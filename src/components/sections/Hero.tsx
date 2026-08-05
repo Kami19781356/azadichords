@@ -30,11 +30,22 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-28 text-center"
     >
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/video/hero-bg.mp4"
+        poster="/video/hero-bg-poster.jpg"
+        autoPlay={!prefersReducedMotion}
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-ink/65" />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 30%, rgba(122,31,43,0.25), transparent 60%)",
+            "radial-gradient(ellipse at 50% 30%, rgba(122,31,43,0.35), transparent 60%)",
         }}
       />
       <div className="relative">
