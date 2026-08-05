@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
+import SplitReveal from "@/components/SplitReveal";
 
 export default function Music() {
   return (
@@ -15,9 +16,11 @@ export default function Music() {
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.music.eyebrow}
         </div>
-        <h2 className="m-0 font-serif text-[clamp(36px,5vw,64px)] font-semibold">
-          {content.music.title}
-        </h2>
+        <SplitReveal
+          as="h2"
+          text={content.music.title}
+          className="m-0 font-serif text-[clamp(36px,5vw,64px)] font-semibold"
+        />
       </motion.div>
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[1.1fr_1fr] md:gap-16">
         <motion.div

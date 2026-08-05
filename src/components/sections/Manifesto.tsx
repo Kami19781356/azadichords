@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
+import SplitReveal from "@/components/SplitReveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="grid min-h-screen grid-cols-1 bg-paper text-ink md:grid-cols-2"
+      className="relative grid min-h-screen grid-cols-1 bg-paper text-ink md:grid-cols-2"
     >
       <div className="sticky top-0 hidden h-screen md:block">
         <Placeholder
@@ -33,9 +35,11 @@ export default function Manifesto() {
           <div className="mb-5 text-[13px] tracking-[0.2em] text-garnet uppercase">
             {content.manifesto.eyebrow}
           </div>
-          <h2 className="m-0 font-serif text-[clamp(36px,5vw,56px)] leading-[1.05] font-semibold">
-            {content.manifesto.title}
-          </h2>
+          <SplitReveal
+            as="h2"
+            text={content.manifesto.title}
+            className="m-0 font-serif text-[clamp(36px,5vw,56px)] leading-[1.05] font-semibold"
+          />
         </motion.div>
         {content.manifesto.paragraphs.map((paragraph, i) => (
           <motion.p
@@ -61,6 +65,7 @@ export default function Manifesto() {
           />
         </motion.div>
       </div>
+      <WaveDivider fill="var(--color-ink)" />
     </section>
   );
 }

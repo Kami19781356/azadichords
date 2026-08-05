@@ -36,3 +36,12 @@ body {
 a {
   color: inherit;
 }
+
+body.cursor-none-custom,
+body.cursor-none-custom a,
+body.cursor-none-custom button,
+body.cursor-none-custom input,
+body.cursor-none-custom select,
+body.cursor-none-custom textarea {
+  cursor: none;
+}

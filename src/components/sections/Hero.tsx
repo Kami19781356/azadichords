@@ -3,16 +3,18 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { content } from "@/lib/content";
-import { easeCustom } from "@/lib/motionVariants";
+import { easeCustom, preloaderDurationMs } from "@/lib/motionVariants";
+import SplitReveal from "@/components/SplitReveal";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 60);
+    const base = prefersReducedMotion ? 60 : preloaderDurationMs - 200;
+    const t = setTimeout(() => setMounted(true), base);
     return () => clearTimeout(t);
-  }, []);
+  }, [prefersReducedMotion]);
 
   const step = (translate: number, delayMs: number) => {
     const distance = prefersReducedMotion ? 0 : translate;
@@ -42,12 +44,16 @@ export default function Hero() {
         >
           {content.hero.eyebrow}
         </motion.div>
-        <motion.h1
-          {...step(24, 120)}
-          className="m-0 mb-8 font-serif text-[clamp(64px,12vw,168px)] leading-[0.95] font-bold tracking-[-0.01em]"
-        >
-          {content.hero.title}
-        </motion.h1>
+        <h1 className="m-0 mb-8 font-serif text-[clamp(64px,12vw,168px)] leading-[0.95] font-bold tracking-[-0.01em]">
+          <SplitReveal
+            text={content.hero.title}
+            mode="letter"
+            triggerOnMount
+            active={mounted}
+            stagger={0.035}
+            delayChildren={0.12}
+          />
+        </h1>
         <motion.p
           {...step(20, 260)}
           className="mx-auto mb-12 max-w-[640px] text-[clamp(18px,2vw,26px)] font-light text-paper/75"

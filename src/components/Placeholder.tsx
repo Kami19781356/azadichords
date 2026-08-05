@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 const STRIPE_VARIANTS = {
@@ -24,24 +24,54 @@ export default function Placeholder({
   className?: string;
 }) {
   const isDark = variant !== "warm";
+
+  const mx = useMotionValue(0.5);
+  const my = useMotionValue(0.5);
+  const rotateX = useSpring(useTransform(my, [0, 1], [7, -7]), {
+    stiffness: 300,
+    damping: 30,
+  });
+  const rotateY = useSpring(useTransform(mx, [0, 1], [-7, 7]), {
+    stiffness: 300,
+    damping: 30,
+  });
+
+  function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mx.set((e.clientX - rect.left) / rect.width);
+    my.set((e.clientY - rect.top) / rect.height);
+  }
+
+  function handleLeave() {
+    mx.set(0.5);
+    my.set(0.5);
+  }
+
   return (
     <div
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
       className={cn(
-        "flex items-center justify-center overflow-hidden",
+        "overflow-hidden",
         rounded && "rounded",
         className,
       )}
-      style={{ background: STRIPE_VARIANTS[variant], aspectRatio: aspect }}
+      style={{ aspectRatio: aspect, perspective: 800 }}
     >
       <motion.div
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className={cn(
-          "px-6 py-6 text-center font-mono text-[13px]",
-          isDark ? "text-paper/40" : "text-ink/50",
-        )}
+        style={{ rotateX, rotateY, background: STRIPE_VARIANTS[variant] }}
+        className="flex h-full w-full items-center justify-center"
       >
-        [ {caption} ]
+        <motion.div
+          whileHover={{ scale: 1.12 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className={cn(
+            "px-6 py-6 text-center font-mono text-[13px]",
+            isDark ? "text-paper/40" : "text-ink/50",
+          )}
+        >
+          [ {caption} ]
+        </motion.div>
       </motion.div>
     </div>
   );

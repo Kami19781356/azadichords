@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
+import SplitReveal from "@/components/SplitReveal";
 
 export default function Artist() {
   return (
@@ -23,9 +24,11 @@ export default function Artist() {
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.artist.eyebrow}
         </div>
-        <h2 className="m-0 mb-7 font-serif text-[clamp(32px,4.5vw,52px)] font-semibold">
-          {content.artist.title}
-        </h2>
+        <SplitReveal
+          as="h2"
+          text={content.artist.title}
+          className="m-0 mb-7 font-serif text-[clamp(32px,4.5vw,52px)] font-semibold"
+        />
         <p className="m-0 mb-8 text-[19px] leading-[1.7] text-paper/75">
           {content.artist.bio}
         </p>

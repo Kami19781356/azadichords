@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Work_Sans } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import Preloader from "@/components/Preloader";
+import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -28,6 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${bodoniModa.variable} ${workSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-ink text-paper">
+        <Preloader />
+        <CustomCursor />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

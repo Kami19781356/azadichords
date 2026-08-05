@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
+import SplitReveal from "@/components/SplitReveal";
 
 const inputClass =
   "border-0 border-b border-paper/25 bg-transparent px-1 py-3.5 font-sans text-base text-paper outline-none transition-colors duration-200 focus:border-gold";
@@ -18,9 +19,11 @@ export default function Contact() {
           <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
             {content.contact.eyebrow}
           </div>
-          <h2 className="m-0 mb-4 font-serif text-[clamp(36px,5vw,56px)] font-semibold">
-            {content.contact.title}
-          </h2>
+          <SplitReveal
+            as="h2"
+            text={content.contact.title}
+            className="m-0 mb-4 font-serif text-[clamp(36px,5vw,56px)] font-semibold"
+          />
           <p className="m-0 mb-12 text-[17px] text-paper/60">
             {content.contact.subhead}
           </p>

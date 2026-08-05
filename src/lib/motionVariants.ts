@@ -1,4 +1,5 @@
 export const easeCustom = [0.16, 1, 0.3, 1] as const;
+export const preloaderDurationMs = 1700;
 export const hoverSpring = { type: "spring", stiffness: 300, damping: 25 } as const;
 
 export const reveal = {
