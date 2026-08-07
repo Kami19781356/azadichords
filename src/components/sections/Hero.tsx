@@ -29,9 +29,19 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-28 text-center sm:px-6">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
         src="/video/hero-bg.mp4"
         poster="/video/hero-bg-poster.jpg"
+        autoPlay={!prefersReducedMotion}
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <video
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
+        src="/video/hero-bg-mobile.mp4"
+        poster="/video/hero-bg-mobile-poster.jpg"
         autoPlay={!prefersReducedMotion}
         muted
         loop

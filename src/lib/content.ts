@@ -7,7 +7,7 @@ export const content = {
     links: [
       { href: "/manifesto", label: "Manifesto" },
       { href: "/music", label: "Music" },
-      { href: "/the-artist", label: "The Artist" },
+      { href: "/artists", label: "Artists" },
       { href: "/press", label: "Press" },
       { href: "/support", label: "Support" },
       { href: "/contact", label: "Contact" },
@@ -33,7 +33,7 @@ export const content = {
     ],
     closing:
       "That first album belongs to Kamran Rasoolzadeh — poet, composer, and the label's first artist.",
-    cta: { label: "Meet the Artist →", href: "/the-artist" },
+    cta: { label: "Meet the Artist →", href: "/artists/kamran-rasoolzadeh" },
   },
   music: {
     eyebrow: "Music",
@@ -46,31 +46,25 @@ export const content = {
     cta: { label: "Listen to CHESHMAT →", href: "#" },
     closing: "The label's first release — including official videos — arrives soon.",
   },
-  recognition: {
-    title: "Recognition",
-    columns: ["Award", "Category", "Year"],
-    rows: [
-      {
-        award: "Iranian Film Festival San Francisco",
-        category: "Best Music Video",
-        year: "2022",
-      },
-      {
-        award: "Fajr Music Festival",
-        category: "Best Songwriting",
-        year: "2022",
-      },
-    ],
-  },
-  artist: {
-    eyebrow: "The Artist",
-    title: "The Artist",
-    imageCaption: "portrait — Kamran, close crop",
+  artistsPage: {
+    eyebrow: "Artists",
+    title: "Artists",
     intro:
-      "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
-    bio: "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His 2014 album <em>CHESHMAT</em> became one of the defining records of its generation, despite — and in part because of — the restrictions placed on his work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where Azadichords was born.",
-    cta: { label: "Explore the Music →", href: "/music" },
+      "Azadichords is built to grow beyond a single voice. It begins with one artist — more will join as the label expands.",
+    viewProfile: "View Profile →",
   },
+  artists: [
+    {
+      slug: "kamran-rasoolzadeh",
+      name: "Kamran Rasoolzadeh",
+      role: "Poet, Composer, Singer-Songwriter",
+      imageCaption: "portrait — Kamran, close crop",
+      intro:
+        "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
+      bio: "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His 2014 album <em>CHESHMAT</em> became one of the defining records of its generation, despite — and in part because of — the restrictions placed on his work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where Azadichords was born.",
+      cta: { label: "Explore the Music →", href: "/music" },
+    },
+  ],
   press: {
     eyebrow: "Press",
     title: "Press",

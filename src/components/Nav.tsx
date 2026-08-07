@@ -11,6 +11,9 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
+
   return (
     <nav className="sticky top-0 z-50 border-b border-paper/8 bg-ink/85 backdrop-blur-md">
       <div className="flex items-center justify-between gap-12 px-6 py-5 md:px-12">
@@ -27,7 +30,7 @@ export default function Nav() {
               href={link.href}
               className={cn(
                 "text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold hover:opacity-100",
-                pathname === link.href
+                isActive(link.href)
                   ? "text-gold opacity-100"
                   : "text-paper/80",
               )}
@@ -55,7 +58,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className={cn(
                 "py-3 text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold",
-                pathname === link.href ? "text-gold" : "text-paper/80",
+                isActive(link.href) ? "text-gold" : "text-paper/80",
               )}
             >
               {link.label}

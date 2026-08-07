@@ -18,10 +18,6 @@
   --font-sans: var(--font-work-sans);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--color-ink);
   color: var(--color-paper);
