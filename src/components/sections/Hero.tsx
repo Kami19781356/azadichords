@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-28 text-center">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-28 text-center sm:px-6">
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/video/hero-bg.mp4"
@@ -53,7 +53,7 @@ export default function Hero() {
         >
           {content.hero.eyebrow}
         </motion.div>
-        <h1 className="m-0 mb-8 font-serif text-[clamp(64px,12vw,168px)] leading-[0.95] font-bold tracking-[-0.01em]">
+        <h1 className="m-0 mb-8 font-serif text-[clamp(32px,11vw,168px)] leading-[0.95] font-bold tracking-[-0.01em] whitespace-nowrap">
           <SplitReveal
             text={content.hero.title}
             mode="letter"
