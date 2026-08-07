@@ -99,7 +99,6 @@ const content = {
     eyebrow: artistsPage.eyebrow,
     title: artistsPage.title,
     intro: artistsPage.intro,
-    viewProfile: artistsPage.viewProfileLabel,
   },
   artists,
   albums,

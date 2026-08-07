@@ -23,7 +23,7 @@ collections:
             label: Nav Links
             widget: list
             fields:
-              - { name: href, label: Link (e.g. /music), widget: string }
+              - { name: href, label: Link (e.g. #music), widget: string }
               - { name: label, label: Label, widget: string }
 
       - name: home
@@ -70,7 +70,6 @@ collections:
           - { name: eyebrow, label: Eyebrow, widget: string }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
-          - { name: viewProfileLabel, label: "'View Profile' Link Text", widget: string }
 
       - name: press
         label: Press

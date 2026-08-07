@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
@@ -10,7 +9,10 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Manifesto() {
   return (
-    <section className="relative grid min-h-screen grid-cols-1 bg-paper text-ink md:grid-cols-2">
+    <section
+      id="manifesto"
+      className="relative grid min-h-screen grid-cols-1 bg-paper text-ink md:grid-cols-2"
+    >
       <div className="sticky top-0 hidden h-screen md:block">
         <Placeholder
           caption={content.manifesto.imageCaption}
@@ -57,12 +59,12 @@ export default function Manifesto() {
           <p className="m-0 text-lg leading-[1.7] text-ink/80">
             {content.manifesto.closing}
           </p>
-          <Link
+          <a
             href={content.manifesto.cta.href}
             className="text-sm tracking-[0.06em] text-garnet uppercase transition-colors duration-200 hover:text-ink"
           >
             {content.manifesto.cta.label}
-          </Link>
+          </a>
         </motion.div>
       </div>
       <WaveDivider fill="var(--color-ink)" />

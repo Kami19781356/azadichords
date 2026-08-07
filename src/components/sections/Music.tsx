@@ -8,7 +8,10 @@ import SplitReveal from "@/components/SplitReveal";
 
 export default function Music() {
   return (
-    <section className="flex min-h-screen flex-col gap-14 bg-ink px-6 py-24 md:px-16 md:py-36">
+    <section
+      id="music"
+      className="flex min-h-screen flex-col gap-14 border-t border-paper/8 bg-ink px-6 py-24 md:px-16 md:py-36"
+    >
       <motion.div {...reveal}>
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.music.eyebrow}

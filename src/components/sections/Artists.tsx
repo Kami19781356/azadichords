@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { content } from "@/lib/content";
-import { reveal, staggerChild, staggerParent } from "@/lib/motionVariants";
+import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
 import SplitReveal from "@/components/SplitReveal";
 
 export default function Artists() {
   return (
-    <section className="bg-ink px-6 py-24 md:px-16 md:py-36">
-      <motion.div {...reveal} className="mb-16 max-w-[640px]">
+    <section
+      id="artists"
+      className="border-t border-paper/8 bg-ink px-6 py-24 md:px-16 md:py-36"
+    >
+      <motion.div {...reveal} className="mb-20 max-w-[640px]">
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.artistsPage.eyebrow}
         </div>
@@ -24,36 +26,62 @@ export default function Artists() {
         </p>
       </motion.div>
 
-      <motion.div
-        {...staggerParent}
-        className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16"
-      >
+      <div className="flex flex-col gap-24">
         {content.artists.map((artist) => (
-          <motion.div key={artist.slug} {...staggerChild}>
-            <Placeholder
-              caption={artist.imageCaption}
-              variant="dark90"
-              aspect="4/5"
-              className="mb-6 w-full"
-            />
-            <div className="mb-2 text-[13px] tracking-[0.15em] text-gold uppercase">
-              {artist.role}
+          <div key={artist.slug} id={artist.slug}>
+            <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+              <motion.div {...reveal}>
+                <Placeholder
+                  caption={artist.imageCaption}
+                  variant="dark90"
+                  aspect="4/5"
+                  className="w-full"
+                />
+              </motion.div>
+              <motion.div
+                {...reveal}
+                transition={{ ...reveal.transition, delay: 0.15 }}
+              >
+                <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
+                  {artist.role}
+                </div>
+                <SplitReveal
+                  as="h3"
+                  text={artist.name}
+                  className="m-0 mb-7 font-serif text-[clamp(28px,4vw,44px)] font-semibold"
+                />
+                <p className="m-0 text-[19px] leading-[1.7] text-paper/75">
+                  {artist.intro}
+                </p>
+              </motion.div>
             </div>
-            <h3 className="m-0 mb-4 font-serif text-2xl font-semibold">
-              {artist.name}
-            </h3>
-            <p className="m-0 mb-5 text-base leading-[1.7] text-paper/65">
-              {artist.intro}
-            </p>
-            <Link
-              href={`/artists/${artist.slug}`}
-              className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
+
+            <motion.div
+              {...reveal}
+              transition={{ ...reveal.transition, delay: 0.2 }}
+              className="mt-16 max-w-[720px] border-t border-paper/12 pt-12"
             >
-              {content.artistsPage.viewProfile}
-            </Link>
-          </motion.div>
+              <p
+                className="m-0 text-lg leading-[1.7] text-paper/70"
+                dangerouslySetInnerHTML={{ __html: artist.bio }}
+              />
+            </motion.div>
+
+            <motion.div
+              {...reveal}
+              transition={{ ...reveal.transition, delay: 0.1 }}
+              className="mt-8"
+            >
+              <a
+                href={artist.cta.href}
+                className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
+              >
+                {artist.cta.label}
+              </a>
+            </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

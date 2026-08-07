@@ -73,7 +73,6 @@ export type Content = {
     eyebrow: string;
     title: string;
     intro: string;
-    viewProfile: string;
   };
   artists: Artist[];
   albums: Album[];

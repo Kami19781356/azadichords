@@ -20,5 +20,5 @@ tiers:
       Supporter"). If you would prefer your name included instead, you can
       opt in during checkout — entirely your choice.
 ctaLabel: Get in Touch
-ctaHref: /contact
+ctaHref: "#contact"
 transparency: All proceeds go directly to production and live performance costs. No intermediary, no committee.

@@ -66,9 +66,10 @@ provider`) describes.
 
 ## Extending content later
 
-- **New artist**: add a file to `content/artists/`, or use the CMS —
-  it appears on `/artists` and gets its own `/artists/[slug]` page
-  automatically (no code change).
+- **New artist**: add a file to `content/artists/`, or use the CMS — it
+  appears as a new full profile block in the Artists section of the single
+  page (site is one continuous scrolling page with anchor nav, not separate
+  routes per section — no code change needed either way).
 - **New album / real tracks / a music video**: add or edit a file in
   `content/albums/`. An empty `tracks: []` shows "Tracks arriving soon" on
   the Music page; add entries with `audioUrl` to show a real player. Same

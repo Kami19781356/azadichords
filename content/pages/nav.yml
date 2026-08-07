@@ -1,14 +1,14 @@
 brand: AZADICHORDS
 links:
-  - href: /manifesto
+  - href: "#manifesto"
     label: Manifesto
-  - href: /music
+  - href: "#music"
     label: Music
-  - href: /artists
+  - href: "#artists"
     label: Artists
-  - href: /press
+  - href: "#press"
     label: Press
-  - href: /support
+  - href: "#support"
     label: Support
-  - href: /contact
+  - href: "#contact"
     label: Contact

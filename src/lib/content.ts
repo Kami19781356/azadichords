@@ -10,27 +10,27 @@ export const content: Content = {
     "brand": "AZADICHORDS",
     "links": [
       {
-        "href": "/manifesto",
+        "href": "#manifesto",
         "label": "Manifesto"
       },
       {
-        "href": "/music",
+        "href": "#music",
         "label": "Music"
       },
       {
-        "href": "/artists",
+        "href": "#artists",
         "label": "Artists"
       },
       {
-        "href": "/press",
+        "href": "#press",
         "label": "Press"
       },
       {
-        "href": "/support",
+        "href": "#support",
         "label": "Support"
       },
       {
-        "href": "/contact",
+        "href": "#contact",
         "label": "Contact"
       }
     ]
@@ -41,11 +41,11 @@ export const content: Content = {
     "subhead": "An independent label for the voice that refuses to be silent.",
     "ctaPrimary": {
       "label": "Listen",
-      "href": "/music"
+      "href": "#music"
     },
     "ctaSecondary": {
       "label": "Our Story",
-      "href": "/manifesto"
+      "href": "#manifesto"
     },
     "scrollHint": "(Scroll for more)"
   },
@@ -62,7 +62,7 @@ export const content: Content = {
     "closing": "That first album belongs to Kamran Rasoolzadeh — poet, composer, and the label's first artist.",
     "cta": {
       "label": "Meet the Artist →",
-      "href": "/artists/kamran-rasoolzadeh"
+      "href": "#artists"
     }
   },
   "music": {
@@ -77,8 +77,7 @@ export const content: Content = {
   "artistsPage": {
     "eyebrow": "Artists",
     "title": "Artists",
-    "intro": "Azadichords is built to grow beyond a single voice. It begins with one artist — more will join as the label expands.",
-    "viewProfile": "View Profile →"
+    "intro": "Azadichords is built to grow beyond a single voice. It begins with one artist — more will join as the label expands."
   },
   "artists": [
     {
@@ -90,7 +89,7 @@ export const content: Content = {
       "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His 2014 album <em>CHESHMAT</em> became one of the defining records of its generation, despite — and in part because of — the restrictions placed on his work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where Azadichords was born.",
       "cta": {
         "label": "Explore the Music →",
-        "href": "/music"
+        "href": "#music"
       }
     }
   ],
@@ -149,7 +148,7 @@ export const content: Content = {
     ],
     "cta": {
       "label": "Get in Touch",
-      "href": "/contact"
+      "href": "#contact"
     },
     "transparency": "All proceeds go directly to production and live performance costs. No intermediary, no committee."
   },

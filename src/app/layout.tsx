@@ -5,7 +5,6 @@ import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -38,9 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScroll>
           <div className="relative w-full overflow-x-clip">
             <Nav />
-            <main>
-              <PageTransition>{children}</PageTransition>
-            </main>
+            <main>{children}</main>
             <Footer />
           </div>
         </SmoothScroll>
