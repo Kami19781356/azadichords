@@ -42,6 +42,18 @@ export type SupportTier = {
   note?: string;
 };
 
+export type ActivityItem = {
+  date: string;
+  title: string;
+  description: string;
+  link?: string;
+};
+
+export type ServiceItem = {
+  title: string;
+  description: string;
+};
+
 export type Content = {
   nav: { brand: string; links: NavLink[] };
   hero: {
@@ -76,7 +88,29 @@ export type Content = {
   };
   artists: Artist[];
   albums: Album[];
+  activityPage: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    emptyStateNote: string;
+  };
+  activity: ActivityItem[];
   press: { eyebrow: string; title: string; paragraphs: string[] };
+  services: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: ServiceItem[];
+    cta: Cta;
+  };
+  submissions: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    guidelines: string[];
+    note: string;
+    cta: Cta;
+  };
   support: {
     eyebrow: string;
     title: string;

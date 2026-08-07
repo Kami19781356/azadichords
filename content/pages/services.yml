@@ -1,0 +1,16 @@
+eyebrow: Services
+title: What the Label Offers
+intro: Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.
+services:
+  - title: Production & Mixing
+    description: Studio time, arrangement, and audio engineering support, from first draft to final master.
+  - title: Distribution
+    description: Placing the work on every major platform, worldwide, under the artist's own name.
+  - title: Visual Identity
+    description: Album art, music videos, and the visual language that carries a record beyond its audio.
+  - title: Live Performance
+    description: From a first show to a touring itinerary — the logistics behind bringing a record to a stage.
+  - title: Licensing & Publishing
+    description: Protecting the work and placing it commercially, on terms the artist understands and agrees to.
+ctaLabel: Working on something that belongs here? Get in Touch →
+ctaHref: "#contact"

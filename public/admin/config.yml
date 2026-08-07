@@ -71,6 +71,15 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
 
+      - name: activity_page
+        label: Activity (page framing)
+        file: content/pages/activity.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: emptyStateNote, label: "Text Shown While There's No Activity Yet", widget: text }
+
       - name: press
         label: Press
         file: content/pages/press.yml
@@ -78,6 +87,34 @@ collections:
           - { name: eyebrow, label: Eyebrow, widget: string }
           - { name: title, label: Title, widget: string }
           - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+
+      - name: services
+        label: Services
+        file: content/pages/services.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - name: services
+            label: Service List
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: ctaHref, label: "CTA Link", widget: string }
+
+      - name: submissions
+        label: Submissions
+        file: content/pages/submissions.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: guidelines, label: Guidelines, widget: list, field: { name: line, widget: string } }
+          - { name: note, label: "Fine-print Note", widget: text }
+          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: ctaHref, label: "CTA Link", widget: string }
 
       - name: support
         label: Support
@@ -175,3 +212,14 @@ collections:
       - { name: musicVideoUrl, label: "Music Video URL", widget: string, required: false }
       - { name: musicVideoCaption, label: "Music Video Caption", widget: string, required: false }
       - { name: body, label: "Album Description", widget: markdown }
+
+  - name: activity
+    label: Activity
+    folder: content/activity
+    create: true
+    slug: "{{fields.date}}-{{fields.title}}"
+    fields:
+      - { name: date, label: "Date (e.g. 2027 or March 2027)", widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: link, label: "Link (optional)", widget: string, required: false }
+      - { name: body, label: Description, widget: markdown }

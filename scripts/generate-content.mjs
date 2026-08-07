@@ -36,7 +36,10 @@ const home = readYaml("home");
 const manifesto = readYaml("manifesto");
 const music = readYaml("music");
 const artistsPage = readYaml("artists-page");
+const activityPage = readYaml("activity");
 const press = readYaml("press");
+const services = readYaml("services");
+const submissions = readYaml("submissions");
 const support = readYaml("support");
 const contact = readYaml("contact");
 const footer = readYaml("footer");
@@ -49,6 +52,13 @@ const artists = readFolder("artists").map((a) => ({
   intro: a.intro,
   bio: a.body,
   cta: { label: a.ctaLabel, href: a.ctaHref },
+}));
+
+const activity = readFolder("activity").map((a) => ({
+  date: a.date,
+  title: a.title,
+  description: a.body,
+  link: a.link || "",
 }));
 
 const albums = readFolder("albums").map((a) => ({
@@ -102,10 +112,32 @@ const content = {
   },
   artists,
   albums,
+  activityPage: {
+    eyebrow: activityPage.eyebrow,
+    title: activityPage.title,
+    intro: activityPage.intro,
+    emptyStateNote: activityPage.emptyStateNote,
+  },
+  activity,
   press: {
     eyebrow: press.eyebrow,
     title: press.title,
     paragraphs: press.paragraphs,
+  },
+  services: {
+    eyebrow: services.eyebrow,
+    title: services.title,
+    intro: services.intro,
+    items: services.services,
+    cta: { label: services.ctaLabel, href: services.ctaHref },
+  },
+  submissions: {
+    eyebrow: submissions.eyebrow,
+    title: submissions.title,
+    intro: submissions.intro,
+    guidelines: submissions.guidelines,
+    note: submissions.note,
+    cta: { label: submissions.ctaLabel, href: submissions.ctaHref },
   },
   support: {
     eyebrow: support.eyebrow,

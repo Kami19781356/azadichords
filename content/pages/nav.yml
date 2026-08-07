@@ -6,8 +6,14 @@ links:
     label: Music
   - href: "#artists"
     label: Artists
+  - href: "#activity"
+    label: Activity
   - href: "#press"
     label: Press
+  - href: "#services"
+    label: Services
+  - href: "#submissions"
+    label: Submissions
   - href: "#support"
     label: Support
   - href: "#contact"

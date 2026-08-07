@@ -22,8 +22,20 @@ export const content: Content = {
         "label": "Artists"
       },
       {
+        "href": "#activity",
+        "label": "Activity"
+      },
+      {
         "href": "#press",
         "label": "Press"
+      },
+      {
+        "href": "#services",
+        "label": "Services"
+      },
+      {
+        "href": "#submissions",
+        "label": "Submissions"
       },
       {
         "href": "#support",
@@ -111,6 +123,13 @@ export const content: Content = {
       }
     }
   ],
+  "activityPage": {
+    "eyebrow": "Activity",
+    "title": "Activity",
+    "intro": "A running record of where Azadichords has been — performances, releases, and the milestones along the way.",
+    "emptyStateNote": "Azadichords is early. This record starts with the first release and the first show — both are still ahead."
+  },
+  "activity": [],
   "press": {
     "eyebrow": "Press",
     "title": "Press",
@@ -118,6 +137,52 @@ export const content: Content = {
       "Press materials and interviews will appear here as they're published.",
       "For press inquiries, use the contact form."
     ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What the Label Offers",
+    "intro": "Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.",
+    "items": [
+      {
+        "title": "Production & Mixing",
+        "description": "Studio time, arrangement, and audio engineering support, from first draft to final master."
+      },
+      {
+        "title": "Distribution",
+        "description": "Placing the work on every major platform, worldwide, under the artist's own name."
+      },
+      {
+        "title": "Visual Identity",
+        "description": "Album art, music videos, and the visual language that carries a record beyond its audio."
+      },
+      {
+        "title": "Live Performance",
+        "description": "From a first show to a touring itinerary — the logistics behind bringing a record to a stage."
+      },
+      {
+        "title": "Licensing & Publishing",
+        "description": "Protecting the work and placing it commercially, on terms the artist understands and agrees to."
+      }
+    ],
+    "cta": {
+      "label": "Working on something that belongs here? Get in Touch →",
+      "href": "#contact"
+    }
+  },
+  "submissions": {
+    "eyebrow": "Submissions",
+    "title": "For the Next Voice",
+    "intro": "Azadichords exists for music that needed a home beyond permission. If that describes your work, we want to hear it.",
+    "guidelines": [
+      "2–3 tracks, in their current form — polished or not.",
+      "A few sentences about the work and the story behind it.",
+      "No press kit, no pitch deck. Just the music."
+    ],
+    "note": "Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.",
+    "cta": {
+      "label": "Submit Your Work →",
+      "href": "#contact"
+    }
   },
   "support": {
     "eyebrow": "Support",
@@ -164,6 +229,7 @@ export const content: Content = {
     },
     "categories": [
       "General",
+      "Submission",
       "Press",
       "Booking",
       "Licensing"
