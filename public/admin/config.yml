@@ -1,0 +1,178 @@
+backend:
+  name: github
+  repo: AZadichords/azadichords-site
+  branch: master
+  api_root: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io/api/v1
+  base_url: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io
+  auth_endpoint: login/oauth/authorize
+
+publish_mode: simple
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: nav
+        label: Navigation
+        file: content/pages/nav.yml
+        fields:
+          - { name: brand, label: Brand Name, widget: string }
+          - name: links
+            label: Nav Links
+            widget: list
+            fields:
+              - { name: href, label: Link (e.g. /music), widget: string }
+              - { name: label, label: Label, widget: string }
+
+      - name: home
+        label: Home / Hero
+        file: content/pages/home.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: subhead, label: Subhead, widget: text }
+          - { name: ctaPrimaryLabel, label: "Primary Button Label", widget: string }
+          - { name: ctaPrimaryHref, label: "Primary Button Link", widget: string }
+          - { name: ctaSecondaryLabel, label: "Secondary Button Label", widget: string }
+          - { name: ctaSecondaryHref, label: "Secondary Button Link", widget: string }
+          - { name: scrollHint, label: "Scroll Hint Text", widget: string }
+
+      - name: manifesto
+        label: Manifesto
+        file: content/pages/manifesto.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: imageCaption, label: "Image Placeholder Caption", widget: string }
+          - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+          - { name: closing, label: Closing Line, widget: text }
+          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: ctaHref, label: "CTA Link", widget: string }
+
+      - name: music
+        label: Music (page framing)
+        file: content/pages/music.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: closing, label: Closing Line, widget: text }
+          - { name: comingSoonLabel, label: "'Coming Soon' Badge Text", widget: string }
+          - { name: tracksComingSoonLabel, label: "No-Tracks-Yet Text", widget: string }
+          - { name: videoComingSoonLabel, label: "No-Video-Yet Text", widget: string }
+
+      - name: artists_page
+        label: Artists (roster page)
+        file: content/pages/artists-page.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: viewProfileLabel, label: "'View Profile' Link Text", widget: string }
+
+      - name: press
+        label: Press
+        file: content/pages/press.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+
+      - name: support
+        label: Support
+        file: content/pages/support.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+          - name: tiers
+            label: Tiers
+            widget: list
+            fields:
+              - { name: name, label: "Tier Label (e.g. Tier 1)", widget: string }
+              - { name: title, label: Tier Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: note, label: "Fine-print Note (optional)", widget: text, required: false }
+          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: ctaHref, label: "CTA Link", widget: string }
+          - { name: transparency, label: "Transparency Line", widget: text }
+
+      - name: contact
+        label: Contact
+        file: content/pages/contact.yml
+        fields:
+          - { name: eyebrow, label: Eyebrow, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: subhead, label: Subhead, widget: text }
+          - { name: fieldNameLabel, label: "'Name' Field Label", widget: string }
+          - { name: fieldEmailLabel, label: "'Email' Field Label", widget: string }
+          - { name: fieldSubjectLabel, label: "'Subject' Field Label", widget: string }
+          - { name: fieldCategoryLabel, label: "'Category' Field Label", widget: string }
+          - { name: categories, label: "Category Options", widget: list, field: { name: category, widget: string } }
+          - { name: submitLabel, label: "Submit Button Label", widget: string }
+
+      - name: footer
+        label: Footer
+        file: content/pages/footer.yml
+        fields:
+          - { name: copyright, label: Copyright Line, widget: string }
+          - name: social
+            label: Social Links
+            widget: list
+            fields:
+              - { name: label, label: Platform Name, widget: string }
+              - { name: href, label: URL, widget: string }
+          - { name: disclaimer, label: Disclaimer Line, widget: text }
+
+  - name: artists
+    label: Artists
+    folder: content/artists
+    create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - { name: slug, label: "Slug (URL-safe, e.g. kamran-rasoolzadeh)", widget: string }
+      - { name: name, label: Full Name, widget: string }
+      - { name: role, label: "Role (e.g. Poet, Composer, Singer-Songwriter)", widget: string }
+      - { name: imageCaption, label: "Portrait Placeholder Caption", widget: string }
+      - { name: intro, label: "Short Intro (shown on roster card)", widget: text }
+      - { name: ctaLabel, label: "Profile CTA Label", widget: string }
+      - { name: ctaHref, label: "Profile CTA Link", widget: string }
+      - { name: body, label: "Full Bio", widget: markdown }
+
+  - name: albums
+    label: Albums
+    folder: content/albums
+    create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - { name: slug, label: "Slug (URL-safe, e.g. cheshmat)", widget: string }
+      - { name: title, label: Album Title, widget: string }
+      - name: artist
+        label: Artist
+        widget: relation
+        collection: artists
+        search_fields: [name]
+        display_fields: [name]
+        value_field: "{{slug}}"
+      - { name: year, label: Year, widget: number, value_type: int }
+      - name: status
+        label: Status
+        widget: select
+        options: [released, coming-soon]
+        default: coming-soon
+      - { name: coverImageCaption, label: "Cover Placeholder Caption", widget: string }
+      - { name: externalListenLabel, label: "External Listen Link Label", widget: string, required: false }
+      - { name: externalListenHref, label: "External Listen Link (Spotify/etc.)", widget: string, required: false }
+      - name: tracks
+        label: Tracks
+        widget: list
+        required: false
+        fields:
+          - { name: title, label: Track Title, widget: string }
+          - { name: durationLabel, label: "Duration (e.g. 3:42)", widget: string, required: false }
+          - { name: audioUrl, label: "Preview Audio URL", widget: string, required: false }
+      - { name: musicVideoUrl, label: "Music Video URL", widget: string, required: false }
+      - { name: musicVideoCaption, label: "Music Video Caption", widget: string, required: false }
+      - { name: body, label: "Album Description", widget: markdown }

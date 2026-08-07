@@ -1,0 +1,24 @@
+eyebrow: Support
+title: Support the Project
+intro:
+  - Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. That independence is made possible directly by the people who choose to support it.
+  - Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe.
+tiers:
+  - name: Tier 1
+    title: The Record
+    description: High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.
+    note: ""
+  - name: Tier 2
+    title: The Record + The Room
+    description: Everything in Tier 1, plus a ticket (or priority access) to the first live performance.
+    note: ""
+  - name: Tier 3
+    title: Founding Supporter
+    description: Everything in Tier 2, plus recognition as an early supporter of independent art.
+    note: >-
+      By default, founding supporters are listed anonymously ("A Founding
+      Supporter"). If you would prefer your name included instead, you can
+      opt in during checkout — entirely your choice.
+ctaLabel: Get in Touch
+ctaHref: /contact
+transparency: All proceeds go directly to production and live performance costs. No intermediary, no committee.

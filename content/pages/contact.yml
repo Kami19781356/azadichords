@@ -1,0 +1,13 @@
+eyebrow: Contact
+title: Get in Touch
+subhead: For music, press, or performance inquiries.
+fieldNameLabel: Name
+fieldEmailLabel: Email
+fieldSubjectLabel: Subject
+fieldCategoryLabel: Category
+categories:
+  - General
+  - Press
+  - Booking
+  - Licensing
+submitLabel: Send
