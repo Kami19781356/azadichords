@@ -3,6 +3,8 @@ import { Bodoni_Moda, Work_Sans } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -18,7 +20,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AZADICHORDS — Independent Music Label, Paris",
+  title: "Azadichords — Independent Music Label, Paris",
   description:
     "An independent label for the voice that refuses to be silent.",
 };
@@ -32,7 +34,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-ink text-paper">
         <Preloader />
         <CustomCursor />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <div className="relative w-full overflow-x-clip">
+            <Nav />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   );

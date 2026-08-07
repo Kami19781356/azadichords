@@ -9,7 +9,6 @@ import WaveDivider from "@/components/WaveDivider";
 export default function Press() {
   return (
     <motion.section
-      id="press"
       {...reveal}
       className="relative flex min-h-[60vh] flex-col justify-center bg-paper px-6 py-24 text-ink md:px-16 md:py-36"
     >

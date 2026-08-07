@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { content } from "@/lib/content";
 import { easeCustom, preloaderDurationMs } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
@@ -26,10 +27,7 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-28 text-center"
-    >
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-28 text-center">
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/video/hero-bg.mp4"
@@ -75,18 +73,18 @@ export default function Hero() {
           {...step(16, 380)}
           className="flex flex-wrap justify-center gap-5"
         >
-          <a
+          <Link
             href={content.hero.ctaPrimary.href}
             className="rounded-full border border-paper px-9 py-4 text-sm tracking-[0.08em] text-paper uppercase transition-colors duration-[250ms] hover:bg-paper hover:text-ink"
           >
             {content.hero.ctaPrimary.label}
-          </a>
-          <a
+          </Link>
+          <Link
             href={content.hero.ctaSecondary.href}
             className="rounded-full border border-transparent px-9 py-4 text-sm tracking-[0.08em] text-gold uppercase transition-colors duration-[250ms] hover:text-paper"
           >
             {content.hero.ctaSecondary.label}
-          </a>
+          </Link>
         </motion.div>
       </div>
       <div className="absolute bottom-10 text-xs tracking-[0.1em] text-paper/40">

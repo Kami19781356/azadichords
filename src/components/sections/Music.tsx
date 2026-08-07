@@ -8,10 +8,7 @@ import SplitReveal from "@/components/SplitReveal";
 
 export default function Music() {
   return (
-    <section
-      id="music"
-      className="flex min-h-screen flex-col gap-14 bg-ink px-6 py-24 md:px-16 md:py-36"
-    >
+    <section className="flex min-h-screen flex-col gap-14 bg-ink px-6 py-24 md:px-16 md:py-36">
       <motion.div {...reveal}>
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.music.eyebrow}
@@ -39,11 +36,11 @@ export default function Music() {
           transition={{ ...reveal.transition, delay: 0.2 }}
         >
           <p className="m-0 mb-6 text-xl leading-[1.6] text-paper/85">
-            {content.music.forthcoming}
+            {content.music.intro}
           </p>
           <p
             className="m-0 mb-6 text-lg leading-[1.7] text-paper/65"
-            dangerouslySetInnerHTML={{ __html: content.music.revisit }}
+            dangerouslySetInnerHTML={{ __html: content.music.cheshmat }}
           />
           <a
             href={content.music.cta.href}
@@ -52,7 +49,7 @@ export default function Music() {
             {content.music.cta.label}
           </a>
           <p className="m-0 text-sm tracking-[0.05em] text-paper/40">
-            {content.music.soon}
+            {content.music.closing}
           </p>
         </motion.div>
       </div>

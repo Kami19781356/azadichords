@@ -1,16 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { content } from "@/lib/content";
 import { reveal, staggerChild, staggerParent } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 
 export default function Support() {
   return (
-    <section
-      id="support"
-      className="border-t border-paper/8 bg-ink px-6 py-24 md:px-16 md:py-36"
-    >
+    <section className="bg-ink px-6 py-24 md:px-16 md:py-36">
       <motion.div {...reveal} className="mb-14 max-w-[720px]">
         <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
           {content.support.eyebrow}
@@ -70,12 +68,12 @@ export default function Support() {
         <p className="m-0 max-w-[520px] text-sm text-paper/50">
           {content.support.transparency}
         </p>
-        <a
+        <Link
           href={content.support.cta.href}
           className="inline-block rounded-full bg-garnet px-8 py-3.5 text-[13px] tracking-[0.08em] text-paper uppercase transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-garnet-hover"
         >
           {content.support.cta.label}
-        </a>
+        </Link>
       </motion.div>
     </section>
   );
