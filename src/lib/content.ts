@@ -11,39 +11,39 @@ export const content: Content = {
     "tagline": "The Voice of Freedom",
     "links": [
       {
-        "href": "#manifesto",
+        "href": "/manifesto",
         "label": "Manifesto"
       },
       {
-        "href": "#music",
+        "href": "/music",
         "label": "Music"
       },
       {
-        "href": "#artists",
+        "href": "/artists",
         "label": "Artists"
       },
       {
-        "href": "#activity",
+        "href": "/activity",
         "label": "Activity"
       },
       {
-        "href": "#press",
+        "href": "/press",
         "label": "Press"
       },
       {
-        "href": "#services",
+        "href": "/services",
         "label": "Services"
       },
       {
-        "href": "#submissions",
+        "href": "/submissions",
         "label": "Submissions"
       },
       {
-        "href": "#support",
+        "href": "/support",
         "label": "Support"
       },
       {
-        "href": "#contact",
+        "href": "/contact",
         "label": "Contact"
       }
     ]
@@ -54,11 +54,11 @@ export const content: Content = {
     "subhead": "An independent label for the voice that refuses to be silent.",
     "ctaPrimary": {
       "label": "Listen",
-      "href": "#music"
+      "href": "/music"
     },
     "ctaSecondary": {
       "label": "Our Story",
-      "href": "#manifesto"
+      "href": "/manifesto"
     },
     "scrollHint": "(Scroll for more)"
   },
@@ -75,7 +75,7 @@ export const content: Content = {
     "closing": "That first album belongs to Kamran Rasoolzadeh — poet, composer, and the label's first artist.",
     "cta": {
       "label": "Meet the Artist →",
-      "href": "#artists"
+      "href": "/artists"
     }
   },
   "music": {
@@ -102,7 +102,7 @@ export const content: Content = {
       "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works.",
       "cta": {
         "label": "Explore the Music →",
-        "href": "#music"
+        "href": "/music"
       },
       "recognition": [
         {
@@ -189,7 +189,7 @@ export const content: Content = {
     ],
     "cta": {
       "label": "Working on something that belongs here? Get in Touch →",
-      "href": "#contact"
+      "href": "/contact"
     }
   },
   "submissions": {
@@ -204,7 +204,7 @@ export const content: Content = {
     "note": "Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.",
     "cta": {
       "label": "Submit Your Work →",
-      "href": "#contact"
+      "href": "/contact"
     }
   },
   "support": {
@@ -236,7 +236,7 @@ export const content: Content = {
     ],
     "cta": {
       "label": "Get in Touch",
-      "href": "#contact"
+      "href": "/contact"
     },
     "transparency": "All proceeds go directly to production and live performance costs. No intermediary, no committee."
   },

@@ -3,10 +3,12 @@
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import { useReducedMotion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
   const prefersReducedMotion = useReducedMotion();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (prefersReducedMotion) return;
@@ -21,26 +23,20 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     }
     rafId = requestAnimationFrame(raf);
 
-    // Anchor links (nav, in-page CTAs) should smooth-scroll through Lenis
-    // instead of the browser's instant jump.
-    const onClick = (e: MouseEvent) => {
-      const anchor = (e.target as HTMLElement).closest("a");
-      const href = anchor?.getAttribute("href");
-      if (!href || !href.startsWith("#") || href === "#") return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      lenis.scrollTo(target as HTMLElement);
-    };
-    document.addEventListener("click", onClick);
-
     return () => {
-      document.removeEventListener("click", onClick);
       cancelAnimationFrame(rafId);
       lenis.destroy();
       lenisRef.current = null;
     };
   }, [prefersReducedMotion]);
+
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 }

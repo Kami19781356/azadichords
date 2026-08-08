@@ -1,21 +1,21 @@
 brand: AZADICHORDS
 tagline: The Voice of Freedom
 links:
-  - href: "#manifesto"
+  - href: "/manifesto"
     label: Manifesto
-  - href: "#music"
+  - href: "/music"
     label: Music
-  - href: "#artists"
+  - href: "/artists"
     label: Artists
-  - href: "#activity"
+  - href: "/activity"
     label: Activity
-  - href: "#press"
+  - href: "/press"
     label: Press
-  - href: "#services"
+  - href: "/services"
     label: Services
-  - href: "#submissions"
+  - href: "/submissions"
     label: Submissions
-  - href: "#support"
+  - href: "/support"
     label: Support
-  - href: "#contact"
+  - href: "/contact"
     label: Contact

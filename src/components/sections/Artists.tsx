@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
@@ -102,12 +103,12 @@ export default function Artists() {
               transition={{ ...reveal.transition, delay: 0.1 }}
               className="mt-12"
             >
-              <a
+              <Link
                 href={artist.cta.href}
                 className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
               >
                 {artist.cta.label}
-              </a>
+              </Link>
             </motion.div>
           </div>
         ))}

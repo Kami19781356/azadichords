@@ -5,7 +5,7 @@ role: Poet, Composer, Singer-Songwriter
 imageCaption: portrait — Kamran, close crop
 intro: Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.
 ctaLabel: Explore the Music →
-ctaHref: "#music"
+ctaHref: "/music"
 recognition:
   - award: Iranian Film Festival San Francisco
     category: Best Music Video — Freedom

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
@@ -50,12 +51,12 @@ export default function Submissions() {
       </motion.p>
 
       <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.25 }}>
-        <a
+        <Link
           href={content.submissions.cta.href}
           className="inline-block rounded-full bg-garnet px-8 py-3.5 text-[13px] tracking-[0.08em] text-paper uppercase transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-garnet-hover"
         >
           {content.submissions.cta.label}
-        </a>
+        </Link>
       </motion.div>
 
       <WaveDivider fill="var(--color-ink)" />

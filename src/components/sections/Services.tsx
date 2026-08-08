@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { content } from "@/lib/content";
 import { reveal, staggerChild, staggerParent } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
@@ -52,12 +53,12 @@ export default function Services() {
         transition={{ ...reveal.transition, delay: 0.15 }}
         className="mt-14"
       >
-        <a
+        <Link
           href={content.services.cta.href}
           className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
         >
           {content.services.cta.label}
-        </a>
+        </Link>
       </motion.div>
     </section>
   );

@@ -13,4 +13,4 @@ services:
   - title: Licensing & Publishing
     description: Protecting the work and placing it commercially, on terms the artist understands and agrees to.
 ctaLabel: Working on something that belongs here? Get in Touch →
-ctaHref: "#contact"
+ctaHref: "/contact"
