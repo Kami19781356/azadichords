@@ -67,10 +67,40 @@ export default function Artists() {
               />
             </motion.div>
 
+            {artist.recognition.length > 0 && (
+              <motion.div
+                {...reveal}
+                transition={{ ...reveal.transition, delay: 0.25 }}
+                className="mt-16 max-w-[720px]"
+              >
+                <div className="mb-6 text-[13px] tracking-[0.15em] text-gold uppercase">
+                  Recognition
+                </div>
+                <div className="border-t border-paper/15">
+                  {artist.recognition.map((item) => (
+                    <div
+                      key={`${item.award}-${item.category}`}
+                      className="grid grid-cols-1 gap-1 border-b border-paper/15 py-4 md:grid-cols-[2fr_1fr] md:items-baseline"
+                    >
+                      <div>
+                        <span className="text-[15px] text-paper/85">
+                          {item.award}
+                        </span>
+                        <span className="ms-2 text-[15px] text-paper/50">
+                          — {item.category}
+                        </span>
+                      </div>
+                      <div className="text-sm text-paper/40">{item.year}</div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
             <motion.div
               {...reveal}
               transition={{ ...reveal.transition, delay: 0.1 }}
-              className="mt-8"
+              className="mt-12"
             >
               <a
                 href={artist.cta.href}

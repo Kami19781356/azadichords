@@ -16,21 +16,30 @@
 
 ## 1. Brand Overview
 
-Azadichords is an independent Persian-founded music label based in Paris. The site's job is to read as **an institution first** — a real, operating label — with its founding artist, Kamran Rasoolzadeh, presented as content the label houses, not as the site's central character.
+Azadichords is an independent Persian-founded music label based in Paris. The site's job is to read as **an institution first** — a real, operating label built to sign and grow with multiple artists — with Kamran Rasoolzadeh, its first artist, presented as content the label houses, not as the site's central character.
+
+**Tagline: "The Voice of Freedom."** *Azadi* is Persian for "freedom" — the tagline both states the label's mission and translates the name for non-Persian readers. Place it as a small line beneath the AZADICHORDS wordmark in the nav (not competing with the existing hero subheading, which stays as-is).
 
 **Tone:** Literary, restrained, serious. No agency sales language, no overt political sloganeering — the site speaks in human terms (silence, exile, voice), never in accusations or names. No filmmaking content anywhere on this site — that identity belongs to youality.fr, kept fully separate.
 
 ---
 
-## 2. Sitemap (final — 7 items)
+## 2. Sitemap (final — 10 standalone routes)
 
-1. **Home** — hero statement
-2. **Manifesto** — label philosophy, origin story
-3. **Music** — the label's output (currently pre-release)
-4. **The Artist** — full bio + Recognition (awards)
-5. **Press** — empty shell, ready to populate
-6. **Support** — pre-order / direct-to-fan funding
-7. **Contact** — form only, no exposed personal contact info
+**Architecture (confirmed):** Home (`/`) is a full-scroll narrative experience with anchor links between sections, for first-time visitors reading the whole story in sequence. Every section also exists as its own standalone route — clicking any nav item navigates to that dedicated URL, not just an anchor jump. This gives full SEO/sharing benefit to every page, including Activity, Services, and Submissions.
+
+1. **Home** (`/`) — hero statement + tagline + full-scroll version of everything below
+2. **Manifesto** (`/manifesto`) — label philosophy, origin story
+3. **Music** (`/music`) — the label's output (currently pre-release)
+4. **Artists** (`/artists` — confirm exact slug with Claude Code) — growth-framed intro + Kamran's full bio + Recognition
+5. **Activity** (`/activity`) — timeline/milestone log
+6. **Press** (`/press`) — empty shell, ready to populate
+7. **Services** (`/services`) — "What the Label Offers," for prospective artists
+8. **Submissions** (`/submissions`) — "For the Next Voice," open call for artist submissions
+9. **Support** (`/support`) — pre-order / direct-to-fan funding
+10. **Contact** (`/contact`) — form (now includes "Submission" category)
+
+**SEO implication:** all 10 routes need their own metadata + JSON-LD per the SEO spec — this is now confirmed to include `/activity`, `/services`, and `/submissions` too, not just the original 7. `/submissions` in particular should be written to rank for "Persian independent label accepting submissions"-type searches, since it's a real, independently reachable page.
 
 ---
 
@@ -78,38 +87,100 @@ An independent label for the voice that refuses to be silent.
 
 > This label exists because of one record — Azadichords' debut release, forthcoming from its first artist, Kamran Rasoolzadeh.
 >
-> Before founding the label, Kamran released *CHESHMAT* (2014) — the record that shaped a generation, and drew the attention that would eventually silence him.
+> Before Azadichords, Kamran composed and produced *CHESHMAT* (2014) for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. His music video *Freedom* — a meditation on liberation as the foundation of a free society — later won Best Music Video at festivals in San Francisco, Seoul, and Kazan.
 >
 > [ Listen to CHESHMAT → ]
 >
 > The label's first release — including official videos — arrives soon.
 
+**Correction note:** CHESHMAT was composed and produced by Kamran; vocals were performed by Mehrnoosh. Do not credit Kamran as the singer on this specific release — this was an error in the earlier draft.
+
 **Build note:** This page hosts the audio preview player (see `Azadichords_SEO_MediaPreview_Spec.md`) once the first single/teaser clip is ready. Build the player component now; populate with real audio when available.
 
 ---
 
-### THE ARTIST
+### ARTISTS
 
-**Header:** The Artist
+**Header:** Artists
 
-**Intro:**
+**Section intro (new — reflects the label's growth ambition):**
+
+> Azadichords is built to grow beyond a single voice. It begins with one artist — more will join as the label expands.
+
+**Kamran Rasoolzadeh subsection:**
+
+*Role line:* Poet, Composer, Singer-Songwriter
+
+*Intro:*
 
 > Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.
 
-**Full bio:**
+*Full bio (corrected):*
 
-> Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His 2014 album *CHESHMAT* became one of the defining records of its generation, despite — and in part because of — the restrictions placed on his work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where Azadichords was born.
+> Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced *CHESHMAT* for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works.
 
-**Subsection — Recognition:**
+**Subsection — Recognition (expanded with verified awards):**
 
 | Award | Category | Year |
 |---|---|---|
-| Iranian Film Festival San Francisco | Best Music Video | 2022 |
+| Iranian Film Festival San Francisco | Best Music Video — *Freedom* | 2022 |
+| K-Music and Arts Film Festival, Seoul | Best Music Video — *Freedom* | 2022 |
+| ZILANT International Film Festival | Best Music Video — *Freedom* | 2022 |
 | Fajr Music Festival | Best Songwriting | 2022 |
+
+*Possible addition pending confirmation:* Sepanta Award for Best Music Video (also for *Freedom*) — year not yet confirmed, add once verified.
 
 **Closing:**
 
 > [ Explore the Music → ]
+
+---
+
+### ACTIVITY (new section — live on site, not in earlier drafts)
+
+**Header:** Activity
+
+> A running record of where Azadichords has been — performances, releases, and the milestones along the way.
+>
+> Azadichords is early. This record starts with the first release and the first show — both are still ahead.
+
+---
+
+### SERVICES — "What the Label Offers" (new section — live on site, not in earlier drafts)
+
+**Header:** What the Label Offers
+
+> Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.
+
+**Production & Mixing** — Studio time, arrangement, and audio engineering support, from first draft to final master.
+
+**Distribution** — Placing the work on every major platform, worldwide, under the artist's own name.
+
+**Visual Identity** — Album art, music videos, and the visual language that carries a record beyond its audio.
+
+**Live Performance** — From a first show to a touring itinerary — the logistics behind bringing a record to a stage.
+
+**Licensing & Publishing** — Protecting the work and placing it commercially, on terms the artist understands and agrees to.
+
+> [ Working on something that belongs here? Get in Touch → ]
+
+---
+
+### SUBMISSIONS — "For the Next Voice" (new section — live on site, not in earlier drafts)
+
+**Header:** For the Next Voice
+
+> Azadichords exists for music that needed a home beyond permission. If that describes your work, we want to hear it.
+
+- 2–3 tracks, in their current form — polished or not.
+- A few sentences about the work and the story behind it.
+- No press kit, no pitch deck. Just the music.
+
+> Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.
+>
+> [ Submit Your Work → ]
+
+**Note:** Contact form's Category dropdown now includes "Submission" alongside General / Press / Booking / Licensing.
 
 ---
 

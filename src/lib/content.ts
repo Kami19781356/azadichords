@@ -8,6 +8,7 @@ import type { Content } from "./content.types";
 export const content: Content = {
   "nav": {
     "brand": "AZADICHORDS",
+    "tagline": "The Voice of Freedom",
     "links": [
       {
         "href": "#manifesto",
@@ -98,11 +99,33 @@ export const content: Content = {
       "role": "Poet, Composer, Singer-Songwriter",
       "imageCaption": "portrait — Kamran, close crop",
       "intro": "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
-      "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His 2014 album <em>CHESHMAT</em> became one of the defining records of its generation, despite — and in part because of — the restrictions placed on his work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where Azadichords was born.",
+      "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works.",
       "cta": {
         "label": "Explore the Music →",
         "href": "#music"
-      }
+      },
+      "recognition": [
+        {
+          "award": "Iranian Film Festival San Francisco",
+          "category": "Best Music Video — Freedom",
+          "year": "2022"
+        },
+        {
+          "award": "K-Music and Arts Film Festival, Seoul",
+          "category": "Best Music Video — Freedom",
+          "year": "2022"
+        },
+        {
+          "award": "ZILANT International Film Festival",
+          "category": "Best Music Video — Freedom",
+          "year": "2022"
+        },
+        {
+          "award": "Fajr Music Festival",
+          "category": "Best Songwriting",
+          "year": "2022"
+        }
+      ]
     }
   ],
   "albums": [
@@ -113,7 +136,7 @@ export const content: Content = {
       "year": 2014,
       "status": "released",
       "coverImageCaption": "CHESHMAT — 2014 album art",
-      "blurb": "Before founding the label, Kamran released <em>CHESHMAT</em> (2014) — the record that shaped a generation, and drew the attention that would eventually silence him.",
+      "blurb": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> (2014) for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. His music video <em>Freedom</em> — a meditation on liberation as the foundation of a free society — later won Best Music Video at festivals in San Francisco, Seoul, and Kazan.",
       "tracks": [],
       "musicVideoUrl": "",
       "musicVideoCaption": "",

@@ -19,6 +19,7 @@ collections:
         file: content/pages/nav.yml
         fields:
           - { name: brand, label: Brand Name, widget: string }
+          - { name: tagline, label: "Tagline (under the wordmark)", widget: string }
           - name: links
             label: Nav Links
             widget: list
@@ -175,6 +176,14 @@ collections:
       - { name: intro, label: "Short Intro (shown on roster card)", widget: text }
       - { name: ctaLabel, label: "Profile CTA Label", widget: string }
       - { name: ctaHref, label: "Profile CTA Link", widget: string }
+      - name: recognition
+        label: "Recognition (awards specific to this artist)"
+        widget: list
+        required: false
+        fields:
+          - { name: award, label: "Award / Festival", widget: string }
+          - { name: category, label: Category, widget: string }
+          - { name: year, label: Year, widget: string }
       - { name: body, label: "Full Bio", widget: markdown }
 
   - name: albums

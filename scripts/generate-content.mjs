@@ -52,6 +52,7 @@ const artists = readFolder("artists").map((a) => ({
   intro: a.intro,
   bio: a.body,
   cta: { label: a.ctaLabel, href: a.ctaHref },
+  recognition: a.recognition ?? [],
 }));
 
 const activity = readFolder("activity").map((a) => ({
@@ -78,6 +79,7 @@ const albums = readFolder("albums").map((a) => ({
 const content = {
   nav: {
     brand: nav.brand,
+    tagline: nav.tagline,
     links: nav.links,
   },
   hero: {

@@ -25,6 +25,12 @@ export type Album = {
   externalListen: Cta;
 };
 
+export type RecognitionItem = {
+  award: string;
+  category: string;
+  year: string;
+};
+
 export type Artist = {
   slug: string;
   name: string;
@@ -33,6 +39,7 @@ export type Artist = {
   intro: string;
   bio: string;
   cta: Cta;
+  recognition: RecognitionItem[];
 };
 
 export type SupportTier = {
@@ -55,7 +62,7 @@ export type ServiceItem = {
 };
 
 export type Content = {
-  nav: { brand: string; links: NavLink[] };
+  nav: { brand: string; tagline: string; links: NavLink[] };
   hero: {
     eyebrow: string;
     title: string;

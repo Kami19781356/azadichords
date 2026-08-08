@@ -18,14 +18,30 @@ Music:        "Music — Azadichords"
               "Listen to releases from Azadichords, an independent Paris 
                label for uncensored voices."
 
-The Artist:   "Kamran Rasoolzadeh — Azadichords"
-              "Iranian poet, composer, and singer-songwriter. Creator of 
-               CHESHMAT (2014) and Azadichords' first artist."
+Artists:      "Kamran Rasoolzadeh — Azadichords"
+              "Iranian poet, composer, and singer-songwriter. Composer and 
+               producer of CHESHMAT (2014) and Azadichords' first artist."
+
+Activity:     "Activity — Azadichords"
+              "A running record of Azadichords' releases, performances, 
+               and milestones."
 
 Press:        "Press — Azadichords"
+
+Services:     "What the Label Offers — Azadichords"
+              "Production, distribution, visual identity, live performance, 
+               and licensing support for the artists Azadichords works with."
+
+Submissions:  "For the Next Voice — Submit Your Music — Azadichords"
+              "Azadichords is an independent Persian label reviewing music 
+               submissions from artists whose work needed a home beyond 
+               permission."
+
 Support:      "Support the Project — Azadichords"
 Contact:      "Contact — Azadichords"
 ```
+
+**Priority note:** Submissions is the highest-value page for search-intent matching — it's the page most likely to be found by artists actively searching for a label. Write its title/description to match real search phrasing ("independent label accepting submissions," "Persian music label submit music") rather than purely brand-voice copy.
 
 Each needs to be implemented via Next.js `generateMetadata()` per route — not hardcoded once in a root layout.
 
@@ -56,14 +72,14 @@ This is what lets Google show rich results (artist panels, album cards) instead 
 }
 ```
 
-**On The Artist page (Person):**
+**On the Artists page (Person):**
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Kamran Rasoolzadeh",
   "jobTitle": "Poet, Composer, Singer-songwriter",
-  "url": "https://azadichords.com/the-artist"
+  "url": "https://azadichords.com/artists"
 }
 ```
 
@@ -87,7 +103,7 @@ This last block only gets populated as tracks actually drop — no placeholder d
 - [ ] One `<h1>` per page, proper heading hierarchy below it (currently looks correct from the screenshots)
 - [ ] Real `alt` text on every image once photography replaces the `[portrait — ...]` placeholders — this is currently a gap since placeholders have no alt text to model from
 - [ ] Core Web Vitals: since this is self-hosted (not on a CDN-backed platform), image optimization matters more than usual — use Next.js `<Image>` component everywhere, WebP/AVIF, lazy-load below the fold
-- [ ] i18n/hreflang scaffolding — already noted as architecture-ready in v1; activate only if/when Persian is added
+- [ ] i18n/hreflang scaffolding — already noted as architecture-ready in the Master Brief (Section 5); activate only if/when Persian is added
 
 ### 1.5 Post-launch (not a dev task — your action after going live)
 
@@ -132,7 +148,7 @@ Clean embed with no third-party branding, adaptive quality for slow connections,
 
 ### 2.4 Build order
 
-1. Confirm video hosting choice (Cloudflare Stream vs. self-hosted)
+1. Register Cloudflare account + enable Stream (decision already locked — see 2.3)
 2. Audio player component (wavesurfer.js + custom styling) — build now, even with placeholder/silent state until first clip exists
 3. Video player component — same, build the shell now
 4. Object storage buckets for audio clips (Hetzner)
@@ -140,4 +156,4 @@ Clean embed with no third-party branding, adaptive quality for slow connections,
 
 ---
 
-*All decisions locked. This doc is ready to hand to Claude Code as-is, alongside the content patches (v1–v4) and the sales process spec.*
+*All decisions locked. This doc is ready to hand to Claude Code as-is, alongside the Master Brief (which now consolidates all content — v1 through v4 are superseded) and the sales process spec.*
