@@ -5,6 +5,8 @@ import { content } from "@/lib/content";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
 import SplitReveal from "@/components/SplitReveal";
+import AudioPlayer from "@/components/AudioPlayer";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export default function Music() {
   return (
@@ -78,12 +80,7 @@ export default function Music() {
                           )}
                         </div>
                         {track.audioUrl && (
-                          <audio
-                            controls
-                            preload="none"
-                            src={track.audioUrl}
-                            className="h-9 w-full"
-                          />
+                          <AudioPlayer src={track.audioUrl} title={track.title} />
                         )}
                       </li>
                     ))}
@@ -100,11 +97,9 @@ export default function Music() {
                   Video
                 </div>
                 {album.musicVideoUrl ? (
-                  <video
-                    controls
-                    preload="none"
+                  <VideoPlayer
                     src={album.musicVideoUrl}
-                    className="w-full rounded"
+                    caption={album.musicVideoCaption || album.title}
                   />
                 ) : (
                   <p className="m-0 text-sm text-paper/40">
