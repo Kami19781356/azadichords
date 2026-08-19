@@ -91,7 +91,11 @@ export const content: Content = {
     "closing": "The label's first release — including official videos — arrives soon.",
     "comingSoonLabel": "Coming Soon",
     "tracksComingSoonLabel": "Tracks arriving soon.",
-    "videoComingSoonLabel": "Music video arriving soon."
+    "videoComingSoonLabel": "Music video arriving soon.",
+    "demoComingSoonLabel": "Demo arriving soon.",
+    "getReleaseLabel": "Get This Release",
+    "getReleaseNote": "Stream everywhere once released — or get it now, plus a ticket to our first live show.",
+    "getReleaseCtaLabel": "See how →"
   },
   "artistsPage": {
     "eyebrow": "Artists",
@@ -140,53 +144,55 @@ export const content: Content = {
       ]
     }
   ],
-  "albums": [
+  "releases": [
     {
       "slug": "iran-e-jan",
       "title": "Iran-e Jan",
+      "type": "album",
       "artist": "kamran-rasoolzadeh",
-      "year": 2026,
-      "status": "coming-soon",
+      "status": "upcoming",
+      "releaseDate": "2026-09-16",
       "coverImageCaption": "Iran-e Jan — album art",
-      "blurb": "Azadichords' debut release, arriving September 16, 2026. Lead single \"Bang Bang\" premieres around September 1.",
+      "tagline": "The debut release from Azadichords — arriving September 16, 2026.",
+      "description": "Iran-e Jan is Kamran Rasoolzadeh's debut release under Azadichords — eleven tracks written in the shadow of a country in mourning and the light of one that refuses to stay silent. Lead single \"Bang Bang\" premieres September 1; the full album follows on September 16 — the anniversary of Jina Mahsa Amini's death.",
+      "demoAudioUrl": "",
+      "videoUrl": "",
+      "videoCaption": "",
       "tracks": [
         {
-          "title": "1819",
-          "durationLabel": "",
-          "audioUrl": "",
-          "isLead": false,
-          "leadNote": ""
+          "trackNumber": 1,
+          "title": "Bang Bang",
+          "duration": "",
+          "previewUrl": ""
         },
         {
-          "title": "Bang Bang",
-          "durationLabel": "",
-          "audioUrl": "",
-          "isLead": true,
-          "leadNote": "Lead single — teaser arriving around September 1"
+          "trackNumber": 2,
+          "title": "1819",
+          "duration": "",
+          "previewUrl": ""
         }
       ],
-      "musicVideoUrl": "",
-      "musicVideoCaption": "",
-      "externalListen": {
-        "label": "",
-        "href": ""
-      }
+      "streamingLinks": [],
+      "supportTierLink": true,
+      "purchaseNote": ""
     },
     {
       "slug": "cheshmat",
       "title": "CHESHMAT",
+      "type": "album",
       "artist": "kamran-rasoolzadeh",
-      "year": 2014,
-      "status": "released",
+      "status": "out_now",
+      "releaseDate": "2014",
       "coverImageCaption": "CHESHMAT — 2014 album art",
-      "blurb": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> (2014) for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. His music video <em>Freedom</em> — a meditation on liberation as the foundation of a free society — later won Best Music Video at festivals in San Francisco, Seoul, and Kazan.",
+      "tagline": "The 2014 album that shaped a generation — and drew the attention that would later silence him.",
+      "description": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> (2014) for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. His music video <em>Freedom</em> — a meditation on liberation as the foundation of a free society — later won Best Music Video at festivals in San Francisco, Seoul, and Kazan.",
+      "demoAudioUrl": "",
+      "videoUrl": "",
+      "videoCaption": "",
       "tracks": [],
-      "musicVideoUrl": "",
-      "musicVideoCaption": "",
-      "externalListen": {
-        "label": "Listen to CHESHMAT →",
-        "href": "#"
-      }
+      "streamingLinks": [],
+      "supportTierLink": false,
+      "purchaseNote": ""
     }
   ],
   "activityPage": {

@@ -5,26 +5,35 @@
 export type NavLink = { href: string; label: string };
 export type Cta = { label: string; href: string };
 
-export type Track = {
+export type ReleaseTrack = {
+  trackNumber: number;
   title: string;
-  durationLabel?: string;
-  audioUrl?: string;
-  isLead?: boolean;
-  leadNote?: string;
+  duration?: string;
+  previewUrl?: string;
 };
 
-export type Album = {
+export type StreamingLink = { platform: string; url: string };
+
+// A Release is an album, single, or EP — one schema for the whole
+// catalog. Sorted by releaseDate (see generate-content.mjs), so the
+// newest one is always content.releases[0] — no manual ordering field.
+export type Release = {
   slug: string;
   title: string;
+  type: "album" | "single" | "ep";
   artist: string;
-  year: number;
-  status: string;
+  status: "upcoming" | "out_now";
+  releaseDate: string;
   coverImageCaption: string;
-  blurb: string;
-  tracks: Track[];
-  musicVideoUrl: string;
-  musicVideoCaption: string;
-  externalListen: Cta;
+  tagline: string;
+  description: string;
+  demoAudioUrl: string;
+  videoUrl: string;
+  videoCaption: string;
+  tracks: ReleaseTrack[];
+  streamingLinks: StreamingLink[];
+  supportTierLink: boolean;
+  purchaseNote: string;
 };
 
 export type RecognitionItem = {
@@ -91,6 +100,10 @@ export type Content = {
     comingSoonLabel: string;
     tracksComingSoonLabel: string;
     videoComingSoonLabel: string;
+    demoComingSoonLabel: string;
+    getReleaseLabel: string;
+    getReleaseNote: string;
+    getReleaseCtaLabel: string;
   };
   artistsPage: {
     eyebrow: string;
@@ -98,7 +111,7 @@ export type Content = {
     intro: string;
   };
   artists: Artist[];
-  albums: Album[];
+  releases: Release[];
   activityPage: {
     eyebrow: string;
     title: string;

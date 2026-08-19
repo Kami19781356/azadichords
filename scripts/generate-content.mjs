@@ -74,28 +74,38 @@ const activity = readFolder("activity").map((a) => ({
   link: a.link || "",
 }));
 
-const albums = readFolder("albums").map((a) => ({
-  slug: a.slug,
-  title: a.title,
-  artist: a.artist,
-  year: a.year,
-  status: a.status,
-  coverImageCaption: a.coverImageCaption,
-  blurb: en(a, "blurb") || a.body,
-  tracks: (a.tracks ?? []).map((t) => ({
-    title: t.title,
-    durationLabel: t.durationLabel || "",
-    audioUrl: t.audioUrl || "",
-    isLead: !!t.isLead,
-    leadNote: en(t, "leadNote") || "",
-  })),
-  musicVideoUrl: a.musicVideoUrl || "",
-  musicVideoCaption: en(a, "musicVideoCaption") || "",
-  externalListen: {
-    label: en(a, "externalListenLabel") || "",
-    href: a.externalListenHref || "",
-  },
-}));
+// Releases (albums/singles/EPs) share one schema and are sorted by
+// release_date (newest first) instead of a manual order field — see
+// Azadichords_Release_Template.md. content.releases[0] is always the
+// newest/featured one.
+const releases = readFolder("releases")
+  .map((r) => ({
+    slug: r.slug,
+    title: r.title,
+    type: r.type,
+    artist: r.artist,
+    status: r.status,
+    releaseDate: r.release_date,
+    coverImageCaption: r.coverImageCaption,
+    tagline: en(r, "tagline"),
+    description: en(r, "description") || r.body,
+    demoAudioUrl: r.demo_audio_url || "",
+    videoUrl: r.video_url || "",
+    videoCaption: en(r, "musicVideoCaption") || "",
+    tracks: (r.tracks ?? []).map((t) => ({
+      trackNumber: t.track_number,
+      title: en(t, "title"),
+      duration: t.duration || "",
+      previewUrl: t.preview_url || "",
+    })),
+    streamingLinks: (r.streaming_links ?? []).map((s) => ({
+      platform: s.platform,
+      url: s.url,
+    })),
+    supportTierLink: !!r.support_tier_link,
+    purchaseNote: en(r, "purchaseNote") || "",
+  }))
+  .sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
 
 const content = {
   nav: {
@@ -128,6 +138,10 @@ const content = {
     comingSoonLabel: en(music, "comingSoonLabel"),
     tracksComingSoonLabel: en(music, "tracksComingSoonLabel"),
     videoComingSoonLabel: en(music, "videoComingSoonLabel"),
+    demoComingSoonLabel: en(music, "demoComingSoonLabel"),
+    getReleaseLabel: en(music, "getReleaseLabel"),
+    getReleaseNote: en(music, "getReleaseNote"),
+    getReleaseCtaLabel: en(music, "getReleaseCtaLabel"),
   },
   artistsPage: {
     eyebrow: en(artistsPage, "eyebrow"),
@@ -135,7 +149,7 @@ const content = {
     intro: en(artistsPage, "intro"),
   },
   artists,
-  albums,
+  releases,
   activityPage: {
     eyebrow: en(activityPage, "eyebrow"),
     title: en(activityPage, "title"),

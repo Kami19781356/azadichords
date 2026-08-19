@@ -92,6 +92,14 @@ collections:
           - { name: tracksComingSoonLabel_fa, label: "No-Tracks-Yet Text FA", widget: string, required: false }
           - { name: videoComingSoonLabel_en, label: "No-Video-Yet Text EN", widget: string }
           - { name: videoComingSoonLabel_fa, label: "No-Video-Yet Text FA", widget: string, required: false }
+          - { name: demoComingSoonLabel_en, label: "No-Demo-Yet Text EN", widget: string }
+          - { name: demoComingSoonLabel_fa, label: "No-Demo-Yet Text FA", widget: string, required: false }
+          - { name: getReleaseLabel_en, label: "'Get This Release' Button Label EN", widget: string }
+          - { name: getReleaseLabel_fa, label: "'Get This Release' Button Label FA", widget: string, required: false }
+          - { name: getReleaseNote_en, label: "'Get This Release' Note EN (links to /support)", widget: text }
+          - { name: getReleaseNote_fa, label: "'Get This Release' Note FA", widget: text, required: false }
+          - { name: getReleaseCtaLabel_en, label: "'Get This Release' Note Link Label EN", widget: string }
+          - { name: getReleaseCtaLabel_fa, label: "'Get This Release' Note Link Label FA", widget: string, required: false }
 
       - name: artists_page
         label: Artists (roster page)
@@ -261,14 +269,23 @@ collections:
       - { name: bio_en, label: "Full Bio EN", widget: markdown }
       - { name: bio_fa, label: "Full Bio FA", widget: markdown, required: false }
 
-  - name: albums
-    label: Albums
-    folder: content/albums
+  # One schema for every release — album, single, or EP. Sorted by
+  # release_date (see scripts/generate-content.mjs), so whichever entry
+  # has the newest date automatically becomes the featured "latest
+  # release" on the Music page — no manual ordering field to maintain.
+  - name: releases
+    label: Releases
+    folder: content/releases
     create: true
     slug: "{{fields.slug}}"
     fields:
       - { name: slug, label: "Slug (URL-safe, e.g. cheshmat)", widget: string }
-      - { name: title, label: "Album Title (not translated)", widget: string }
+      - { name: title, label: "Release Title (not translated)", widget: string }
+      - name: type
+        label: Type
+        widget: select
+        options: [album, single, ep]
+        default: album
       - name: artist
         label: Artist
         widget: relation
@@ -276,32 +293,44 @@ collections:
         search_fields: [name]
         display_fields: [name]
         value_field: "{{slug}}"
-      - { name: year, label: Year, widget: number, value_type: int }
       - name: status
         label: Status
         widget: select
-        options: [released, coming-soon]
-        default: coming-soon
+        options: [upcoming, out_now]
+        default: upcoming
+      - { name: release_date, label: "Release Date (YYYY-MM-DD, or just YYYY if the exact date isn't known yet)", widget: string }
       - { name: coverImageCaption, label: "Cover Placeholder Caption", widget: string }
-      - { name: externalListenLabel_en, label: "External Listen Link Label EN", widget: string, required: false }
-      - { name: externalListenLabel_fa, label: "External Listen Link Label FA", widget: string, required: false }
-      - { name: externalListenHref, label: "External Listen Link (Spotify/etc.)", widget: string, required: false }
+      - { name: tagline_en, label: "Tagline EN (short, one line)", widget: string }
+      - { name: tagline_fa, label: "Tagline FA", widget: string, required: false }
+      - { name: description_en, label: Description EN, widget: markdown }
+      - { name: description_fa, label: Description FA, widget: markdown, required: false }
+      - { name: demo_audio_url, label: "Inline Demo Audio URL (optional)", widget: string, required: false }
+      - { name: video_url, label: "Music Video URL (optional)", widget: string, required: false }
+      - { name: musicVideoCaption_en, label: "Music Video Caption EN", widget: string, required: false }
+      - { name: musicVideoCaption_fa, label: "Music Video Caption FA", widget: string, required: false }
       - name: tracks
         label: Tracks
         widget: list
         required: false
         fields:
-          - { name: title, label: "Track Title (not translated)", widget: string }
-          - { name: durationLabel, label: "Duration (e.g. 3:42)", widget: string, required: false }
-          - { name: audioUrl, label: "Preview Audio URL", widget: string, required: false }
-          - { name: isLead, label: "Lead single? (shown in the hero's inline player)", widget: boolean, default: false }
-          - { name: leadNote_en, label: "Lead-single note EN (e.g. 'teaser arriving Sept 1')", widget: string, required: false }
-          - { name: leadNote_fa, label: "Lead-single note FA", widget: string, required: false }
-      - { name: musicVideoUrl, label: "Music Video URL", widget: string, required: false }
-      - { name: musicVideoCaption_en, label: "Music Video Caption EN", widget: string, required: false }
-      - { name: musicVideoCaption_fa, label: "Music Video Caption FA", widget: string, required: false }
-      - { name: blurb_en, label: "Album Description EN", widget: markdown }
-      - { name: blurb_fa, label: "Album Description FA", widget: markdown, required: false }
+          - { name: track_number, label: "Track #", widget: number, value_type: int }
+          - { name: title_en, label: Track Title EN, widget: string }
+          - { name: title_fa, label: Track Title FA, widget: string, required: false }
+          - { name: duration, label: "Duration (e.g. 3:42)", widget: string, required: false }
+          - { name: preview_url, label: "Preview Audio URL", widget: string, required: false }
+      - name: streaming_links
+        label: Streaming Links
+        widget: list
+        required: false
+        fields:
+          - name: platform
+            label: Platform
+            widget: select
+            options: [spotify, apple_music, youtube_music, soundcloud, other]
+          - { name: url, label: URL, widget: string }
+      - { name: support_tier_link, label: "Link this release to the Support tiers?", widget: boolean, default: false }
+      - { name: purchaseNote_en, label: "Override 'Get This Release' note EN (optional — leave blank for the site default)", widget: string, required: false }
+      - { name: purchaseNote_fa, label: "Override 'Get This Release' note FA (optional)", widget: string, required: false }
 
   - name: activity
     label: Activity

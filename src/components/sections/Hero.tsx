@@ -8,21 +8,13 @@ import { easeCustom, preloaderDurationMs } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import AudioPlayer from "@/components/AudioPlayer";
 
-// The lead single is whichever track across all albums is flagged
-// isLead — keeps Hero content-driven instead of hardcoding a track.
-function findLeadTrack() {
-  for (const album of content.albums) {
-    const track = album.tracks.find((t) => t.isLead);
-    if (track) return track;
-  }
-  return null;
-}
-
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [listenOpen, setListenOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const leadTrack = findLeadTrack();
+  // content.releases is sorted newest-first, so [0] is always the
+  // release the Hero's inline player should feature.
+  const latestRelease = content.releases[0] ?? null;
 
   useEffect(() => {
     const base = prefersReducedMotion ? 60 : preloaderDurationMs - 200;
@@ -125,13 +117,16 @@ export default function Hero() {
               className="mx-auto w-full max-w-[420px] overflow-hidden"
             >
               <div className="rounded-full border border-paper/20 bg-ink/40 px-6 py-4 backdrop-blur-sm">
-                {leadTrack?.audioUrl ? (
-                  <AudioPlayer src={leadTrack.audioUrl} title={leadTrack.title} />
+                {latestRelease?.demoAudioUrl ? (
+                  <AudioPlayer
+                    src={latestRelease.demoAudioUrl}
+                    title={latestRelease.title}
+                  />
                 ) : (
                   <p className="m-0 text-sm text-paper/60">
-                    {leadTrack
-                      ? `"${leadTrack.title}" — ${leadTrack.leadNote || "arriving soon"}`
-                      : content.music.tracksComingSoonLabel}
+                    {latestRelease
+                      ? `"${latestRelease.title}" — ${latestRelease.tagline}`
+                      : content.music.demoComingSoonLabel}
                   </p>
                 )}
               </div>
