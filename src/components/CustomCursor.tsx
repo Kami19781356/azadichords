@@ -1,18 +1,18 @@
 "use client";
 
-import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const SIZE = 12;
+const SIZE = 22;
 
 export default function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
   const [hovering, setHovering] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  // Bound directly to raw pointer coordinates (no spring) so the note
+  // tracks the mouse at native cursor speed, with zero lag.
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
-  const springX = useSpring(x, { stiffness: 500, damping: 40, mass: 0.3 });
-  const springY = useSpring(y, { stiffness: 500, damping: 40, mass: 0.3 });
 
   useEffect(() => {
     if (prefersReducedMotion) return;
@@ -44,18 +44,20 @@ export default function CustomCursor() {
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none fixed top-0 left-0 z-[90] rounded-full bg-gold/80"
+      className="pointer-events-none fixed top-0 left-0 z-[90] text-gold/80"
       style={{
-        width: SIZE,
-        height: SIZE,
-        x: springX,
-        y: springY,
+        x,
+        y,
         translateX: "-50%",
         translateY: "-50%",
         willChange: "transform",
       }}
-      animate={{ scale: hovering ? 3.6 : 1 }}
+      animate={{ scale: hovering ? 1.8 : 1 }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-    />
+    >
+      <svg width={SIZE} height={SIZE} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9z" />
+      </svg>
+    </motion.div>
   );
 }
