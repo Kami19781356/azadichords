@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 
@@ -9,6 +9,7 @@ const inputClass =
   "border-0 border-b border-paper/25 bg-transparent px-1 py-3.5 font-sans text-base text-paper outline-none transition-colors duration-200 focus:border-gold";
 
 export default function Contact() {
+  const content = useContent();
   return (
     <section
       id="contact"

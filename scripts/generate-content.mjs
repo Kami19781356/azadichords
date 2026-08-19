@@ -1,15 +1,13 @@
 // Regenerates src/lib/content.ts from the editable files in content/
-// (pages/*.yml, artists/*.md, albums/*.md). Runs automatically before
+// (pages/*.yml, artists/*.md, releases/*.md). Runs automatically before
 // `next dev` and `next build` (see package.json), so anything committed
 // through the CMS is picked up on the next run/deploy with no manual step.
 //
 // Source files use a bilingual `_en`/`_fa` field-pair convention (e.g.
-// `title_en` / `title_fa`) so that adding real i18n later — or
-// migrating to a CMS with native i18n (Payload, etc.) — is a matter of
-// reading a different suffix, not a schema rewrite. The site itself
-// only renders English right now, so this generator reads `_en` and
-// emits the same flat, unprefixed shape it always has; `_fa` values
-// live in the source files but aren't consumed yet.
+// `title_en` / `title_fa`). This generator builds one full content tree
+// per locale (see buildContent below); any `_fa` field left blank falls
+// back to its `_en` value, so the Persian site never shows a gap — it
+// just shows English until the field is filled in.
 //
 // Do not hand-edit src/lib/content.ts — edit the files in content/ instead.
 
@@ -39,8 +37,20 @@ function readFolder(folder) {
     });
 }
 
-// Reads the `_en` half of a bilingual field pair.
-const en = (obj, key) => obj[`${key}_en`];
+function isEmpty(v) {
+  if (v == null) return true;
+  if (typeof v === "string") return v.trim() === "";
+  if (Array.isArray(v)) return v.length === 0;
+  return false;
+}
+
+// Reads the `_{lang}` half of a bilingual field pair, falling back to
+// `_en` when the localized value is missing/blank (works for strings
+// and arrays alike).
+function t(obj, key, lang) {
+  const localized = obj[`${key}_${lang}`];
+  return isEmpty(localized) ? obj[`${key}_en`] : localized;
+}
 
 const nav = readYaml("nav");
 const home = readYaml("home");
@@ -55,162 +65,183 @@ const support = readYaml("support");
 const contact = readYaml("contact");
 const footer = readYaml("footer");
 
-const artists = readFolder("artists").map((a) => ({
-  slug: a.slug,
-  name: a.name,
-  role: en(a, "role"),
-  badge: en(a, "badge") || "",
-  imageCaption: a.imageCaption,
-  intro: en(a, "intro"),
-  bio: en(a, "bio") || a.body, // fall back to markdown body for older entries
-  cta: { label: en(a, "ctaLabel"), href: a.ctaHref },
-  recognition: a.recognition ?? [],
-}));
+const artistFiles = readFolder("artists");
+const activityFiles = readFolder("activity");
+const releaseFiles = readFolder("releases");
 
-const activity = readFolder("activity").map((a) => ({
-  date: a.date,
-  title: en(a, "title"),
-  description: en(a, "body") || a.body,
-  link: a.link || "",
-}));
+function buildContent(lang) {
+  const artists = artistFiles.map((a) => ({
+    slug: a.slug,
+    name: a.name,
+    role: t(a, "role", lang),
+    badge: t(a, "badge", lang) || "",
+    imageCaption: a.imageCaption,
+    intro: t(a, "intro", lang),
+    bio: t(a, "bio", lang) || a.body, // fall back to markdown body for older entries
+    cta: { label: t(a, "ctaLabel", lang), href: a.ctaHref },
+    recognition: a.recognition ?? [],
+    priorWork: isEmpty(a.priorWorkTitle_en)
+      ? null
+      : {
+          title: t(a, "priorWorkTitle", lang),
+          description: t(a, "priorWorkDescription", lang),
+          videoUrl: a.priorWorkVideoUrl || "",
+        },
+  }));
 
-// Releases (albums/singles/EPs) share one schema and are sorted by
-// release_date (newest first) instead of a manual order field — see
-// Azadichords_Release_Template.md. content.releases[0] is always the
-// newest/featured one.
-const releases = readFolder("releases")
-  .map((r) => ({
-    slug: r.slug,
-    title: r.title,
-    type: r.type,
-    artist: r.artist,
-    status: r.status,
-    releaseDate: r.release_date,
-    coverImageCaption: r.coverImageCaption,
-    tagline: en(r, "tagline"),
-    description: en(r, "description") || r.body,
-    demoAudioUrl: r.demo_audio_url || "",
-    videoUrl: r.video_url || "",
-    videoCaption: en(r, "musicVideoCaption") || "",
-    tracks: (r.tracks ?? []).map((t) => ({
-      trackNumber: t.track_number,
-      title: en(t, "title"),
-      duration: t.duration || "",
-      previewUrl: t.preview_url || "",
-    })),
-    streamingLinks: (r.streaming_links ?? []).map((s) => ({
-      platform: s.platform,
-      url: s.url,
-    })),
-    supportTierLink: !!r.support_tier_link,
-    purchaseNote: en(r, "purchaseNote") || "",
-  }))
-  .sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
+  const activity = activityFiles.map((a) => ({
+    date: a.date,
+    title: t(a, "title", lang),
+    description: t(a, "body", lang) || a.body,
+    link: a.link || "",
+  }));
+
+  // Releases (albums/singles/EPs) share one schema and are sorted by
+  // release_date (newest first) instead of a manual order field — see
+  // Azadichords_Release_Template.md. content.releases[0] is always the
+  // newest/featured one. Tracks are sorted by track_number, not file
+  // order, so re-saving in the CMS can't silently reshuffle them.
+  const releases = releaseFiles
+    .map((r) => ({
+      slug: r.slug,
+      title: r.title,
+      type: r.type,
+      artist: r.artist,
+      status: r.status,
+      releaseDate: r.release_date,
+      coverImageCaption: r.coverImageCaption,
+      tagline: t(r, "tagline", lang),
+      description: t(r, "description", lang) || r.body,
+      demoAudioUrl: r.demo_audio_url || "",
+      videoUrl: r.video_url || "",
+      videoCaption: t(r, "musicVideoCaption", lang) || "",
+      tracks: (r.tracks ?? [])
+        .map((tr) => ({
+          trackNumber: tr.track_number,
+          title: t(tr, "title", lang),
+          duration: tr.duration || "",
+          previewUrl: tr.preview_url || "",
+        }))
+        .sort((a, b) => a.trackNumber - b.trackNumber),
+      streamingLinks: (r.streaming_links ?? []).map((s) => ({
+        platform: s.platform,
+        url: s.url,
+      })),
+      supportTierLink: !!r.support_tier_link,
+      purchaseNote: t(r, "purchaseNote", lang) || "",
+    }))
+    .sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
+
+  return {
+    nav: {
+      brand: nav.brand,
+      tagline: t(nav, "tagline", lang),
+      links: nav.links.map((l) => ({ href: l.href, label: t(l, "label", lang) })),
+    },
+    hero: {
+      eyebrow: t(home, "eyebrow", lang),
+      title: home.title,
+      subhead: t(home, "subhead", lang),
+      ctaPrimary: { label: t(home, "ctaPrimaryLabel", lang), href: home.ctaPrimaryHref },
+      ctaSecondary: { label: t(home, "ctaSecondaryLabel", lang), href: home.ctaSecondaryHref },
+      scrollHint: t(home, "scrollHint", lang),
+      promoBar: { label: t(home, "promoBarLabel", lang), href: home.promoBarHref },
+    },
+    manifesto: {
+      eyebrow: t(manifesto, "eyebrow", lang),
+      title: t(manifesto, "title", lang),
+      imageCaption: manifesto.imageCaption,
+      paragraphs: t(manifesto, "paragraphs", lang),
+      closing: t(manifesto, "closing", lang),
+      cta: { label: t(manifesto, "ctaLabel", lang), href: manifesto.ctaHref },
+    },
+    music: {
+      eyebrow: t(music, "eyebrow", lang),
+      title: t(music, "title", lang),
+      intro: t(music, "intro", lang),
+      closing: t(music, "closing", lang),
+      comingSoonLabel: t(music, "comingSoonLabel", lang),
+      tracksComingSoonLabel: t(music, "tracksComingSoonLabel", lang),
+      videoComingSoonLabel: t(music, "videoComingSoonLabel", lang),
+      demoComingSoonLabel: t(music, "demoComingSoonLabel", lang),
+      getReleaseLabel: t(music, "getReleaseLabel", lang),
+      getReleaseNote: t(music, "getReleaseNote", lang),
+      getReleaseCtaLabel: t(music, "getReleaseCtaLabel", lang),
+    },
+    artistsPage: {
+      eyebrow: t(artistsPage, "eyebrow", lang),
+      title: t(artistsPage, "title", lang),
+      intro: t(artistsPage, "intro", lang),
+    },
+    artists,
+    releases,
+    activityPage: {
+      eyebrow: t(activityPage, "eyebrow", lang),
+      title: t(activityPage, "title", lang),
+      intro: t(activityPage, "intro", lang),
+      emptyStateNote: t(activityPage, "emptyStateNote", lang),
+    },
+    activity,
+    press: {
+      eyebrow: t(press, "eyebrow", lang),
+      title: t(press, "title", lang),
+      paragraphs: t(press, "paragraphs", lang),
+    },
+    services: {
+      eyebrow: t(services, "eyebrow", lang),
+      title: t(services, "title", lang),
+      intro: t(services, "intro", lang),
+      items: services.services.map((s) => ({
+        title: t(s, "title", lang),
+        description: t(s, "description", lang),
+      })),
+      cta: { label: t(services, "ctaLabel", lang), href: services.ctaHref },
+    },
+    submissions: {
+      eyebrow: t(submissions, "eyebrow", lang),
+      title: t(submissions, "title", lang),
+      intro: t(submissions, "intro", lang),
+      guidelines: t(submissions, "guidelines", lang),
+      note: t(submissions, "note", lang),
+      cta: { label: t(submissions, "ctaLabel", lang), href: submissions.ctaHref },
+    },
+    support: {
+      eyebrow: t(support, "eyebrow", lang),
+      title: t(support, "title", lang),
+      intro: t(support, "intro", lang),
+      tiers: support.tiers.map((tier) => ({
+        name: tier.name,
+        title: t(tier, "title", lang),
+        description: t(tier, "description", lang),
+        note: t(tier, "note", lang) || "",
+      })),
+      cta: { label: t(support, "ctaLabel", lang), href: support.ctaHref },
+      transparency: t(support, "transparency", lang),
+    },
+    contact: {
+      eyebrow: t(contact, "eyebrow", lang),
+      title: t(contact, "title", lang),
+      subhead: t(contact, "subhead", lang),
+      fields: {
+        name: t(contact, "fieldNameLabel", lang),
+        email: t(contact, "fieldEmailLabel", lang),
+        subject: t(contact, "fieldSubjectLabel", lang),
+        category: t(contact, "fieldCategoryLabel", lang),
+      },
+      categories: t(contact, "categories", lang),
+      submit: t(contact, "submitLabel", lang),
+    },
+    footer: {
+      copyright: footer.copyright,
+      social: footer.social,
+      disclaimer: t(footer, "disclaimer", lang),
+    },
+  };
+}
 
 const content = {
-  nav: {
-    brand: nav.brand,
-    tagline: en(nav, "tagline"),
-    links: nav.links.map((l) => ({ href: l.href, label: en(l, "label") })),
-  },
-  hero: {
-    eyebrow: en(home, "eyebrow"),
-    title: home.title,
-    subhead: en(home, "subhead"),
-    ctaPrimary: { label: en(home, "ctaPrimaryLabel"), href: home.ctaPrimaryHref },
-    ctaSecondary: { label: en(home, "ctaSecondaryLabel"), href: home.ctaSecondaryHref },
-    scrollHint: en(home, "scrollHint"),
-    promoBar: { label: en(home, "promoBarLabel"), href: home.promoBarHref },
-  },
-  manifesto: {
-    eyebrow: en(manifesto, "eyebrow"),
-    title: en(manifesto, "title"),
-    imageCaption: manifesto.imageCaption,
-    paragraphs: manifesto.paragraphs_en,
-    closing: en(manifesto, "closing"),
-    cta: { label: en(manifesto, "ctaLabel"), href: manifesto.ctaHref },
-  },
-  music: {
-    eyebrow: en(music, "eyebrow"),
-    title: en(music, "title"),
-    intro: en(music, "intro"),
-    closing: en(music, "closing"),
-    comingSoonLabel: en(music, "comingSoonLabel"),
-    tracksComingSoonLabel: en(music, "tracksComingSoonLabel"),
-    videoComingSoonLabel: en(music, "videoComingSoonLabel"),
-    demoComingSoonLabel: en(music, "demoComingSoonLabel"),
-    getReleaseLabel: en(music, "getReleaseLabel"),
-    getReleaseNote: en(music, "getReleaseNote"),
-    getReleaseCtaLabel: en(music, "getReleaseCtaLabel"),
-  },
-  artistsPage: {
-    eyebrow: en(artistsPage, "eyebrow"),
-    title: en(artistsPage, "title"),
-    intro: en(artistsPage, "intro"),
-  },
-  artists,
-  releases,
-  activityPage: {
-    eyebrow: en(activityPage, "eyebrow"),
-    title: en(activityPage, "title"),
-    intro: en(activityPage, "intro"),
-    emptyStateNote: en(activityPage, "emptyStateNote"),
-  },
-  activity,
-  press: {
-    eyebrow: en(press, "eyebrow"),
-    title: en(press, "title"),
-    paragraphs: press.paragraphs_en,
-  },
-  services: {
-    eyebrow: en(services, "eyebrow"),
-    title: en(services, "title"),
-    intro: en(services, "intro"),
-    items: services.services.map((s) => ({
-      title: en(s, "title"),
-      description: en(s, "description"),
-    })),
-    cta: { label: en(services, "ctaLabel"), href: services.ctaHref },
-  },
-  submissions: {
-    eyebrow: en(submissions, "eyebrow"),
-    title: en(submissions, "title"),
-    intro: en(submissions, "intro"),
-    guidelines: submissions.guidelines_en,
-    note: en(submissions, "note"),
-    cta: { label: en(submissions, "ctaLabel"), href: submissions.ctaHref },
-  },
-  support: {
-    eyebrow: en(support, "eyebrow"),
-    title: en(support, "title"),
-    intro: support.intro_en,
-    tiers: support.tiers.map((t) => ({
-      name: t.name,
-      title: en(t, "title"),
-      description: en(t, "description"),
-      note: en(t, "note") || "",
-    })),
-    cta: { label: en(support, "ctaLabel"), href: support.ctaHref },
-    transparency: en(support, "transparency"),
-  },
-  contact: {
-    eyebrow: en(contact, "eyebrow"),
-    title: en(contact, "title"),
-    subhead: en(contact, "subhead"),
-    fields: {
-      name: en(contact, "fieldNameLabel"),
-      email: en(contact, "fieldEmailLabel"),
-      subject: en(contact, "fieldSubjectLabel"),
-      category: en(contact, "fieldCategoryLabel"),
-    },
-    categories: contact.categories_en,
-    submit: en(contact, "submitLabel"),
-  },
-  footer: {
-    copyright: footer.copyright,
-    social: footer.social,
-    disclaimer: en(footer, "disclaimer"),
-  },
+  en: buildContent("en"),
+  fa: buildContent("fa"),
 };
 
 const banner = `// AUTO-GENERATED by scripts/generate-content.mjs — do not edit by hand.
@@ -218,13 +249,14 @@ const banner = `// AUTO-GENERATED by scripts/generate-content.mjs — do not edi
 // re-run \`npm run generate-content\` (also runs automatically before
 // dev/build).
 
-import type { Content } from "./content.types";
+import type { Content, Locale } from "./content.types";
 
 `;
 
 writeFileSync(
   outFile,
-  banner + `export const content: Content = ${JSON.stringify(content, null, 2)};\n`,
+  banner +
+    `export const content: Record<Locale, Content> = ${JSON.stringify(content, null, 2)};\n`,
 );
 
 console.log(`Generated ${path.relative(process.cwd(), outFile)}`);

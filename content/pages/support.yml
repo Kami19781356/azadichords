@@ -7,37 +7,44 @@ intro_en:
   - Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe.
 intro_fa:
   - حمایت از آزادی‌کورد یعنی حمایت از صداهایی که تصمیم گرفتن ساکت نمونن. با گوش‌دادن، خریدن، و به‌اشتراک‌گذاشتنِ این موسیقی، بخشی از این حرکت می‌شید.
+  - هر حمایتی که تو این صفحه انجام می‌شه، مستقیم صرفِ رسوندنِ این موسیقی به روی صحنه می‌شه — تولید، سفر، و اولین اجراهای زنده در اروپا.
 tiers:
   # Tier 1 has real content but no Stripe price yet (STRIPE_PRICE_ID_TIER_1
   # env var unset) — see docs/SALES_SETUP.md.
+  # Tier names ("The Record" / "The Record + The Room" / "Founding
+  # Supporter") are brand names and stay untranslated in title_fa too
+  # — only the descriptions/notes are translated.
   - name: Tier 1
     title_en: The Record
-    title_fa: آلبوم
+    title_fa: The Record
     description_en: High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.
-    description_fa: ""
+    description_fa: آلبومِ دیجیتال با کیفیتِ بالا (FLAC + lossless) به‌همراه بوکلتِ دیجیتالِ متن ترانه‌ها و داستانِ پشتِ هر آهنگ.
     note_en: ""
     note_fa: ""
   # TODO (per user, do not guess): Tier 2 price not yet decided.
   - name: Tier 2
     title_en: The Record + The Room
-    title_fa: آلبوم + جا در سالن
+    title_fa: The Record + The Room
     description_en: Everything in Tier 1, plus a ticket (or priority access) to the first live performance.
-    description_fa: ""
+    description_fa: همه‌چیزِ Tier 1، به‌همراه یک بلیت (یا دسترسیِ اولویت‌دار) برای اولین اجرای زنده.
     note_en: ""
     note_fa: ""
   # TODO (per user, do not guess): Tier 3 price not yet decided.
   - name: Tier 3
     title_en: Founding Supporter
-    title_fa: حامی بنیان‌گذار
+    title_fa: Founding Supporter
     description_en: Everything in Tier 2, plus recognition as an early supporter of independent art.
-    description_fa: ""
+    description_fa: همه‌چیزِ Tier 2، به‌همراه معرفی‌شدن به‌عنوانِ یکی از حامیانِ اولیه‌ی هنرِ مستقل.
     note_en: >-
       By default, founding supporters are listed anonymously ("A Founding
       Supporter"). If you would prefer your name included instead, you can
       opt in during checkout — entirely your choice.
-    note_fa: ""
+    note_fa: >-
+      به‌صورتِ پیش‌فرض، اسمِ حامیان به‌طورِ ناشناس ثبت می‌شه («یک Founding
+      Supporter»). اگه ترجیح می‌دید اسمتون ثبت بشه، موقعِ پرداخت می‌تونید
+      این گزینه رو انتخاب کنید — کاملاً به انتخابِ خودتونه.
 ctaLabel_en: Get in Touch
 ctaLabel_fa: تماس بگیرید
 ctaHref: "/contact"
 transparency_en: All proceeds go directly to production and live performance costs. No intermediary, no committee.
-transparency_fa: ""
+transparency_fa: تمامِ درآمد مستقیم صرفِ هزینه‌های تولید و اجرای زنده می‌شه. بدونِ واسطه، بدونِ کمیته.

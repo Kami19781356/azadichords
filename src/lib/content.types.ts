@@ -2,6 +2,8 @@
 // Kept separate from content.ts so the generator can overwrite that file
 // freely without clobbering type info.
 
+export type Locale = "en" | "fa";
+
 export type NavLink = { href: string; label: string };
 export type Cta = { label: string; href: string };
 
@@ -42,6 +44,15 @@ export type RecognitionItem = {
   year: string;
 };
 
+// A single optional callout for work that predates the label (e.g.
+// Kamran's CHESHMAT) — not a Release, just a bio-adjacent block with
+// its own video.
+export type PriorWork = {
+  title: string;
+  description: string;
+  videoUrl: string;
+};
+
 export type Artist = {
   slug: string;
   name: string;
@@ -52,6 +63,7 @@ export type Artist = {
   bio: string;
   cta: Cta;
   recognition: RecognitionItem[];
+  priorWork: PriorWork | null;
 };
 
 export type SupportTier = {

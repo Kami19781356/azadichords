@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Submissions() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="submissions"
@@ -35,7 +38,7 @@ export default function Submissions() {
         {content.submissions.guidelines.map((line) => (
           <li
             key={line}
-            className="max-w-[560px] border-l-2 border-garnet/40 pl-4 text-[17px] leading-[1.6] text-ink/75"
+            className="max-w-[560px] border-s-2 border-garnet/40 ps-4 text-[17px] leading-[1.6] text-ink/75"
           >
             {line}
           </li>
@@ -52,7 +55,7 @@ export default function Submissions() {
 
       <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.25 }}>
         <Link
-          href={content.submissions.cta.href}
+          href={localizeHref(content.submissions.cta.href, locale)}
           className="inline-block rounded-full bg-garnet px-8 py-3.5 text-[13px] tracking-[0.08em] text-paper uppercase transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-garnet-hover"
         >
           {content.submissions.cta.label}

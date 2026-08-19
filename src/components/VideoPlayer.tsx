@@ -1,14 +1,52 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { Play } from "lucide-react";
 
-// Accepts a Cloudflare Stream iframe embed URL (e.g.
-// https://customer-XXXX.cloudflarestream.com/<uid>/iframe) — paste it
-// into the album's musicVideoUrl field in the CMS. Autoplay-muted
-// only starts once the player has actually scrolled into view, per
-// the SEO/Media spec's "autoplay-muted when scrolled into view" UI
-// pattern; a real <iframe> only mounts at that point so nothing loads
-// (bandwidth-wise) before then.
+// Accepts a raw YouTube (watch/share/youtu.be) or Vimeo URL from the
+// CMS's video_url field — detects the provider, shows a thumbnail
+// facade, and only mounts the real embed <iframe> once clicked (no
+// network request to the video host before then).
+function parseVideo(src: string): { embedUrl: string; thumbnailUrl: string | null } | null {
+  try {
+    const url = new URL(src);
+    const host = url.hostname.replace(/^www\./, "");
+
+    if (host === "youtu.be") {
+      const id = url.pathname.slice(1);
+      if (!id) return null;
+      return {
+        embedUrl: `https://www.youtube.com/embed/${id}?autoplay=1`,
+        thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+      };
+    }
+    if (host === "youtube.com" || host === "m.youtube.com") {
+      const id = url.pathname.startsWith("/embed/")
+        ? url.pathname.split("/embed/")[1]
+        : url.searchParams.get("v");
+      if (!id) return null;
+      return {
+        embedUrl: `https://www.youtube.com/embed/${id}?autoplay=1`,
+        thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+      };
+    }
+    if (host === "vimeo.com") {
+      const id = url.pathname.split("/").filter(Boolean)[0];
+      if (!id) return null;
+      return {
+        embedUrl: `https://player.vimeo.com/video/${id}?autoplay=1`,
+        // Vimeo thumbnails need an oEmbed network call to resolve, which
+        // would defeat the "no request before click" goal — fall back
+        // to a plain facade instead.
+        thumbnailUrl: null,
+      };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export default function VideoPlayer({
   src,
   caption,
@@ -16,56 +54,46 @@ export default function VideoPlayer({
   src: string;
   caption?: string;
 }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const video = parseVideo(src);
 
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const embedSrc = (() => {
-    try {
-      const url = new URL(src);
-      url.searchParams.set("autoplay", "true");
-      url.searchParams.set("muted", "true");
-      url.searchParams.set("loop", "true");
-      url.searchParams.set("controls", "true");
-      return url.toString();
-    } catch {
-      return src;
-    }
-  })();
+  if (!video) return null;
 
   return (
     <div
-      ref={containerRef}
-      className="relative w-full overflow-hidden rounded"
+      className="relative w-full overflow-hidden rounded bg-black/40"
       style={{ aspectRatio: "16 / 9" }}
     >
-      {inView ? (
+      {playing ? (
         <iframe
-          src={embedSrc}
-          title={caption ?? "Music video"}
+          src={video.embedUrl}
+          title={caption ?? "Video"}
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowFullScreen
           className="absolute inset-0 h-full w-full border-0"
         />
       ) : (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-[13px] text-paper/40">
-          {caption ?? "Loading video…"}
-        </div>
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={`Play ${caption ?? "video"}`}
+          className="group absolute inset-0 flex h-full w-full items-center justify-center border-0 bg-cover bg-center p-0"
+          style={
+            video.thumbnailUrl
+              ? { backgroundImage: `url(${video.thumbnailUrl})` }
+              : undefined
+          }
+        >
+          <div className="absolute inset-0 bg-black/35 transition-colors duration-200 group-hover:bg-black/20" />
+          <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-paper/70 bg-ink/50 text-paper transition-transform duration-200 group-hover:scale-110">
+            <Play size={22} className="ms-1" />
+          </span>
+          {caption && (
+            <span className="absolute bottom-3 start-3 text-[13px] text-paper/80">
+              {caption}
+            </span>
+          )}
+        </button>
       )}
     </div>
   );

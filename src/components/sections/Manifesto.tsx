@@ -2,13 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
 import SplitReveal from "@/components/SplitReveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Manifesto() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="manifesto"
@@ -61,7 +64,7 @@ export default function Manifesto() {
             {content.manifesto.closing}
           </p>
           <Link
-            href={content.manifesto.cta.href}
+            href={localizeHref(content.manifesto.cta.href, locale)}
             className="text-sm tracking-[0.06em] text-garnet uppercase transition-colors duration-200 hover:text-ink"
           >
             {content.manifesto.cta.label}

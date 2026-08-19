@@ -1,12 +1,15 @@
+# Social hrefs left blank — no real URLs exist yet for any of these.
+# Footer.tsx filters out empty/"#" links, so nothing renders until a
+# real URL is added here.
 copyright: AZADICHORDS © 2026 — Paris
 social:
   - label: Instagram
-    href: "#"
+    href: ""
   - label: YouTube
-    href: "#"
+    href: ""
   - label: Spotify
-    href: "#"
+    href: ""
   - label: Telegram
-    href: "#"
+    href: ""
 disclaimer_en: Azadichords is an independent label with no affiliation to any political party, movement, or government.
-disclaimer_fa: ""
+disclaimer_fa: آزادی‌کورد لیبلی مستقله و به هیچ حزب، جنبش یا دولتی وابسته نیست.

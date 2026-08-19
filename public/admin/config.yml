@@ -265,9 +265,16 @@ collections:
         fields:
           - { name: award, label: "Award / Festival", widget: string }
           - { name: category, label: Category, widget: string }
-          - { name: year, label: Year, widget: string }
+          - { name: year, label: "Year (leave blank if unconfirmed — don't guess)", widget: string, required: false }
       - { name: bio_en, label: "Full Bio EN", widget: markdown }
       - { name: bio_fa, label: "Full Bio FA", widget: markdown, required: false }
+      # Optional — pre-label work (e.g. Kamran/CHESHMAT). Leave
+      # priorWorkTitle_en blank to omit this block entirely.
+      - { name: priorWorkTitle_en, label: "Prior Work Title EN (leave blank for none)", widget: string, required: false }
+      - { name: priorWorkTitle_fa, label: Prior Work Title FA, widget: string, required: false }
+      - { name: priorWorkDescription_en, label: Prior Work Description EN, widget: markdown, required: false }
+      - { name: priorWorkDescription_fa, label: Prior Work Description FA, widget: markdown, required: false }
+      - { name: priorWorkVideoUrl, label: "Prior Work Video URL (YouTube or Vimeo)", widget: string, required: false }
 
   # One schema for every release — album, single, or EP. Sorted by
   # release_date (see scripts/generate-content.mjs), so whichever entry

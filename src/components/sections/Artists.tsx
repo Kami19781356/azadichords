@@ -2,12 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
 import SplitReveal from "@/components/SplitReveal";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export default function Artists() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="artists"
@@ -75,6 +79,31 @@ export default function Artists() {
               />
             </motion.div>
 
+            {artist.priorWork && (
+              <motion.div
+                {...reveal}
+                transition={{ ...reveal.transition, delay: 0.22 }}
+                className="mt-16 max-w-[720px] border-t border-paper/12 pt-12"
+              >
+                <div className="mb-4 text-[13px] tracking-[0.15em] text-gold uppercase">
+                  Before Azadichords
+                </div>
+                <h4 className="m-0 mb-3 font-serif text-xl font-semibold">
+                  {artist.priorWork.title}
+                </h4>
+                <p
+                  className="m-0 mb-6 text-base leading-[1.7] text-paper/65"
+                  dangerouslySetInnerHTML={{ __html: artist.priorWork.description }}
+                />
+                {artist.priorWork.videoUrl && (
+                  <VideoPlayer
+                    src={artist.priorWork.videoUrl}
+                    caption={artist.priorWork.title}
+                  />
+                )}
+              </motion.div>
+            )}
+
             {artist.recognition.length > 0 && (
               <motion.div
                 {...reveal}
@@ -111,7 +140,7 @@ export default function Artists() {
               className="mt-12"
             >
               <Link
-                href={artist.cta.href}
+                href={localizeHref(artist.cta.href, locale)}
                 className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
               >
                 {artist.cta.label}

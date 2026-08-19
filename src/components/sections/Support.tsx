@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal, staggerParent } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import SupportTierCard from "@/components/SupportTierCard";
 
 export default function Support() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="support"
@@ -52,7 +55,7 @@ export default function Support() {
           {content.support.transparency}
         </p>
         <Link
-          href={content.support.cta.href}
+          href={localizeHref(content.support.cta.href, locale)}
           className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
         >
           {content.support.cta.label}

@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal, staggerChild, staggerParent } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 
 export default function Services() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="services"
@@ -54,7 +57,7 @@ export default function Services() {
         className="mt-14"
       >
         <Link
-          href={content.services.cta.href}
+          href={localizeHref(content.services.cta.href, locale)}
           className="text-sm tracking-[0.06em] text-gold uppercase transition-colors duration-200 hover:text-paper"
         >
           {content.services.cta.label}

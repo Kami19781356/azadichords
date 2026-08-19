@@ -24,6 +24,17 @@ body {
   font-family: var(--font-sans), sans-serif;
 }
 
+/* Persian pages: Bodoni Moda has no Arabic/Persian glyphs, so swap
+   both the heading and body fonts to Vazirmatn. Tailwind's `@theme
+   inline` bakes --font-bodoni/--font-work-sans directly into the
+   .font-serif/.font-sans utilities at build time (not a live
+   var(--font-serif) indirection), so those are the variables that
+   actually need overriding here — not --font-serif/--font-sans. */
+body.font-farsi {
+  --font-work-sans: var(--font-vazirmatn);
+  --font-bodoni: var(--font-vazirmatn);
+}
+
 ::selection {
   background: var(--color-garnet);
   color: var(--color-paper);

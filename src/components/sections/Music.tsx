@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import Placeholder from "@/components/Placeholder";
 import SplitReveal from "@/components/SplitReveal";
@@ -17,12 +18,14 @@ const typeLabel: Record<Release["type"], string> = {
 };
 
 function GetReleaseBlock({ release }: { release: Release }) {
+  const content = useContent();
+  const locale = useLocale();
   if (!release.supportTierLink) return null;
   return (
     <p className="m-0 max-w-[520px] text-sm leading-[1.7] text-paper/60">
       {release.purchaseNote || content.music.getReleaseNote}{" "}
       <Link
-        href="/support"
+        href={localizeHref("/support", locale)}
         className="text-gold transition-colors duration-200 hover:text-paper"
       >
         {content.music.getReleaseCtaLabel}
@@ -32,6 +35,7 @@ function GetReleaseBlock({ release }: { release: Release }) {
 }
 
 function TrackList({ tracks }: { tracks: Release["tracks"] }) {
+  const content = useContent();
   if (tracks.length === 0) {
     return (
       <p className="m-0 text-sm text-paper/40">
@@ -48,7 +52,7 @@ function TrackList({ tracks }: { tracks: Release["tracks"] }) {
         >
           <div className="flex items-center justify-between text-[15px] text-paper/80">
             <span>
-              <span className="mr-2 text-paper/30">{track.trackNumber}.</span>
+              <span className="me-2 text-paper/30">{track.trackNumber}.</span>
               {track.title}
             </span>
             {track.duration && (
@@ -65,6 +69,7 @@ function TrackList({ tracks }: { tracks: Release["tracks"] }) {
 }
 
 function Spotlight({ release }: { release: Release }) {
+  const content = useContent();
   return (
     <motion.div
       {...reveal}
@@ -198,6 +203,7 @@ function CatalogItem({ release }: { release: Release }) {
 }
 
 export default function Music() {
+  const content = useContent();
   const [latest, ...rest] = content.releases;
 
   return (

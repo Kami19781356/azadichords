@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 
 export default function Activity() {
+  const content = useContent();
+  const locale = useLocale();
   return (
     <section
       id="activity"
@@ -41,7 +44,7 @@ export default function Activity() {
                 <h3 className="m-0 mb-1 font-serif text-xl font-semibold">
                   {item.link ? (
                     <a
-                      href={item.link}
+                      href={localizeHref(item.link ?? "", locale)}
                       className="transition-colors duration-200 hover:text-garnet"
                     >
                       {item.title}

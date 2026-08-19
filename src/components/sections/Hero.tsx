@@ -3,12 +3,15 @@
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { easeCustom, preloaderDurationMs } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import AudioPlayer from "@/components/AudioPlayer";
 
 export default function Hero() {
+  const content = useContent();
+  const locale = useLocale();
   const [mounted, setMounted] = useState(false);
   const [listenOpen, setListenOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -71,7 +74,10 @@ export default function Hero() {
         >
           {content.hero.eyebrow}
         </motion.div>
-        <h1 className="m-0 mb-8 font-serif text-[clamp(32px,11vw,168px)] leading-[0.95] font-bold tracking-[-0.01em] whitespace-nowrap">
+        <h1
+          dir="ltr"
+          className="m-0 mb-8 font-serif text-[clamp(32px,11vw,168px)] leading-[0.95] font-bold tracking-[-0.01em] whitespace-nowrap"
+        >
           <SplitReveal
             text={content.hero.title}
             mode="letter"
@@ -100,7 +106,7 @@ export default function Hero() {
             {content.hero.ctaPrimary.label}
           </button>
           <Link
-            href={content.hero.ctaSecondary.href}
+            href={localizeHref(content.hero.ctaSecondary.href, locale)}
             className="rounded-full border border-transparent px-9 py-4 text-sm tracking-[0.08em] text-gold uppercase transition-colors duration-[250ms] hover:text-paper"
           >
             {content.hero.ctaSecondary.label}
@@ -136,7 +142,7 @@ export default function Hero() {
 
         <motion.div {...step(12, 460)} className="mt-10">
           <Link
-            href={content.hero.promoBar.href}
+            href={localizeHref(content.hero.promoBar.href, locale)}
             className="text-[12px] tracking-[0.08em] text-paper/60 uppercase transition-colors duration-200 hover:text-gold"
           >
             🎟 {content.hero.promoBar.label}

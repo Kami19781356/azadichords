@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/lib/content";
+import { useContent } from "@/lib/ContentProvider";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Press() {
+  const content = useContent();
   return (
     <motion.section
       id="press"

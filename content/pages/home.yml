@@ -16,5 +16,5 @@ scrollHint_fa: (برای ادامه اسکرول کنید)
 # Thin promo strip under the hero CTAs — see brief section 1. No price
 # shown since Tier 2/3 pricing is still TODO (not guessing it here).
 promoBarLabel_en: "The Record + The Room includes a ticket to our first live performance"
-promoBarLabel_fa: "بسته‌ی «آلبوم + بلیت» شامل بلیت اولین اجرای زنده‌ی ماست"
+promoBarLabel_fa: "The Record + The Room شاملِ بلیتِ اولین اجرای زنده‌ی ماست"
 promoBarHref: "/support"

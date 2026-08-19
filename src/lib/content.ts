@@ -3,331 +3,633 @@
 // re-run `npm run generate-content` (also runs automatically before
 // dev/build).
 
-import type { Content } from "./content.types";
+import type { Content, Locale } from "./content.types";
 
-export const content: Content = {
-  "nav": {
-    "brand": "AZADICHORDS",
-    "tagline": "The Voice of Freedom",
-    "links": [
-      {
-        "href": "/manifesto",
-        "label": "Manifesto"
-      },
-      {
-        "href": "/music",
-        "label": "Music"
-      },
-      {
-        "href": "/artists",
-        "label": "Artists"
-      },
-      {
-        "href": "/activity",
-        "label": "Activity"
-      },
-      {
-        "href": "/press",
-        "label": "Press"
-      },
-      {
-        "href": "/services",
-        "label": "Services"
-      },
-      {
-        "href": "/submissions",
-        "label": "Submissions"
-      },
-      {
-        "href": "/support",
-        "label": "Support"
-      },
-      {
-        "href": "/contact",
-        "label": "Contact"
-      }
-    ]
-  },
-  "hero": {
-    "eyebrow": "Independent Music Label — Paris",
-    "title": "AZADICHORDS",
-    "subhead": "An independent label for the voice that refuses to be silent.",
-    "ctaPrimary": {
-      "label": "Listen",
-      "href": "/music"
-    },
-    "ctaSecondary": {
-      "label": "The Manifesto",
-      "href": "/manifesto"
-    },
-    "scrollHint": "(Scroll for more)",
-    "promoBar": {
-      "label": "The Record + The Room includes a ticket to our first live performance",
-      "href": "/support"
-    }
-  },
-  "manifesto": {
-    "eyebrow": "Manifesto",
-    "title": "A Label Built in Exile",
-    "imageCaption": "portrait — Kamran Rasoolzadeh, Paris",
-    "paragraphs": [
-      "Azadichords is built from two words: Azadi — freedom — and chords. Here, the two become one.",
-      "We are an independent label for voices that cannot, and will not, stay silent. For poetry and music that breaks through censorship, not with its permission.",
-      "We don't release artists; we release a belief — that every voice, even in exile, even forced into silence, has the right to be heard.",
-      "This label began with one voice. It was never meant to end with it.",
-      "Azadichords began with a decision: that committed music and poetry deserve a label that stands fully behind it — not just behind a single song.",
-      "Every album, every track, every poem is a step toward the day this label is home to many voices, not one."
-    ],
-    "closing": "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded this label as its first artist. Not to remain the only one, but to be the first of many voices still to come.",
-    "cta": {
-      "label": "Meet the Artist →",
-      "href": "/artists"
-    }
-  },
-  "music": {
-    "eyebrow": "Music",
-    "title": "Music",
-    "intro": "This label exists because of one record — Azadichords' debut release, forthcoming from its first artist, Kamran Rasoolzadeh.",
-    "closing": "The label's first release — including official videos — arrives soon.",
-    "comingSoonLabel": "Coming Soon",
-    "tracksComingSoonLabel": "Tracks arriving soon.",
-    "videoComingSoonLabel": "Music video arriving soon.",
-    "demoComingSoonLabel": "Demo arriving soon.",
-    "getReleaseLabel": "Get This Release",
-    "getReleaseNote": "Stream everywhere once released — or get it now, plus a ticket to our first live show.",
-    "getReleaseCtaLabel": "See how →"
-  },
-  "artistsPage": {
-    "eyebrow": "Artists",
-    "title": "Artists",
-    "intro": "Every Azadichords artist is a voice that chose not to stay silent."
-  },
-  "artists": [
-    {
-      "slug": "kamran-rasoolzadeh",
-      "name": "Kamran Rasoolzadeh",
-      "role": "Poet, Composer, Singer-Songwriter",
-      "badge": "Founding Artist",
-      "imageCaption": "portrait — Kamran, close crop",
-      "intro": "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
-      "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works. He founded Azadichords as its Founding Artist.",
-      "cta": {
-        "label": "Explore the Music →",
-        "href": "/music"
-      },
-      "recognition": [
+export const content: Record<Locale, Content> = {
+  "en": {
+    "nav": {
+      "brand": "AZADICHORDS",
+      "tagline": "The Voice of Freedom",
+      "links": [
         {
-          "award": "Iranian Film Festival San Francisco",
-          "category": "Best Music Video — Freedom",
-          "year": "2022"
+          "href": "/manifesto",
+          "label": "Manifesto"
         },
         {
-          "award": "K-Music and Arts Film Festival, Seoul",
-          "category": "Best Music Video — Freedom",
-          "year": "2022"
+          "href": "/music",
+          "label": "Music"
         },
         {
-          "award": "ZILANT International Film Festival",
-          "category": "Best Music Video — Freedom",
-          "year": "2022"
+          "href": "/artists",
+          "label": "Artists"
         },
         {
-          "award": "Fajr Music Festival",
-          "category": "Best Songwriting",
-          "year": "2022"
+          "href": "/activity",
+          "label": "Activity"
         },
         {
-          "award": "Baku Poetry Festival",
-          "category": "Honorary Diploma",
-          "year": "2015"
+          "href": "/press",
+          "label": "Press"
+        },
+        {
+          "href": "/services",
+          "label": "Services"
+        },
+        {
+          "href": "/submissions",
+          "label": "Submissions"
+        },
+        {
+          "href": "/support",
+          "label": "Support"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
         }
       ]
-    }
-  ],
-  "releases": [
-    {
-      "slug": "iran-e-jan",
-      "title": "Iran-e Jan",
-      "type": "album",
-      "artist": "kamran-rasoolzadeh",
-      "status": "upcoming",
-      "releaseDate": "2026-09-16",
-      "coverImageCaption": "Iran-e Jan — album art",
-      "tagline": "The debut release from Azadichords — arriving September 16, 2026.",
-      "description": "Iran-e Jan is Kamran Rasoolzadeh's debut release under Azadichords — eleven tracks written in the shadow of a country in mourning and the light of one that refuses to stay silent. Lead single \"Bang Bang\" premieres September 1; the full album follows on September 16 — the anniversary of Jina Mahsa Amini's death.",
-      "demoAudioUrl": "",
-      "videoUrl": "",
-      "videoCaption": "",
-      "tracks": [
+    },
+    "hero": {
+      "eyebrow": "Independent Music Label — Paris",
+      "title": "AZADICHORDS",
+      "subhead": "An independent label for the voice that refuses to be silent.",
+      "ctaPrimary": {
+        "label": "Listen",
+        "href": "/music"
+      },
+      "ctaSecondary": {
+        "label": "The Manifesto",
+        "href": "/manifesto"
+      },
+      "scrollHint": "(Scroll for more)",
+      "promoBar": {
+        "label": "The Record + The Room includes a ticket to our first live performance",
+        "href": "/support"
+      }
+    },
+    "manifesto": {
+      "eyebrow": "Manifesto",
+      "title": "A Label Built in Exile",
+      "imageCaption": "Azadichords — Iran-e Jan, album art",
+      "paragraphs": [
+        "Azadichords is built from two words: Azadi — freedom — and chords. Here, the two become one.",
+        "We are an independent label for voices that cannot, and will not, stay silent. For poetry and music that breaks through censorship, not with its permission.",
+        "We don't release artists; we release a belief — that every voice, even in exile, even forced into silence, has the right to be heard.",
+        "This label began with one voice. It was never meant to end with it.",
+        "Azadichords began with a decision: that committed music and poetry deserve a label that stands fully behind it — not just behind a single song.",
+        "Every album, every track, every poem is a step toward the day this label is home to many voices, not one."
+      ],
+      "closing": "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded this label as its first artist. Not to remain the only one, but to be the first of many voices still to come.",
+      "cta": {
+        "label": "Meet the Artist →",
+        "href": "/artists"
+      }
+    },
+    "music": {
+      "eyebrow": "Music",
+      "title": "Music",
+      "intro": "Azadichords' catalog begins here.",
+      "closing": "The label's first release — including official videos — arrives soon.",
+      "comingSoonLabel": "Coming Soon",
+      "tracksComingSoonLabel": "Tracks arriving soon.",
+      "videoComingSoonLabel": "Music video arriving soon.",
+      "demoComingSoonLabel": "Demo arriving soon.",
+      "getReleaseLabel": "Get This Release",
+      "getReleaseNote": "Stream everywhere once released — or get it now, plus a ticket to our first live show.",
+      "getReleaseCtaLabel": "See how →"
+    },
+    "artistsPage": {
+      "eyebrow": "Artists",
+      "title": "Artists",
+      "intro": "Every Azadichords artist is a voice that chose not to stay silent."
+    },
+    "artists": [
+      {
+        "slug": "kamran-rasoolzadeh",
+        "name": "Kamran Rasoolzadeh",
+        "role": "Poet, Composer, Singer-Songwriter",
+        "badge": "Founding Artist",
+        "imageCaption": "portrait — Kamran, close crop",
+        "intro": "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
+        "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works. He founded Azadichords as its Founding Artist.",
+        "cta": {
+          "label": "Explore the Music →",
+          "href": "/music"
+        },
+        "recognition": [
+          {
+            "award": "Iranian Film Festival San Francisco",
+            "category": "Best Music Video — Freedom",
+            "year": "2022"
+          },
+          {
+            "award": "K-Music and Arts Film Festival, Seoul",
+            "category": "Best Music Video — Freedom",
+            "year": ""
+          },
+          {
+            "award": "ZILANT International Film Festival",
+            "category": "Best Music Video — Freedom",
+            "year": ""
+          },
+          {
+            "award": "Fajr Music Festival",
+            "category": "Best Songwriting",
+            "year": "2022"
+          },
+          {
+            "award": "Baku Poetry Festival",
+            "category": "Honorary Diploma",
+            "year": "2015"
+          }
+        ],
+        "priorWork": {
+          "title": "CHESHMAT (2014)",
+          "description": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. Its official video, published on the Avang Music YouTube channel, has been viewed roughly 20 million times.",
+          "videoUrl": ""
+        }
+      }
+    ],
+    "releases": [
+      {
+        "slug": "iran-e-jan",
+        "title": "Iran-e Jan",
+        "type": "album",
+        "artist": "kamran-rasoolzadeh",
+        "status": "upcoming",
+        "releaseDate": "2026-09-16",
+        "coverImageCaption": "Iran-e Jan — album art",
+        "tagline": "The debut release from Azadichords — arriving September 16, 2026.",
+        "description": "Iran-e Jan is Kamran Rasoolzadeh's debut release under Azadichords — eleven tracks written in the shadow of a country in mourning and the light of one that refuses to stay silent. Lead single \"Bang Bang\" premieres September 1; the full album follows on September 16 — the anniversary of Jina Mahsa Amini's death.",
+        "demoAudioUrl": "",
+        "videoUrl": "",
+        "videoCaption": "",
+        "tracks": [
+          {
+            "trackNumber": 1,
+            "title": "Bang Bang",
+            "duration": "",
+            "previewUrl": ""
+          },
+          {
+            "trackNumber": 2,
+            "title": "1819",
+            "duration": "",
+            "previewUrl": ""
+          }
+        ],
+        "streamingLinks": [],
+        "supportTierLink": true,
+        "purchaseNote": ""
+      }
+    ],
+    "activityPage": {
+      "eyebrow": "Activity",
+      "title": "Activity",
+      "intro": "A running record of where Azadichords has been — performances, releases, and the milestones along the way.",
+      "emptyStateNote": "Azadichords is early. This record starts with the first release and the first show — both are still ahead."
+    },
+    "activity": [],
+    "press": {
+      "eyebrow": "Press",
+      "title": "Press",
+      "paragraphs": [
+        "Press materials and interviews will appear here as they're published.",
+        "For press inquiries, use the contact form."
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "What the Label Offers",
+      "intro": "Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.",
+      "items": [
         {
-          "trackNumber": 1,
-          "title": "Bang Bang",
-          "duration": "",
-          "previewUrl": ""
+          "title": "Production & Mixing",
+          "description": "Studio time, arrangement, and audio engineering support, from first draft to final master."
         },
         {
-          "trackNumber": 2,
-          "title": "1819",
-          "duration": "",
-          "previewUrl": ""
+          "title": "Distribution",
+          "description": "Placing the work on every major platform, worldwide, under the artist's own name."
+        },
+        {
+          "title": "Visual Identity",
+          "description": "Album art, music videos, and the visual language that carries a record beyond its audio."
+        },
+        {
+          "title": "Live Performance",
+          "description": "From a first show to a touring itinerary — the logistics behind bringing a record to a stage."
+        },
+        {
+          "title": "Licensing & Publishing",
+          "description": "Protecting the work and placing it commercially, on terms the artist understands and agrees to."
         }
       ],
-      "streamingLinks": [],
-      "supportTierLink": true,
-      "purchaseNote": ""
+      "cta": {
+        "label": "Working on something that belongs here? Get in Touch →",
+        "href": "/contact"
+      }
     },
-    {
-      "slug": "cheshmat",
-      "title": "CHESHMAT",
-      "type": "album",
-      "artist": "kamran-rasoolzadeh",
-      "status": "out_now",
-      "releaseDate": "2014",
-      "coverImageCaption": "CHESHMAT — 2014 album art",
-      "tagline": "The 2014 album that shaped a generation — and drew the attention that would later silence him.",
-      "description": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> (2014) for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. His music video <em>Freedom</em> — a meditation on liberation as the foundation of a free society — later won Best Music Video at festivals in San Francisco, Seoul, and Kazan.",
-      "demoAudioUrl": "",
-      "videoUrl": "",
-      "videoCaption": "",
-      "tracks": [],
-      "streamingLinks": [],
-      "supportTierLink": false,
-      "purchaseNote": ""
+    "submissions": {
+      "eyebrow": "Submissions",
+      "title": "For the Next Voice",
+      "intro": "If your voice is something that can't stay silent, we want to hear it. Azadichords is looking for artists whose music and poetry come from a belief, not just a genre. Send us your work.",
+      "guidelines": [
+        "2–3 tracks, in their current form — polished or not.",
+        "A few sentences about the work and the story behind it.",
+        "No press kit, no pitch deck. Just the music."
+      ],
+      "note": "Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.",
+      "cta": {
+        "label": "Submit Your Work →",
+        "href": "/contact"
+      }
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "Support the Project",
+      "intro": [
+        "Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. That independence is made possible directly by the people who choose to support it.",
+        "Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe."
+      ],
+      "tiers": [
+        {
+          "name": "Tier 1",
+          "title": "The Record",
+          "description": "High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.",
+          "note": ""
+        },
+        {
+          "name": "Tier 2",
+          "title": "The Record + The Room",
+          "description": "Everything in Tier 1, plus a ticket (or priority access) to the first live performance.",
+          "note": ""
+        },
+        {
+          "name": "Tier 3",
+          "title": "Founding Supporter",
+          "description": "Everything in Tier 2, plus recognition as an early supporter of independent art.",
+          "note": "By default, founding supporters are listed anonymously (\"A Founding Supporter\"). If you would prefer your name included instead, you can opt in during checkout — entirely your choice."
+        }
+      ],
+      "cta": {
+        "label": "Get in Touch",
+        "href": "/contact"
+      },
+      "transparency": "All proceeds go directly to production and live performance costs. No intermediary, no committee."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Get in Touch",
+      "subhead": "For music, press, or performance inquiries.",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "category": "Category"
+      },
+      "categories": [
+        "General",
+        "Submission",
+        "Press",
+        "Booking",
+        "Licensing"
+      ],
+      "submit": "Send"
+    },
+    "footer": {
+      "copyright": "AZADICHORDS © 2026 — Paris",
+      "social": [
+        {
+          "label": "Instagram",
+          "href": ""
+        },
+        {
+          "label": "YouTube",
+          "href": ""
+        },
+        {
+          "label": "Spotify",
+          "href": ""
+        },
+        {
+          "label": "Telegram",
+          "href": ""
+        }
+      ],
+      "disclaimer": "Azadichords is an independent label with no affiliation to any political party, movement, or government."
     }
-  ],
-  "activityPage": {
-    "eyebrow": "Activity",
-    "title": "Activity",
-    "intro": "A running record of where Azadichords has been — performances, releases, and the milestones along the way.",
-    "emptyStateNote": "Azadichords is early. This record starts with the first release and the first show — both are still ahead."
   },
-  "activity": [],
-  "press": {
-    "eyebrow": "Press",
-    "title": "Press",
-    "paragraphs": [
-      "Press materials and interviews will appear here as they're published.",
-      "For press inquiries, use the contact form."
-    ]
-  },
-  "services": {
-    "eyebrow": "Services",
-    "title": "What the Label Offers",
-    "intro": "Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.",
-    "items": [
-      {
-        "title": "Production & Mixing",
-        "description": "Studio time, arrangement, and audio engineering support, from first draft to final master."
+  "fa": {
+    "nav": {
+      "brand": "AZADICHORDS",
+      "tagline": "صدای آزادی",
+      "links": [
+        {
+          "href": "/manifesto",
+          "label": "مانیفست"
+        },
+        {
+          "href": "/music",
+          "label": "موسیقی"
+        },
+        {
+          "href": "/artists",
+          "label": "هنرمندان"
+        },
+        {
+          "href": "/activity",
+          "label": "فعالیت‌ها"
+        },
+        {
+          "href": "/press",
+          "label": "مطبوعات"
+        },
+        {
+          "href": "/services",
+          "label": "خدمات"
+        },
+        {
+          "href": "/submissions",
+          "label": "ارسال اثر"
+        },
+        {
+          "href": "/support",
+          "label": "حمایت"
+        },
+        {
+          "href": "/contact",
+          "label": "تماس"
+        }
+      ]
+    },
+    "hero": {
+      "eyebrow": "لیبل مستقل موسیقی — پاریس",
+      "title": "AZADICHORDS",
+      "subhead": "لیبلی مستقل برای صدایی که حاضر نیست ساکت بماند.",
+      "ctaPrimary": {
+        "label": "شنیدن",
+        "href": "/music"
       },
-      {
-        "title": "Distribution",
-        "description": "Placing the work on every major platform, worldwide, under the artist's own name."
+      "ctaSecondary": {
+        "label": "مانیفست",
+        "href": "/manifesto"
       },
+      "scrollHint": "(برای ادامه اسکرول کنید)",
+      "promoBar": {
+        "label": "The Record + The Room شاملِ بلیتِ اولین اجرای زنده‌ی ماست",
+        "href": "/support"
+      }
+    },
+    "manifesto": {
+      "eyebrow": "مانیفست",
+      "title": "لیبلی ساخته‌شده در تبعید",
+      "imageCaption": "Azadichords — Iran-e Jan, album art",
+      "paragraphs": [
+        "آزادی‌کورد از دو کلمه ساخته شده: آزادی، و آکورد. اینجا این دو یکی می‌شن.",
+        "ما یک لیبلِ مستقلیم برای صداهایی که نمی‌تونن، و نمی‌خوان، ساکت بمونن. برای شعر و موسیقی‌ای که از دلِ سانسور بیرون می‌زنه، نه با اجازه‌ی سانسور.",
+        "ما هنرمند منتشر نمی‌کنیم؛ یک باور منتشر می‌کنیم: که صدای هر آدمی، حتی در تبعید، حتی در سکوتِ اجباری، حق داره شنیده بشه.",
+        "این لیبل با یک صدا شروع شد. قرار نیست با همون یکی تموم بشه.",
+        "آزادی‌کورد از یک تصمیم شروع شد: که موسیقی و شعرِ متعهد، لایقِ لیبلی‌ست که پشتش وایسه — نه فقط پشتِ یک آهنگ.",
+        "هر آلبوم، هر ترک، هر شعر، قدمیه به‌سمتِ روزی که این لیبل خونه‌ی چند صدا باشه، نه یکی."
+      ],
+      "closing": "کامران رسول‌زاده — شاعر، آهنگ‌ساز، و خواننده-ترانه‌سرا — این لیبل رو به‌عنوانِ اولین هنرمندش بنیان گذاشت؛ نه به این نیت که تنها بمونه، بلکه به این نیت که اولین صدا باشه از صداهای بیشتری که قراره بیان.",
+      "cta": {
+        "label": "هنرمند را بشناسید ←",
+        "href": "/artists"
+      }
+    },
+    "music": {
+      "eyebrow": "موسیقی",
+      "title": "موسیقی",
+      "intro": "کاتالوگِ آزادی‌کورد از اینجا شروع می‌شه.",
+      "closing": "اولین ریلیزِ لیبل — همراه با موزیک‌ویدیوهای رسمی — به‌زودی منتشر می‌شه.",
+      "comingSoonLabel": "به‌زودی",
+      "tracksComingSoonLabel": "ترک‌ها به‌زودی.",
+      "videoComingSoonLabel": "موزیک‌ویدیو به‌زودی.",
+      "demoComingSoonLabel": "دمو به‌زودی.",
+      "getReleaseLabel": "این ریلیز رو بگیر",
+      "getReleaseNote": "همه‌جا استریم کن — یا همین حالا بگیرش، همراه با بلیتِ اولین اجرای زنده.",
+      "getReleaseCtaLabel": "ببین چطور ←"
+    },
+    "artistsPage": {
+      "eyebrow": "هنرمندان",
+      "title": "هنرمندان",
+      "intro": "هر هنرمندِ آزادی‌کورد، صداییه که تصمیم گرفته ساکت نمونه."
+    },
+    "artists": [
       {
-        "title": "Visual Identity",
-        "description": "Album art, music videos, and the visual language that carries a record beyond its audio."
-      },
-      {
-        "title": "Live Performance",
-        "description": "From a first show to a touring itinerary — the logistics behind bringing a record to a stage."
-      },
-      {
-        "title": "Licensing & Publishing",
-        "description": "Protecting the work and placing it commercially, on terms the artist understands and agrees to."
+        "slug": "kamran-rasoolzadeh",
+        "name": "Kamran Rasoolzadeh",
+        "role": "شاعر، آهنگساز، خواننده-ترانه‌سرا",
+        "badge": "هنرمند بنیان‌گذار",
+        "imageCaption": "portrait — Kamran, close crop",
+        "intro": "کامران رسول‌زاده می‌نویسد، می‌سازد و می‌خواند؛ ترانه‌هایی شکل‌گرفته از تبعید و بازگشت. آثارش ممنوع و جایزه‌گرفته‌اند و او پس از سال‌ها سکوت، دوباره آغاز می‌کند.",
+        "bio": "کامران رسول‌زاده شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی است. اشعارش برای بیش از یک دهه در صدر پرفروش‌ترین‌های ایران بوده‌اند. در سال ۲۰۱۴، او آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — آلبومی که با وجودِ محدودیت‌هایی که بر آن اعمال شد، و تا حدی به‌خاطرِ همان محدودیت‌ها، یکی از آثار ماندگارِ نسل خود شد. پس از سال‌ها سانسور و فشار مکرر از سوی مقامات، ایران را ترک کرد و در فرانسه ساکن شد، جایی که اکنون زندگی و کار می‌کند. او آزادی‌کورد را به‌عنوان هنرمند بنیان‌گذار پایه‌گذاری کرد.",
+        "cta": {
+          "label": "موسیقی را کاوش کنید ←",
+          "href": "/music"
+        },
+        "recognition": [
+          {
+            "award": "Iranian Film Festival San Francisco",
+            "category": "Best Music Video — Freedom",
+            "year": "2022"
+          },
+          {
+            "award": "K-Music and Arts Film Festival, Seoul",
+            "category": "Best Music Video — Freedom",
+            "year": ""
+          },
+          {
+            "award": "ZILANT International Film Festival",
+            "category": "Best Music Video — Freedom",
+            "year": ""
+          },
+          {
+            "award": "Fajr Music Festival",
+            "category": "Best Songwriting",
+            "year": "2022"
+          },
+          {
+            "award": "Baku Poetry Festival",
+            "category": "Honorary Diploma",
+            "year": "2015"
+          }
+        ],
+        "priorWork": {
+          "title": "چشمت (۲۰۱۴)",
+          "description": "پیش از آزادی‌کورد، کامران آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — اثری که نسلی را شکل داد و توجهی جلب کرد که سرانجام به سکوتش انجامید. ویدیوی رسمی آن، منتشرشده در کانال یوتیوب Avang Music، حدود ۲۰ میلیون بار دیده شده است.",
+          "videoUrl": ""
+        }
       }
     ],
-    "cta": {
-      "label": "Working on something that belongs here? Get in Touch →",
-      "href": "/contact"
-    }
-  },
-  "submissions": {
-    "eyebrow": "Submissions",
-    "title": "For the Next Voice",
-    "intro": "If your voice is something that can't stay silent, we want to hear it. Azadichords is looking for artists whose music and poetry come from a belief, not just a genre. Send us your work.",
-    "guidelines": [
-      "2–3 tracks, in their current form — polished or not.",
-      "A few sentences about the work and the story behind it.",
-      "No press kit, no pitch deck. Just the music."
-    ],
-    "note": "Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.",
-    "cta": {
-      "label": "Submit Your Work →",
-      "href": "/contact"
-    }
-  },
-  "support": {
-    "eyebrow": "Support",
-    "title": "Support the Project",
-    "intro": [
-      "Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. That independence is made possible directly by the people who choose to support it.",
-      "Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe."
-    ],
-    "tiers": [
+    "releases": [
       {
-        "name": "Tier 1",
-        "title": "The Record",
-        "description": "High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.",
-        "note": ""
-      },
-      {
-        "name": "Tier 2",
-        "title": "The Record + The Room",
-        "description": "Everything in Tier 1, plus a ticket (or priority access) to the first live performance.",
-        "note": ""
-      },
-      {
-        "name": "Tier 3",
-        "title": "Founding Supporter",
-        "description": "Everything in Tier 2, plus recognition as an early supporter of independent art.",
-        "note": "By default, founding supporters are listed anonymously (\"A Founding Supporter\"). If you would prefer your name included instead, you can opt in during checkout — entirely your choice."
+        "slug": "iran-e-jan",
+        "title": "Iran-e Jan",
+        "type": "album",
+        "artist": "kamran-rasoolzadeh",
+        "status": "upcoming",
+        "releaseDate": "2026-09-16",
+        "coverImageCaption": "Iran-e Jan — album art",
+        "tagline": "اولین ریلیزِ آزادی‌کورد — ۱۶ سپتامبر ۲۰۲۶.",
+        "description": "ایرانِ جان، اولین ریلیزِ کامران رسول‌زاده زیرِ آزادی‌کورده — یازده ترک که در سایه‌ی کشوری در سوگ، و در روشناییِ کشوری که تصمیم گرفته ساکت نمونه، نوشته شدن. سینگلِ لید «بنگ بنگ» اول سپتامبر منتشر می‌شه؛ آلبومِ کامل ۱۶ سپتامبر — سالگردِ درگذشتِ ژینا مهسا امینی.",
+        "demoAudioUrl": "",
+        "videoUrl": "",
+        "videoCaption": "",
+        "tracks": [
+          {
+            "trackNumber": 1,
+            "title": "بنگ بنگ",
+            "duration": "",
+            "previewUrl": ""
+          },
+          {
+            "trackNumber": 2,
+            "title": "۱۸۱۹",
+            "duration": "",
+            "previewUrl": ""
+          }
+        ],
+        "streamingLinks": [],
+        "supportTierLink": true,
+        "purchaseNote": ""
       }
     ],
-    "cta": {
-      "label": "Get in Touch",
-      "href": "/contact"
+    "activityPage": {
+      "eyebrow": "فعالیت‌ها",
+      "title": "فعالیت‌ها",
+      "intro": "روایتی از مسیرِ آزادی‌کورد — اجراها، ریلیزها، و نقاطِ عطفِ این راه.",
+      "emptyStateNote": "آزادی‌کورد هنوز در ابتداست. این روایت با اولین ریلیز و اولین اجرا شروع می‌شه — که هر دو هنوز پیشِ رو هستن."
     },
-    "transparency": "All proceeds go directly to production and live performance costs. No intermediary, no committee."
-  },
-  "contact": {
-    "eyebrow": "Contact",
-    "title": "Get in Touch",
-    "subhead": "For music, press, or performance inquiries.",
-    "fields": {
-      "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "category": "Category"
+    "activity": [],
+    "press": {
+      "eyebrow": "مطبوعات",
+      "title": "مطبوعات",
+      "paragraphs": [
+        "مطالبِ مطبوعاتی و مصاحبه‌ها همین‌جا و به‌محضِ انتشار قرار می‌گیرن.",
+        "برای درخواست‌های مطبوعاتی از فرمِ تماس استفاده کنید."
+      ]
     },
-    "categories": [
-      "General",
-      "Submission",
-      "Press",
-      "Booking",
-      "Licensing"
-    ],
-    "submit": "Send"
-  },
-  "footer": {
-    "copyright": "AZADICHORDS © 2026 — Paris",
-    "social": [
-      {
-        "label": "Instagram",
-        "href": "#"
-      },
-      {
-        "label": "YouTube",
-        "href": "#"
-      },
-      {
-        "label": "Spotify",
-        "href": "#"
-      },
-      {
-        "label": "Telegram",
-        "href": "#"
+    "services": {
+      "eyebrow": "خدمات",
+      "title": "آنچه لیبل ارائه می‌دهد",
+      "intro": "فراتر از انتشار، آزادی‌کورد در تمامِ مراحلی که یک اثر پیش از رسیدن به مخاطب طی می‌کنه، کنارِ هنرمندانش می‌ایسته.",
+      "items": [
+        {
+          "title": "تولید و میکس",
+          "description": "زمانِ استودیو، تنظیم، و پشتیبانیِ مهندسیِ صدا، از اولین پیش‌نویس تا مسترِ نهایی."
+        },
+        {
+          "title": "توزیع",
+          "description": "قرار دادنِ اثر روی تمامِ پلتفرم‌های اصلی، در سراسرِ دنیا، زیرِ نامِ خودِ هنرمند."
+        },
+        {
+          "title": "هویت بصری",
+          "description": "طراحیِ کاورِ آلبوم، موزیک‌ویدیو، و زبانِ بصری‌ای که اثر را فراتر از صدایش می‌برد."
+        },
+        {
+          "title": "اجرای زنده",
+          "description": "از اولین اجرا تا برنامه‌ی یک تور — تمامِ لجستیکِ رسوندنِ یک اثر به روی صحنه."
+        },
+        {
+          "title": "لایسنس و نشر",
+          "description": "محافظت از اثر و قرار دادنِ آن در بازار، با شرایطی که هنرمند می‌فهمد و باهاش موافقه."
+        }
+      ],
+      "cta": {
+        "label": "کاری داری که اینجا جاش هست؟ تماس بگیر ←",
+        "href": "/contact"
       }
-    ],
-    "disclaimer": "Azadichords is an independent label with no affiliation to any political party, movement, or government."
+    },
+    "submissions": {
+      "eyebrow": "ارسال اثر",
+      "title": "برای صدای بعدی",
+      "intro": "اگه صدات چیزیه که نمی‌تونه ساکت بمونه، می‌خوایم بشنویمش. آزادی‌کورد به‌دنبالِ هنرمندانیه که موسیقی و شعرشون از یک باور میاد، نه فقط یک ژانر. کارت رو برامون بفرست.",
+      "guidelines": [
+        "۲ تا ۳ ترک، به همون شکلی که الان هست — چه نهایی باشه چه نه.",
+        "چند جمله درباره‌ی اثر و داستانِ پشتِ اون.",
+        "نه پرس‌کیت، نه پیچ‌دک. فقط موسیقی."
+      ],
+      "note": "آثارِ ارسالی در حدِ زمانِ موجود بررسی می‌شن. به هر ارسالی جواب داده نمی‌شه — ولی به همه گوش داده می‌شه.",
+      "cta": {
+        "label": "اثرت را ارسال کن ←",
+        "href": "/contact"
+      }
+    },
+    "support": {
+      "eyebrow": "حمایت",
+      "title": "از این پروژه حمایت کنید",
+      "intro": [
+        "حمایت از آزادی‌کورد یعنی حمایت از صداهایی که تصمیم گرفتن ساکت نمونن. با گوش‌دادن، خریدن، و به‌اشتراک‌گذاشتنِ این موسیقی، بخشی از این حرکت می‌شید.",
+        "هر حمایتی که تو این صفحه انجام می‌شه، مستقیم صرفِ رسوندنِ این موسیقی به روی صحنه می‌شه — تولید، سفر، و اولین اجراهای زنده در اروپا."
+      ],
+      "tiers": [
+        {
+          "name": "Tier 1",
+          "title": "The Record",
+          "description": "آلبومِ دیجیتال با کیفیتِ بالا (FLAC + lossless) به‌همراه بوکلتِ دیجیتالِ متن ترانه‌ها و داستانِ پشتِ هر آهنگ.",
+          "note": ""
+        },
+        {
+          "name": "Tier 2",
+          "title": "The Record + The Room",
+          "description": "همه‌چیزِ Tier 1، به‌همراه یک بلیت (یا دسترسیِ اولویت‌دار) برای اولین اجرای زنده.",
+          "note": ""
+        },
+        {
+          "name": "Tier 3",
+          "title": "Founding Supporter",
+          "description": "همه‌چیزِ Tier 2، به‌همراه معرفی‌شدن به‌عنوانِ یکی از حامیانِ اولیه‌ی هنرِ مستقل.",
+          "note": "به‌صورتِ پیش‌فرض، اسمِ حامیان به‌طورِ ناشناس ثبت می‌شه («یک Founding Supporter»). اگه ترجیح می‌دید اسمتون ثبت بشه، موقعِ پرداخت می‌تونید این گزینه رو انتخاب کنید — کاملاً به انتخابِ خودتونه."
+        }
+      ],
+      "cta": {
+        "label": "تماس بگیرید",
+        "href": "/contact"
+      },
+      "transparency": "تمامِ درآمد مستقیم صرفِ هزینه‌های تولید و اجرای زنده می‌شه. بدونِ واسطه، بدونِ کمیته."
+    },
+    "contact": {
+      "eyebrow": "تماس",
+      "title": "با ما در تماس باشید",
+      "subhead": "برای درخواست‌های موسیقی، مطبوعات یا اجرا.",
+      "fields": {
+        "name": "نام",
+        "email": "ایمیل",
+        "subject": "موضوع",
+        "category": "دسته"
+      },
+      "categories": [
+        "عمومی",
+        "ارسال اثر",
+        "مطبوعات",
+        "رزرو",
+        "لایسنس"
+      ],
+      "submit": "ارسال"
+    },
+    "footer": {
+      "copyright": "AZADICHORDS © 2026 — Paris",
+      "social": [
+        {
+          "label": "Instagram",
+          "href": ""
+        },
+        {
+          "label": "YouTube",
+          "href": ""
+        },
+        {
+          "label": "Spotify",
+          "href": ""
+        },
+        {
+          "label": "Telegram",
+          "href": ""
+        }
+      ],
+      "disclaimer": "آزادی‌کورد لیبلی مستقله و به هیچ حزب، جنبش یا دولتی وابسته نیست."
+    }
   }
 };
