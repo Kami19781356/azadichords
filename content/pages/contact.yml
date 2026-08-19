@@ -1,14 +1,28 @@
-eyebrow: Contact
-title: Get in Touch
-subhead: For music, press, or performance inquiries.
-fieldNameLabel: Name
-fieldEmailLabel: Email
-fieldSubjectLabel: Subject
-fieldCategoryLabel: Category
-categories:
+eyebrow_en: Contact
+eyebrow_fa: تماس
+title_en: Get in Touch
+title_fa: با ما در تماس باشید
+subhead_en: For music, press, or performance inquiries.
+subhead_fa: ""
+fieldNameLabel_en: Name
+fieldNameLabel_fa: نام
+fieldEmailLabel_en: Email
+fieldEmailLabel_fa: ایمیل
+fieldSubjectLabel_en: Subject
+fieldSubjectLabel_fa: موضوع
+fieldCategoryLabel_en: Category
+fieldCategoryLabel_fa: دسته
+categories_en:
   - General
   - Submission
   - Press
   - Booking
   - Licensing
-submitLabel: Send
+categories_fa:
+  - عمومی
+  - ارسال اثر
+  - مطبوعات
+  - رزرو
+  - لایسنس
+submitLabel_en: Send
+submitLabel_fa: ارسال

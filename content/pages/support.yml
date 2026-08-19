@@ -1,24 +1,43 @@
-eyebrow: Support
-title: Support the Project
-intro:
+eyebrow_en: Support
+eyebrow_fa: حمایت
+title_en: Support the Project
+title_fa: از این پروژه حمایت کنید
+intro_en:
   - Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. That independence is made possible directly by the people who choose to support it.
   - Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe.
+intro_fa:
+  - حمایت از آزادی‌کورد یعنی حمایت از صداهایی که تصمیم گرفتن ساکت نمونن. با گوش‌دادن، خریدن، و به‌اشتراک‌گذاشتنِ این موسیقی، بخشی از این حرکت می‌شید.
 tiers:
+  # Tier 1 has real content but no Stripe price yet (STRIPE_PRICE_ID_TIER_1
+  # env var unset) — see docs/SALES_SETUP.md.
   - name: Tier 1
-    title: The Record
-    description: High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.
-    note: ""
+    title_en: The Record
+    title_fa: آلبوم
+    description_en: High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.
+    description_fa: ""
+    note_en: ""
+    note_fa: ""
+  # TODO (per user, do not guess): Tier 2 price not yet decided.
   - name: Tier 2
-    title: The Record + The Room
-    description: Everything in Tier 1, plus a ticket (or priority access) to the first live performance.
-    note: ""
+    title_en: The Record + The Room
+    title_fa: آلبوم + جا در سالن
+    description_en: Everything in Tier 1, plus a ticket (or priority access) to the first live performance.
+    description_fa: ""
+    note_en: ""
+    note_fa: ""
+  # TODO (per user, do not guess): Tier 3 price not yet decided.
   - name: Tier 3
-    title: Founding Supporter
-    description: Everything in Tier 2, plus recognition as an early supporter of independent art.
-    note: >-
+    title_en: Founding Supporter
+    title_fa: حامی بنیان‌گذار
+    description_en: Everything in Tier 2, plus recognition as an early supporter of independent art.
+    description_fa: ""
+    note_en: >-
       By default, founding supporters are listed anonymously ("A Founding
       Supporter"). If you would prefer your name included instead, you can
       opt in during checkout — entirely your choice.
-ctaLabel: Get in Touch
+    note_fa: ""
+ctaLabel_en: Get in Touch
+ctaLabel_fa: تماس بگیرید
 ctaHref: "/contact"
-transparency: All proceeds go directly to production and live performance costs. No intermediary, no committee.
+transparency_en: All proceeds go directly to production and live performance costs. No intermediary, no committee.
+transparency_fa: ""

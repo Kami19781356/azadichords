@@ -1,11 +1,24 @@
-eyebrow: Manifesto
-title: A Label Built in Exile
+eyebrow_en: Manifesto
+eyebrow_fa: مانیفست
+title_en: A Label Built in Exile
+title_fa: لیبلی ساخته‌شده در تبعید
 imageCaption: portrait — Kamran Rasoolzadeh, Paris
-paragraphs:
-  - "Azadichords began with an album — a record that needed a home beyond permission: no committee, no censor, no government approval required. So one was built, in Paris, in 2026."
-  - We believe music is one of the last languages that cannot be fully policed. A melody crosses borders that people cannot. A lyric survives censorship that speeches do not.
-  - Azadichords exists for that music — songs written by those who were told to stop writing, sung by voices that were told to go quiet. We are independent by choice, not necessity — no committee decides what we release, and no permission is required for what we say.
-  - This is not a protest label. It is a human one. Some of what we release speaks directly to a moment in history. Most of it speaks, as music always has, to love, loss, and the ordinary weight of being alive.
-closing: That first album belongs to Kamran Rasoolzadeh — poet, composer, and the label's first artist.
-ctaLabel: Meet the Artist →
+paragraphs_en:
+  - "Azadichords is built from two words: Azadi — freedom — and chords. Here, the two become one."
+  - "We are an independent label for voices that cannot, and will not, stay silent. For poetry and music that breaks through censorship, not with its permission."
+  - "We don't release artists; we release a belief — that every voice, even in exile, even forced into silence, has the right to be heard."
+  - "This label began with one voice. It was never meant to end with it."
+  - "Azadichords began with a decision: that committed music and poetry deserve a label that stands fully behind it — not just behind a single song."
+  - "Every album, every track, every poem is a step toward the day this label is home to many voices, not one."
+paragraphs_fa:
+  - آزادی‌کورد از دو کلمه ساخته شده: آزادی، و آکورد. اینجا این دو یکی می‌شن.
+  - ما یک لیبلِ مستقلیم برای صداهایی که نمی‌تونن، و نمی‌خوان، ساکت بمونن. برای شعر و موسیقی‌ای که از دلِ سانسور بیرون می‌زنه، نه با اجازه‌ی سانسور.
+  - ما هنرمند منتشر نمی‌کنیم؛ یک باور منتشر می‌کنیم: که صدای هر آدمی، حتی در تبعید، حتی در سکوتِ اجباری، حق داره شنیده بشه.
+  - این لیبل با یک صدا شروع شد. قرار نیست با همون یکی تموم بشه.
+  - آزادی‌کورد از یک تصمیم شروع شد: که موسیقی و شعرِ متعهد، لایقِ لیبلی‌ست که پشتش وایسه — نه فقط پشتِ یک آهنگ.
+  - هر آلبوم، هر ترک، هر شعر، قدمیه به‌سمتِ روزی که این لیبل خونه‌ی چند صدا باشه، نه یکی.
+closing_en: "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded this label as its first artist. Not to remain the only one, but to be the first of many voices still to come."
+closing_fa: "کامران رسول‌زاده — شاعر، آهنگ‌ساز، و خواننده-ترانه‌سرا — این لیبل رو به‌عنوانِ اولین هنرمندش بنیان گذاشت؛ نه به این نیت که تنها بمونه، بلکه به این نیت که اولین صدا باشه از صداهای بیشتری که قراره بیان."
+ctaLabel_en: Meet the Artist →
+ctaLabel_fa: هنرمند را بشناسید ←
 ctaHref: "/artists"

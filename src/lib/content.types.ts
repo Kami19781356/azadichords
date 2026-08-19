@@ -9,6 +9,8 @@ export type Track = {
   title: string;
   durationLabel?: string;
   audioUrl?: string;
+  isLead?: boolean;
+  leadNote?: string;
 };
 
 export type Album = {
@@ -35,6 +37,7 @@ export type Artist = {
   slug: string;
   name: string;
   role: string;
+  badge: string;
   imageCaption: string;
   intro: string;
   bio: string;
@@ -70,6 +73,7 @@ export type Content = {
     ctaPrimary: Cta;
     ctaSecondary: Cta;
     scrollHint: string;
+    promoBar: Cta;
   };
   manifesto: {
     eyebrow: string;

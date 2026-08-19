@@ -1,8 +1,20 @@
-eyebrow: Independent Music Label — Paris
+eyebrow_en: Independent Music Label — Paris
+eyebrow_fa: لیبل مستقل موسیقی — پاریس
 title: AZADICHORDS
-subhead: An independent label for the voice that refuses to be silent.
-ctaPrimaryLabel: Listen
+subhead_en: An independent label for the voice that refuses to be silent.
+subhead_fa: لیبلی مستقل برای صدایی که حاضر نیست ساکت بماند.
+ctaPrimaryLabel_en: Listen
+ctaPrimaryLabel_fa: شنیدن
+# Inline mini-player in the hero, not a page navigation — see Hero.tsx.
+# Falls back to this link if there's ever no track configured.
 ctaPrimaryHref: "/music"
-ctaSecondaryLabel: Our Story
+ctaSecondaryLabel_en: The Manifesto
+ctaSecondaryLabel_fa: مانیفست
 ctaSecondaryHref: "/manifesto"
-scrollHint: (Scroll for more)
+scrollHint_en: (Scroll for more)
+scrollHint_fa: (برای ادامه اسکرول کنید)
+# Thin promo strip under the hero CTAs — see brief section 1. No price
+# shown since Tier 2/3 pricing is still TODO (not guessing it here).
+promoBarLabel_en: "The Record + The Room includes a ticket to our first live performance"
+promoBarLabel_fa: "بسته‌ی «آلبوم + بلیت» شامل بلیت اولین اجرای زنده‌ی ماست"
+promoBarHref: "/support"

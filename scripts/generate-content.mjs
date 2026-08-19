@@ -3,6 +3,14 @@
 // `next dev` and `next build` (see package.json), so anything committed
 // through the CMS is picked up on the next run/deploy with no manual step.
 //
+// Source files use a bilingual `_en`/`_fa` field-pair convention (e.g.
+// `title_en` / `title_fa`) so that adding real i18n later — or
+// migrating to a CMS with native i18n (Payload, etc.) — is a matter of
+// reading a different suffix, not a schema rewrite. The site itself
+// only renders English right now, so this generator reads `_en` and
+// emits the same flat, unprefixed shape it always has; `_fa` values
+// live in the source files but aren't consumed yet.
+//
 // Do not hand-edit src/lib/content.ts — edit the files in content/ instead.
 
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -31,6 +39,9 @@ function readFolder(folder) {
     });
 }
 
+// Reads the `_en` half of a bilingual field pair.
+const en = (obj, key) => obj[`${key}_en`];
+
 const nav = readYaml("nav");
 const home = readYaml("home");
 const manifesto = readYaml("manifesto");
@@ -47,18 +58,19 @@ const footer = readYaml("footer");
 const artists = readFolder("artists").map((a) => ({
   slug: a.slug,
   name: a.name,
-  role: a.role,
+  role: en(a, "role"),
+  badge: en(a, "badge") || "",
   imageCaption: a.imageCaption,
-  intro: a.intro,
-  bio: a.body,
-  cta: { label: a.ctaLabel, href: a.ctaHref },
+  intro: en(a, "intro"),
+  bio: en(a, "bio") || a.body, // fall back to markdown body for older entries
+  cta: { label: en(a, "ctaLabel"), href: a.ctaHref },
   recognition: a.recognition ?? [],
 }));
 
 const activity = readFolder("activity").map((a) => ({
   date: a.date,
-  title: a.title,
-  description: a.body,
+  title: en(a, "title"),
+  description: en(a, "body") || a.body,
   link: a.link || "",
 }));
 
@@ -69,103 +81,121 @@ const albums = readFolder("albums").map((a) => ({
   year: a.year,
   status: a.status,
   coverImageCaption: a.coverImageCaption,
-  blurb: a.body,
-  tracks: a.tracks ?? [],
+  blurb: en(a, "blurb") || a.body,
+  tracks: (a.tracks ?? []).map((t) => ({
+    title: t.title,
+    durationLabel: t.durationLabel || "",
+    audioUrl: t.audioUrl || "",
+    isLead: !!t.isLead,
+    leadNote: en(t, "leadNote") || "",
+  })),
   musicVideoUrl: a.musicVideoUrl || "",
-  musicVideoCaption: a.musicVideoCaption || "",
-  externalListen: { label: a.externalListenLabel, href: a.externalListenHref },
+  musicVideoCaption: en(a, "musicVideoCaption") || "",
+  externalListen: {
+    label: en(a, "externalListenLabel") || "",
+    href: a.externalListenHref || "",
+  },
 }));
 
 const content = {
   nav: {
     brand: nav.brand,
-    tagline: nav.tagline,
-    links: nav.links,
+    tagline: en(nav, "tagline"),
+    links: nav.links.map((l) => ({ href: l.href, label: en(l, "label") })),
   },
   hero: {
-    eyebrow: home.eyebrow,
+    eyebrow: en(home, "eyebrow"),
     title: home.title,
-    subhead: home.subhead,
-    ctaPrimary: { label: home.ctaPrimaryLabel, href: home.ctaPrimaryHref },
-    ctaSecondary: { label: home.ctaSecondaryLabel, href: home.ctaSecondaryHref },
-    scrollHint: home.scrollHint,
+    subhead: en(home, "subhead"),
+    ctaPrimary: { label: en(home, "ctaPrimaryLabel"), href: home.ctaPrimaryHref },
+    ctaSecondary: { label: en(home, "ctaSecondaryLabel"), href: home.ctaSecondaryHref },
+    scrollHint: en(home, "scrollHint"),
+    promoBar: { label: en(home, "promoBarLabel"), href: home.promoBarHref },
   },
   manifesto: {
-    eyebrow: manifesto.eyebrow,
-    title: manifesto.title,
+    eyebrow: en(manifesto, "eyebrow"),
+    title: en(manifesto, "title"),
     imageCaption: manifesto.imageCaption,
-    paragraphs: manifesto.paragraphs,
-    closing: manifesto.closing,
-    cta: { label: manifesto.ctaLabel, href: manifesto.ctaHref },
+    paragraphs: manifesto.paragraphs_en,
+    closing: en(manifesto, "closing"),
+    cta: { label: en(manifesto, "ctaLabel"), href: manifesto.ctaHref },
   },
   music: {
-    eyebrow: music.eyebrow,
-    title: music.title,
-    intro: music.intro,
-    closing: music.closing,
-    comingSoonLabel: music.comingSoonLabel,
-    tracksComingSoonLabel: music.tracksComingSoonLabel,
-    videoComingSoonLabel: music.videoComingSoonLabel,
+    eyebrow: en(music, "eyebrow"),
+    title: en(music, "title"),
+    intro: en(music, "intro"),
+    closing: en(music, "closing"),
+    comingSoonLabel: en(music, "comingSoonLabel"),
+    tracksComingSoonLabel: en(music, "tracksComingSoonLabel"),
+    videoComingSoonLabel: en(music, "videoComingSoonLabel"),
   },
   artistsPage: {
-    eyebrow: artistsPage.eyebrow,
-    title: artistsPage.title,
-    intro: artistsPage.intro,
+    eyebrow: en(artistsPage, "eyebrow"),
+    title: en(artistsPage, "title"),
+    intro: en(artistsPage, "intro"),
   },
   artists,
   albums,
   activityPage: {
-    eyebrow: activityPage.eyebrow,
-    title: activityPage.title,
-    intro: activityPage.intro,
-    emptyStateNote: activityPage.emptyStateNote,
+    eyebrow: en(activityPage, "eyebrow"),
+    title: en(activityPage, "title"),
+    intro: en(activityPage, "intro"),
+    emptyStateNote: en(activityPage, "emptyStateNote"),
   },
   activity,
   press: {
-    eyebrow: press.eyebrow,
-    title: press.title,
-    paragraphs: press.paragraphs,
+    eyebrow: en(press, "eyebrow"),
+    title: en(press, "title"),
+    paragraphs: press.paragraphs_en,
   },
   services: {
-    eyebrow: services.eyebrow,
-    title: services.title,
-    intro: services.intro,
-    items: services.services,
-    cta: { label: services.ctaLabel, href: services.ctaHref },
+    eyebrow: en(services, "eyebrow"),
+    title: en(services, "title"),
+    intro: en(services, "intro"),
+    items: services.services.map((s) => ({
+      title: en(s, "title"),
+      description: en(s, "description"),
+    })),
+    cta: { label: en(services, "ctaLabel"), href: services.ctaHref },
   },
   submissions: {
-    eyebrow: submissions.eyebrow,
-    title: submissions.title,
-    intro: submissions.intro,
-    guidelines: submissions.guidelines,
-    note: submissions.note,
-    cta: { label: submissions.ctaLabel, href: submissions.ctaHref },
+    eyebrow: en(submissions, "eyebrow"),
+    title: en(submissions, "title"),
+    intro: en(submissions, "intro"),
+    guidelines: submissions.guidelines_en,
+    note: en(submissions, "note"),
+    cta: { label: en(submissions, "ctaLabel"), href: submissions.ctaHref },
   },
   support: {
-    eyebrow: support.eyebrow,
-    title: support.title,
-    intro: support.intro,
-    tiers: support.tiers,
-    cta: { label: support.ctaLabel, href: support.ctaHref },
-    transparency: support.transparency,
+    eyebrow: en(support, "eyebrow"),
+    title: en(support, "title"),
+    intro: support.intro_en,
+    tiers: support.tiers.map((t) => ({
+      name: t.name,
+      title: en(t, "title"),
+      description: en(t, "description"),
+      note: en(t, "note") || "",
+    })),
+    cta: { label: en(support, "ctaLabel"), href: support.ctaHref },
+    transparency: en(support, "transparency"),
   },
   contact: {
-    eyebrow: contact.eyebrow,
-    title: contact.title,
-    subhead: contact.subhead,
+    eyebrow: en(contact, "eyebrow"),
+    title: en(contact, "title"),
+    subhead: en(contact, "subhead"),
     fields: {
-      name: contact.fieldNameLabel,
-      email: contact.fieldEmailLabel,
-      subject: contact.fieldSubjectLabel,
-      category: contact.fieldCategoryLabel,
+      name: en(contact, "fieldNameLabel"),
+      email: en(contact, "fieldEmailLabel"),
+      subject: en(contact, "fieldSubjectLabel"),
+      category: en(contact, "fieldCategoryLabel"),
     },
-    categories: contact.categories,
-    submit: contact.submitLabel,
+    categories: contact.categories_en,
+    submit: en(contact, "submitLabel"),
   },
   footer: {
     copyright: footer.copyright,
     social: footer.social,
-    disclaimer: footer.disclaimer,
+    disclaimer: en(footer, "disclaimer"),
   },
 };
 

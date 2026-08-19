@@ -57,22 +57,28 @@ export const content: Content = {
       "href": "/music"
     },
     "ctaSecondary": {
-      "label": "Our Story",
+      "label": "The Manifesto",
       "href": "/manifesto"
     },
-    "scrollHint": "(Scroll for more)"
+    "scrollHint": "(Scroll for more)",
+    "promoBar": {
+      "label": "The Record + The Room includes a ticket to our first live performance",
+      "href": "/support"
+    }
   },
   "manifesto": {
     "eyebrow": "Manifesto",
     "title": "A Label Built in Exile",
     "imageCaption": "portrait — Kamran Rasoolzadeh, Paris",
     "paragraphs": [
-      "Azadichords began with an album — a record that needed a home beyond permission: no committee, no censor, no government approval required. So one was built, in Paris, in 2026.",
-      "We believe music is one of the last languages that cannot be fully policed. A melody crosses borders that people cannot. A lyric survives censorship that speeches do not.",
-      "Azadichords exists for that music — songs written by those who were told to stop writing, sung by voices that were told to go quiet. We are independent by choice, not necessity — no committee decides what we release, and no permission is required for what we say.",
-      "This is not a protest label. It is a human one. Some of what we release speaks directly to a moment in history. Most of it speaks, as music always has, to love, loss, and the ordinary weight of being alive."
+      "Azadichords is built from two words: Azadi — freedom — and chords. Here, the two become one.",
+      "We are an independent label for voices that cannot, and will not, stay silent. For poetry and music that breaks through censorship, not with its permission.",
+      "We don't release artists; we release a belief — that every voice, even in exile, even forced into silence, has the right to be heard.",
+      "This label began with one voice. It was never meant to end with it.",
+      "Azadichords began with a decision: that committed music and poetry deserve a label that stands fully behind it — not just behind a single song.",
+      "Every album, every track, every poem is a step toward the day this label is home to many voices, not one."
     ],
-    "closing": "That first album belongs to Kamran Rasoolzadeh — poet, composer, and the label's first artist.",
+    "closing": "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded this label as its first artist. Not to remain the only one, but to be the first of many voices still to come.",
     "cta": {
       "label": "Meet the Artist →",
       "href": "/artists"
@@ -90,16 +96,17 @@ export const content: Content = {
   "artistsPage": {
     "eyebrow": "Artists",
     "title": "Artists",
-    "intro": "Azadichords is built to grow beyond a single voice. It begins with one artist — more will join as the label expands."
+    "intro": "Every Azadichords artist is a voice that chose not to stay silent."
   },
   "artists": [
     {
       "slug": "kamran-rasoolzadeh",
       "name": "Kamran Rasoolzadeh",
       "role": "Poet, Composer, Singer-Songwriter",
+      "badge": "Founding Artist",
       "imageCaption": "portrait — Kamran, close crop",
       "intro": "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
-      "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works.",
+      "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works. He founded Azadichords as its Founding Artist.",
       "cta": {
         "label": "Explore the Music →",
         "href": "/music"
@@ -124,11 +131,47 @@ export const content: Content = {
           "award": "Fajr Music Festival",
           "category": "Best Songwriting",
           "year": "2022"
+        },
+        {
+          "award": "Baku Poetry Festival",
+          "category": "Honorary Diploma",
+          "year": "2015"
         }
       ]
     }
   ],
   "albums": [
+    {
+      "slug": "iran-e-jan",
+      "title": "Iran-e Jan",
+      "artist": "kamran-rasoolzadeh",
+      "year": 2026,
+      "status": "coming-soon",
+      "coverImageCaption": "Iran-e Jan — album art",
+      "blurb": "Azadichords' debut release, arriving September 16, 2026. Lead single \"Bang Bang\" premieres around September 1.",
+      "tracks": [
+        {
+          "title": "1819",
+          "durationLabel": "",
+          "audioUrl": "",
+          "isLead": false,
+          "leadNote": ""
+        },
+        {
+          "title": "Bang Bang",
+          "durationLabel": "",
+          "audioUrl": "",
+          "isLead": true,
+          "leadNote": "Lead single — teaser arriving around September 1"
+        }
+      ],
+      "musicVideoUrl": "",
+      "musicVideoCaption": "",
+      "externalListen": {
+        "label": "",
+        "href": ""
+      }
+    },
     {
       "slug": "cheshmat",
       "title": "CHESHMAT",
@@ -195,7 +238,7 @@ export const content: Content = {
   "submissions": {
     "eyebrow": "Submissions",
     "title": "For the Next Voice",
-    "intro": "Azadichords exists for music that needed a home beyond permission. If that describes your work, we want to hear it.",
+    "intro": "If your voice is something that can't stay silent, we want to hear it. Azadichords is looking for artists whose music and poetry come from a belief, not just a genre. Send us your work.",
     "guidelines": [
       "2–3 tracks, in their current form — polished or not.",
       "A few sentences about the work and the story behind it.",

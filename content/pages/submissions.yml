@@ -1,10 +1,16 @@
-eyebrow: Submissions
-title: For the Next Voice
-intro: Azadichords exists for music that needed a home beyond permission. If that describes your work, we want to hear it.
-guidelines:
+eyebrow_en: Submissions
+eyebrow_fa: ارسال اثر
+title_en: For the Next Voice
+title_fa: برای صدای بعدی
+intro_en: "If your voice is something that can't stay silent, we want to hear it. Azadichords is looking for artists whose music and poetry come from a belief, not just a genre. Send us your work."
+intro_fa: "اگه صدات چیزیه که نمی‌تونه ساکت بمونه، می‌خوایم بشنویمش. آزادی‌کورد به‌دنبالِ هنرمندانیه که موسیقی و شعرشون از یک باور میاد، نه فقط یک ژانر. کارت رو برامون بفرست."
+guidelines_en:
   - 2–3 tracks, in their current form — polished or not.
   - A few sentences about the work and the story behind it.
   - No press kit, no pitch deck. Just the music.
-note: Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.
-ctaLabel: Submit Your Work →
+guidelines_fa: []
+note_en: Submissions are reviewed as time allows. Not every submission gets a reply — but every one gets heard.
+note_fa: ""
+ctaLabel_en: Submit Your Work →
+ctaLabel_fa: اثرت را ارسال کن ←
 ctaHref: "/contact"

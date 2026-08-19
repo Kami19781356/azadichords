@@ -1,15 +1,28 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { easeCustom, preloaderDurationMs } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
+import AudioPlayer from "@/components/AudioPlayer";
+
+// The lead single is whichever track across all albums is flagged
+// isLead — keeps Hero content-driven instead of hardcoding a track.
+function findLeadTrack() {
+  for (const album of content.albums) {
+    const track = album.tracks.find((t) => t.isLead);
+    if (track) return track;
+  }
+  return null;
+}
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
+  const [listenOpen, setListenOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const leadTrack = findLeadTrack();
 
   useEffect(() => {
     const base = prefersReducedMotion ? 60 : preloaderDurationMs - 200;
@@ -78,7 +91,7 @@ export default function Hero() {
         </h1>
         <motion.p
           {...step(20, 260)}
-          className="mx-auto mb-12 max-w-[640px] text-[clamp(18px,2vw,26px)] font-light text-paper/75"
+          className="mx-auto mb-8 max-w-[640px] text-[clamp(18px,2vw,26px)] font-light text-paper/75"
         >
           {content.hero.subhead}
         </motion.p>
@@ -86,17 +99,52 @@ export default function Hero() {
           {...step(16, 380)}
           className="flex flex-wrap justify-center gap-5"
         >
-          <Link
-            href={content.hero.ctaPrimary.href}
+          <button
+            type="button"
+            onClick={() => setListenOpen((v) => !v)}
+            aria-expanded={listenOpen}
             className="rounded-full border border-paper px-9 py-4 text-sm tracking-[0.08em] text-paper uppercase transition-colors duration-[250ms] hover:bg-paper hover:text-ink"
           >
             {content.hero.ctaPrimary.label}
-          </Link>
+          </button>
           <Link
             href={content.hero.ctaSecondary.href}
             className="rounded-full border border-transparent px-9 py-4 text-sm tracking-[0.08em] text-gold uppercase transition-colors duration-[250ms] hover:text-paper"
           >
             {content.hero.ctaSecondary.label}
+          </Link>
+        </motion.div>
+
+        <AnimatePresence>
+          {listenOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0, marginTop: 0 }}
+              animate={{ opacity: 1, height: "auto", marginTop: 28 }}
+              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+              transition={{ duration: 0.4, ease: easeCustom }}
+              className="mx-auto w-full max-w-[420px] overflow-hidden"
+            >
+              <div className="rounded-full border border-paper/20 bg-ink/40 px-6 py-4 backdrop-blur-sm">
+                {leadTrack?.audioUrl ? (
+                  <AudioPlayer src={leadTrack.audioUrl} title={leadTrack.title} />
+                ) : (
+                  <p className="m-0 text-sm text-paper/60">
+                    {leadTrack
+                      ? `"${leadTrack.title}" — ${leadTrack.leadNote || "arriving soon"}`
+                      : content.music.tracksComingSoonLabel}
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <motion.div {...step(12, 460)} className="mt-10">
+          <Link
+            href={content.hero.promoBar.href}
+            className="text-[12px] tracking-[0.08em] text-paper/60 uppercase transition-colors duration-200 hover:text-gold"
+          >
+            🎟 {content.hero.promoBar.label}
           </Link>
         </motion.div>
       </div>

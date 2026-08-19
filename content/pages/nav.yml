@@ -1,21 +1,31 @@
 brand: AZADICHORDS
-tagline: The Voice of Freedom
+tagline_en: The Voice of Freedom
+tagline_fa: صدای آزادی
 links:
   - href: "/manifesto"
-    label: Manifesto
+    label_en: Manifesto
+    label_fa: مانیفست
   - href: "/music"
-    label: Music
+    label_en: Music
+    label_fa: موسیقی
   - href: "/artists"
-    label: Artists
+    label_en: Artists
+    label_fa: هنرمندان
   - href: "/activity"
-    label: Activity
+    label_en: Activity
+    label_fa: فعالیت‌ها
   - href: "/press"
-    label: Press
+    label_en: Press
+    label_fa: مطبوعات
   - href: "/services"
-    label: Services
+    label_en: Services
+    label_fa: خدمات
   - href: "/submissions"
-    label: Submissions
+    label_en: Submissions
+    label_fa: ارسال اثر
   - href: "/support"
-    label: Support
+    label_en: Support
+    label_fa: حمایت
   - href: "/contact"
-    label: Contact
+    label_en: Contact
+    label_fa: تماس

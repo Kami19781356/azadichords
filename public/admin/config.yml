@@ -10,6 +10,13 @@ publish_mode: simple
 media_folder: public/images/uploads
 public_folder: /images/uploads
 
+# Bilingual convention: every editorial text field is a pair —
+# fieldName_en / fieldName_fa. The site currently only renders _en;
+# _fa is captured now so nothing has to be re-modeled later, whether
+# that's a real i18n toggle on this same CMS or a migration to
+# something with native i18n (Payload, etc). _fa fields are optional —
+# leave blank until you have a translation.
+
 collections:
   - name: pages
     label: Pages
@@ -18,150 +25,212 @@ collections:
         label: Navigation
         file: content/pages/nav.yml
         fields:
-          - { name: brand, label: Brand Name, widget: string }
-          - { name: tagline, label: "Tagline (under the wordmark)", widget: string }
+          - { name: brand, label: "Brand Name (not translated)", widget: string }
+          - { name: tagline_en, label: "Tagline EN (under the wordmark)", widget: string }
+          - { name: tagline_fa, label: "Tagline FA", widget: string, required: false }
           - name: links
             label: Nav Links
             widget: list
             fields:
-              - { name: href, label: Link (e.g. #music), widget: string }
-              - { name: label, label: Label, widget: string }
+              - { name: href, label: "Link (e.g. /music)", widget: string }
+              - { name: label_en, label: Label EN, widget: string }
+              - { name: label_fa, label: Label FA, widget: string, required: false }
 
       - name: home
         label: Home / Hero
         file: content/pages/home.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: subhead, label: Subhead, widget: text }
-          - { name: ctaPrimaryLabel, label: "Primary Button Label", widget: string }
-          - { name: ctaPrimaryHref, label: "Primary Button Link", widget: string }
-          - { name: ctaSecondaryLabel, label: "Secondary Button Label", widget: string }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title, label: "Title (wordmark, not translated)", widget: string }
+          - { name: subhead_en, label: Subhead EN, widget: text }
+          - { name: subhead_fa, label: Subhead FA, widget: text, required: false }
+          - { name: ctaPrimaryLabel_en, label: "Primary Button Label EN", widget: string }
+          - { name: ctaPrimaryLabel_fa, label: "Primary Button Label FA", widget: string, required: false }
+          - { name: ctaPrimaryHref, label: "Primary Button Link (fallback only — button opens an inline player)", widget: string }
+          - { name: ctaSecondaryLabel_en, label: "Secondary Button Label EN", widget: string }
+          - { name: ctaSecondaryLabel_fa, label: "Secondary Button Label FA", widget: string, required: false }
           - { name: ctaSecondaryHref, label: "Secondary Button Link", widget: string }
-          - { name: scrollHint, label: "Scroll Hint Text", widget: string }
+          - { name: scrollHint_en, label: "Scroll Hint Text EN", widget: string }
+          - { name: scrollHint_fa, label: "Scroll Hint Text FA", widget: string, required: false }
+          - { name: promoBarLabel_en, label: "Promo Strip Text EN (below hero buttons)", widget: string }
+          - { name: promoBarLabel_fa, label: "Promo Strip Text FA", widget: string, required: false }
+          - { name: promoBarHref, label: "Promo Strip Link", widget: string }
 
       - name: manifesto
         label: Manifesto
         file: content/pages/manifesto.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
           - { name: imageCaption, label: "Image Placeholder Caption", widget: string }
-          - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, widget: text } }
-          - { name: closing, label: Closing Line, widget: text }
-          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: paragraphs_en, label: Paragraphs EN, widget: list, field: { name: paragraph, widget: text } }
+          - { name: paragraphs_fa, label: Paragraphs FA, widget: list, field: { name: paragraph, widget: text }, required: false }
+          - { name: closing_en, label: Closing Line EN, widget: text }
+          - { name: closing_fa, label: Closing Line FA, widget: text, required: false }
+          - { name: ctaLabel_en, label: "CTA Label EN", widget: string }
+          - { name: ctaLabel_fa, label: "CTA Label FA", widget: string, required: false }
           - { name: ctaHref, label: "CTA Link", widget: string }
 
       - name: music
         label: Music (page framing)
         file: content/pages/music.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro, widget: text }
-          - { name: closing, label: Closing Line, widget: text }
-          - { name: comingSoonLabel, label: "'Coming Soon' Badge Text", widget: string }
-          - { name: tracksComingSoonLabel, label: "No-Tracks-Yet Text", widget: string }
-          - { name: videoComingSoonLabel, label: "No-Video-Yet Text", widget: string }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro EN, widget: text }
+          - { name: intro_fa, label: Intro FA, widget: text, required: false }
+          - { name: closing_en, label: Closing Line EN, widget: text }
+          - { name: closing_fa, label: Closing Line FA, widget: text, required: false }
+          - { name: comingSoonLabel_en, label: "'Coming Soon' Badge Text EN", widget: string }
+          - { name: comingSoonLabel_fa, label: "'Coming Soon' Badge Text FA", widget: string, required: false }
+          - { name: tracksComingSoonLabel_en, label: "No-Tracks-Yet Text EN", widget: string }
+          - { name: tracksComingSoonLabel_fa, label: "No-Tracks-Yet Text FA", widget: string, required: false }
+          - { name: videoComingSoonLabel_en, label: "No-Video-Yet Text EN", widget: string }
+          - { name: videoComingSoonLabel_fa, label: "No-Video-Yet Text FA", widget: string, required: false }
 
       - name: artists_page
         label: Artists (roster page)
         file: content/pages/artists-page.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro, widget: text }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro EN, widget: text }
+          - { name: intro_fa, label: Intro FA, widget: text, required: false }
 
       - name: activity_page
         label: Activity (page framing)
         file: content/pages/activity.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro, widget: text }
-          - { name: emptyStateNote, label: "Text Shown While There's No Activity Yet", widget: text }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro EN, widget: text }
+          - { name: intro_fa, label: Intro FA, widget: text, required: false }
+          - { name: emptyStateNote_en, label: "Text Shown While There's No Activity Yet (EN)", widget: text }
+          - { name: emptyStateNote_fa, label: "Same, FA", widget: text, required: false }
 
       - name: press
         label: Press
         file: content/pages/press.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: paragraphs_en, label: Paragraphs EN, widget: list, field: { name: paragraph, widget: text } }
+          - { name: paragraphs_fa, label: Paragraphs FA, widget: list, field: { name: paragraph, widget: text }, required: false }
 
       - name: services
         label: Services
         file: content/pages/services.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro, widget: text }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro EN, widget: text }
+          - { name: intro_fa, label: Intro FA, widget: text, required: false }
           - name: services
             label: Service List
             widget: list
             fields:
-              - { name: title, label: Title, widget: string }
-              - { name: description, label: Description, widget: text }
-          - { name: ctaLabel, label: "CTA Label", widget: string }
+              - { name: title_en, label: Title EN, widget: string }
+              - { name: title_fa, label: Title FA, widget: string, required: false }
+              - { name: description_en, label: Description EN, widget: text }
+              - { name: description_fa, label: Description FA, widget: text, required: false }
+          - { name: ctaLabel_en, label: "CTA Label EN", widget: string }
+          - { name: ctaLabel_fa, label: "CTA Label FA", widget: string, required: false }
           - { name: ctaHref, label: "CTA Link", widget: string }
 
       - name: submissions
         label: Submissions
         file: content/pages/submissions.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro, widget: text }
-          - { name: guidelines, label: Guidelines, widget: list, field: { name: line, widget: string } }
-          - { name: note, label: "Fine-print Note", widget: text }
-          - { name: ctaLabel, label: "CTA Label", widget: string }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro EN, widget: text }
+          - { name: intro_fa, label: Intro FA, widget: text, required: false }
+          - { name: guidelines_en, label: Guidelines EN, widget: list, field: { name: line, widget: string } }
+          - { name: guidelines_fa, label: Guidelines FA, widget: list, field: { name: line, widget: string }, required: false }
+          - { name: note_en, label: "Fine-print Note EN", widget: text }
+          - { name: note_fa, label: "Fine-print Note FA", widget: text, required: false }
+          - { name: ctaLabel_en, label: "CTA Label EN", widget: string }
+          - { name: ctaLabel_fa, label: "CTA Label FA", widget: string, required: false }
           - { name: ctaHref, label: "CTA Link", widget: string }
 
       - name: support
         label: Support
         file: content/pages/support.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: intro, label: Intro Paragraphs, widget: list, field: { name: paragraph, widget: text } }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: intro_en, label: Intro Paragraphs EN, widget: list, field: { name: paragraph, widget: text } }
+          - { name: intro_fa, label: Intro Paragraphs FA, widget: list, field: { name: paragraph, widget: text }, required: false }
           - name: tiers
-            label: Tiers
+            label: "Tiers (prices are set in Stripe directly — see docs/SALES_SETUP.md; Tier 2/3 prices are still TODO, not set anywhere yet)"
             widget: list
             fields:
               - { name: name, label: "Tier Label (e.g. Tier 1)", widget: string }
-              - { name: title, label: Tier Title, widget: string }
-              - { name: description, label: Description, widget: text }
-              - { name: note, label: "Fine-print Note (optional)", widget: text, required: false }
-          - { name: ctaLabel, label: "CTA Label", widget: string }
+              - { name: title_en, label: Tier Title EN, widget: string }
+              - { name: title_fa, label: Tier Title FA, widget: string, required: false }
+              - { name: description_en, label: Description EN, widget: text }
+              - { name: description_fa, label: Description FA, widget: text, required: false }
+              - { name: note_en, label: "Fine-print Note EN (optional)", widget: text, required: false }
+              - { name: note_fa, label: "Fine-print Note FA (optional)", widget: text, required: false }
+          - { name: ctaLabel_en, label: "CTA Label EN", widget: string }
+          - { name: ctaLabel_fa, label: "CTA Label FA", widget: string, required: false }
           - { name: ctaHref, label: "CTA Link", widget: string }
-          - { name: transparency, label: "Transparency Line", widget: text }
+          - { name: transparency_en, label: "Transparency Line EN", widget: text }
+          - { name: transparency_fa, label: "Transparency Line FA", widget: text, required: false }
 
       - name: contact
         label: Contact
         file: content/pages/contact.yml
         fields:
-          - { name: eyebrow, label: Eyebrow, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: subhead, label: Subhead, widget: text }
-          - { name: fieldNameLabel, label: "'Name' Field Label", widget: string }
-          - { name: fieldEmailLabel, label: "'Email' Field Label", widget: string }
-          - { name: fieldSubjectLabel, label: "'Subject' Field Label", widget: string }
-          - { name: fieldCategoryLabel, label: "'Category' Field Label", widget: string }
-          - { name: categories, label: "Category Options", widget: list, field: { name: category, widget: string } }
-          - { name: submitLabel, label: "Submit Button Label", widget: string }
+          - { name: eyebrow_en, label: Eyebrow EN, widget: string }
+          - { name: eyebrow_fa, label: Eyebrow FA, widget: string, required: false }
+          - { name: title_en, label: Title EN, widget: string }
+          - { name: title_fa, label: Title FA, widget: string, required: false }
+          - { name: subhead_en, label: Subhead EN, widget: text }
+          - { name: subhead_fa, label: Subhead FA, widget: text, required: false }
+          - { name: fieldNameLabel_en, label: "'Name' Field Label EN", widget: string }
+          - { name: fieldNameLabel_fa, label: "'Name' Field Label FA", widget: string, required: false }
+          - { name: fieldEmailLabel_en, label: "'Email' Field Label EN", widget: string }
+          - { name: fieldEmailLabel_fa, label: "'Email' Field Label FA", widget: string, required: false }
+          - { name: fieldSubjectLabel_en, label: "'Subject' Field Label EN", widget: string }
+          - { name: fieldSubjectLabel_fa, label: "'Subject' Field Label FA", widget: string, required: false }
+          - { name: fieldCategoryLabel_en, label: "'Category' Field Label EN", widget: string }
+          - { name: fieldCategoryLabel_fa, label: "'Category' Field Label FA", widget: string, required: false }
+          - { name: categories_en, label: "Category Options EN", widget: list, field: { name: category, widget: string } }
+          - { name: categories_fa, label: "Category Options FA", widget: list, field: { name: category, widget: string }, required: false }
+          - { name: submitLabel_en, label: "Submit Button Label EN", widget: string }
+          - { name: submitLabel_fa, label: "Submit Button Label FA", widget: string, required: false }
 
       - name: footer
         label: Footer
         file: content/pages/footer.yml
         fields:
-          - { name: copyright, label: Copyright Line, widget: string }
+          - { name: copyright, label: "Copyright Line (not translated)", widget: string }
           - name: social
             label: Social Links
             widget: list
             fields:
-              - { name: label, label: Platform Name, widget: string }
+              - { name: label, label: "Platform Name (not translated)", widget: string }
               - { name: href, label: URL, widget: string }
-          - { name: disclaimer, label: Disclaimer Line, widget: text }
+          - { name: disclaimer_en, label: "Disclaimer Line EN", widget: text }
+          - { name: disclaimer_fa, label: "Disclaimer Line FA", widget: text, required: false }
 
   - name: artists
     label: Artists
@@ -170,21 +239,27 @@ collections:
     slug: "{{fields.slug}}"
     fields:
       - { name: slug, label: "Slug (URL-safe, e.g. kamran-rasoolzadeh)", widget: string }
-      - { name: name, label: Full Name, widget: string }
-      - { name: role, label: "Role (e.g. Poet, Composer, Singer-Songwriter)", widget: string }
+      - { name: name, label: "Full Name (not translated)", widget: string }
+      - { name: role_en, label: "Role EN (e.g. Poet, Composer, Singer-Songwriter)", widget: string }
+      - { name: role_fa, label: Role FA, widget: string, required: false }
+      - { name: badge_en, label: "Badge EN (e.g. Founding Artist) — leave blank for none", widget: string, required: false }
+      - { name: badge_fa, label: Badge FA, widget: string, required: false }
       - { name: imageCaption, label: "Portrait Placeholder Caption", widget: string }
-      - { name: intro, label: "Short Intro (shown on roster card)", widget: text }
-      - { name: ctaLabel, label: "Profile CTA Label", widget: string }
+      - { name: intro_en, label: "Short Intro EN (shown on roster card)", widget: text }
+      - { name: intro_fa, label: "Short Intro FA", widget: text, required: false }
+      - { name: ctaLabel_en, label: "Profile CTA Label EN", widget: string }
+      - { name: ctaLabel_fa, label: "Profile CTA Label FA", widget: string, required: false }
       - { name: ctaHref, label: "Profile CTA Link", widget: string }
       - name: recognition
-        label: "Recognition (awards specific to this artist)"
+        label: "Recognition (awards specific to this artist — names of awards/festivals are not translated)"
         widget: list
         required: false
         fields:
           - { name: award, label: "Award / Festival", widget: string }
           - { name: category, label: Category, widget: string }
           - { name: year, label: Year, widget: string }
-      - { name: body, label: "Full Bio", widget: markdown }
+      - { name: bio_en, label: "Full Bio EN", widget: markdown }
+      - { name: bio_fa, label: "Full Bio FA", widget: markdown, required: false }
 
   - name: albums
     label: Albums
@@ -193,7 +268,7 @@ collections:
     slug: "{{fields.slug}}"
     fields:
       - { name: slug, label: "Slug (URL-safe, e.g. cheshmat)", widget: string }
-      - { name: title, label: Album Title, widget: string }
+      - { name: title, label: "Album Title (not translated)", widget: string }
       - name: artist
         label: Artist
         widget: relation
@@ -208,27 +283,35 @@ collections:
         options: [released, coming-soon]
         default: coming-soon
       - { name: coverImageCaption, label: "Cover Placeholder Caption", widget: string }
-      - { name: externalListenLabel, label: "External Listen Link Label", widget: string, required: false }
+      - { name: externalListenLabel_en, label: "External Listen Link Label EN", widget: string, required: false }
+      - { name: externalListenLabel_fa, label: "External Listen Link Label FA", widget: string, required: false }
       - { name: externalListenHref, label: "External Listen Link (Spotify/etc.)", widget: string, required: false }
       - name: tracks
         label: Tracks
         widget: list
         required: false
         fields:
-          - { name: title, label: Track Title, widget: string }
+          - { name: title, label: "Track Title (not translated)", widget: string }
           - { name: durationLabel, label: "Duration (e.g. 3:42)", widget: string, required: false }
           - { name: audioUrl, label: "Preview Audio URL", widget: string, required: false }
+          - { name: isLead, label: "Lead single? (shown in the hero's inline player)", widget: boolean, default: false }
+          - { name: leadNote_en, label: "Lead-single note EN (e.g. 'teaser arriving Sept 1')", widget: string, required: false }
+          - { name: leadNote_fa, label: "Lead-single note FA", widget: string, required: false }
       - { name: musicVideoUrl, label: "Music Video URL", widget: string, required: false }
-      - { name: musicVideoCaption, label: "Music Video Caption", widget: string, required: false }
-      - { name: body, label: "Album Description", widget: markdown }
+      - { name: musicVideoCaption_en, label: "Music Video Caption EN", widget: string, required: false }
+      - { name: musicVideoCaption_fa, label: "Music Video Caption FA", widget: string, required: false }
+      - { name: blurb_en, label: "Album Description EN", widget: markdown }
+      - { name: blurb_fa, label: "Album Description FA", widget: markdown, required: false }
 
   - name: activity
     label: Activity
     folder: content/activity
     create: true
-    slug: "{{fields.date}}-{{fields.title}}"
+    slug: "{{fields.date}}-{{fields.title_en}}"
     fields:
       - { name: date, label: "Date (e.g. 2027 or March 2027)", widget: string }
-      - { name: title, label: Title, widget: string }
+      - { name: title_en, label: Title EN, widget: string }
+      - { name: title_fa, label: Title FA, widget: string, required: false }
       - { name: link, label: "Link (optional)", widget: string, required: false }
-      - { name: body, label: Description, widget: markdown }
+      - { name: body_en, label: Description EN, widget: markdown }
+      - { name: body_fa, label: Description FA, widget: markdown, required: false }

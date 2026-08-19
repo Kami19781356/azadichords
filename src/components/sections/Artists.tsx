@@ -43,8 +43,15 @@ export default function Artists() {
                 {...reveal}
                 transition={{ ...reveal.transition, delay: 0.15 }}
               >
-                <div className="mb-5 text-[13px] tracking-[0.2em] text-gold uppercase">
-                  {artist.role}
+                <div className="mb-5 flex flex-wrap items-center gap-3">
+                  <span className="text-[13px] tracking-[0.2em] text-gold uppercase">
+                    {artist.role}
+                  </span>
+                  {artist.badge && (
+                    <span className="rounded-full border border-gold/60 px-3 py-1 text-[11px] tracking-[0.1em] text-gold uppercase">
+                      {artist.badge}
+                    </span>
+                  )}
                 </div>
                 <SplitReveal
                   as="h3"

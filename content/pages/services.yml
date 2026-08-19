@@ -1,16 +1,34 @@
-eyebrow: Services
-title: What the Label Offers
-intro: Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.
+# NOTE: the new brief's draft Services copy ("distribution through
+# Believe Digital...") was explicitly flagged as unconfirmed. Keeping
+# the existing, more detailed copy until that's confirmed rather than
+# downgrading to an admittedly-rough draft. Revisit once confirmed.
+eyebrow_en: Services
+eyebrow_fa: خدمات
+title_en: What the Label Offers
+title_fa: آنچه لیبل ارائه می‌دهد
+intro_en: Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.
+intro_fa: ""
 services:
-  - title: Production & Mixing
-    description: Studio time, arrangement, and audio engineering support, from first draft to final master.
-  - title: Distribution
-    description: Placing the work on every major platform, worldwide, under the artist's own name.
-  - title: Visual Identity
-    description: Album art, music videos, and the visual language that carries a record beyond its audio.
-  - title: Live Performance
-    description: From a first show to a touring itinerary — the logistics behind bringing a record to a stage.
-  - title: Licensing & Publishing
-    description: Protecting the work and placing it commercially, on terms the artist understands and agrees to.
-ctaLabel: Working on something that belongs here? Get in Touch →
+  - title_en: Production & Mixing
+    title_fa: تولید و میکس
+    description_en: Studio time, arrangement, and audio engineering support, from first draft to final master.
+    description_fa: ""
+  - title_en: Distribution
+    title_fa: توزیع
+    description_en: Placing the work on every major platform, worldwide, under the artist's own name.
+    description_fa: ""
+  - title_en: Visual Identity
+    title_fa: هویت بصری
+    description_en: Album art, music videos, and the visual language that carries a record beyond its audio.
+    description_fa: ""
+  - title_en: Live Performance
+    title_fa: اجرای زنده
+    description_en: From a first show to a touring itinerary — the logistics behind bringing a record to a stage.
+    description_fa: ""
+  - title_en: Licensing & Publishing
+    title_fa: لایسنس و نشر
+    description_en: Protecting the work and placing it commercially, on terms the artist understands and agrees to.
+    description_fa: ""
+ctaLabel_en: Working on something that belongs here? Get in Touch →
+ctaLabel_fa: کاری داری که اینجا جاش هست؟ تماس بگیر ←
 ctaHref: "/contact"
