@@ -25,34 +25,29 @@ still needs your action in Gitea:
   clicking "Login" correctly opens a popup pointed at your Gitea instance
   (`gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io`)
 
-## Still needed from you (Gitea admin access required — I don't have it)
+## Done (a later session)
 
-1. **Register the OAuth2 Application in Gitea**
-   - Log into Gitea as admin → Site Administration → Applications (or your
-     own account → Settings → Applications, depending on Gitea version)
-   - Application name: `Azadichords CMS`
-   - Redirect URI: `https://staging.azadichords.com/admin/` (add the
-     production URL too once `azadichords.com` itself is live)
-   - If Gitea gives you the option, use a **public client** (no client
-     secret) since this is a PKCE flow with no server-side proxy
-   - Gitea will hand you a **Client ID** after saving
+1. **Registered the OAuth2 Application in Gitea** — name `Azadichords
+   CMS`, redirect URI `https://staging.azadichords.com/admin/`.
+2. **Confirmed `config.yml` needs the Client ID explicitly** — without
+   it, Decap's `github` backend assumes `base_url` is itself a
+   Decap/Netlify-style OAuth-proxy server and sends a
+   `provider=github&site_id=...&scope=repo` query instead of a real
+   OAuth2 request, which Gitea rejects with "Client ID not
+   registered". Fixed by adding `backend.app_id` to
+   `public/admin/config.yml`.
+3. Also found and fixed, while debugging the above: the Gitea service
+   in Coolify only had an `http://` domain configured, so Traefik had
+   no HTTPS router for it at all ("no available server" on any HTTPS
+   request to the Gitea subdomain, even though HTTP worked fine).
+   Changing the domain to `https://` in Coolify and redeploying the
+   service made Traefik generate the HTTPS router + request its
+   Let's Encrypt cert.
 
-2. **Confirm whether `config.yml` needs that Client ID**
-   - I could not complete a real OAuth handshake from here (no Gitea login),
-     so I can't 100% confirm whether Decap's `github`-backend-against-Gitea
-     setup needs the Client ID added to `public/admin/config.yml` explicitly
-     (some Decap versions expect it under `backend.app_id`, others infer it
-     from the redirect). **Test the login button on staging after step 1** —
-     if it errors instead of completing login, add:
-     ```yaml
-     backend:
-       ...
-       app_id: <client id from Gitea>
-     ```
-     to `public/admin/config.yml`, commit, and retest.
+## Still open
 
-3. **2FA on the Gitea admin account** (from the Master Brief's checklist,
-   still open as far as I can tell)
+- **2FA on the Gitea admin account** (from the Master Brief's checklist,
+  still open as far as I can tell)
 
 ## Why `github` as the backend name against a Gitea repo
 

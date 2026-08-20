@@ -5,6 +5,11 @@ backend:
   api_root: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io/api/v1
   base_url: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io
   auth_endpoint: login/oauth/authorize
+  # OAuth2 app registered in Gitea (Settings -> Applications), redirect
+  # URI https://staging.azadichords.com/admin/. Without this, Decap
+  # falls back to a Netlify-style OAuth-proxy query format Gitea
+  # doesn't understand ("Client ID not registered").
+  app_id: 3800b448-12d0-4924-9190-ed3c6ec59bf2
 
 publish_mode: simple
 media_folder: public/images/uploads

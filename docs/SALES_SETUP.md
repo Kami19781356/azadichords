@@ -84,17 +84,17 @@ more robust later, say so and it can get real auth.
 yet — approving a name here only marks it `approved` in the database.
 Say when you want that list rendered somewhere on the site.
 
-## 6. Cloudflare Stream (music video embeds)
+## 6. Music videos (YouTube / Vimeo)
 
-1. Create a Cloudflare account, enable Stream.
-2. Upload a video, copy its player/iframe embed URL (looks like
-   `https://customer-XXXX.cloudflarestream.com/<uid>/iframe`).
-3. Paste that URL into the album's `musicVideoUrl` field via the CMS
-   (or directly in `content/albums/*.md`).
-
-The video player component (`src/components/VideoPlayer.tsx`) only
-mounts the iframe once it's scrolled into view, then autoplays muted
-— nothing loads before that.
+**No account or upload needed.** `VideoPlayer.tsx` now embeds YouTube
+or Vimeo directly instead of Cloudflare Stream — just paste a normal
+YouTube (watch/share/`youtu.be`) or Vimeo URL into a release's
+`video_url` field via the CMS (or an artist's `priorWorkVideoUrl`).
+The component shows a click-to-play thumbnail facade first (YouTube's
+own thumbnail, no request to YouTube before the click) and only mounts
+the real iframe once clicked — no separate hosting, transcoding, or
+CDN account to set up. This replaces the earlier Cloudflare Stream
+plan from the original spec.
 
 ## 7. Audio track previews
 
