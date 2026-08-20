@@ -115,10 +115,16 @@ docker restart gitea-dscyrlmmaf5dfm1jzyzkfm7u
 
 The CMS commits straight to Gitea, but nothing redeploys the running
 site on its own unless a webhook is wired up: Gitea repo → Settings →
-Webhooks → add one of type **Gitea** pointed at the app's deploy
-webhook URL from Coolify (Push events only). Without this, every CMS
-edit needs a manual Redeploy in Coolify to actually show up on the
-site — the commit itself lands immediately either way.
+Webhooks → add one of type **Gitea** pointed at the app's Manual Git
+Webhook URL from Coolify (Configuration → Webhooks — the "Gitea" row,
+`.../webhooks/source/gitea/events/manual`), Push events only. **The
+Gitea Webhook Secret shown next to that URL in Coolify must also be
+pasted into the webhook's Secret field in Gitea** — without it Coolify
+still returns 200 (so it looks like it worked) but silently ignores
+the payload since the signature doesn't verify, and no deploy happens.
+Without any of this working, every CMS edit needs a manual Redeploy in
+Coolify to actually show up on the site — the commit itself lands
+immediately either way.
 
 ## Still open
 
