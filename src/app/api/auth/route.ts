@@ -18,7 +18,15 @@ export async function GET(request: NextRequest) {
     return new NextResponse("Missing GITEA_OAUTH_CLIENT_ID", { status: 500 });
   }
 
-  const scope = request.nextUrl.searchParams.get("scope") || "repo";
+  // Decap always sends GitHub-style scope names (e.g. "repo"), which
+  // Gitea's OAuth2 server doesn't recognize — its own scope names are
+  // "write:repository", "read:user", etc. (see
+  // models/auth/access_token_scope.go). An unrecognized scope is
+  // silently dropped, which is what caused Decap's Publish to fail
+  // with a generic API_ERROR (the token had no write access at all).
+  // Ignore whatever Decap requested and always ask for exactly what
+  // the CMS needs against Gitea.
+  const scope = "write:repository,read:user";
   const state = crypto.randomBytes(16).toString("hex");
   const redirectUri = `${getSiteOrigin(request)}/api/callback`;
 
