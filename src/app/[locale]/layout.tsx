@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Bodoni_Moda, Work_Sans, Vazirmatn } from "next/font/google";
+import { Bodoni_Moda, Work_Sans, Vazirmatn, Noto_Naskh_Arabic } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import Preloader from "@/components/Preloader";
-import CustomCursor from "@/components/CustomCursor";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ContentProvider } from "@/lib/ContentProvider";
@@ -30,6 +29,16 @@ const vazirmatn = Vazirmatn({
   weight: ["400", "500", "600", "700"],
 });
 
+// Persian headings: a classical Naskh serif (mirroring Bodoni Moda's
+// editorial-serif role on the English site) instead of reusing
+// Vazirmatn for everything, which flattened the heading/body contrast
+// the brand relies on.
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  variable: "--font-noto-naskh-arabic",
+  subsets: ["arabic"],
+  weight: ["500", "600", "700"],
+});
+
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
@@ -52,14 +61,13 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${bodoniModa.variable} ${workSans.variable} ${vazirmatn.variable} h-full antialiased`}
+      className={`${bodoniModa.variable} ${workSans.variable} ${vazirmatn.variable} ${notoNaskhArabic.variable} h-full antialiased`}
     >
       <body
         className={`min-h-full flex flex-col bg-ink text-paper ${locale === "fa" ? "font-farsi" : ""}`}
       >
         <ContentProvider locale={locale as Locale}>
           <Preloader />
-          <CustomCursor />
           <SmoothScroll>
             <div className="relative w-full overflow-x-clip">
               <Nav />

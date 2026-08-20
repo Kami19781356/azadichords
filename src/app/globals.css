@@ -24,15 +24,18 @@ body {
   font-family: var(--font-sans), sans-serif;
 }
 
-/* Persian pages: Bodoni Moda has no Arabic/Persian glyphs, so swap
-   both the heading and body fonts to Vazirmatn. Tailwind's `@theme
+/* Persian pages: Bodoni Moda has no Arabic/Persian glyphs. Headings
+   get Noto Naskh Arabic (mirrors Bodoni's role — a classical serif,
+   not just a heavier weight of the body font) and body copy gets
+   Vazirmatn, keeping the same heading/body contrast the English site
+   has instead of flattening both to one typeface. Tailwind's `@theme
    inline` bakes --font-bodoni/--font-work-sans directly into the
    .font-serif/.font-sans utilities at build time (not a live
    var(--font-serif) indirection), so those are the variables that
    actually need overriding here — not --font-serif/--font-sans. */
 body.font-farsi {
   --font-work-sans: var(--font-vazirmatn);
-  --font-bodoni: var(--font-vazirmatn);
+  --font-bodoni: var(--font-noto-naskh-arabic);
 }
 
 ::selection {
@@ -42,13 +45,4 @@ body.font-farsi {
 
 a {
   color: inherit;
-}
-
-body.cursor-none-custom,
-body.cursor-none-custom a,
-body.cursor-none-custom button,
-body.cursor-none-custom input,
-body.cursor-none-custom select,
-body.cursor-none-custom textarea {
-  cursor: none;
 }
