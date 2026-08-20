@@ -157,7 +157,7 @@ export default function Hero() {
         <motion.div {...step(12, 460)} className="mt-10 flex justify-center">
           <Link
             href={localizeHref(content.hero.promoBar.href, locale)}
-            className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-gold/10 px-5 py-2.5 text-[13px] tracking-[0.02em] text-paper/90 transition-colors duration-200 hover:border-gold hover:bg-gold/15 hover:text-paper"
+            className="inline-flex items-center gap-2.5 rounded-full border border-gold/50 px-5 py-2.5 text-[13px] tracking-[0.02em] text-paper backdrop-blur-sm transition-colors duration-200 [text-shadow:0_1px_6px_rgba(0,0,0,0.7)] hover:border-gold hover:text-gold"
           >
             <motion.span
               className="inline-block text-xl leading-none"
