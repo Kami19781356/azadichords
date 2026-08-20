@@ -12,6 +12,8 @@ fieldSubjectLabel_en: Subject
 fieldSubjectLabel_fa: موضوع
 fieldCategoryLabel_en: Category
 fieldCategoryLabel_fa: دسته
+fieldMessageLabel_en: Message
+fieldMessageLabel_fa: پیام
 categories_en:
   - General
   - Submission
@@ -26,3 +28,9 @@ categories_fa:
   - لایسنس
 submitLabel_en: Send
 submitLabel_fa: ارسال
+sendingLabel_en: Sending…
+sendingLabel_fa: در حال ارسال…
+successMessage_en: "Thanks — your message has been sent. We'll get back to you soon."
+successMessage_fa: "ممنون — پیامتون ارسال شد. به‌زودی باهاتون تماس می‌گیریم."
+errorMessage_en: "Something went wrong. Please try again, or email us directly at contact@azadichords.com."
+errorMessage_fa: "مشکلی پیش اومد. لطفاً دوباره امتحان کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."

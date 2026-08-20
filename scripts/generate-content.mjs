@@ -227,9 +227,13 @@ function buildContent(lang) {
         email: t(contact, "fieldEmailLabel", lang),
         subject: t(contact, "fieldSubjectLabel", lang),
         category: t(contact, "fieldCategoryLabel", lang),
+        message: t(contact, "fieldMessageLabel", lang),
       },
       categories: t(contact, "categories", lang),
       submit: t(contact, "submitLabel", lang),
+      sending: t(contact, "sendingLabel", lang),
+      successMessage: t(contact, "successMessage", lang),
+      errorMessage: t(contact, "errorMessage", lang),
     },
     footer: {
       copyright: footer.copyright,

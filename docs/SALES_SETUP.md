@@ -45,11 +45,36 @@ full list with comments). For local testing, copy `.env.example` to
    checkbox — see Sales Process Spec section 4) and invoicing
    requirements for your auto-entrepreneur bookkeeping.
 
-## 3. Brevo (transactional email)
+## 3. Brevo (post-purchase transactional email)
 
 1. Create a Brevo account, verify a sender domain/email.
 2. Copy an API key into `BREVO_API_KEY`, and the verified sender
    address into `BREVO_SENDER_EMAIL`.
+
+## 3b. Resend (Contact page form)
+
+Same pattern as the youality.fr site's contact form — a separate
+provider from Brevo since it's a different concern (a real-time
+"someone submitted the form" notification, not a post-purchase
+receipt).
+
+1. Create a Resend account at [resend.com](https://resend.com).
+2. Add and verify the `azadichords.com` domain (DNS records — same
+   place you'd manage the site's other DNS).
+3. Copy an API key into `RESEND_API_KEY`.
+4. `RESEND_FROM_EMAIL` — an address on the verified domain, e.g.
+   `contact@azadichords.com` (per the Website Brief, this is the only
+   email address the site should ever reference publicly — no personal
+   address).
+5. `RESEND_TO_EMAIL` — wherever these notifications should actually
+   land (can be the same `contact@azadichords.com` if that inbox
+   exists, or a personal inbox behind the scenes — this one's never
+   shown on the site, only `RESEND_FROM_EMAIL` is).
+
+The contact form (`src/components/sections/Contact.tsx` →
+`/api/contact` → `src/lib/resend.ts`) sends the submitted message as
+an email with `replyTo` set to the visitor's address, so replying to
+the notification goes straight back to them.
 
 ## 4. Hetzner Object Storage (digital delivery)
 

@@ -242,10 +242,18 @@ collections:
           - { name: fieldSubjectLabel_fa, label: "'Subject' Field Label FA", widget: string, required: false }
           - { name: fieldCategoryLabel_en, label: "'Category' Field Label EN", widget: string }
           - { name: fieldCategoryLabel_fa, label: "'Category' Field Label FA", widget: string, required: false }
+          - { name: fieldMessageLabel_en, label: "'Message' Field Label EN", widget: string }
+          - { name: fieldMessageLabel_fa, label: "'Message' Field Label FA", widget: string, required: false }
           - { name: categories_en, label: "Category Options EN", widget: list, field: { name: category, widget: string } }
           - { name: categories_fa, label: "Category Options FA", widget: list, field: { name: category, widget: string }, required: false }
           - { name: submitLabel_en, label: "Submit Button Label EN", widget: string }
           - { name: submitLabel_fa, label: "Submit Button Label FA", widget: string, required: false }
+          - { name: sendingLabel_en, label: "'Sending...' Button Label EN", widget: string }
+          - { name: sendingLabel_fa, label: "'Sending...' Button Label FA", widget: string, required: false }
+          - { name: successMessage_en, label: "Success Message EN", widget: string }
+          - { name: successMessage_fa, label: "Success Message FA", widget: string, required: false }
+          - { name: errorMessage_en, label: "Error Message EN", widget: string }
+          - { name: errorMessage_fa, label: "Error Message FA", widget: string, required: false }
 
       - name: footer
         label: Footer

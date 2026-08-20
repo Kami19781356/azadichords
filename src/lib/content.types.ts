@@ -159,9 +159,18 @@ export type Content = {
     eyebrow: string;
     title: string;
     subhead: string;
-    fields: { name: string; email: string; subject: string; category: string };
+    fields: {
+      name: string;
+      email: string;
+      subject: string;
+      category: string;
+      message: string;
+    };
     categories: string[];
     submit: string;
+    sending: string;
+    successMessage: string;
+    errorMessage: string;
   };
   footer: { copyright: string; social: NavLink[]; disclaimer: string };
 };

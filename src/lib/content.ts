@@ -285,7 +285,8 @@ export const content: Record<Locale, Content> = {
         "name": "Name",
         "email": "Email",
         "subject": "Subject",
-        "category": "Category"
+        "category": "Category",
+        "message": "Message"
       },
       "categories": [
         "General",
@@ -294,7 +295,10 @@ export const content: Record<Locale, Content> = {
         "Booking",
         "Licensing"
       ],
-      "submit": "Send"
+      "submit": "Send",
+      "sending": "Sending…",
+      "successMessage": "Thanks — your message has been sent. We'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again, or email us directly at contact@azadichords.com."
     },
     "footer": {
       "copyright": "AZADICHORDS © 2026 — Paris",
@@ -598,7 +602,8 @@ export const content: Record<Locale, Content> = {
         "name": "نام",
         "email": "ایمیل",
         "subject": "موضوع",
-        "category": "دسته"
+        "category": "دسته",
+        "message": "پیام"
       },
       "categories": [
         "عمومی",
@@ -607,7 +612,10 @@ export const content: Record<Locale, Content> = {
         "رزرو",
         "لایسنس"
       ],
-      "submit": "ارسال"
+      "submit": "ارسال",
+      "sending": "در حال ارسال…",
+      "successMessage": "ممنون — پیامتون ارسال شد. به‌زودی باهاتون تماس می‌گیریم.",
+      "errorMessage": "مشکلی پیش اومد. لطفاً دوباره امتحان کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."
     },
     "footer": {
       "copyright": "AZADICHORDS © 2026 — Paris",
