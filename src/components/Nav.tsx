@@ -36,9 +36,12 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={href}
+                aria-current={pathname === href ? "page" : undefined}
                 className={cn(
-                  "text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold hover:opacity-100",
-                  pathname === href ? "text-gold opacity-100" : "text-paper/80",
+                  "border-b-2 pb-1 text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold hover:opacity-100",
+                  pathname === href
+                    ? "border-gold text-gold opacity-100"
+                    : "border-transparent text-paper/80",
                 )}
               >
                 {link.label}
@@ -79,9 +82,12 @@ export default function Nav() {
                 key={link.href}
                 href={href}
                 onClick={() => setOpen(false)}
+                aria-current={pathname === href ? "page" : undefined}
                 className={cn(
-                  "py-3 text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold",
-                  pathname === href ? "text-gold" : "text-paper/80",
+                  "border-s-2 py-3 ps-3 text-[13px] tracking-[0.06em] uppercase transition-colors duration-200 hover:text-gold",
+                  pathname === href
+                    ? "border-gold text-gold"
+                    : "border-transparent text-paper/80",
                 )}
               >
                 {link.label}
