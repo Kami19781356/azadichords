@@ -154,17 +154,17 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        <motion.div {...step(12, 460)} className="mt-10">
+        <motion.div {...step(12, 460)} className="mt-10 flex justify-center">
           <Link
             href={localizeHref(content.hero.promoBar.href, locale)}
-            className="text-[12px] tracking-[0.08em] text-paper/60 uppercase transition-colors duration-200 hover:text-gold"
+            className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-gold/10 px-5 py-2.5 text-[13px] tracking-[0.02em] text-paper/90 transition-colors duration-200 hover:border-gold hover:bg-gold/15 hover:text-paper"
           >
             <motion.span
-              className="inline-block"
+              className="inline-block text-xl leading-none"
               animate={
                 prefersReducedMotion
                   ? undefined
-                  : { rotate: [0, -10, 8, -6, 0] }
+                  : { rotate: [0, -14, 10, -8, 0] }
               }
               transition={{
                 duration: 1.6,
@@ -175,8 +175,8 @@ export default function Hero() {
               style={{ transformOrigin: "50% 0%" }}
             >
               🎟
-            </motion.span>{" "}
-            {content.hero.promoBar.label}
+            </motion.span>
+            <span>{content.hero.promoBar.label}</span>
           </Link>
         </motion.div>
       </div>
