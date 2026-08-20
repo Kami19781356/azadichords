@@ -1,23 +1,30 @@
 backend:
   # Decap CMS has a real, dedicated `gitea` backend (separate from
   # `github`) — found by reading the actual bundle source, not
-  # documented anywhere obvious. It does direct client-side OAuth2
-  # PKCE against Gitea itself (no proxy server needed, unlike
-  # `github`), and writes via Gitea's own POST /contents batch
-  # endpoint instead of GitHub's blob/tree Git Data API, which Gitea
-  # doesn't implement at all — that mismatch is what made `github`
-  # unusable here regardless of auth/CORS config.
+  # documented anywhere obvious. It writes via Gitea's own
+  # POST /contents batch endpoint instead of GitHub's blob/tree Git
+  # Data API, which Gitea doesn't implement at all — that mismatch is
+  # what made `github` unusable here regardless of auth/CORS config.
   name: gitea
   repo: AZadichords/azadichords-site
   branch: master
   api_root: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io/api/v1
-  base_url: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io
-  auth_endpoint: login/oauth/authorize
-  # OAuth2 app registered in Gitea (Settings -> Applications). This
-  # backend's redirect_uri is always the current admin page itself
-  # (document.location), so the app's Redirect URI in Gitea must be
-  # https://<domain>/admin/ — not /api/callback.
+  # This backend does a real client-side OAuth2 PKCE flow, hitting
+  # {base_url}/login/oauth/authorize and {base_url}/login/oauth/
+  # access_token directly (both hardcoded relative paths, not
+  # separately configurable). base_url points at this site itself
+  # instead of Gitea because this Gitea version rejects PKCE's
+  # secretless token exchange ("invalid empty client secret" —
+  # go-gitea/gitea#17107); src/app/login/oauth/authorize and
+  # .../access_token proxy those two exact paths through to Gitea,
+  # injecting the client secret server-side for the token exchange.
   # TODO: update to the production domain once azadichords.com is live.
+  base_url: https://staging.azadichords.com
+  auth_endpoint: login/oauth/authorize
+  # OAuth2 app registered in Gitea (Settings -> Applications).
+  # Redirect URI there is always the current admin page itself
+  # (document.location) regardless of base_url, so it stays
+  # https://<domain>/admin/.
   app_id: 3800b448-12d0-4924-9190-ed3c6ec59bf2
 
 publish_mode: simple

@@ -16,8 +16,9 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except API routes, the Decap admin panel, Next internals,
-  // and files with an extension (favicon, robots.txt, etc.) — those stay
+  // Everything except API routes, the Decap admin panel, the Gitea
+  // OAuth proxy (src/app/login/oauth/*), Next internals, and files
+  // with an extension (favicon, robots.txt, etc.) — those stay
   // locale-unprefixed, matching the plan's routing decision.
-  matcher: ["/((?!api|admin|_next|.*\\..*).*)"],
+  matcher: ["/((?!api|admin|login/oauth|_next|.*\\..*).*)"],
 };

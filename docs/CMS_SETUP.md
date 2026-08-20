@@ -26,13 +26,21 @@ mentioned in Decap's own docs site). This matters a lot:
   a batch multi-file endpoint Gitea added specifically to make CMS
   tools like this work (`go-gitea/gitea#24887`). Confirmed present in
   our Gitea version (1.27.1) by checking its routing source.
-- **`gitea` backend also authenticates differently**: it does a real,
-  direct client-side OAuth2 PKCE flow straight against Gitea — no
-  separate proxy server needed (unlike `github`, which only ever
-  speaks a Netlify-era OAuth-proxy protocol Gitea can't understand,
-  which is why an earlier version of this setup had a whole
-  `/api/auth` + `/api/callback` proxy pair; that's gone now, it was
-  never needed once the backend was corrected).
+- **`gitea` backend authenticates with client-side OAuth2 PKCE** —
+  much closer to working without a proxy than `github` (which only
+  ever speaks a Netlify-era OAuth-proxy protocol Gitea can't
+  understand at all). But this Gitea version (1.27.1) rejects PKCE's
+  whole point — exchanging a code with no client secret — with
+  `"invalid empty client secret"` (`go-gitea/gitea#17107`, still open).
+  So a secret is unavoidable, but only for the *token exchange* step:
+  `src/app/login/oauth/authorize` and `src/app/login/oauth/access_token`
+  are a two-route proxy at the exact paths Decap's Gitea auth class
+  hardcodes (relative to `base_url`, not separately configurable) —
+  `authorize` just redirects to Gitea unchanged (so the user sees
+  Gitea's real login/consent screen), `access_token` relays the
+  browser's token request to Gitea's real endpoint with the client
+  secret injected server-side. Much smaller than the old `github`-era
+  proxy, which had to reimplement the entire postMessage handshake.
 
 ## Gitea OAuth2 Application setup
 
@@ -41,10 +49,11 @@ mentioned in Decap's own docs site). This matters a lot:
 2. Name: `Azadichords CMS`.
 3. **Redirect URI must be `https://<domain>/admin/`** — the `gitea`
    backend always redirects back to the current admin page itself
-   (`document.location`), not a separate callback route.
-4. Copy the **Client ID** into `config.yml`'s `backend.app_id`. No
-   client secret is needed or used — this is a public PKCE client, and
-   the secret never leaves Gitea's UI.
+   (`document.location`), regardless of `base_url`.
+4. Client ID goes in `config.yml`'s `backend.app_id` (public, fine to
+   commit). Client Secret goes in the `GITEA_OAUTH_CLIENT_SECRET` env
+   var (Coolify's environment-variables panel, never committed) — used
+   only by `src/app/login/oauth/access_token`.
 
 ## Gitea must have CORS enabled for the site's domain
 
