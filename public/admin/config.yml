@@ -1,18 +1,24 @@
 backend:
-  name: github
+  # Decap CMS has a real, dedicated `gitea` backend (separate from
+  # `github`) — found by reading the actual bundle source, not
+  # documented anywhere obvious. It does direct client-side OAuth2
+  # PKCE against Gitea itself (no proxy server needed, unlike
+  # `github`), and writes via Gitea's own POST /contents batch
+  # endpoint instead of GitHub's blob/tree Git Data API, which Gitea
+  # doesn't implement at all — that mismatch is what made `github`
+  # unusable here regardless of auth/CORS config.
+  name: gitea
   repo: AZadichords/azadichords-site
   branch: master
   api_root: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io/api/v1
-  # Decap's `github` backend only ever speaks the Netlify-style OAuth
-  # proxy protocol (?provider=X&site_id=Y&scope=Z) — it never sends a
-  # real OAuth2 request directly to the git host, `app_id` included.
-  # base_url/auth_endpoint point at our own /api/auth + /api/callback
-  # routes instead, which do the real OAuth2 exchange against Gitea
-  # server-side (see src/app/api/auth, src/app/api/callback).
-  # TODO: update to the production domain once azadichords.com is
-  # live, and update the redirect URI on the Gitea OAuth app to match.
-  base_url: https://staging.azadichords.com
-  auth_endpoint: api/auth
+  base_url: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io
+  auth_endpoint: login/oauth/authorize
+  # OAuth2 app registered in Gitea (Settings -> Applications). This
+  # backend's redirect_uri is always the current admin page itself
+  # (document.location), so the app's Redirect URI in Gitea must be
+  # https://<domain>/admin/ — not /api/callback.
+  # TODO: update to the production domain once azadichords.com is live.
+  app_id: 3800b448-12d0-4924-9190-ed3c6ec59bf2
 
 publish_mode: simple
 media_folder: public/images/uploads
