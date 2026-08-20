@@ -111,6 +111,15 @@ docker restart gitea-dscyrlmmaf5dfm1jzyzkfm7u
   updating to `https://` explicitly (`git remote set-url origin
   https://...` locally; the app's Git Repository URL field in Coolify).
 
+## Auto-deploy on CMS Publish
+
+The CMS commits straight to Gitea, but nothing redeploys the running
+site on its own unless a webhook is wired up: Gitea repo → Settings →
+Webhooks → add one of type **Gitea** pointed at the app's deploy
+webhook URL from Coolify (Push events only). Without this, every CMS
+edit needs a manual Redeploy in Coolify to actually show up on the
+site — the commit itself lands immediately either way.
+
 ## Still open
 
 - **2FA on the Gitea admin account** (from the Master Brief's

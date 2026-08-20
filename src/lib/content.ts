@@ -365,7 +365,7 @@ export const content: Record<Locale, Content> = {
     "hero": {
       "eyebrow": "لیبل مستقل موسیقی — پاریس",
       "title": "AZADICHORDS",
-      "subhead": "لیبلی مستقل برای صدایی که حاضر نیست ساکت بماند.",
+      "subhead": "لیبلی مستقل برای صداهای آزاد و مستقل .",
       "ctaPrimary": {
         "label": "شنیدن",
         "href": "/music"
