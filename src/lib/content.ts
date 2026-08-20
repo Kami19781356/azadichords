@@ -367,7 +367,7 @@ export const content: Record<Locale, Content> = {
       "title": "AZADICHORDS",
       "subhead": "لیبلی مستقل برای صداهای آزاد و مستقل .",
       "ctaPrimary": {
-        "label": "شنیدن",
+        "label": "تازه ترین انتشار",
         "href": "/music"
       },
       "ctaSecondary": {

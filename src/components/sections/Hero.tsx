@@ -97,14 +97,28 @@ export default function Hero() {
           {...step(16, 380)}
           className="flex flex-wrap justify-center gap-5"
         >
-          <button
-            type="button"
-            onClick={() => setListenOpen((v) => !v)}
-            aria-expanded={listenOpen}
-            className="rounded-full border border-paper px-9 py-4 text-sm tracking-[0.08em] text-paper uppercase transition-colors duration-[250ms] hover:bg-paper hover:text-ink"
-          >
-            {content.hero.ctaPrimary.label}
-          </button>
+          <span className="relative inline-flex">
+            {!prefersReducedMotion && !listenOpen && (
+              <motion.span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-full border border-gold"
+                animate={{ scale: [1, 1.4], opacity: [0.6, 0] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                }}
+              />
+            )}
+            <button
+              type="button"
+              onClick={() => setListenOpen((v) => !v)}
+              aria-expanded={listenOpen}
+              className="relative rounded-full border border-paper px-9 py-4 text-sm tracking-[0.08em] text-paper uppercase transition-colors duration-[250ms] hover:bg-paper hover:text-ink"
+            >
+              {content.hero.ctaPrimary.label}
+            </button>
+          </span>
           <Link
             href={localizeHref(content.hero.ctaSecondary.href, locale)}
             className="rounded-full border border-transparent px-9 py-4 text-sm tracking-[0.08em] text-gold uppercase transition-colors duration-[250ms] hover:text-paper"
