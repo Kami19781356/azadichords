@@ -159,7 +159,24 @@ export default function Hero() {
             href={localizeHref(content.hero.promoBar.href, locale)}
             className="text-[12px] tracking-[0.08em] text-paper/60 uppercase transition-colors duration-200 hover:text-gold"
           >
-            🎟 {content.hero.promoBar.label}
+            <motion.span
+              className="inline-block"
+              animate={
+                prefersReducedMotion
+                  ? undefined
+                  : { rotate: [0, -10, 8, -6, 0] }
+              }
+              transition={{
+                duration: 1.6,
+                repeat: Infinity,
+                repeatDelay: 2.4,
+                ease: "easeInOut",
+              }}
+              style={{ transformOrigin: "50% 0%" }}
+            >
+              🎟
+            </motion.span>{" "}
+            {content.hero.promoBar.label}
           </Link>
         </motion.div>
       </div>
