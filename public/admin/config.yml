@@ -3,13 +3,16 @@ backend:
   repo: AZadichords/azadichords-site
   branch: master
   api_root: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io/api/v1
-  base_url: https://gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io
-  auth_endpoint: login/oauth/authorize
-  # OAuth2 app registered in Gitea (Settings -> Applications), redirect
-  # URI https://staging.azadichords.com/admin/. Without this, Decap
-  # falls back to a Netlify-style OAuth-proxy query format Gitea
-  # doesn't understand ("Client ID not registered").
-  app_id: 3800b448-12d0-4924-9190-ed3c6ec59bf2
+  # Decap's `github` backend only ever speaks the Netlify-style OAuth
+  # proxy protocol (?provider=X&site_id=Y&scope=Z) — it never sends a
+  # real OAuth2 request directly to the git host, `app_id` included.
+  # base_url/auth_endpoint point at our own /api/auth + /api/callback
+  # routes instead, which do the real OAuth2 exchange against Gitea
+  # server-side (see src/app/api/auth, src/app/api/callback).
+  # TODO: update to the production domain once azadichords.com is
+  # live, and update the redirect URI on the Gitea OAuth app to match.
+  base_url: https://staging.azadichords.com
+  auth_endpoint: api/auth
 
 publish_mode: simple
 media_folder: public/images/uploads

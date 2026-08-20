@@ -1,73 +1,83 @@
-# Decap CMS setup — remaining steps
+# Decap CMS setup — how login actually works
 
-The CMS admin panel is built and live at `/admin/` on any deployment of this
-repo (e.g. `https://staging.azadichords.com/admin/`). What's done vs. what
-still needs your action in Gitea:
+The CMS admin panel is live at `/admin/` on any deployment of this repo
+(e.g. `https://staging.azadichords.com/admin/`). Content lives under
+`content/` (`content/pages/*.yml`, `content/artists/*.md`,
+`content/releases/*.md`); `scripts/generate-content.mjs` regenerates
+`src/lib/content.ts` from it automatically before every `dev`/`build`.
 
-## Done (this session)
+## Why login needs a small proxy (`/api/auth` + `/api/callback`)
 
-- Content moved out of hardcoded TS into editable files under `content/`:
-  - `content/pages/*.yml` — one file per page (nav, home, manifesto, music,
-    artists-page, press, support, contact, footer)
-  - `content/artists/*.md` — one file per artist (frontmatter + Markdown body
-    for the full bio)
-  - `content/albums/*.md` — one file per album, including a `tracks` list
-    (title/duration/audio URL) and a `musicVideoUrl` field, so track demos,
-    music-video embeds, and "Coming Soon" status are all CMS-editable from
-    day one
-- `scripts/generate-content.mjs` reads all of the above and regenerates
-  `src/lib/content.ts` — runs automatically before both `npm run dev` and
-  `npm run build` (via `predev`/`prebuild`), so anything edited through the
-  CMS and pushed to Gitea is picked up on the next deploy with no manual step
-- `public/admin/index.html` + `public/admin/config.yml` — the Decap CMS
-  admin app and its collection schema, matching the file structure above
-- Verified locally: `/admin/` loads, the config parses with no errors, and
-  clicking "Login" correctly opens a popup pointed at your Gitea instance
-  (`gitea-dscyrlmmaf5dfm1jzyzkfm7u.178.104.193.74.sslip.io`)
+Decap CMS's `github` backend — which we use against Gitea, since Gitea
+implements a GitHub-compatible REST API — does **not** support a direct
+OAuth2 request to the git host, `app_id` or not. Read straight from
+Decap's own source: it always opens the popup at
+`${base_url}/${auth_endpoint}?provider=github&site_id=...&scope=...`,
+the Netlify-CMS-era OAuth-proxy protocol. Gitea's real
+`/login/oauth/authorize` endpoint doesn't understand that query shape
+at all, so pointing `base_url` straight at Gitea (the original setup)
+always failed with "Client ID not registered" — no config tweak fixes
+that; a small proxy in between is genuinely required for any git host
+other than Netlify's own.
 
-## Done (a later session)
+`src/app/api/auth/route.ts` and `src/app/api/callback/route.ts` are
+that proxy, hosted right on this Next.js app instead of a separate
+service:
+- `/api/auth` starts a real OAuth2 authorization-code request against
+  Gitea (with the actual `client_id`), storing a CSRF `state` in a
+  short-lived cookie.
+- `/api/callback` verifies that state, exchanges the returned `code`
+  for a token using the Gitea OAuth app's client secret (server-side
+  only, never sent to the browser), then serves a tiny HTML page that
+  does the exact two-message handshake Decap's popup code expects
+  (`authorizing:github` echo, then
+  `authorization:github:success:{"token":...}` via `postMessage`).
 
-1. **Registered the OAuth2 Application in Gitea** — name `Azadichords
-   CMS`, redirect URI `https://staging.azadichords.com/admin/`.
-2. **Confirmed `config.yml` needs the Client ID explicitly** — without
-   it, Decap's `github` backend assumes `base_url` is itself a
-   Decap/Netlify-style OAuth-proxy server and sends a
-   `provider=github&site_id=...&scope=repo` query instead of a real
-   OAuth2 request, which Gitea rejects with "Client ID not
-   registered". Fixed by adding `backend.app_id` to
-   `public/admin/config.yml`.
-3. Also found and fixed, while debugging the above: the Gitea service
-   in Coolify only had an `http://` domain configured, so Traefik had
-   no HTTPS router for it at all ("no available server" on any HTTPS
-   request to the Gitea subdomain, even though HTTP worked fine).
-   Changing the domain to `https://` in Coolify and redeploying the
-   service made Traefik generate the HTTPS router + request its
-   Let's Encrypt cert.
+`public/admin/config.yml`'s backend points `base_url` at this site
+itself (`https://staging.azadichords.com`) and `auth_endpoint` at
+`api/auth` — not at Gitea directly.
+
+## Gitea OAuth2 Application setup
+
+1. Gitea → your account avatar → Settings → **Applications** →
+   "Manage OAuth2 Applications".
+2. Name: `Azadichords CMS`.
+3. **Redirect URI must be `https://<domain>/api/callback`** — not
+   `/admin/`. (If you registered it as `/admin/` earlier, edit it.)
+4. Gitea gives you a **Client ID** and **Client Secret**. Set both as
+   env vars on the deployed app (Coolify's environment-variables
+   panel, not committed to git):
+   ```
+   GITEA_OAUTH_CLIENT_ID=...
+   GITEA_OAUTH_CLIENT_SECRET=...
+   ```
+
+## Two unrelated infra issues found while debugging this
+
+- The Gitea service in Coolify only had an `http://` domain
+  configured, so Traefik had no HTTPS router for it at all ("no
+  available server" on any HTTPS request to the Gitea subdomain, even
+  though HTTP worked fine). Fixed by changing the domain to `https://`
+  in Coolify and redeploying the service, which made Traefik generate
+  the HTTPS router and request its Let's Encrypt cert.
+- Once Gitea started redirecting HTTP → HTTPS, anything still using an
+  `http://` URL to reach it (this repo's own git remote, and
+  Coolify's own git-source URL for the app) started failing
+  authentication, since git doesn't follow cross-protocol redirects
+  by default. Both needed updating to `https://` explicitly.
 
 ## Still open
 
-- **2FA on the Gitea admin account** (from the Master Brief's checklist,
-  still open as far as I can tell)
-
-## Why `github` as the backend name against a Gitea repo
-
-Gitea implements a GitHub-compatible REST API for the endpoints Decap CMS
-needs (contents, refs, OAuth authorize). Decap's `github` backend accepts a
-custom `api_root`/`base_url`, so pointing it at your Gitea instance instead
-of api.github.com is the standard way to run Decap against self-hosted
-Gitea without a separate proxy — this is what the Master Brief's CMS
-Architecture section (`Auth: OAuth2 PKCE directly against Gitea's OAuth2
-provider`) describes.
+- **2FA on the Gitea admin account** (from the Master Brief's
+  checklist, still open as far as I can tell).
+- Update `base_url` in `config.yml` and the OAuth app's redirect URI
+  once `azadichords.com` itself (not just staging) is live.
 
 ## Extending content later
 
-- **New artist**: add a file to `content/artists/`, or use the CMS — it
-  appears as a new full profile block in the Artists section of the single
-  page (site is one continuous scrolling page with anchor nav, not separate
-  routes per section — no code change needed either way).
-- **New album / real tracks / a music video**: add or edit a file in
-  `content/albums/`. An empty `tracks: []` shows "Tracks arriving soon" on
-  the Music page; add entries with `audioUrl` to show a real player. Same
-  for `musicVideoUrl` — leave blank for "Music video arriving soon."
-- **Any page copy** (Manifesto body, Support tiers, Contact form labels,
-  etc.): edit the matching file in `content/pages/`, or through the CMS.
+- **New artist**: add a file to `content/artists/`, or use the CMS.
+- **New release** (album/single/EP): add a file to `content/releases/`
+  — see `Azadichords_Release_Template.md` for the schema. Sorted by
+  `release_date`, newest first; no manual ordering needed.
+- **Any page copy**: edit the matching file in `content/pages/`, or
+  through the CMS.
