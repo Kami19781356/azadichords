@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "node:crypto";
+import { getSiteOrigin } from "@/lib/siteOrigin";
 
 // Decap CMS's `github` backend only speaks the Netlify-style OAuth
 // proxy protocol (?provider=X&site_id=Y&scope=Z) — it does NOT do a
@@ -19,7 +20,7 @@ export async function GET(request: NextRequest) {
 
   const scope = request.nextUrl.searchParams.get("scope") || "repo";
   const state = crypto.randomBytes(16).toString("hex");
-  const redirectUri = `${request.nextUrl.origin}/api/callback`;
+  const redirectUri = `${getSiteOrigin(request)}/api/callback`;
 
   const authorizeUrl = new URL("/login/oauth/authorize", GITEA_BASE_URL);
   authorizeUrl.searchParams.set("client_id", clientId);

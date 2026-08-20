@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getSiteOrigin } from "@/lib/siteOrigin";
 
 // See /api/auth/route.ts for why this proxy exists. This route
 // finishes the OAuth2 exchange against Gitea and hands the result to
@@ -64,7 +65,7 @@ export async function GET(request: NextRequest) {
       client_secret: clientSecret,
       code,
       grant_type: "authorization_code",
-      redirect_uri: `${request.nextUrl.origin}/api/callback`,
+      redirect_uri: `${getSiteOrigin(request)}/api/callback`,
     }),
   });
 
