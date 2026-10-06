@@ -2,21 +2,33 @@ eyebrow_en: Music
 eyebrow_fa: موسیقی
 title_en: Music
 title_fa: موسیقی
-intro_en: "Azadichords' catalog begins here."
-intro_fa: "کاتالوگِ آزادی‌کورد از اینجا شروع می‌شه."
-closing_en: "The label's first release — including official videos — arrives soon."
-closing_fa: "اولین ریلیزِ لیبل — همراه با موزیک‌ویدیوهای رسمی — به‌زودی منتشر می‌شه."
+intro_en: "The Azadichords catalog begins with a requiem — and continues with the voices our festival brings to light."
+intro_fa: "کاتالوگِ آزادی‌کورد با یک سوگنامه آغاز می‌شود — و با صداهایی که جشنواره‌مان به روشنایی می‌آورد ادامه پیدا می‌کند."
+closing_en: "Next on the label: a compilation of the selected artists from Azadichords Festival 2027."
+closing_fa: "انتشارِ بعدیِ لیبل: مجموعه‌ای از آثارِ هنرمندانِ برگزیده‌ی جشنواره‌ی آزادی‌کورد ۲۰۲۷."
 comingSoonLabel_en: Coming Soon
 comingSoonLabel_fa: به‌زودی
 tracksComingSoonLabel_en: Tracks arriving soon.
 tracksComingSoonLabel_fa: ترک‌ها به‌زودی.
-videoComingSoonLabel_en: Music video arriving soon.
-videoComingSoonLabel_fa: موزیک‌ویدیو به‌زودی.
-demoComingSoonLabel_en: Demo arriving soon.
-demoComingSoonLabel_fa: دمو به‌زودی.
+videoComingSoonLabel_en: The first music video arrives before the album.
+videoComingSoonLabel_fa: نخستین موزیک‌ویدیو پیش از آلبوم منتشر می‌شود.
+demoComingSoonLabel_en: First listen arriving soon.
+demoComingSoonLabel_fa: نخستین شنیدن، به‌زودی.
+listenLabel_en: Listen
+listenLabel_fa: بشنوید
+tracksLabel_en: Tracks
+tracksLabel_fa: قطعه‌ها
+videoLabel_en: Video
+videoLabel_fa: ویدیو
+albumLabel_en: Album
+albumLabel_fa: آلبوم
+singleLabel_en: Single
+singleLabel_fa: تک‌آهنگ
+epLabel_en: EP
+epLabel_fa: ای‌پی
 getReleaseLabel_en: Get This Release
-getReleaseLabel_fa: این ریلیز رو بگیر
-getReleaseNote_en: "Stream everywhere once released — or get it now, plus a ticket to our first live show."
-getReleaseNote_fa: "همه‌جا استریم کن — یا همین حالا بگیرش، همراه با بلیتِ اولین اجرای زنده."
+getReleaseLabel_fa: تهیه‌ی این اثر
+getReleaseNote_en: "Stream it everywhere once released — or own it directly from the artist."
+getReleaseNote_fa: "پس از انتشار همه‌جا بشنوید — یا مستقیم از هنرمند تهیه‌اش کنید."
 getReleaseCtaLabel_en: See how →
-getReleaseCtaLabel_fa: ببین چطور ←
+getReleaseCtaLabel_fa: ببینید چطور ←

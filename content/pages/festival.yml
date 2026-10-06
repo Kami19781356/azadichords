@@ -1,0 +1,96 @@
+# Azadichords Festival — first edition. Dates are ISO (YYYY-MM-DD) and
+# are formatted per language by the site. When the FilmFreeway listing
+# is live, put its URL in ctaHref and update ctaNote.
+eyebrow_en: Festival · First Edition
+eyebrow_fa: جشنواره · دوره‌ی نخست
+title_en: Azadichords Festival 2027
+title_fa: جشنواره‌ی آزادی‌کورد ۲۰۲۷
+intro_en:
+  - Two days for music that carries memory and freedom. Open to artists from anywhere, in any language — a competition, a live concert, and an awards night.
+  - The festival is where the label listens. Selected artists are invited to the Azadichords annual compilation, released on every major platform.
+intro_fa:
+  - دو روز برای موسیقی‌ای که یاد و آزادی را با خود دارد. باز برای هنرمندانی از هر جای جهان و به هر زبانی — بخشِ رقابتی، کنسرتِ زنده، و شبِ اهدای جوایز.
+  - جشنواره جایی است که لیبل گوش می‌دهد. هنرمندانِ برگزیده به آلبومِ مجموعه‌ی سالانه‌ی آزادی‌کورد دعوت می‌شوند که روی همه‌ی پلتفرم‌های اصلی منتشر می‌شود.
+datesTitle_en: Key Dates
+datesTitle_fa: تاریخ‌های کلیدی
+dates:
+  - date: "2026-10-19"
+    label_en: Submissions open
+    label_fa: آغازِ ارسالِ اثر
+  - date: "2026-11-02"
+    label_en: Jury announced
+    label_fa: معرفیِ هیئت داوران
+  - date: "2026-12-06"
+    label_en: Submission deadline
+    label_fa: پایانِ مهلتِ ارسال
+  - date: "2026-12-20"
+    label_en: Selections announced
+    label_fa: اعلامِ آثارِ برگزیده
+  - date: "2027-01-08"
+    endDate: "2027-01-09"
+    label_en: The festival
+    label_fa: برگزاریِ جشنواره
+    highlight: true
+categoriesTitle_en: Competition Categories
+categoriesTitle_fa: بخش‌های رقابتی
+categories:
+  - title_en: Best Original Song
+    title_fa: بهترین ترانه‌ی اورجینال
+    description_en: An original song, words and music, in any language.
+    description_fa: ترانه‌ای اورجینال، کلام و موسیقی، به هر زبانی.
+  - title_en: Best Music Video
+    title_fa: بهترین موزیک‌ویدیو
+    description_en: The visual life of a song — live action, animation or archive.
+    description_fa: زندگیِ تصویریِ یک ترانه — فیلم، انیمیشن یا آرشیو.
+  - title_en: Best Instrumental or Composition
+    title_fa: بهترین قطعه‌ی بی‌کلام یا آهنگسازی
+    description_en: Music without words that still speaks.
+    description_fa: موسیقیِ بی‌کلامی که همچنان حرف می‌زند.
+  - title_en: Best Vocal Performance
+    title_fa: بهترین اجرای آوازی
+    description_en: A voice heard on its own terms.
+    description_fa: صدایی که به شیوه‌ی خودش شنیده می‌شود.
+  - title_en: Best Poetry Set to Music
+    title_fa: بهترین شعر همراه با موسیقی
+    description_en: Where a poem becomes a song — the root of Azadichords.
+    description_fa: جایی که شعر ترانه می‌شود — ریشه‌ی آزادی‌کورد.
+entryTitle_en: How to Enter
+entryTitle_fa: شیوه‌ی شرکت
+entrySteps_en:
+  - Choose a category and prepare your work — a finished piece or a strong draft.
+  - Submit through the festival's FilmFreeway listing before December 6, 2026.
+  - Tick the compilation consent — a non-exclusive permission to include your work on the Azadichords compilation if it is selected. Ownership stays with you.
+entrySteps_fa:
+  - یک بخش را انتخاب کنید و اثرتان را آماده کنید — اثرِ نهایی یا پیش‌نویسی قوی.
+  - اثر را تا ۶ دسامبر ۲۰۲۶ از طریقِ صفحه‌ی جشنواره در FilmFreeway ارسال کنید.
+  - رضایتِ حضور در آلبومِ مجموعه را تأیید کنید — اجازه‌ای غیرانحصاری برای قرار گرفتنِ اثرتان در آلبومِ آزادی‌کورد در صورتِ برگزیده شدن. مالکیتِ اثر نزدِ شما می‌ماند.
+entryFee_en: Entry is free for the first edition.
+entryFee_fa: ارسالِ اثر در دوره‌ی نخست رایگان است.
+programmeTitle_en: Programme
+programmeTitle_fa: برنامه
+programme:
+  - date: "2027-01-08"
+    title_en: Opening Night — Live Concert
+    title_fa: شبِ افتتاح — کنسرتِ زنده
+    description_en: A curated concert of invited artists, and the release of the label's first album, Requiem for the Eternal Names.
+    description_fa: کنسرتی کیوریت‌شده با هنرمندانِ دعوت‌شده، و انتشارِ نخستین آلبومِ لیبل، «سوگنامه‌ی جاویدنام‌ها».
+  - date: "2027-01-09"
+    title_en: Selections & Awards
+    title_fa: آثارِ برگزیده و اهدای جوایز
+    description_en: Screenings and listening of the selected works, followed by the awards.
+    description_fa: نمایش و شنیدنِ آثارِ برگزیده، و سپس اهدای جوایز.
+juryTitle_en: Jury
+juryTitle_fa: هیئت داوران
+juryText_en: Musicians, poets and critics from the diaspora and beyond. The jury is announced on November 2, 2026.
+juryText_fa: موسیقی‌دانان، شاعران و منتقدانی از دیاسپورا و فراتر از آن. اعضای هیئت داوران ۲ نوامبر ۲۰۲۶ معرفی می‌شوند.
+venueTitle_en: Venue
+venueTitle_fa: محل برگزاری
+venueText_en: Chantilly, near Paris, France — held alongside the YOUALITY International Film Festival. Exact venue to be announced.
+venueText_fa: شانتیی، نزدیکِ پاریس، فرانسه — هم‌زمان با جشنواره‌ی بین‌المللی فیلم YOUALITY. محلِ دقیق به‌زودی اعلام می‌شود.
+ctaLabel_en: Get notified when submissions open →
+ctaLabel_fa: خبرم کنید وقتی ارسال آغاز شد ←
+ctaHref: "/contact"
+ctaNote_en: Submissions open on October 19, 2026.
+ctaNote_fa: ارسالِ اثر از ۱۹ اکتبر ۲۰۲۶ آغاز می‌شود.
+detailsLabel_en: Full festival details →
+detailsLabel_fa: جزئیاتِ کاملِ جشنواره ←

@@ -1,6 +1,6 @@
 brand: AZADICHORDS
-tagline_en: The Voice of Freedom
-tagline_fa: صدای آزادی
+tagline_en: Home for Free Voices
+tagline_fa: خانه‌ی صداهای آزاد
 links:
   - href: "/manifesto"
     label_en: Manifesto
@@ -8,18 +8,12 @@ links:
   - href: "/music"
     label_en: Music
     label_fa: موسیقی
+  - href: "/festival"
+    label_en: Festival
+    label_fa: جشنواره
   - href: "/artists"
     label_en: Artists
     label_fa: هنرمندان
-  - href: "/activity"
-    label_en: Activity
-    label_fa: فعالیت‌ها
-  - href: "/press"
-    label_en: Press
-    label_fa: مطبوعات
-  - href: "/services"
-    label_en: Services
-    label_fa: خدمات
   - href: "/submissions"
     label_en: Submissions
     label_fa: ارسال اثر

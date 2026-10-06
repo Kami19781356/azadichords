@@ -2,8 +2,8 @@ eyebrow_en: Contact
 eyebrow_fa: تماس
 title_en: Get in Touch
 title_fa: با ما در تماس باشید
-subhead_en: For music, press, or performance inquiries.
-subhead_fa: برای درخواست‌های موسیقی، مطبوعات یا اجرا.
+subhead_en: For music, festival, press, partnership or performance inquiries.
+subhead_fa: برای پرسش‌های مربوط به موسیقی، جشنواره، رسانه، همکاری یا اجرا.
 fieldNameLabel_en: Name
 fieldNameLabel_fa: نام
 fieldEmailLabel_en: Email
@@ -16,21 +16,25 @@ fieldMessageLabel_en: Message
 fieldMessageLabel_fa: پیام
 categories_en:
   - General
+  - Festival
   - Submission
   - Press
   - Booking
   - Licensing
+  - Partnership
 categories_fa:
   - عمومی
+  - جشنواره
   - ارسال اثر
   - مطبوعات
-  - رزرو
+  - رزرو اجرا
   - لایسنس
+  - همکاری
 submitLabel_en: Send
 submitLabel_fa: ارسال
 sendingLabel_en: Sending…
 sendingLabel_fa: در حال ارسال…
 successMessage_en: "Thanks — your message has been sent. We'll get back to you soon."
-successMessage_fa: "ممنون — پیامتون ارسال شد. به‌زودی باهاتون تماس می‌گیریم."
+successMessage_fa: "سپاس — پیامتان ارسال شد. به‌زودی با شما تماس می‌گیریم."
 errorMessage_en: "Something went wrong. Please try again, or email us directly at contact@azadichords.com."
-errorMessage_fa: "مشکلی پیش اومد. لطفاً دوباره امتحان کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."
+errorMessage_fa: "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."

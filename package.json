@@ -12,8 +12,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1106.0",
-    "@aws-sdk/s3-request-presigner": "^3.1106.0",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "framer-motion": "^13.0.0",
@@ -21,11 +19,9 @@
     "js-yaml": "^5.2.3",
     "lucide-react": "^1.28.0",
     "next": "16.3.0",
-    "pg": "^8.22.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "resend": "^6.21.0",
-    "stripe": "^22.4.0",
     "tailwind-merge": "^3.6.0",
     "wavesurfer.js": "^7.12.11"
   },
@@ -33,7 +29,6 @@
     "@tailwindcss/postcss": "^4",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
-    "@types/pg": "^8.21.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

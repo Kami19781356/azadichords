@@ -64,6 +64,7 @@ const submissions = readYaml("submissions");
 const support = readYaml("support");
 const contact = readYaml("contact");
 const footer = readYaml("footer");
+const festival = readYaml("festival");
 
 const artistFiles = readFolder("artists");
 const activityFiles = readFolder("activity");
@@ -104,7 +105,8 @@ function buildContent(lang) {
   const releases = releaseFiles
     .map((r) => ({
       slug: r.slug,
-      title: r.title,
+      title: r[`title_${lang}`] || r.title_en || r.title,
+      catalogNumber: r.catalog_number || "",
       type: r.type,
       artist: r.artist,
       status: r.status,
@@ -164,6 +166,14 @@ function buildContent(lang) {
       tracksComingSoonLabel: t(music, "tracksComingSoonLabel", lang),
       videoComingSoonLabel: t(music, "videoComingSoonLabel", lang),
       demoComingSoonLabel: t(music, "demoComingSoonLabel", lang),
+      listenLabel: t(music, "listenLabel", lang),
+      tracksLabel: t(music, "tracksLabel", lang),
+      videoLabel: t(music, "videoLabel", lang),
+      typeLabels: {
+        album: t(music, "albumLabel", lang),
+        single: t(music, "singleLabel", lang),
+        ep: t(music, "epLabel", lang),
+      },
       getReleaseLabel: t(music, "getReleaseLabel", lang),
       getReleaseNote: t(music, "getReleaseNote", lang),
       getReleaseCtaLabel: t(music, "getReleaseCtaLabel", lang),
@@ -209,14 +219,46 @@ function buildContent(lang) {
       eyebrow: t(support, "eyebrow", lang),
       title: t(support, "title", lang),
       intro: t(support, "intro", lang),
-      tiers: support.tiers.map((tier) => ({
-        name: tier.name,
-        title: t(tier, "title", lang),
-        description: t(tier, "description", lang),
-        note: t(tier, "note", lang) || "",
+      ways: support.ways.map((w) => ({
+        name: w.name,
+        title: t(w, "title", lang),
+        description: t(w, "description", lang),
+        cta: { label: t(w, "ctaLabel", lang), href: w.ctaHref },
       })),
-      cta: { label: t(support, "ctaLabel", lang), href: support.ctaHref },
       transparency: t(support, "transparency", lang),
+    },
+    festival: {
+      eyebrow: t(festival, "eyebrow", lang),
+      title: t(festival, "title", lang),
+      intro: t(festival, "intro", lang),
+      datesTitle: t(festival, "datesTitle", lang),
+      dates: festival.dates.map((d) => ({
+        date: String(d.date),
+        endDate: d.endDate ? String(d.endDate) : "",
+        label: t(d, "label", lang),
+        highlight: !!d.highlight,
+      })),
+      categoriesTitle: t(festival, "categoriesTitle", lang),
+      categories: festival.categories.map((c) => ({
+        title: t(c, "title", lang),
+        description: t(c, "description", lang),
+      })),
+      entryTitle: t(festival, "entryTitle", lang),
+      entrySteps: t(festival, "entrySteps", lang),
+      entryFee: t(festival, "entryFee", lang),
+      programmeTitle: t(festival, "programmeTitle", lang),
+      programme: festival.programme.map((p) => ({
+        date: String(p.date),
+        title: t(p, "title", lang),
+        description: t(p, "description", lang),
+      })),
+      juryTitle: t(festival, "juryTitle", lang),
+      juryText: t(festival, "juryText", lang),
+      venueTitle: t(festival, "venueTitle", lang),
+      venueText: t(festival, "venueText", lang),
+      cta: { label: t(festival, "ctaLabel", lang), href: festival.ctaHref },
+      ctaNote: t(festival, "ctaNote", lang),
+      detailsLabel: t(festival, "detailsLabel", lang),
     },
     contact: {
       eyebrow: t(contact, "eyebrow", lang),

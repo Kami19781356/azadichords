@@ -4,14 +4,14 @@ import type { Locale } from "@/lib/content.types";
 
 const meta: Record<Locale, Metadata> = {
   en: {
-    title: "Support the Project — Azadichords",
+    title: "Support — Azadichords",
     description:
-      "Azadichords is fully independent. Support brings this music directly to a stage.",
+      "Azadichords is fully independent. Own the album, share the music, come to the festival, or partner with us.",
   },
   fa: {
-    title: "حمایت از پروژه — آزادی‌کورد",
+    title: "حمایت — آزادی‌کورد",
     description:
-      "آزادی‌کورد کاملاً مستقل است. حمایت شما این موسیقی را مستقیم به روی صحنه می‌برد.",
+      "آزادی‌کورد کاملاً مستقل است. آلبوم را تهیه کنید، موسیقی را به اشتراک بگذارید، به جشنواره بیایید یا همراه ما شوید.",
   },
 };
 

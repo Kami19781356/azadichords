@@ -1,50 +1,45 @@
 eyebrow_en: Support
 eyebrow_fa: حمایت
-title_en: Support the Project
-title_fa: از این پروژه حمایت کنید
+title_en: Stand Behind the Voice
+title_fa: پشتِ این صدا بایستید
 intro_en:
-  - Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. That independence is made possible directly by the people who choose to support it.
-  - Every contribution on this page goes directly toward bringing this music to a stage — production, travel, and the first live performances across Europe.
+  - Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. It exists because people choose to listen, share, and show up.
+  - There is no payment on this site. Each way to support below leads to the place where it actually happens.
 intro_fa:
-  - حمایت از آزادی‌کورد یعنی حمایت از صداهایی که تصمیم گرفتن ساکت نمونن. با گوش‌دادن، خریدن، و به‌اشتراک‌گذاشتنِ این موسیقی، بخشی از این حرکت می‌شید.
-  - هر حمایتی که تو این صفحه انجام می‌شه، مستقیم صرفِ رسوندنِ این موسیقی به روی صحنه می‌شه — تولید، سفر، و اولین اجراهای زنده در اروپا.
-tiers:
-  # Tier 1 has real content but no Stripe price yet (STRIPE_PRICE_ID_TIER_1
-  # env var unset) — see docs/SALES_SETUP.md.
-  # Tier names ("The Record" / "The Record + The Room" / "Founding
-  # Supporter") are brand names and stay untranslated in title_fa too
-  # — only the descriptions/notes are translated.
-  - name: Tier 1
-    title_en: The Record
-    title_fa: The Record
-    description_en: High-resolution digital album (FLAC + lossless) plus a digital lyric booklet with the story behind each song.
-    description_fa: آلبومِ دیجیتال با کیفیتِ بالا (FLAC + lossless) به‌همراه بوکلتِ دیجیتالِ متن ترانه‌ها و داستانِ پشتِ هر آهنگ.
-    note_en: ""
-    note_fa: ""
-  # TODO (per user, do not guess): Tier 2 price not yet decided.
-  - name: Tier 2
-    title_en: The Record + The Room
-    title_fa: The Record + The Room
-    description_en: Everything in Tier 1, plus a ticket (or priority access) to the first live performance.
-    description_fa: همه‌چیزِ Tier 1، به‌همراه یک بلیت (یا دسترسیِ اولویت‌دار) برای اولین اجرای زنده.
-    note_en: ""
-    note_fa: ""
-  # TODO (per user, do not guess): Tier 3 price not yet decided.
-  - name: Tier 3
-    title_en: Founding Supporter
-    title_fa: Founding Supporter
-    description_en: Everything in Tier 2, plus recognition as an early supporter of independent art.
-    description_fa: همه‌چیزِ Tier 2، به‌همراه معرفی‌شدن به‌عنوانِ یکی از حامیانِ اولیه‌ی هنرِ مستقل.
-    note_en: >-
-      By default, founding supporters are listed anonymously ("A Founding
-      Supporter"). If you would prefer your name included instead, you can
-      opt in during checkout — entirely your choice.
-    note_fa: >-
-      به‌صورتِ پیش‌فرض، اسمِ حامیان به‌طورِ ناشناس ثبت می‌شه («یک Founding
-      Supporter»). اگه ترجیح می‌دید اسمتون ثبت بشه، موقعِ پرداخت می‌تونید
-      این گزینه رو انتخاب کنید — کاملاً به انتخابِ خودتونه.
-ctaLabel_en: Get in Touch
-ctaLabel_fa: تماس بگیرید
-ctaHref: "/contact"
-transparency_en: All proceeds go directly to production and live performance costs. No intermediary, no committee.
-transparency_fa: تمامِ درآمد مستقیم صرفِ هزینه‌های تولید و اجرای زنده می‌شه. بدونِ واسطه، بدونِ کمیته.
+  - آزادی‌کورد کاملاً مستقل است — بی‌کمیته، بی‌دروازه‌بان، بی‌بودجه‌ی نهادی. این لیبل زنده است چون آدم‌ها تصمیم می‌گیرند گوش بدهند، به اشتراک بگذارند، و حاضر باشند.
+  - روی این سایت هیچ پرداختی انجام نمی‌شود. هر راهِ حمایتی که در ادامه می‌بینید، شما را به جایی می‌برد که آن حمایت واقعاً اتفاق می‌افتد.
+ways:
+  - name: "01"
+    title_en: Own the Album
+    title_fa: آلبوم را داشته باشید
+    description_en: The memorial album together with the poetry collection Sans Toi — a digital bundle, sold directly by the artist's studio.
+    description_fa: آلبومِ سوگنامه همراه با مجموعه‌شعرِ «بی‌تو» — یک بسته‌ی دیجیتال، مستقیم از استودیوی هنرمند.
+    ctaLabel_en: Get the bundle →
+    ctaLabel_fa: تهیه‌ی بسته ←
+    ctaHref: https://www.youality.fr
+  - name: "02"
+    title_en: Listen and Share
+    title_fa: بشنوید و به اشتراک بگذارید
+    description_en: From January 8, 2027, every release streams on all major platforms. A save, a share, a playlist add — each one carries the music further than any budget could.
+    description_fa: از ۸ ژانویه ۲۰۲۷، همه‌ی انتشارها روی تمامِ پلتفرم‌های اصلی در دسترس است. هر ذخیره، هر اشتراک‌گذاری، هر افزودن به پلی‌لیست — این موسیقی را دورتر از هر بودجه‌ای می‌برد.
+    ctaLabel_en: Go to the music →
+    ctaLabel_fa: رفتن به موسیقی ←
+    ctaHref: /music
+  - name: "03"
+    title_en: Be in the Room
+    title_fa: در سالن باشید
+    description_en: Join us on January 8–9, 2027 for the first Azadichords Festival — a live concert, the competition, and the awards night.
+    description_fa: ۸ و ۹ ژانویه ۲۰۲۷ در نخستین جشنواره‌ی آزادی‌کورد کنارِ ما باشید — کنسرتِ زنده، بخشِ رقابتی و شبِ اهدای جوایز.
+    ctaLabel_en: The festival →
+    ctaLabel_fa: جشنواره ←
+    ctaHref: /festival
+  - name: "04"
+    title_en: Partner With Us
+    title_fa: همراهِ ما شوید
+    description_en: Venues, media, cultural organisations and patrons who want to help bring free voices to a stage — we would like to hear from you.
+    description_fa: سالن‌ها، رسانه‌ها، نهادهای فرهنگی و حامیانی که می‌خواهند صداهای آزاد را به صحنه برسانند — مشتاقیم از شما بشنویم.
+    ctaLabel_en: Get in touch →
+    ctaLabel_fa: تماس بگیرید ←
+    ctaHref: /contact
+transparency_en: Azadichords never asks for payment on this site. Direct sales of the album are handled by the artist's studio.
+transparency_fa: آزادی‌کورد روی این سایت هرگز درخواستِ پرداخت نمی‌کند. فروشِ مستقیمِ آلبوم از طریقِ استودیوی هنرمند انجام می‌شود.

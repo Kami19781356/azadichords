@@ -22,6 +22,7 @@ export type StreamingLink = { platform: string; url: string };
 export type Release = {
   slug: string;
   title: string;
+  catalogNumber: string;
   type: "album" | "single" | "ep";
   artist: string;
   status: "upcoming" | "out_now";
@@ -66,11 +67,26 @@ export type Artist = {
   priorWork: PriorWork | null;
 };
 
-export type SupportTier = {
+export type SupportWay = {
   name: string;
   title: string;
   description: string;
-  note?: string;
+  cta: Cta;
+};
+
+export type FestivalDate = {
+  date: string;
+  endDate: string;
+  label: string;
+  highlight: boolean;
+};
+
+export type FestivalCategory = { title: string; description: string };
+
+export type FestivalProgrammeItem = {
+  date: string;
+  title: string;
+  description: string;
 };
 
 export type ActivityItem = {
@@ -113,6 +129,10 @@ export type Content = {
     tracksComingSoonLabel: string;
     videoComingSoonLabel: string;
     demoComingSoonLabel: string;
+    listenLabel: string;
+    tracksLabel: string;
+    videoLabel: string;
+    typeLabels: Record<Release["type"], string>;
     getReleaseLabel: string;
     getReleaseNote: string;
     getReleaseCtaLabel: string;
@@ -151,9 +171,29 @@ export type Content = {
     eyebrow: string;
     title: string;
     intro: string[];
-    tiers: SupportTier[];
-    cta: Cta;
+    ways: SupportWay[];
     transparency: string;
+  };
+  festival: {
+    eyebrow: string;
+    title: string;
+    intro: string[];
+    datesTitle: string;
+    dates: FestivalDate[];
+    categoriesTitle: string;
+    categories: FestivalCategory[];
+    entryTitle: string;
+    entrySteps: string[];
+    entryFee: string;
+    programmeTitle: string;
+    programme: FestivalProgrammeItem[];
+    juryTitle: string;
+    juryText: string;
+    venueTitle: string;
+    venueText: string;
+    cta: Cta;
+    ctaNote: string;
+    detailsLabel: string;
   };
   contact: {
     eyebrow: string;

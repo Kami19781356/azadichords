@@ -3,8 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Manifesto from "@/components/sections/Manifesto";
 import Music from "@/components/sections/Music";
 import Artists from "@/components/sections/Artists";
-import Activity from "@/components/sections/Activity";
-import Press from "@/components/sections/Press";
+import Festival from "@/components/sections/Festival";
 import Services from "@/components/sections/Services";
 import Submissions from "@/components/sections/Submissions";
 import Support from "@/components/sections/Support";
@@ -13,13 +12,14 @@ import type { Locale } from "@/lib/content.types";
 
 const meta: Record<Locale, Metadata> = {
   en: {
-    title: "Azadichords — Independent Music Label, Paris",
+    title: "Azadichords — Independent Label & Festival for Free Voices, Paris",
     description:
-      "An independent label for the voice that refuses to be silent.",
+      "A home for free voices: an independent music label and an international festival. First festival January 8–9, 2027 near Paris.",
   },
   fa: {
-    title: "آزادی‌کورد — لیبل مستقل موسیقی، پاریس",
-    description: "لیبلی مستقل برای صدایی که حاضر نیست ساکت بماند.",
+    title: "آزادی‌کورد — لیبل و جشنواره‌ی مستقل صداهای آزاد، پاریس",
+    description:
+      "خانه‌ای برای صداهای آزاد: لیبل مستقل موسیقی و جشنواره‌ای بین‌المللی. نخستین جشنواره ۸ و ۹ ژانویه ۲۰۲۷ در نزدیکی پاریس.",
   },
 };
 
@@ -37,10 +37,9 @@ export default function Home() {
     <>
       <Hero />
       <Manifesto />
+      <Festival compact />
       <Music />
       <Artists />
-      <Activity />
-      <Press />
       <Services />
       <Submissions />
       <Support />

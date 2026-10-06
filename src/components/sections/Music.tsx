@@ -11,12 +11,6 @@ import AudioPlayer from "@/components/AudioPlayer";
 import VideoPlayer from "@/components/VideoPlayer";
 import type { Release } from "@/lib/content.types";
 
-const typeLabel: Record<Release["type"], string> = {
-  album: "Album",
-  single: "Single",
-  ep: "EP",
-};
-
 function GetReleaseBlock({ release }: { release: Release }) {
   const content = useContent();
   const locale = useLocale();
@@ -87,8 +81,13 @@ function Spotlight({ release }: { release: Release }) {
             <span className="rounded-full border border-gold px-3 py-1 text-[11px] tracking-[0.08em] text-gold uppercase">
               {release.status === "upcoming"
                 ? content.music.comingSoonLabel
-                : typeLabel[release.type]}
+                : content.music.typeLabels[release.type]}
             </span>
+            {release.catalogNumber && (
+              <span dir="ltr" className="text-[11px] tracking-[0.12em] text-paper/40 uppercase">
+                {release.catalogNumber}
+              </span>
+            )}
             <h3 className="m-0 font-serif text-3xl font-semibold">
               {release.title}
             </h3>
@@ -102,7 +101,7 @@ function Spotlight({ release }: { release: Release }) {
 
         <div>
           <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
-            Listen
+            {content.music.listenLabel}
           </div>
           {release.demoAudioUrl ? (
             <AudioPlayer src={release.demoAudioUrl} title={release.title} />
@@ -115,14 +114,14 @@ function Spotlight({ release }: { release: Release }) {
 
         <div>
           <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
-            Tracks
+            {content.music.tracksLabel}
           </div>
           <TrackList tracks={release.tracks} />
         </div>
 
         <div>
           <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
-            Video
+            {content.music.videoLabel}
           </div>
           {release.videoUrl ? (
             <VideoPlayer
@@ -157,6 +156,7 @@ function Spotlight({ release }: { release: Release }) {
 }
 
 function CatalogItem({ release }: { release: Release }) {
+  const content = useContent();
   const year = release.releaseDate.slice(0, 4);
   return (
     <motion.div
@@ -175,7 +175,7 @@ function CatalogItem({ release }: { release: Release }) {
             {release.title}
           </h4>
           <span className="text-sm text-paper/40">
-            {typeLabel[release.type]} · {year}
+            {content.music.typeLabels[release.type]} · {year}
           </span>
         </div>
         <p

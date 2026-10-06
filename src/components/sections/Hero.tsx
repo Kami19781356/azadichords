@@ -159,23 +159,12 @@ export default function Hero() {
             href={localizeHref(content.hero.promoBar.href, locale)}
             className="inline-flex items-center gap-2.5 rounded-full border border-gold/50 px-5 py-2.5 text-[13px] tracking-[0.02em] text-paper backdrop-blur-sm transition-colors duration-200 [text-shadow:0_1px_6px_rgba(0,0,0,0.7)] hover:border-gold hover:text-gold"
           >
-            <motion.span
-              className="inline-block text-xl leading-none"
-              animate={
-                prefersReducedMotion
-                  ? undefined
-                  : { rotate: [0, -14, 10, -8, 0] }
-              }
-              transition={{
-                duration: 1.6,
-                repeat: Infinity,
-                repeatDelay: 2.4,
-                ease: "easeInOut",
-              }}
-              style={{ transformOrigin: "50% 0%" }}
-            >
-              🎟
-            </motion.span>
+            <span className="relative inline-flex h-2 w-2" aria-hidden>
+              {!prefersReducedMotion && (
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-60" />
+              )}
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
+            </span>
             <span>{content.hero.promoBar.label}</span>
           </Link>
         </motion.div>

@@ -7,6 +7,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ContentProvider } from "@/lib/ContentProvider";
 import type { Locale } from "@/lib/content.types";
+import { SITE_URL, SITE_INDEXABLE } from "@/lib/site";
 import "../globals.css";
 
 const LOCALES: Locale[] = ["en", "fa"];
@@ -44,9 +45,20 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Azadichords — Independent Music Label, Paris",
+  metadataBase: new URL(SITE_URL),
+  title: "Azadichords — Independent Label & Festival for Free Voices, Paris",
   description:
-    "An independent label for the voice that refuses to be silent.",
+    "A home for free voices: an independent music label and an international festival, based in Paris.",
+  applicationName: "Azadichords",
+  robots: SITE_INDEXABLE
+    ? { index: true, follow: true }
+    : { index: false, follow: false },
+  openGraph: {
+    type: "website",
+    siteName: "Azadichords",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Azadichords — Home for Free Voices" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og-image.jpg"] },
 };
 
 export default async function RootLayout({
