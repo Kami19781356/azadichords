@@ -1,0 +1,61 @@
+# Private preview: password-protected until launch.
+# Install on the server (replaces the earlier staging route):
+#   HASH=$(openssl passwd -apr1)        # asks for the password, twice
+#   sed "s|__HASH__|$HASH|" deploy/traefik-private.yml > /data/coolify/proxy/dynamic/azadichords-staging.yml
+# The password itself never touches this repo — only its hash on the server.
+http:
+  routers:
+    azadichords-preview-http:
+      rule: "Host(`finalstaging.azadichords.com`) || Host(`staging.azadichords.com`)"
+      entryPoints:
+        - http
+      middlewares:
+        - azadichords-preview-redirect-https
+      service: azadichords-preview
+
+    azadichords-preview-https:
+      rule: "Host(`finalstaging.azadichords.com`)"
+      entryPoints:
+        - https
+      middlewares:
+        - azadichords-preview-auth
+      service: azadichords-preview
+      tls:
+        certResolver: letsencrypt
+
+    # Old address (shared earlier): sends visitors to the new one,
+    # where the password prompt applies.
+    azadichords-old-staging-https:
+      rule: "Host(`staging.azadichords.com`)"
+      entryPoints:
+        - https
+      middlewares:
+        - azadichords-old-staging-redirect
+      service: azadichords-preview
+      tls:
+        certResolver: letsencrypt
+
+  middlewares:
+    azadichords-preview-redirect-https:
+      redirectScheme:
+        scheme: https
+        permanent: false
+
+    azadichords-old-staging-redirect:
+      redirectRegex:
+        regex: "^https://staging\\.azadichords\\.com/(.*)"
+        replacement: "https://finalstaging.azadichords.com/${1}"
+        permanent: false
+
+    azadichords-preview-auth:
+      basicAuth:
+        realm: "Azadichords preview"
+        users:
+          - "kamran:__HASH__"
+
+  services:
+    azadichords-preview:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3700"
+        passHostHeader: true
