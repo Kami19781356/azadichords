@@ -17,23 +17,37 @@ export default function Manifesto() {
       id="manifesto"
       className="relative grid min-h-screen grid-cols-1 bg-paper text-ink md:grid-cols-2"
     >
-      <div className="sticky top-0 hidden h-screen md:block">
-        <Placeholder
-          caption={content.manifesto.imageCaption}
-          variant="warm"
-          rounded={false}
-          className="h-full w-full"
-        />
-      </div>
-      <div className="block md:hidden">
-        <Placeholder
-          caption={content.manifesto.imageCaption}
-          variant="warm"
-          rounded={false}
-          aspect="4/3"
-          className="w-full"
-        />
-      </div>
+      {content.manifesto.image ? (
+        <div className="relative h-[70vh] md:sticky md:top-0 md:h-screen">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={content.manifesto.image}
+            alt={content.manifesto.imageCaption}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_35%]"
+          />
+        </div>
+      ) : (
+        <>
+          <div className="sticky top-0 hidden h-screen md:block">
+            <Placeholder
+              caption={content.manifesto.imageCaption}
+              variant="warm"
+              rounded={false}
+              className="h-full w-full"
+            />
+          </div>
+          <div className="block md:hidden">
+            <Placeholder
+              caption={content.manifesto.imageCaption}
+              variant="warm"
+              rounded={false}
+              aspect="4/3"
+              className="w-full"
+            />
+          </div>
+        </>
+      )}
       <div className="flex flex-col gap-8 px-6 py-24 md:px-16 md:py-36">
         <motion.div {...reveal}>
           <div className="mb-5 text-[13px] tracking-[0.2em] text-garnet uppercase">

@@ -163,6 +163,7 @@ function buildContent(lang) {
       eyebrow: t(manifesto, "eyebrow", lang),
       title: t(manifesto, "title", lang),
       imageCaption: manifesto.imageCaption,
+      image: manifesto.image || "",
       paragraphs: t(manifesto, "paragraphs", lang),
       closing: t(manifesto, "closing", lang),
       cta: { label: t(manifesto, "ctaLabel", lang), href: manifesto.ctaHref },

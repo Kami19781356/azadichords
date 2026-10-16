@@ -44,7 +44,7 @@ export const content: Record<Locale, Content> = {
     "hero": {
       "eyebrow": "Independent Label & Song Festival — Paris",
       "title": "AZADICHORDS",
-      "subhead": "A home for free voices — a label that releases them, a song festival that finds them.",
+      "subhead": "A home for songs and free voices — a label to release the melodies of freedom, a festival to discover the words and voices of freedom.",
       "ctaPrimary": {
         "label": "Listen",
         "href": "/music"
@@ -63,6 +63,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Manifesto",
       "title": "A Label Built in Exile",
       "imageCaption": "Azadichords — label artwork",
+      "image": "/images/hero-art.jpg",
       "paragraphs": [
         "Azadichords — the chords of freedom — is the name of a label and a song festival: a home for voices that cannot, and will not, stay silent.",
         "We work for poetry and music that breaks through censorship, not with its permission.",
@@ -81,7 +82,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Music",
       "title": "Music",
       "intro": "Songs released by Azadichords — streaming everywhere, and free to download for listeners inside Iran.",
-      "closing": "Coming next on the label: the album «Azadichords» — nine Persian songs selected in the festival's special section, produced by Kamran Rasoolzadeh.",
+      "closing": "Coming next on the label: the album «Azadichords» — nine Persian songs selected in the festival's special section, produced by the Azadichords team.",
       "comingSoonLabel": "Coming Soon",
       "tracksComingSoonLabel": "Tracks arriving soon.",
       "videoComingSoonLabel": "Video arriving soon.",
@@ -192,7 +193,7 @@ export const content: Record<Locale, Content> = {
         "releaseDate": "2026-10-16",
         "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "The new single by Kamran Rasoolzadeh",
-        "description": "Golouleh — a bullet, with a flower (gol) inside its name. The new song by Kamran Rasoolzadeh. Streaming on all platforms — and free to download on the Persian site for listeners inside Iran.",
+        "description": "Golouleh — a song that has just come into bloom, a “gol” (flower) in the heart of the bullet... The newest song by Kamran Rasoolzadeh. Free to download on the Persian site for listeners inside Iran.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "coverImage": "/images/releases/golouleh.jpg",
@@ -267,7 +268,7 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "Submit · Special Section",
       "title": "Send Us Your Song",
-      "intro": "The special section of the Azadichords Song Festival is for Persian songs written in memory of Iran's Javidnaman. Send the lyrics alone, or with a melody or demo. Nine selected songs will be produced by Kamran Rasoolzadeh and released on the album «Azadichords».",
+      "intro": "The special section of the Azadichords Song Festival is for Persian songs written in memory of Iran's Javidnaman. Send the lyrics alone, or with a melody or demo. Nine selected songs will be produced by the Azadichords team and released on the album «Azadichords».",
       "guidelines": [
         "The song must be in Persian and your own work (or sent with its author's permission).",
         "A stage name is enough. Your real name is not required.",
@@ -327,7 +328,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "Be in the Room",
-          "description": "January 8–9, 2027 in Paris — screenings, the awards, and a live performance by Kamran Rasoolzadeh on closing night.",
+          "description": "January 8–9, 2027 in Paris — screenings, the awards, and a live music performance on closing night.",
           "cta": {
             "label": "The festival →",
             "href": "/festival"
@@ -350,9 +351,9 @@ export const content: Record<Locale, Content> = {
       "title": "Azadichords Song Festival 2027",
       "intro": [
         "A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.",
-        "Hosted by the YOUALITY International Short Film Festival in Paris. On closing night, Kamran Rasoolzadeh performs live."
+        "Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night."
       ],
-      "sectionsTitle": "Two Sections",
+      "sectionsTitle": "Festival Sections",
       "sections": [
         {
           "label": "General Section",
@@ -385,7 +386,7 @@ export const content: Record<Locale, Content> = {
           "points": [
             "Submit through this site — a stage name is enough",
             "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label",
-            "Production of the album by Kamran Rasoolzadeh"
+            "The album will be produced by the Azadichords team"
           ],
           "cta": {
             "label": "Submit a Persian song →",
@@ -433,7 +434,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-01-09",
           "title": "Closing Night — Awards & Live Performance",
-          "description": "The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live performance by Kamran Rasoolzadeh."
+          "description": "The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live music performance."
         }
       ],
       "juryTitle": "Jury",
@@ -533,7 +534,7 @@ export const content: Record<Locale, Content> = {
     "hero": {
       "eyebrow": "لیبل و جشنواره‌ی ترانه — پاریس",
       "title": "AZADICHORDS",
-      "subhead": "خانه‌ای برای صداهای آزاد؛ لیبلی که منتشرشان می‌کند و جشنواره‌ای که پیدایشان می‌کند.",
+      "subhead": "خانه‌ای برای ترانه‌ها و صداهای آزاد؛ لیبلی برای انتشار نغمه‌های آزادی؛ جشنواره‌ای برای کشف واژه‌ها و حنجره‌های آزادی",
       "ctaPrimary": {
         "label": "بشنوید",
         "href": "/music"
@@ -552,6 +553,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "مانیفست",
       "title": "لیبلی ساخته‌شده در تبعید",
       "imageCaption": "Azadichords — label artwork",
+      "image": "/images/hero-art.jpg",
       "paragraphs": [
         "«آکوردهای آزادی» نامِ یک لیبل و یک جشنواره‌ی ترانه است؛ خانه‌ای برای صداهایی که نمی‌توانند، و نمی‌خواهند، ساکت بمانند.",
         "ما برای شعر و موسیقی‌ای کار می‌کنیم که از دلِ سانسور بیرون می‌زند، نه با اجازه‌ی آن.",
@@ -570,7 +572,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "موسیقی",
       "title": "موسیقی",
       "intro": "ترانه‌هایی که آکوردهای آزادی منتشر می‌کند. برای مخاطبانِ داخلِ ایران، دانلودشان از همین سایت رایگان است.",
-      "closing": "انتشارِ بعدیِ لیبل آلبومِ «آکوردهای آزادی» است: نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه‌ی جشنواره، با تهیه و تولیدِ کامران رسول‌زاده.",
+      "closing": "انتشارِ بعدیِ لیبل آلبومِ «آکوردهای آزادی» است: نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه‌ی جشنواره، با تهیه و تولیدِ تیمِ آکوردهای آزادی.",
       "comingSoonLabel": "به‌زودی",
       "tracksComingSoonLabel": "قطعه‌ها به‌زودی.",
       "videoComingSoonLabel": "ویدیو به‌زودی.",
@@ -681,7 +683,7 @@ export const content: Record<Locale, Content> = {
         "releaseDate": "2026-10-16",
         "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "تک‌آهنگِ تازه‌ی کامران رسول‌زاده",
-        "description": "گلوله، و در دلِ آن «گل». تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
+        "description": "گلوله، ترانه‌ای که به تازگی «گل» کرده... تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "coverImage": "/images/releases/golouleh.jpg",
@@ -756,7 +758,7 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "ارسالِ اثر · بخشِ ویژه",
       "title": "ترانه‌ات را بفرست",
-      "intro": "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران است. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. نُه ترانه‌ی برگزیده را کامران رسول‌زاده تولید می‌کند و در آلبومِ «آکوردهای آزادی» منتشر می‌شوند.",
+      "intro": "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران است. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در آلبومِ «آکوردهای آزادی» منتشر می‌شوند.",
       "guidelines": [
         "ترانه باید فارسی و اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
         "نامِ هنری کافی است و نامِ واقعی لازم نیست.",
@@ -816,7 +818,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "در سالن باشید",
-          "description": "۸ و ۹ ژانویه ۲۰۲۷ (۱۸ و ۱۹ دی ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی کامران رسول‌زاده در شبِ اختتامیه.",
+          "description": "۸ و ۹ ژانویه ۲۰۲۷ (۱۸ و ۱۹ دی ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی موسیقی در شبِ اختتامیه.",
           "cta": {
             "label": "جشنواره ←",
             "href": "/festival"
@@ -839,9 +841,9 @@ export const content: Record<Locale, Content> = {
       "title": "جشنواره‌ی ترانه‌ی آکوردهای آزادی",
       "intro": [
         "جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.",
-        "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، کامران رسول‌زاده اجرای زنده دارد."
+        "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد."
       ],
-      "sectionsTitle": "دو بخش",
+      "sectionsTitle": "بخش‌های جشنواره",
       "sections": [
         {
           "label": "بخش عمومی",
@@ -874,7 +876,7 @@ export const content: Record<Locale, Content> = {
           "points": [
             "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است",
             "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند",
-            "تهیه و تولیدِ آلبوم با کامران رسول‌زاده"
+            "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
           ],
           "cta": {
             "label": "ارسالِ ترانه ←",
@@ -922,7 +924,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-01-09",
           "title": "شبِ اختتامیه — جوایز و اجرای زنده",
-          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی کامران رسول‌زاده."
+          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی موسیقی."
         }
       ],
       "juryTitle": "هیئت داوران",

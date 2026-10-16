@@ -11,12 +11,12 @@ title_en: Azadichords Song Festival 2027
 title_fa: جشنواره‌ی ترانه‌ی آکوردهای آزادی
 intro_en:
   - A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.
-  - Hosted by the YOUALITY International Short Film Festival in Paris. On closing night, Kamran Rasoolzadeh performs live.
+  - Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night.
 intro_fa:
   - جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.
-  - میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، کامران رسول‌زاده اجرای زنده دارد.
-sectionsTitle_en: Two Sections
-sectionsTitle_fa: دو بخش
+  - میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد.
+sectionsTitle_en: Festival Sections
+sectionsTitle_fa: بخش‌های جشنواره
 sections:
   - label_en: General Section
     label_fa: بخش عمومی
@@ -48,11 +48,11 @@ sections:
     points_en:
       - "Submit through this site — a stage name is enough"
       - "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label"
-      - "Production of the album by Kamran Rasoolzadeh"
+      - "The album will be produced by the Azadichords team"
     points_fa:
       - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
       - "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند"
-      - "تهیه و تولیدِ آلبوم با کامران رسول‌زاده"
+      - "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
     ctaLabel_en: Submit a Persian song →
     ctaLabel_fa: ارسالِ ترانه ←
     ctaHref: /submissions
@@ -87,8 +87,8 @@ programme:
   - date: "2027-01-09"
     title_en: Closing Night — Awards & Live Performance
     title_fa: شبِ اختتامیه — جوایز و اجرای زنده
-    description_en: The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live performance by Kamran Rasoolzadeh.
-    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی کامران رسول‌زاده.
+    description_en: The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live music performance.
+    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی موسیقی.
 juryTitle_en: Jury
 juryTitle_fa: هیئت داوران
 juryText_en: Musicians, poets and filmmakers. Members will be announced here.

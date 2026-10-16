@@ -127,6 +127,7 @@ export type Content = {
     eyebrow: string;
     title: string;
     imageCaption: string;
+    image: string;
     paragraphs: string[];
     closing: string;
     cta: Cta;
