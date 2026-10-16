@@ -23,8 +23,17 @@ echo "==> Installing dependencies"
 npm ci --no-audit --no-fund
 
 echo "==> Building (this takes a few minutes)"
-rm -rf .next
-npm run build
+# Keep a copy of the working build: if this build fails, put it back so
+# the live site is never left without its files.
+rm -rf .next-prev
+[ -d .next ] && cp -a .next .next-prev
+if ! npm run build; then
+  echo "Build FAILED — restoring the previous build; the live site is unchanged." >&2
+  rm -rf .next
+  [ -d .next-prev ] && mv .next-prev .next
+  exit 1
+fi
+rm -rf .next-prev
 
 echo "==> Starting with PM2 as $APP_NAME on port $PORT"
 if pm2 describe "$APP_NAME" > /dev/null 2>&1; then

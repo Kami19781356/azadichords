@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Bodoni_Moda, Work_Sans, Vazirmatn, Noto_Naskh_Arabic } from "next/font/google";
+import localFont from "next/font/local";
 import SmoothScroll from "@/components/SmoothScroll";
 import Preloader from "@/components/Preloader";
 import Nav from "@/components/Nav";
@@ -12,32 +12,51 @@ import "../globals.css";
 
 const LOCALES: Locale[] = ["en", "fa"];
 
-const bodoniModa = Bodoni_Moda({
+// Fonts are bundled in src/fonts (from the open-source Fontsource
+// packages), so building never depends on reaching Google.
+const bodoniModa = localFont({
   variable: "--font-bodoni",
-  subsets: ["latin"],
-  weight: ["600", "700"],
+  display: "swap",
+  src: [
+    { path: "../../fonts/bodoni-moda-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "../../fonts/bodoni-moda-latin-700-normal.woff2", weight: "700", style: "normal" },
+  ],
 });
 
-const workSans = Work_Sans({
+const workSans = localFont({
   variable: "--font-work-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  src: [
+    { path: "../../fonts/work-sans-latin-300-normal.woff2", weight: "300", style: "normal" },
+    { path: "../../fonts/work-sans-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/work-sans-latin-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/work-sans-latin-600-normal.woff2", weight: "600", style: "normal" },
+  ],
 });
 
-const vazirmatn = Vazirmatn({
+const vazirmatn = localFont({
   variable: "--font-vazirmatn",
-  subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  src: [
+    { path: "../../fonts/vazirmatn-arabic-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/vazirmatn-arabic-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/vazirmatn-arabic-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "../../fonts/vazirmatn-arabic-700-normal.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 // Persian headings: a classical Naskh serif (mirroring Bodoni Moda's
 // editorial-serif role on the English site) instead of reusing
 // Vazirmatn for everything, which flattened the heading/body contrast
 // the brand relies on.
-const notoNaskhArabic = Noto_Naskh_Arabic({
+const notoNaskhArabic = localFont({
   variable: "--font-noto-naskh-arabic",
-  subsets: ["arabic"],
-  weight: ["500", "600", "700"],
+  display: "swap",
+  src: [
+    { path: "../../fonts/noto-naskh-arabic-arabic-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/noto-naskh-arabic-arabic-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "../../fonts/noto-naskh-arabic-arabic-700-normal.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 export function generateStaticParams() {

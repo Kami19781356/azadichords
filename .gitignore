@@ -43,3 +43,4 @@ next-env.d.ts
 
 # festival submissions stored on the server
 /data/
+/.next-prev/
