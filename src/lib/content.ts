@@ -397,7 +397,7 @@ export const content: Record<Locale, Content> = {
       "datesTitle": "Key Dates",
       "dates": [
         {
-          "date": "2026-10-17",
+          "date": "2026-10-19",
           "endDate": "",
           "label": "Submissions open",
           "highlight": false
@@ -886,7 +886,7 @@ export const content: Record<Locale, Content> = {
       "datesTitle": "تاریخ‌های کلیدی",
       "dates": [
         {
-          "date": "2026-10-17",
+          "date": "2026-10-19",
           "endDate": "",
           "label": "آغازِ ارسالِ اثر",
           "highlight": false
