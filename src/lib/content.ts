@@ -61,7 +61,7 @@ export const content: Record<Locale, Content> = {
     },
     "manifesto": {
       "eyebrow": "Manifesto",
-      "title": "A Label Built in Exile",
+      "title": "A Label Built to Record the Sound of Freedom",
       "imageCaption": "Azadichords — label artwork",
       "image": "/images/hero-art.jpg",
       "paragraphs": [
@@ -551,7 +551,7 @@ export const content: Record<Locale, Content> = {
     },
     "manifesto": {
       "eyebrow": "مانیفست",
-      "title": "لیبلی ساخته‌شده در تبعید",
+      "title": "لیبلی که برای ثبتِ صدای آزادی ساخته شد",
       "imageCaption": "Azadichords — label artwork",
       "image": "/images/hero-art.jpg",
       "paragraphs": [

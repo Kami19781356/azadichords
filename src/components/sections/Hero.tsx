@@ -39,25 +39,32 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-28 text-center sm:px-6"
     >
-      {/* Cover artwork: a painted flame rising from a record. Darkened so the
-          headline stays readable; the red of the flame still carries. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/images/hero-art.jpg"
-        srcSet="/images/hero-art-sm.jpg 900w, /images/hero-art.jpg 1600w"
-        sizes="100vw"
-        alt=""
+      <video
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        src="/video/hero-bg.mp4"
+        poster="/video/hero-bg-poster.jpg"
+        autoPlay={!prefersReducedMotion}
+        muted
+        loop
+        playsInline
         aria-hidden="true"
-        fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[50%_35%]"
-        style={{ filter: "brightness(0.55) contrast(1.1) saturate(1.15)" }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/55 via-transparent to-ink/80" />
+      <video
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
+        src="/video/hero-bg-mobile.mp4"
+        poster="/video/hero-bg-mobile-poster.jpg"
+        autoPlay={!prefersReducedMotion}
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-ink/65" />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 40%, rgba(10,10,10,0.45), transparent 65%)",
+            "radial-gradient(ellipse at 50% 30%, rgba(122,31,43,0.35), transparent 60%)",
         }}
       />
       <div className="relative">
