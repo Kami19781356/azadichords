@@ -190,13 +190,26 @@ export const content: Record<Locale, Content> = {
         "artist": "kamran-rasoolzadeh",
         "status": "out_now",
         "releaseDate": "2026-10-16",
-        "coverImageCaption": "Golouleh — single cover",
+        "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "The new single by Kamran Rasoolzadeh",
-        "description": "Golouleh, the new song by Kamran Rasoolzadeh. Streaming on all platforms — and free to download on the Persian site for listeners inside Iran.",
+        "description": "Golouleh — a bullet, with a flower (gol) inside its name. The new song by Kamran Rasoolzadeh. Streaming on all platforms — and free to download on the Persian site for listeners inside Iran.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
-        "coverImage": "/images/logo.png",
-        "credits": [],
+        "coverImage": "/images/releases/golouleh.jpg",
+        "credits": [
+          {
+            "role": "Words & Music",
+            "name": "Kamran Rasoolzadeh"
+          },
+          {
+            "role": "Music Producer",
+            "name": "Kamran Rasoolzadeh"
+          },
+          {
+            "role": "Label",
+            "name": "Azadichords"
+          }
+        ],
         "videoUrl": "",
         "videoCaption": "",
         "tracks": [],
@@ -666,13 +679,26 @@ export const content: Record<Locale, Content> = {
         "artist": "kamran-rasoolzadeh",
         "status": "out_now",
         "releaseDate": "2026-10-16",
-        "coverImageCaption": "Golouleh — single cover",
+        "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "تک‌آهنگِ تازه‌ی کامران رسول‌زاده",
-        "description": "«گلوله»، تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
+        "description": "گلوله، و در دلِ آن «گل». تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
-        "coverImage": "/images/logo.png",
-        "credits": [],
+        "coverImage": "/images/releases/golouleh.jpg",
+        "credits": [
+          {
+            "role": "ترانه و آهنگ",
+            "name": "کامران رسول‌زاده"
+          },
+          {
+            "role": "تهیه‌کننده‌ی موسیقی",
+            "name": "کامران رسول‌زاده"
+          },
+          {
+            "role": "لیبل",
+            "name": "آکوردهای آزادی"
+          }
+        ],
         "videoUrl": "",
         "videoCaption": "",
         "tracks": [],
