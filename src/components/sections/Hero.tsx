@@ -68,8 +68,18 @@ export default function Hero() {
         }}
       />
       <div className="relative">
+        <motion.div {...step(16, 0)} className="mb-6 flex justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.png"
+            alt="Azadichords"
+            width={112}
+            height={112}
+            className="h-20 w-20 rounded-full md:h-28 md:w-28"
+          />
+        </motion.div>
         <motion.div
-          {...step(16, 0)}
+          {...step(16, 60)}
           className="mb-7 text-[13px] tracking-[0.2em] text-gold uppercase"
         >
           {content.hero.eyebrow}

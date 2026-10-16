@@ -21,12 +21,22 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-paper/8 bg-ink/85 backdrop-blur-md">
       <div className="flex items-center justify-between gap-12 px-6 py-5 md:px-12">
-        <Link href={localizeHref("/", locale)} className="flex-none">
-          <span className="block font-serif text-xl font-semibold tracking-[0.02em] text-paper">
-            {content.nav.brand}
-          </span>
-          <span className="block text-[10px] tracking-[0.15em] text-gold/80 uppercase">
-            {content.nav.tagline}
+        <Link href={localizeHref("/", locale)} className="flex flex-none items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-160.png"
+            alt=""
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full"
+          />
+          <span>
+            <span className="block font-serif text-xl font-semibold tracking-[0.02em] text-paper">
+              {content.nav.brand}
+            </span>
+            <span className="block text-[10px] tracking-[0.15em] text-gold/80 uppercase">
+              {content.nav.tagline}
+            </span>
           </span>
         </Link>
         <div className="ms-auto hidden flex-wrap items-center justify-end gap-8 md:flex">
