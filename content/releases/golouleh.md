@@ -34,7 +34,9 @@ video_url: ""
 musicVideoCaption_en: ""
 musicVideoCaption_fa: ""
 tracks: []
-streaming_links: []
+streaming_links:
+  - platform: Spotify
+    url: https://open.spotify.com/track/3O0Sbp5EduC5TpJtpbGdHG
 support_tier_link: true
 purchaseNote_en: "Free to download for listeners in Iran. Outside Iran, stream it everywhere — and stand behind the work."
 purchaseNote_fa: "اگر بیرونِ ایران هستی، با شنیدن در پلتفرم‌ها و حمایت از هنرمند کنارِ این کار باش."

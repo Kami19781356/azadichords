@@ -214,7 +214,12 @@ export const content: Record<Locale, Content> = {
         "videoUrl": "",
         "videoCaption": "",
         "tracks": [],
-        "streamingLinks": [],
+        "streamingLinks": [
+          {
+            "platform": "Spotify",
+            "url": "https://open.spotify.com/track/3O0Sbp5EduC5TpJtpbGdHG"
+          }
+        ],
         "supportTierLink": true,
         "purchaseNote": "Free to download for listeners in Iran. Outside Iran, stream it everywhere — and stand behind the work."
       }
@@ -706,7 +711,12 @@ export const content: Record<Locale, Content> = {
         "videoUrl": "",
         "videoCaption": "",
         "tracks": [],
-        "streamingLinks": [],
+        "streamingLinks": [
+          {
+            "platform": "Spotify",
+            "url": "https://open.spotify.com/track/3O0Sbp5EduC5TpJtpbGdHG"
+          }
+        ],
         "supportTierLink": true,
         "purchaseNote": "اگر بیرونِ ایران هستی، با شنیدن در پلتفرم‌ها و حمایت از هنرمند کنارِ این کار باش."
       }

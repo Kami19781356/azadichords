@@ -204,7 +204,7 @@ function Spotlight({ release }: { release: Release }) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm tracking-[0.05em] text-paper/70 uppercase transition-colors duration-200 hover:text-gold"
+                className="rounded-full border border-gold px-6 py-3 text-[13px] tracking-[0.08em] text-gold uppercase transition-colors duration-200 hover:bg-gold hover:text-ink"
               >
                 {link.platform.replace("_", " ")}
               </a>
