@@ -2,6 +2,7 @@ import { appendFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { NextRequest, NextResponse } from "next/server";
 import { sendSongSubmissionNotification } from "@/lib/resend";
+import { submissionsAreOpen } from "@/lib/submissionsWindow";
 
 // Special-section song submissions. Each one is appended to a JSONL file
 // on the server (SUBMISSIONS_DIR, default ./data — git-ignored, survives
@@ -27,7 +28,16 @@ function str(v: unknown) {
   return typeof v === "string" ? v.trim() : "";
 }
 
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  return NextResponse.json({ open: submissionsAreOpen() });
+}
+
 export async function POST(request: NextRequest) {
+  if (!submissionsAreOpen()) {
+    return NextResponse.json({ error: "Submissions are not open yet" }, { status: 403 });
+  }
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body || typeof body !== "object") {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });

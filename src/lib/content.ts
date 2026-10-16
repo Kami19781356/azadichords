@@ -293,6 +293,7 @@ export const content: Record<Locale, Content> = {
       "sending": "Sending…",
       "successMessage": "Received. Thank you — every song is read and listened to. Selections are announced on December 20, 2026.",
       "errorMessage": "Something went wrong. Please try again in a few minutes, or email the song to contact@azadichords.com.",
+      "closedMessage": "Submissions open on October 19, 2026. Come back then — the form will be ready for your song.",
       "generalNote": "Making a music video instead? The general section — love, social and spiritual music videos from anywhere — takes submissions through FilmFreeway.",
       "generalCta": {
         "label": "Submit on FilmFreeway →",
@@ -783,6 +784,7 @@ export const content: Record<Locale, Content> = {
       "sending": "در حالِ ارسال…",
       "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۲۰ دسامبر ۲۰۲۶ (۲۹ آذر ۱۴۰۵) اعلام می‌شوند.",
       "errorMessage": "مشکلی پیش آمد. چند دقیقه‌ی دیگر دوباره امتحان کن، یا ترانه را به contact@azadichords.com ایمیل کن.",
+      "closedMessage": "ارسالِ ترانه از ۱۹ اکتبر ۲۰۲۶ (۲۷ مهر ۱۴۰۵) آغاز می‌شود. همان روز برگرد؛ فرم برای ترانه‌ی تو آماده است.",
       "generalNote": "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ FilmFreeway می‌پذیرد.",
       "generalCta": {
         "label": "ارسال در FilmFreeway ←",

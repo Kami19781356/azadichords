@@ -209,6 +209,7 @@ export type Content = {
     sending: string;
     successMessage: string;
     errorMessage: string;
+    closedMessage: string;
     generalNote: string;
     generalCta: Cta;
   };

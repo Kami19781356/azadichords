@@ -259,6 +259,7 @@ function buildContent(lang) {
       sending: t(submissions, "sendingLabel", lang),
       successMessage: t(submissions, "successMessage", lang),
       errorMessage: t(submissions, "errorMessage", lang),
+      closedMessage: t(submissions, "closedMessage", lang),
       generalNote: t(submissions, "generalNote", lang),
       generalCta: { label: t(submissions, "generalCtaLabel", lang), href: submissions.generalCtaHref },
     },

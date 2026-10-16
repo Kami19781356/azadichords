@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useContent } from "@/lib/ContentProvider";
 import { reveal } from "@/lib/motionVariants";
@@ -29,6 +29,14 @@ export default function Submissions() {
   const content = useContent();
   const s = content.submissions;
   const [status, setStatus] = useState<Status>("idle");
+  // Closed until the opening day; the server enforces this too.
+  const [open, setOpen] = useState(true);
+  useEffect(() => {
+    fetch("/api/submit", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((d) => setOpen(d.open !== false))
+      .catch(() => {});
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -131,12 +139,15 @@ export default function Submissions() {
 
           <button
             type="submit"
-            disabled={status === "sending"}
+            disabled={status === "sending" || !open}
             className="mt-4 rounded-full bg-garnet px-4 py-4 text-sm tracking-[0.08em] text-paper uppercase transition-all duration-[250ms] hover:-translate-y-0.5 hover:bg-garnet-hover disabled:opacity-50 disabled:hover:translate-y-0"
           >
             {status === "sending" ? s.sending : s.submit}
           </button>
           <div aria-live="polite">
+            {!open && (
+              <p className="m-0 text-center text-[15px] leading-[1.7] text-garnet">{s.closedMessage}</p>
+            )}
             {status === "success" && (
               <p className="m-0 text-center text-[15px] leading-[1.7] text-garnet">{s.successMessage}</p>
             )}
