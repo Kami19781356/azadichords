@@ -10,9 +10,9 @@ release_date: "2026-10-16"
 coverImageCaption: Golouleh — single cover
 # Put the cover at public/images/releases/golouleh.jpg and the audio at
 # public/downloads/golouleh.mp3, then fill these three fields.
-cover_image: ""
-demo_audio_url: ""
-download_url: ""
+cover_image: "/images/logo.png"
+demo_audio_url: "/downloads/golouleh-kamran-rasoolzadeh.mp3"
+download_url: "/downloads/golouleh-kamran-rasoolzadeh.mp3"
 tagline_en: "The new single by Kamran Rasoolzadeh"
 tagline_fa: "تک‌آهنگِ تازه‌ی کامران رسول‌زاده"
 description_en: "Golouleh, the new song by Kamran Rasoolzadeh. Streaming on all platforms — and free to download on the Persian site for listeners inside Iran."
