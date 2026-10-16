@@ -272,6 +272,7 @@ function buildContent(lang) {
         title: t(w, "title", lang),
         description: t(w, "description", lang),
         cta: { label: t(w, "ctaLabel", lang), href: w.ctaHref },
+        soonNote: w.soonNote_en ? t(w, "soonNote", lang) : undefined,
       })),
       transparency: t(support, "transparency", lang),
     },

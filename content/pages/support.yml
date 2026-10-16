@@ -12,16 +12,18 @@ ways:
   - name: "01"
     title_en: Own the Work
     title_fa: آثار را تهیه کنید
-    description_en: Kamran Rasoolzadeh's music and the poetry collection Sans Toi, sold directly by the artist's studio. Every purchase funds the next song and the festival.
-    description_fa: موسیقیِ کامران رسول‌زاده و مجموعه‌شعرِ «بی‌تو»، مستقیم از استودیوی هنرمند. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.
+    description_en: "The album «Iran-e Jan» — Kamran Rasoolzadeh's newest album, in remembrance of the names of the homeland's Javidnaman — together with Kamran's new poetry collection."
+    description_fa: "آلبومِ «ایرانِ جان»، تازه‌ترین آلبومِ کامران رسول‌زاده (پاسداشتِ نامِ جاویدنامانِ وطن)، به همراهِ مجموعه‌شعرِ تازه‌ی کامران."
     ctaLabel_en: Go to the studio →
     ctaLabel_fa: رفتن به استودیو ←
     ctaHref: https://www.youality.fr
+    soonNote_en: Pre-sale begins soon…
+    soonNote_fa: آغازِ پیش‌فروش، به‌زودی…
   - name: "02"
     title_en: Listen and Share
     title_fa: بشنوید و به اشتراک بگذارید
-    description_en: Stream on Spotify, Apple Music and YouTube. A save, a share, a playlist add — each one carries the music further than any budget could.
-    description_fa: در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری این موسیقی را دورتر از هر بودجه‌ای می‌برد.
+    description_en: Stream on Spotify, Apple Music and YouTube. Every share is an effective effort to carry this song to the families of Iran's Javidnaman, and to keep their memory alive forever.
+    description_fa: در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری تلاشی‌ست مؤثر برای رساندنِ این آهنگ به بازماندگانِ جاویدنام‌ها و زنده نگه‌داشتنِ یادشان تا ابد.
     ctaLabel_en: Go to the music →
     ctaLabel_fa: رفتن به موسیقی ←
     ctaHref: /music

@@ -75,6 +75,8 @@ export type SupportWay = {
   title: string;
   description: string;
   cta: Cta;
+  // When set, the button reveals this note instead of linking out.
+  soonNote?: string;
 };
 
 export type FestivalDate = {

@@ -311,16 +311,17 @@ export const content: Record<Locale, Content> = {
         {
           "name": "01",
           "title": "Own the Work",
-          "description": "Kamran Rasoolzadeh's music and the poetry collection Sans Toi, sold directly by the artist's studio. Every purchase funds the next song and the festival.",
+          "description": "The album «Iran-e Jan» — Kamran Rasoolzadeh's newest album, in remembrance of the names of the homeland's Javidnaman — together with Kamran's new poetry collection.",
           "cta": {
             "label": "Go to the studio →",
             "href": "https://www.youality.fr"
-          }
+          },
+          "soonNote": "Pre-sale begins soon…"
         },
         {
           "name": "02",
           "title": "Listen and Share",
-          "description": "Stream on Spotify, Apple Music and YouTube. A save, a share, a playlist add — each one carries the music further than any budget could.",
+          "description": "Stream on Spotify, Apple Music and YouTube. Every share is an effective effort to carry this song to the families of Iran's Javidnaman, and to keep their memory alive forever.",
           "cta": {
             "label": "Go to the music →",
             "href": "/music"
@@ -802,16 +803,17 @@ export const content: Record<Locale, Content> = {
         {
           "name": "01",
           "title": "آثار را تهیه کنید",
-          "description": "موسیقیِ کامران رسول‌زاده و مجموعه‌شعرِ «بی‌تو»، مستقیم از استودیوی هنرمند. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.",
+          "description": "آلبومِ «ایرانِ جان»، تازه‌ترین آلبومِ کامران رسول‌زاده (پاسداشتِ نامِ جاویدنامانِ وطن)، به همراهِ مجموعه‌شعرِ تازه‌ی کامران.",
           "cta": {
             "label": "رفتن به استودیو ←",
             "href": "https://www.youality.fr"
-          }
+          },
+          "soonNote": "آغازِ پیش‌فروش، به‌زودی…"
         },
         {
           "name": "02",
           "title": "بشنوید و به اشتراک بگذارید",
-          "description": "در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری این موسیقی را دورتر از هر بودجه‌ای می‌برد.",
+          "description": "در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری تلاشی‌ست مؤثر برای رساندنِ این آهنگ به بازماندگانِ جاویدنام‌ها و زنده نگه‌داشتنِ یادشان تا ابد.",
           "cta": {
             "label": "رفتن به موسیقی ←",
             "href": "/music"

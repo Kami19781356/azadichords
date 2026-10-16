@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useContent } from "@/lib/ContentProvider";
 import { useLocale, localizeHref } from "@/lib/locale";
@@ -13,6 +14,7 @@ const EXTERNAL_RE = /^https?:\/\//i;
 export default function Support() {
   const content = useContent();
   const locale = useLocale();
+  const [soonOpen, setSoonOpen] = useState<string | null>(null);
   return (
     <section
       id="support"
@@ -65,7 +67,33 @@ export default function Support() {
               <p className="m-0 mb-8 text-[15px] leading-[1.7] text-paper/65">
                 {way.description}
               </p>
-              {external ? (
+              {way.soonNote ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSoonOpen((v) => (v === way.name ? null : way.name))
+                    }
+                    aria-expanded={soonOpen === way.name}
+                    className={linkClass}
+                  >
+                    {way.cta.label}
+                  </button>
+                  <AnimatePresence>
+                    {soonOpen === way.name && (
+                      <motion.p
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="m-0 mt-4 overflow-hidden text-[15px] text-gold"
+                        role="status"
+                      >
+                        {way.soonNote}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </>
+              ) : external ? (
                 <a
                   href={href}
                   target="_blank"
