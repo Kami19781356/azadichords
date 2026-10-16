@@ -150,6 +150,14 @@ export default function Hero() {
                   </p>
                 )}
               </div>
+              {locale === "fa" && latestRelease?.downloadUrl && (
+                <Link
+                  href={`/fa/download/${latestRelease.slug}`}
+                  className="mt-4 inline-block text-sm text-gold transition-colors duration-200 hover:text-paper"
+                >
+                  ↓ {content.music.downloadLabel} «{latestRelease.title}»
+                </Link>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

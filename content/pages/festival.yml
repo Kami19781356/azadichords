@@ -1,96 +1,108 @@
-# Azadichords Festival — first edition. Dates are ISO (YYYY-MM-DD) and
-# are formatted per language by the site. When the FilmFreeway listing
-# is live, put its URL in ctaHref and update ctaNote.
-eyebrow_en: Festival · First Edition
-eyebrow_fa: جشنواره · دوره‌ی نخست
-title_en: Azadichords Festival 2027
-title_fa: جشنواره‌ی آزادی‌کورد ۲۰۲۷
+# Azadichords Song Festival — first edition. Two sections:
+#   general — international music videos, submitted through the YOUALITY
+#             International Short Film Festival's FilmFreeway listing
+#             (the host festival);
+#   special — Persian songs in memory of Iran's Javidnaman, submitted
+#             through this site's own form (/submissions).
+# Dates are ISO (YYYY-MM-DD) and formatted per language by the site.
+eyebrow_en: Song Festival · First Edition
+eyebrow_fa: جشنواره‌ی ترانه · دوره‌ی نخست
+title_en: Azadichords Song Festival 2027
+title_fa: جشنواره‌ی ترانه‌ی آکوردهای آزادی
 intro_en:
-  - Two days for music that carries memory and freedom. Open to artists from anywhere, in any language — a competition, a live concert, and an awards night.
-  - The festival is where the label listens. Selected artists are invited to the Azadichords annual compilation, released on every major platform.
+  - A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.
+  - Hosted by the YOUALITY International Short Film Festival in Paris. On closing night, Kamran Rasoolzadeh performs live.
 intro_fa:
-  - دو روز برای موسیقی‌ای که یاد و آزادی را با خود دارد. باز برای هنرمندانی از هر جای جهان و به هر زبانی — بخشِ رقابتی، کنسرتِ زنده، و شبِ اهدای جوایز.
-  - جشنواره جایی است که لیبل گوش می‌دهد. هنرمندانِ برگزیده به آلبومِ مجموعه‌ی سالانه‌ی آزادی‌کورد دعوت می‌شوند که روی همه‌ی پلتفرم‌های اصلی منتشر می‌شود.
+  - جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.
+  - میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، کامران رسول‌زاده اجرای زنده دارد.
+sectionsTitle_en: Two Sections
+sectionsTitle_fa: دو بخش
+sections:
+  - label_en: General Section
+    label_fa: بخش عمومی
+    title_en: International Music Videos
+    title_fa: موزیک‌ویدیوهای بین‌المللی
+    description_en: Music videos from anywhere in the world, in any language.
+    description_fa: موزیک‌ویدیو از هر جای جهان و به هر زبانی.
+    tags_en: [Love, Social, Spiritual]
+    tags_fa: [عاشقانه, اجتماعی, معنوی]
+    points_en:
+      - "Host: YOUALITY International Short Film Festival, Paris"
+      - "Awards: the festival statuette and honorary diplomas"
+      - "Submit through the festival's FilmFreeway page"
+    points_fa:
+      - "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، پاریس"
+      - "جوایز: تندیسِ جشنواره و دیپلمِ افتخار"
+      - "ارسالِ اثر از طریقِ صفحه‌ی جشنواره در FilmFreeway"
+    ctaLabel_en: Submit a music video →
+    ctaLabel_fa: ارسالِ موزیک‌ویدیو ←
+    ctaHref: https://filmfreeway.com/youality
+  - label_en: Special Section
+    label_fa: بخش ویژه
+    title_en: Persian Songs in Memory of Iran's Javidnaman
+    title_fa: ترانه‌های فارسی به یادِ جاویدنامانِ ایران
+    description_en: Persian songs — lyrics, or lyrics with a melody or demo — written in memory of those whose names now live on.
+    description_fa: ترانه‌ی فارسی، چه فقط متن و چه همراه با ملودی یا دمو، به یادِ کسانی که نامشان ماندگار شده است.
+    tags_en: [Persian lyrics, Demo welcome]
+    tags_fa: [ترانه‌ی فارسی, دمو اختیاری]
+    points_en:
+      - "Submit through this site — a stage name is enough"
+      - "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label"
+      - "Production of the album by Kamran Rasoolzadeh"
+    points_fa:
+      - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
+      - "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند"
+      - "تهیه و تولیدِ آلبوم با کامران رسول‌زاده"
+    ctaLabel_en: Submit a Persian song →
+    ctaLabel_fa: ارسالِ ترانه ←
+    ctaHref: /submissions
+    highlight: true
 datesTitle_en: Key Dates
 datesTitle_fa: تاریخ‌های کلیدی
 dates:
-  - date: "2026-10-19"
+  - date: "2026-10-17"
     label_en: Submissions open
     label_fa: آغازِ ارسالِ اثر
-  - date: "2026-11-02"
-    label_en: Jury announced
-    label_fa: معرفیِ هیئت داوران
   - date: "2026-12-06"
-    label_en: Submission deadline
-    label_fa: پایانِ مهلتِ ارسال
+    label_en: Special-section deadline
+    label_fa: پایانِ مهلتِ بخشِ ویژه
   - date: "2026-12-20"
     label_en: Selections announced
     label_fa: اعلامِ آثارِ برگزیده
   - date: "2027-01-08"
     endDate: "2027-01-09"
-    label_en: The festival
-    label_fa: برگزاریِ جشنواره
+    label_en: The festival, Paris
+    label_fa: برگزاریِ جشنواره، پاریس
     highlight: true
-categoriesTitle_en: Competition Categories
-categoriesTitle_fa: بخش‌های رقابتی
-categories:
-  - title_en: Best Original Song
-    title_fa: بهترین ترانه‌ی اورجینال
-    description_en: An original song, words and music, in any language.
-    description_fa: ترانه‌ای اورجینال، کلام و موسیقی، به هر زبانی.
-  - title_en: Best Music Video
-    title_fa: بهترین موزیک‌ویدیو
-    description_en: The visual life of a song — live action, animation or archive.
-    description_fa: زندگیِ تصویریِ یک ترانه — فیلم، انیمیشن یا آرشیو.
-  - title_en: Best Instrumental or Composition
-    title_fa: بهترین قطعه‌ی بی‌کلام یا آهنگسازی
-    description_en: Music without words that still speaks.
-    description_fa: موسیقیِ بی‌کلامی که همچنان حرف می‌زند.
-  - title_en: Best Vocal Performance
-    title_fa: بهترین اجرای آوازی
-    description_en: A voice heard on its own terms.
-    description_fa: صدایی که به شیوه‌ی خودش شنیده می‌شود.
-  - title_en: Best Poetry Set to Music
-    title_fa: بهترین شعر همراه با موسیقی
-    description_en: Where a poem becomes a song — the root of Azadichords.
-    description_fa: جایی که شعر ترانه می‌شود — ریشه‌ی آزادی‌کورد.
-entryTitle_en: How to Enter
-entryTitle_fa: شیوه‌ی شرکت
-entrySteps_en:
-  - Choose a category and prepare your work — a finished piece or a strong draft.
-  - Submit through the festival's FilmFreeway listing before December 6, 2026.
-  - Tick the compilation consent — a non-exclusive permission to include your work on the Azadichords compilation if it is selected. Ownership stays with you.
-entrySteps_fa:
-  - یک بخش را انتخاب کنید و اثرتان را آماده کنید — اثرِ نهایی یا پیش‌نویسی قوی.
-  - اثر را تا ۶ دسامبر ۲۰۲۶ از طریقِ صفحه‌ی جشنواره در FilmFreeway ارسال کنید.
-  - رضایتِ حضور در آلبومِ مجموعه را تأیید کنید — اجازه‌ای غیرانحصاری برای قرار گرفتنِ اثرتان در آلبومِ آزادی‌کورد در صورتِ برگزیده شدن. مالکیتِ اثر نزدِ شما می‌ماند.
-entryFee_en: Entry is free for the first edition.
-entryFee_fa: ارسالِ اثر در دوره‌ی نخست رایگان است.
+datesNote_en: General-section deadlines follow the host festival's FilmFreeway page.
+datesNote_fa: مهلت‌های بخشِ عمومی طبقِ صفحه‌ی جشنواره‌ی میزبان در FilmFreeway است.
 programmeTitle_en: Programme
 programmeTitle_fa: برنامه
 programme:
   - date: "2027-01-08"
-    title_en: Opening Night — Live Concert
-    title_fa: شبِ افتتاح — کنسرتِ زنده
-    description_en: A curated concert of invited artists, and the release of the label's first album, Requiem for the Eternal Names.
-    description_fa: کنسرتی کیوریت‌شده با هنرمندانِ دعوت‌شده، و انتشارِ نخستین آلبومِ لیبل، «سوگنامه‌ی جاویدنام‌ها».
+    title_en: Screenings & Listening
+    title_fa: نمایش و شنیدن
+    description_en: The selected music videos of the general section, and the selected songs of the special section.
+    description_fa: نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی بخشِ ویژه.
   - date: "2027-01-09"
-    title_en: Selections & Awards
-    title_fa: آثارِ برگزیده و اهدای جوایز
-    description_en: Screenings and listening of the selected works, followed by the awards.
-    description_fa: نمایش و شنیدنِ آثارِ برگزیده، و سپس اهدای جوایز.
+    title_en: Closing Night — Awards & Live Performance
+    title_fa: شبِ اختتامیه — جوایز و اجرای زنده
+    description_en: The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live performance by Kamran Rasoolzadeh.
+    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی کامران رسول‌زاده.
 juryTitle_en: Jury
 juryTitle_fa: هیئت داوران
-juryText_en: Musicians, poets and critics from the diaspora and beyond. The jury is announced on November 2, 2026.
-juryText_fa: موسیقی‌دانان، شاعران و منتقدانی از دیاسپورا و فراتر از آن. اعضای هیئت داوران ۲ نوامبر ۲۰۲۶ معرفی می‌شوند.
+juryText_en: Musicians, poets and filmmakers. Members will be announced here.
+juryText_fa: موسیقی‌دانان، شاعران و فیلم‌سازان. اعضا به‌زودی همین‌جا معرفی می‌شوند.
 venueTitle_en: Venue
 venueTitle_fa: محل برگزاری
-venueText_en: Chantilly, near Paris, France — held alongside the YOUALITY International Film Festival. Exact venue to be announced.
-venueText_fa: شانتیی، نزدیکِ پاریس، فرانسه — هم‌زمان با جشنواره‌ی بین‌المللی فیلم YOUALITY. محلِ دقیق به‌زودی اعلام می‌شود.
-ctaLabel_en: Get notified when submissions open →
-ctaLabel_fa: خبرم کنید وقتی ارسال آغاز شد ←
-ctaHref: "/contact"
-ctaNote_en: Submissions open on October 19, 2026.
-ctaNote_fa: ارسالِ اثر از ۱۹ اکتبر ۲۰۲۶ آغاز می‌شود.
+venueText_en: Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.
+venueText_fa: پاریس، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.
+entryFee_en: Submitting to the special section is free.
+entryFee_fa: ارسالِ اثر به بخشِ ویژه رایگان است.
+ctaLabel_en: Submit a Persian song →
+ctaLabel_fa: ارسالِ ترانه به بخشِ ویژه ←
+ctaHref: "/submissions"
+ctaNote_en: Music videos are submitted through FilmFreeway — see the general section below.
+ctaNote_fa: موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).
 detailsLabel_en: Full festival details →
 detailsLabel_fa: جزئیاتِ کاملِ جشنواره ←

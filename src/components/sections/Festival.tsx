@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useContent } from "@/lib/ContentProvider";
 import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal, staggerParent, staggerChild } from "@/lib/motionVariants";
-import { formatDateRange, formatDayMonth, formatIndex } from "@/lib/formatDate";
+import { formatDateRange, formatDayMonth } from "@/lib/formatDate";
 import { cn } from "@/lib/cn";
 import SplitReveal from "@/components/SplitReveal";
 
@@ -42,6 +42,11 @@ function Cta() {
           {cta.label}
         </Link>
       )}
+      {content.festival.entryFee && (
+        <p className="m-0 rounded-full border border-gold/50 px-4 py-1.5 text-sm text-gold">
+          {content.festival.entryFee}
+        </p>
+      )}
       {ctaNote && <p className="m-0 text-sm text-paper/50">{ctaNote}</p>}
     </div>
   );
@@ -56,7 +61,7 @@ function KeyDates() {
       <SectionLabel>{datesTitle}</SectionLabel>
       <motion.ol
         {...staggerParent}
-        className="m-0 grid list-none grid-cols-1 gap-0 p-0 md:grid-cols-5"
+        className="m-0 grid list-none grid-cols-1 gap-0 p-0 md:grid-cols-4"
       >
         {dates.map((d) => (
           <motion.li
@@ -94,36 +99,88 @@ function KeyDates() {
           </motion.li>
         ))}
       </motion.ol>
+      {content.festival.datesNote && (
+        <p className="m-0 mt-6 text-sm text-paper/45">{content.festival.datesNote}</p>
+      )}
     </motion.div>
   );
 }
 
-function Categories() {
-  const content = useContent();
+function SectionLink({ href, label, primary }: { href: string; label: string; primary: boolean }) {
   const locale = useLocale();
-  const { categories, categoriesTitle } = content.festival;
+  const className = cn(
+    "mt-auto self-start rounded-full px-7 py-3.5 text-[13px] tracking-[0.08em] uppercase transition-all duration-200 hover:-translate-y-0.5",
+    primary
+      ? "bg-garnet text-paper hover:bg-garnet-hover"
+      : "border border-gold text-gold hover:bg-gold hover:text-ink",
+  );
+  if (EXTERNAL_RE.test(href)) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {label}
+      </a>
+    );
+  }
+  return (
+    <Link href={localizeHref(href, locale)} className={className}>
+      {label}
+    </Link>
+  );
+}
+
+function Sections() {
+  const content = useContent();
+  const { sections, sectionsTitle } = content.festival;
   return (
     <motion.div {...reveal}>
-      <SectionLabel>{categoriesTitle}</SectionLabel>
+      <SectionLabel>{sectionsTitle}</SectionLabel>
       <motion.div
         {...staggerParent}
-        className="grid grid-cols-1 gap-px overflow-hidden rounded border border-paper/12 bg-paper/12 sm:grid-cols-2 lg:grid-cols-5"
+        className="grid grid-cols-1 gap-6 md:grid-cols-2"
       >
-        {categories.map((c, i) => (
+        {sections.map((s) => (
           <motion.div
-            key={c.title}
+            key={s.title}
             {...staggerChild}
-            className="flex flex-col gap-3 bg-ink p-7"
+            className={cn(
+              "flex flex-col gap-5 rounded border p-8 md:p-10",
+              s.highlight
+                ? "border-gold/50 bg-garnet/10"
+                : "border-paper/12 bg-ink",
+            )}
           >
-            <span className="text-[13px] tracking-[0.15em] text-gold">
-              {formatIndex(i + 1, locale)}
+            <span className="text-[13px] tracking-[0.15em] text-gold uppercase">
+              {s.label}
             </span>
-            <h3 className="m-0 font-serif text-xl leading-[1.25] font-semibold">
-              {c.title}
+            <h3 className="m-0 font-serif text-[clamp(24px,2.6vw,32px)] leading-[1.25] font-semibold">
+              {s.title}
             </h3>
-            <p className="m-0 text-[15px] leading-[1.6] text-paper/60">
-              {c.description}
+            <p className="m-0 text-[16px] leading-[1.7] text-paper/70">
+              {s.description}
             </p>
+            {s.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {s.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-paper/20 px-3 py-1 text-[13px] text-paper/75"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+            <ul className="m-0 mb-3 flex list-none flex-col gap-2.5 p-0">
+              {s.points.map((point) => (
+                <li
+                  key={point}
+                  className="border-s-2 border-gold/40 ps-4 text-[15px] leading-[1.6] text-paper/70"
+                >
+                  {point}
+                </li>
+              ))}
+            </ul>
+            <SectionLink href={s.cta.href} label={s.cta.label} primary={s.highlight} />
           </motion.div>
         ))}
       </motion.div>
@@ -131,55 +188,33 @@ function Categories() {
   );
 }
 
-function EntryAndProgramme() {
+function Programme() {
   const content = useContent();
   const locale = useLocale();
   const f = content.festival;
   return (
-    <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-20">
-      <motion.div {...reveal}>
-        <SectionLabel>{f.entryTitle}</SectionLabel>
-        <ol className="m-0 flex list-none flex-col gap-5 p-0">
-          {f.entrySteps.map((step, i) => (
-            <li key={step.slice(0, 24)} className="flex gap-4">
-              <span className="font-serif text-2xl leading-none text-gold">
-                {formatIndex(i + 1, locale, 1)}
-              </span>
-              <span className="text-[16px] leading-[1.7] text-paper/75">
-                {step}
-              </span>
-            </li>
-          ))}
-        </ol>
-        <p className="m-0 mt-7 inline-block rounded-full border border-gold/50 px-4 py-2 text-sm text-gold">
-          {f.entryFee}
-        </p>
-      </motion.div>
-      <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.1 }}>
-        <SectionLabel>{f.programmeTitle}</SectionLabel>
-        <div className="flex flex-col">
-          {f.programme.map((p) => (
-            <div
-              key={p.date + p.title}
-              className="flex flex-col gap-2 border-t border-paper/12 py-6 first:border-t-0 first:pt-0"
+    <motion.div {...reveal}>
+      <SectionLabel>{f.programmeTitle}</SectionLabel>
+      <div className="grid grid-cols-1 gap-x-20 md:grid-cols-2">
+        {f.programme.map((p) => (
+          <div
+            key={p.date + p.title}
+            className="flex flex-col gap-2 border-t border-paper/12 py-6"
+          >
+            <span
+              suppressHydrationWarning
+              className="text-[13px] tracking-[0.12em] text-gold uppercase"
             >
-              <span
-                suppressHydrationWarning
-                className="text-[13px] tracking-[0.12em] text-gold uppercase"
-              >
-                {formatDayMonth(p.date, locale)}
-              </span>
-              <h3 className="m-0 font-serif text-2xl font-semibold">
-                {p.title}
-              </h3>
-              <p className="m-0 text-[15px] leading-[1.7] text-paper/60">
-                {p.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
+              {formatDayMonth(p.date, locale)}
+            </span>
+            <h3 className="m-0 font-serif text-2xl font-semibold">{p.title}</h3>
+            <p className="m-0 text-[15px] leading-[1.7] text-paper/60">
+              {p.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </motion.div>
   );
 }
 
@@ -252,6 +287,7 @@ export default function Festival({ compact = false }: { compact?: boolean }) {
       </motion.div>
 
       <div className="relative flex flex-col gap-20">
+        <Sections />
         <KeyDates />
         {compact ? (
           <motion.div {...reveal}>
@@ -264,8 +300,7 @@ export default function Festival({ compact = false }: { compact?: boolean }) {
           </motion.div>
         ) : (
           <>
-            <Categories />
-            <EntryAndProgramme />
+            <Programme />
             <JuryAndVenue />
           </>
         )}

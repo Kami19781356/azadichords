@@ -1,7 +1,7 @@
 # Social hrefs left blank — no real URLs exist yet for any of these.
 # Footer.tsx filters out empty/"#" links, so nothing renders until a
 # real URL is added here.
-copyright: AZADICHORDS © 2026 — Paris · Label & Festival
+copyright: AZADICHORDS © 2026 — Paris · Label & Song Festival
 social:
   - label: Instagram
     href: ""
@@ -12,4 +12,4 @@ social:
   - label: Telegram
     href: ""
 disclaimer_en: Azadichords is an independent label and festival with no affiliation to any political party, movement, or government.
-disclaimer_fa: آزادی‌کورد لیبل و جشنواره‌ای مستقل است و به هیچ حزب، جنبش یا دولتی وابسته نیست.
+disclaimer_fa: آکوردهای آزادی لیبل و جشنواره‌ای مستقل است و به هیچ حزب، جنبش یا دولتی وابسته نیست.

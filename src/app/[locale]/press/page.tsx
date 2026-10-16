@@ -9,8 +9,8 @@ const meta: Record<Locale, Metadata> = {
       "Press materials and interviews from Azadichords, an independent music label based in Paris.",
   },
   fa: {
-    title: "مطبوعات — آزادی‌کورد",
-    description: "مطالب مطبوعاتی و مصاحبه‌های آزادی‌کورد، لیبل مستقل موسیقی در پاریس.",
+    title: "مطبوعات — آکوردهای آزادی",
+    description: "مطالب مطبوعاتی و مصاحبه‌های آکوردهای آزادی، لیبل مستقل موسیقی در پاریس.",
   },
 };
 

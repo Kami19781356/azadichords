@@ -6,12 +6,12 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Support — Azadichords",
     description:
-      "Azadichords is fully independent. Own the album, share the music, come to the festival, or partner with us.",
+      "Azadichords is fully independent. Own the work, share the music, come to the festival, or partner with us.",
   },
   fa: {
-    title: "حمایت — آزادی‌کورد",
+    title: "حمایت — آکوردهای آزادی",
     description:
-      "آزادی‌کورد کاملاً مستقل است. آلبوم را تهیه کنید، موسیقی را به اشتراک بگذارید، به جشنواره بیایید یا همراه ما شوید.",
+      "آکوردهای آزادی کاملاً مستقل است. آثار را تهیه کنید، موسیقی را به اشتراک بگذارید، به جشنواره بیایید یا همراهِ ما شوید.",
   },
 };
 

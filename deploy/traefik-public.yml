@@ -1,0 +1,51 @@
+# Public launch: azadichords.com serves the site; www and the old staging
+# address redirect to it. Install on the server (replaces the password-
+# protected preview file):
+#   cp deploy/traefik-public.yml /data/coolify/proxy/dynamic/azadichords-staging.yml
+# DNS: A records for azadichords.com and www.azadichords.com → this server.
+http:
+  routers:
+    azadichords-http:
+      rule: "Host(`azadichords.com`) || Host(`www.azadichords.com`) || Host(`staging.azadichords.com`)"
+      entryPoints:
+        - http
+      middlewares:
+        - azadichords-redirect-https
+      service: azadichords
+
+    azadichords-https:
+      rule: "Host(`azadichords.com`)"
+      entryPoints:
+        - https
+      service: azadichords
+      tls:
+        certResolver: letsencrypt
+
+    azadichords-aliases-https:
+      rule: "Host(`www.azadichords.com`) || Host(`staging.azadichords.com`)"
+      entryPoints:
+        - https
+      middlewares:
+        - azadichords-to-apex
+      service: azadichords
+      tls:
+        certResolver: letsencrypt
+
+  middlewares:
+    azadichords-redirect-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+    azadichords-to-apex:
+      redirectRegex:
+        regex: "^https?://(www|staging)\\.azadichords\\.com/(.*)"
+        replacement: "https://azadichords.com/${2}"
+        permanent: true
+
+  services:
+    azadichords:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3700"
+        passHostHeader: true

@@ -7,7 +7,7 @@ eyebrow_fa: خدمات
 title_en: What the Label Offers
 title_fa: آنچه لیبل ارائه می‌دهد
 intro_en: Beyond release, Azadichords works alongside the artists it houses at every stage a record needs before it reaches an audience.
-intro_fa: فراتر از انتشار، آزادی‌کورد در تمامِ مراحلی که یک اثر پیش از رسیدن به مخاطب طی می‌کنه، کنارِ هنرمندانش می‌ایسته.
+intro_fa: فراتر از انتشار، آکوردهای آزادی در تمامِ مراحلی که یک اثر پیش از رسیدن به مخاطب طی می‌کند، کنارِ هنرمندانش می‌ایستد.
 services:
   - title_en: Production & Mixing
     title_fa: تولید و میکس
@@ -24,11 +24,11 @@ services:
   - title_en: Live Performance
     title_fa: اجرای زنده
     description_en: From a first show to a touring itinerary — the logistics behind bringing a record to a stage.
-    description_fa: از اولین اجرا تا برنامه‌ی یک تور — تمامِ لجستیکِ رسوندنِ یک اثر به روی صحنه.
+    description_fa: از اولین اجرا تا برنامه‌ی یک تور — تمامِ لجستیکِ رساندنِ یک اثر به روی صحنه.
   - title_en: Licensing & Publishing
     title_fa: لایسنس و نشر
     description_en: Protecting the work and placing it commercially, on terms the artist understands and agrees to.
-    description_fa: محافظت از اثر و قرار دادنِ آن در بازار، با شرایطی که هنرمند می‌فهمد و باهاش موافقه.
+    description_fa: محافظت از اثر و قرار دادنِ آن در بازار، با شرایطی که هنرمند می‌فهمد و با آن موافق است.
 ctaLabel_en: Working on something that belongs here? Get in Touch →
-ctaLabel_fa: کاری داری که اینجا جاش هست؟ تماس بگیر ←
+ctaLabel_fa: برای همکاری تماس بگیرید ←
 ctaHref: "/contact"

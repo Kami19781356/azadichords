@@ -1,22 +1,22 @@
 brand: AZADICHORDS
-tagline_en: Home for Free Voices
-tagline_fa: خانه‌ی صداهای آزاد
+tagline_en: Label & Song Festival
+tagline_fa: لیبل و جشنواره‌ی ترانه
 links:
-  - href: "/manifesto"
-    label_en: Manifesto
-    label_fa: مانیفست
   - href: "/music"
     label_en: Music
     label_fa: موسیقی
   - href: "/festival"
     label_en: Festival
     label_fa: جشنواره
-  - href: "/artists"
-    label_en: Artists
-    label_fa: هنرمندان
   - href: "/submissions"
-    label_en: Submissions
-    label_fa: ارسال اثر
+    label_en: Submit a Song
+    label_fa: ارسالِ ترانه
+  - href: "/manifesto"
+    label_en: Manifesto
+    label_fa: مانیفست
+  - href: "/artists"
+    label_en: Artist
+    label_fa: هنرمند
   - href: "/support"
     label_en: Support
     label_fa: حمایت

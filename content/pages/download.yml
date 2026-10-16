@@ -1,0 +1,31 @@
+# Shown on /fa/download/<slug> while the free download starts. The point
+# of this page: the music is free, and here is how to stand behind it.
+eyebrow_en: Download
+eyebrow_fa: دانلود
+title_en: Your download is starting
+title_fa: دانلود شروع شد
+body_en: "If it doesn't start in a few seconds, use the button below."
+body_fa: "اگر تا چند ثانیه‌ی دیگر شروع نشد، دکمه‌ی زیر را بزن."
+buttonLabel_en: Download the file
+buttonLabel_fa: دانلودِ فایل
+unavailable_en: The file will be available here shortly.
+unavailable_fa: فایل به‌زودی همین‌جا قرار می‌گیرد.
+supportTitle_en: This music is free. Making it was not.
+supportTitle_fa: این موسیقی رایگان است، ولی ساختنش رایگان نبوده.
+supportIntro_en: Azadichords is independent — no sponsor, no institution. If this song reached you, here is how to carry it further.
+supportIntro_fa: آکوردهای آزادی مستقل است و هیچ اسپانسر یا نهادی پشتش نیست. اگر این ترانه به دستت رسید، این‌طوری می‌توانی آن را دورتر ببری.
+paths:
+  - title_en: If you are inside Iran
+    title_fa: اگر داخلِ ایران هستی
+    description_en: Listen, and send it to others — every share keeps it alive. If you have written a song in memory of the Javidnaman, send it to the festival's special section.
+    description_fa: گوش بده و برای دیگران بفرست؛ هر بار که دست‌به‌دست می‌شود، زنده می‌ماند. اگر ترانه‌ای به یادِ جاویدنامان نوشته‌ای، آن را به بخشِ ویژه‌ی جشنواره بفرست.
+    ctaLabel_en: Send your song →
+    ctaLabel_fa: ارسالِ ترانه ←
+    ctaHref: /submissions
+  - title_en: If you are outside Iran
+    title_fa: اگر بیرونِ ایران هستی
+    description_en: Stream it on Spotify, Apple Music and YouTube — and support the work directly through the artist's studio. Each purchase funds the next song and the festival.
+    description_fa: آن را در اسپاتیفای، اپل‌موزیک و یوتیوب گوش بده و مستقیم از استودیوی هنرمند حمایت کن. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.
+    ctaLabel_en: Ways to support →
+    ctaLabel_fa: راه‌های حمایت ←
+    ctaHref: /support

@@ -44,3 +44,24 @@ export async function sendContactNotification(params: {
     throw new Error(`Resend send failed: ${error.message}`);
   }
 }
+
+export async function sendSongSubmissionNotification(params: {
+  artistName: string;
+  email: string;
+  songTitle: string;
+  text: string;
+}) {
+  const from = process.env.RESEND_FROM_EMAIL;
+  const to = process.env.RESEND_TO_EMAIL;
+  if (!from || !to) {
+    throw new Error("RESEND_FROM_EMAIL / RESEND_TO_EMAIL are not set.");
+  }
+  const { error } = await getClient().emails.send({
+    from,
+    to,
+    replyTo: params.email,
+    subject: `[Festival · Special section] ${params.songTitle} — ${params.artistName}`,
+    text: params.text,
+  });
+  if (error) throw new Error(`Resend send failed: ${error.message}`);
+}

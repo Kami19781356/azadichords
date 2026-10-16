@@ -3,33 +3,33 @@ eyebrow_fa: حمایت
 title_en: Stand Behind the Voice
 title_fa: پشتِ این صدا بایستید
 intro_en:
-  - Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. It exists because people choose to listen, share, and show up.
+  - Azadichords is fully independent — no sponsor, no institution, no gatekeeper. Our songs are free for listeners inside Iran. Everyone else can help keep it that way.
   - There is no payment on this site. Each way to support below leads to the place where it actually happens.
 intro_fa:
-  - آزادی‌کورد کاملاً مستقل است — بی‌کمیته، بی‌دروازه‌بان، بی‌بودجه‌ی نهادی. این لیبل زنده است چون آدم‌ها تصمیم می‌گیرند گوش بدهند، به اشتراک بگذارند، و حاضر باشند.
+  - آکوردهای آزادی کاملاً مستقل است و هیچ اسپانسر، نهاد یا دروازه‌بانی ندارد. ترانه‌هایمان برای مخاطبانِ داخلِ ایران رایگان است، و بقیه می‌توانند کمک کنند که همین‌طور بماند.
   - روی این سایت هیچ پرداختی انجام نمی‌شود. هر راهِ حمایتی که در ادامه می‌بینید، شما را به جایی می‌برد که آن حمایت واقعاً اتفاق می‌افتد.
 ways:
   - name: "01"
-    title_en: Own the Album
-    title_fa: آلبوم را داشته باشید
-    description_en: The memorial album together with the poetry collection Sans Toi — a digital bundle, sold directly by the artist's studio.
-    description_fa: آلبومِ سوگنامه همراه با مجموعه‌شعرِ «بی‌تو» — یک بسته‌ی دیجیتال، مستقیم از استودیوی هنرمند.
-    ctaLabel_en: Get the bundle →
-    ctaLabel_fa: تهیه‌ی بسته ←
+    title_en: Own the Work
+    title_fa: آثار را تهیه کنید
+    description_en: Kamran Rasoolzadeh's music and the poetry collection Sans Toi, sold directly by the artist's studio. Every purchase funds the next song and the festival.
+    description_fa: موسیقیِ کامران رسول‌زاده و مجموعه‌شعرِ «بی‌تو»، مستقیم از استودیوی هنرمند. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.
+    ctaLabel_en: Go to the studio →
+    ctaLabel_fa: رفتن به استودیو ←
     ctaHref: https://www.youality.fr
   - name: "02"
     title_en: Listen and Share
     title_fa: بشنوید و به اشتراک بگذارید
-    description_en: From January 8, 2027, every release streams on all major platforms. A save, a share, a playlist add — each one carries the music further than any budget could.
-    description_fa: از ۸ ژانویه ۲۰۲۷، همه‌ی انتشارها روی تمامِ پلتفرم‌های اصلی در دسترس است. هر ذخیره، هر اشتراک‌گذاری، هر افزودن به پلی‌لیست — این موسیقی را دورتر از هر بودجه‌ای می‌برد.
+    description_en: Stream on Spotify, Apple Music and YouTube. A save, a share, a playlist add — each one carries the music further than any budget could.
+    description_fa: در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری این موسیقی را دورتر از هر بودجه‌ای می‌برد.
     ctaLabel_en: Go to the music →
     ctaLabel_fa: رفتن به موسیقی ←
     ctaHref: /music
   - name: "03"
     title_en: Be in the Room
     title_fa: در سالن باشید
-    description_en: Join us on January 8–9, 2027 for the first Azadichords Festival — a live concert, the competition, and the awards night.
-    description_fa: ۸ و ۹ ژانویه ۲۰۲۷ در نخستین جشنواره‌ی آزادی‌کورد کنارِ ما باشید — کنسرتِ زنده، بخشِ رقابتی و شبِ اهدای جوایز.
+    description_en: January 8–9, 2027 in Paris — screenings, the awards, and a live performance by Kamran Rasoolzadeh on closing night.
+    description_fa: ۸ و ۹ ژانویه ۲۰۲۷ (۱۸ و ۱۹ دی ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی کامران رسول‌زاده در شبِ اختتامیه.
     ctaLabel_en: The festival →
     ctaLabel_fa: جشنواره ←
     ctaHref: /festival
@@ -37,9 +37,9 @@ ways:
     title_en: Partner With Us
     title_fa: همراهِ ما شوید
     description_en: Venues, media, cultural organisations and patrons who want to help bring free voices to a stage — we would like to hear from you.
-    description_fa: سالن‌ها، رسانه‌ها، نهادهای فرهنگی و حامیانی که می‌خواهند صداهای آزاد را به صحنه برسانند — مشتاقیم از شما بشنویم.
+    description_fa: سالن‌ها، رسانه‌ها، نهادهای فرهنگی و حامیانی که می‌خواهند صداهای آزاد را به صحنه برسانند، مشتاقیم از شما بشنویم.
     ctaLabel_en: Get in touch →
     ctaLabel_fa: تماس بگیرید ←
     ctaHref: /contact
-transparency_en: Azadichords never asks for payment on this site. Direct sales of the album are handled by the artist's studio.
-transparency_fa: آزادی‌کورد روی این سایت هرگز درخواستِ پرداخت نمی‌کند. فروشِ مستقیمِ آلبوم از طریقِ استودیوی هنرمند انجام می‌شود.
+transparency_en: Azadichords never asks for payment on this site. Direct sales are handled by the artist's studio.
+transparency_fa: آکوردهای آزادی روی این سایت هرگز درخواستِ پرداخت نمی‌کند. فروشِ مستقیم از طریقِ استودیوی هنرمند انجام می‌شود.

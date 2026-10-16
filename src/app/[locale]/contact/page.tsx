@@ -8,7 +8,7 @@ const meta: Record<Locale, Metadata> = {
     description: "For music, press, or performance inquiries.",
   },
   fa: {
-    title: "تماس — آزادی‌کورد",
+    title: "تماس — آکوردهای آزادی",
     description: "برای درخواست‌های موسیقی، مطبوعات یا اجرا.",
   },
 };

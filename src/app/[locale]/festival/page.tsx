@@ -4,14 +4,14 @@ import type { Locale } from "@/lib/content.types";
 
 const meta: Record<Locale, Metadata> = {
   en: {
-    title: "Festival 2027 — Azadichords",
+    title: "Song Festival 2027 — Azadichords",
     description:
-      "Azadichords Festival, January 8–9, 2027 near Paris: an international competition and live concert for free voices. Free entry for artists.",
+      "Azadichords Song Festival, January 8–9, 2027 in Paris: international music videos, and a special section for Persian songs in memory of Iran’s Javidnaman.",
   },
   fa: {
-    title: "جشنواره ۲۰۲۷ — آزادی‌کورد",
+    title: "جشنواره‌ی ترانه — آکوردهای آزادی",
     description:
-      "جشنواره‌ی آزادی‌کورد، ۸ و ۹ ژانویه ۲۰۲۷ در نزدیکی پاریس: رقابت بین‌المللی و کنسرت زنده برای صداهای آزاد. ارسال اثر رایگان.",
+      "جشنواره‌ی ترانه‌ی آکوردهای آزادی، ۸ و ۹ ژانویه ۲۰۲۷ در پاریس: موزیک‌ویدیوهای بین‌المللی، و بخشِ ویژه‌ی ترانه‌های فارسی به یادِ جاویدنامانِ ایران.",
   },
 };
 

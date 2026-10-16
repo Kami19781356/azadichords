@@ -6,12 +6,14 @@ catalog_number: AZC-001
 type: album
 artist: kamran-rasoolzadeh
 status: upcoming
+# Hidden from the site until the album plan is reconfirmed.
+hidden: true
 release_date: "2027-01-08"
 coverImageCaption: Requiem for the Eternal Names — album art
 tagline_en: "The first release from Azadichords — out January 8, 2027."
-tagline_fa: "نخستین انتشارِ آزادی‌کورد — ۸ ژانویه ۲۰۲۷."
+tagline_fa: "نخستین انتشارِ آکوردهای آزادی — ۸ ژانویه ۲۰۲۷."
 description_en: "Eight songs by Kamran Rasoolzadeh, written for those whose names are now spoken in their place. A requiem held between grief and the stubborn hope of the living — mourning without surrender, memory without silence. The album arrives on January 8, 2027, the opening day of the first Azadichords Festival."
-description_fa: "هشت ترانه از کامران رسول‌زاده، برای کسانی که حالا نامشان به‌جای خودشان شنیده می‌شود. سوگنامه‌ای میانِ اندوه و امیدِ سرسختِ زندگان — سوگی بی‌تسلیم، یادی بی‌سکوت. آلبوم ۸ ژانویه ۲۰۲۷، روزِ گشایشِ نخستین جشنواره‌ی آزادی‌کورد، منتشر می‌شود."
+description_fa: "هشت ترانه از کامران رسول‌زاده، برای کسانی که حالا نامشان به‌جای خودشان شنیده می‌شود. سوگنامه‌ای میانِ اندوه و امیدِ سرسختِ زندگان — سوگی بی‌تسلیم، یادی بی‌سکوت. آلبوم ۸ ژانویه ۲۰۲۷، روزِ گشایشِ نخستین جشنواره‌ی آکوردهای آزادی، منتشر می‌شود."
 demo_audio_url: ""
 video_url: ""
 musicVideoCaption_en: ""

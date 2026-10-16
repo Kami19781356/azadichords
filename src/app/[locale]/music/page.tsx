@@ -6,12 +6,12 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Music — Azadichords",
     description:
-      "Listen to releases from Azadichords, an independent Paris label for uncensored voices.",
+      "Songs released by Azadichords, an independent label in Paris for free voices.",
   },
   fa: {
-    title: "موسیقی — آزادی‌کورد",
+    title: "موسیقی — آکوردهای آزادی",
     description:
-      "ریلیزهای آزادی‌کورد را بشنوید — لیبلی مستقل در پاریس برای صداهای سانسورنشده.",
+      "ترانه‌های آکوردهای آزادی را بشنوید. دانلود برای مخاطبانِ داخلِ ایران رایگان است.",
   },
 };
 

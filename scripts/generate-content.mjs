@@ -65,6 +65,7 @@ const support = readYaml("support");
 const contact = readYaml("contact");
 const footer = readYaml("footer");
 const festival = readYaml("festival");
+const download = readYaml("download");
 
 const artistFiles = readFolder("artists");
 const activityFiles = readFolder("activity");
@@ -103,6 +104,7 @@ function buildContent(lang) {
   // newest/featured one. Tracks are sorted by track_number, not file
   // order, so re-saving in the CMS can't silently reshuffle them.
   const releases = releaseFiles
+    .filter((r) => !r.hidden)
     .map((r) => ({
       slug: r.slug,
       title: r[`title_${lang}`] || r.title_en || r.title,
@@ -115,6 +117,14 @@ function buildContent(lang) {
       tagline: t(r, "tagline", lang),
       description: t(r, "description", lang) || r.body,
       demoAudioUrl: r.demo_audio_url || "",
+      // Free download — offered on the Persian site only (for listeners
+      // inside Iran, where streaming platforms are blocked).
+      downloadUrl: r.download_url || "",
+      coverImage: r.cover_image || "",
+      credits: (r.credits ?? []).map((c) => ({
+        role: t(c, "role", lang),
+        name: t(c, "name", lang),
+      })),
       videoUrl: r.video_url || "",
       videoCaption: t(r, "musicVideoCaption", lang) || "",
       tracks: (r.tracks ?? [])
@@ -177,6 +187,24 @@ function buildContent(lang) {
       getReleaseLabel: t(music, "getReleaseLabel", lang),
       getReleaseNote: t(music, "getReleaseNote", lang),
       getReleaseCtaLabel: t(music, "getReleaseCtaLabel", lang),
+      downloadLabel: t(music, "downloadLabel", lang),
+      downloadNote: t(music, "downloadNote", lang),
+      outNowLabel: t(music, "outNowLabel", lang),
+      creditsLabel: t(music, "creditsLabel", lang),
+    },
+    download: {
+      eyebrow: t(download, "eyebrow", lang),
+      title: t(download, "title", lang),
+      body: t(download, "body", lang),
+      buttonLabel: t(download, "buttonLabel", lang),
+      unavailable: t(download, "unavailable", lang),
+      supportTitle: t(download, "supportTitle", lang),
+      supportIntro: t(download, "supportIntro", lang),
+      paths: download.paths.map((p) => ({
+        title: t(p, "title", lang),
+        description: t(p, "description", lang),
+        cta: { label: t(p, "ctaLabel", lang), href: p.ctaHref },
+      })),
     },
     artistsPage: {
       eyebrow: t(artistsPage, "eyebrow", lang),
@@ -212,8 +240,26 @@ function buildContent(lang) {
       title: t(submissions, "title", lang),
       intro: t(submissions, "intro", lang),
       guidelines: t(submissions, "guidelines", lang),
-      note: t(submissions, "note", lang),
-      cta: { label: t(submissions, "ctaLabel", lang), href: submissions.ctaHref },
+      safetyNote: t(submissions, "safetyNote", lang),
+      fields: {
+        artistName: t(submissions, "fieldArtistName", lang),
+        email: t(submissions, "fieldEmail", lang),
+        songTitle: t(submissions, "fieldSongTitle", lang),
+        lyricist: t(submissions, "fieldLyricist", lang),
+        composer: t(submissions, "fieldComposer", lang),
+        dedication: t(submissions, "fieldDedication", lang),
+        lyrics: t(submissions, "fieldLyrics", lang),
+        demoUrl: t(submissions, "fieldDemoUrl", lang),
+        note: t(submissions, "fieldNote", lang),
+      },
+      consentRights: t(submissions, "consentRights", lang),
+      consentAlbum: t(submissions, "consentAlbum", lang),
+      submit: t(submissions, "submitLabel", lang),
+      sending: t(submissions, "sendingLabel", lang),
+      successMessage: t(submissions, "successMessage", lang),
+      errorMessage: t(submissions, "errorMessage", lang),
+      generalNote: t(submissions, "generalNote", lang),
+      generalCta: { label: t(submissions, "generalCtaLabel", lang), href: submissions.generalCtaHref },
     },
     support: {
       eyebrow: t(support, "eyebrow", lang),
@@ -231,6 +277,16 @@ function buildContent(lang) {
       eyebrow: t(festival, "eyebrow", lang),
       title: t(festival, "title", lang),
       intro: t(festival, "intro", lang),
+      sectionsTitle: t(festival, "sectionsTitle", lang),
+      sections: festival.sections.map((s) => ({
+        label: t(s, "label", lang),
+        title: t(s, "title", lang),
+        description: t(s, "description", lang),
+        tags: t(s, "tags", lang) ?? [],
+        points: t(s, "points", lang) ?? [],
+        cta: { label: t(s, "ctaLabel", lang), href: s.ctaHref },
+        highlight: !!s.highlight,
+      })),
       datesTitle: t(festival, "datesTitle", lang),
       dates: festival.dates.map((d) => ({
         date: String(d.date),
@@ -238,13 +294,7 @@ function buildContent(lang) {
         label: t(d, "label", lang),
         highlight: !!d.highlight,
       })),
-      categoriesTitle: t(festival, "categoriesTitle", lang),
-      categories: festival.categories.map((c) => ({
-        title: t(c, "title", lang),
-        description: t(c, "description", lang),
-      })),
-      entryTitle: t(festival, "entryTitle", lang),
-      entrySteps: t(festival, "entrySteps", lang),
+      datesNote: t(festival, "datesNote", lang) || "",
       entryFee: t(festival, "entryFee", lang),
       programmeTitle: t(festival, "programmeTitle", lang),
       programme: festival.programme.map((p) => ({

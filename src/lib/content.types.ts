@@ -31,6 +31,9 @@ export type Release = {
   tagline: string;
   description: string;
   demoAudioUrl: string;
+  downloadUrl: string;
+  coverImage: string;
+  credits: { role: string; name: string }[];
   videoUrl: string;
   videoCaption: string;
   tracks: ReleaseTrack[];
@@ -81,7 +84,15 @@ export type FestivalDate = {
   highlight: boolean;
 };
 
-export type FestivalCategory = { title: string; description: string };
+export type FestivalSection = {
+  label: string;
+  title: string;
+  description: string;
+  tags: string[];
+  points: string[];
+  cta: Cta;
+  highlight: boolean;
+};
 
 export type FestivalProgrammeItem = {
   date: string;
@@ -136,6 +147,20 @@ export type Content = {
     getReleaseLabel: string;
     getReleaseNote: string;
     getReleaseCtaLabel: string;
+    downloadLabel: string;
+    downloadNote: string;
+    outNowLabel: string;
+    creditsLabel: string;
+  };
+  download: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    buttonLabel: string;
+    unavailable: string;
+    supportTitle: string;
+    supportIntro: string;
+    paths: { title: string; description: string; cta: Cta }[];
   };
   artistsPage: {
     eyebrow: string;
@@ -164,8 +189,27 @@ export type Content = {
     title: string;
     intro: string;
     guidelines: string[];
-    note: string;
-    cta: Cta;
+    safetyNote: string;
+    fields: Record<
+      | "artistName"
+      | "email"
+      | "songTitle"
+      | "lyricist"
+      | "composer"
+      | "dedication"
+      | "lyrics"
+      | "demoUrl"
+      | "note",
+      string
+    >;
+    consentRights: string;
+    consentAlbum: string;
+    submit: string;
+    sending: string;
+    successMessage: string;
+    errorMessage: string;
+    generalNote: string;
+    generalCta: Cta;
   };
   support: {
     eyebrow: string;
@@ -178,12 +222,11 @@ export type Content = {
     eyebrow: string;
     title: string;
     intro: string[];
+    sectionsTitle: string;
+    sections: FestivalSection[];
     datesTitle: string;
     dates: FestivalDate[];
-    categoriesTitle: string;
-    categories: FestivalCategory[];
-    entryTitle: string;
-    entrySteps: string[];
+    datesNote: string;
     entryFee: string;
     programmeTitle: string;
     programme: FestivalProgrammeItem[];

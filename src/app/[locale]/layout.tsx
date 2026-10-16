@@ -46,9 +46,9 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Azadichords — Independent Label & Festival for Free Voices, Paris",
+  title: "Azadichords — Independent Label & Song Festival, Paris",
   description:
-    "A home for free voices: an independent music label and an international festival, based in Paris.",
+    "A home for free voices: an independent music label and a song festival, based in Paris.",
   applicationName: "Azadichords",
   robots: SITE_INDEXABLE
     ? { index: true, follow: true }

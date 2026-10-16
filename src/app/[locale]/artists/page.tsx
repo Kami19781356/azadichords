@@ -9,9 +9,9 @@ const meta: Record<Locale, Metadata> = {
       "Iranian poet, composer, and singer-songwriter. Composer and producer of CHESHMAT (2014) and Azadichords' first artist.",
   },
   fa: {
-    title: "کامران رسول‌زاده — آزادی‌کورد",
+    title: "کامران رسول‌زاده — آکوردهای آزادی",
     description:
-      "شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی. سازنده و تهیه‌کننده‌ی چشمت (۲۰۱۴) و اولین هنرمند آزادی‌کورد.",
+      "شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی. سازنده و تهیه‌کننده‌ی چشمت (۲۰۱۴) و اولین هنرمند آکوردهای آزادی.",
   },
 };
 

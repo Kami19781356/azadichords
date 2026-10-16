@@ -4,14 +4,14 @@ import type { Locale } from "@/lib/content.types";
 
 const meta: Record<Locale, Metadata> = {
   en: {
-    title: "For the Next Voice — Submit Your Music — Azadichords",
+    title: "Submit a Persian Song — Azadichords Song Festival",
     description:
-      "Azadichords is an independent Persian label reviewing music submissions from artists whose work needed a home beyond permission.",
+      "The special section of the Azadichords Song Festival: Persian songs in memory of Iran’s Javidnaman. Nine selected songs will be produced for the album «Azadichords».",
   },
   fa: {
-    title: "برای صدای بعدی — اثرت را ارسال کن — آزادی‌کورد",
+    title: "ارسالِ ترانه — جشنواره‌ی ترانه‌ی آکوردهای آزادی",
     description:
-      "آزادی‌کورد لیبلی مستقل و فارسی‌زبان است که آثار هنرمندانی را بررسی می‌کند که کارشان به خانه‌ای فراتر از اجازه نیاز داشت.",
+      "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی: ترانه‌های فارسی به یادِ جاویدنامانِ ایران. نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» منتشر می‌شوند.",
   },
 };
 

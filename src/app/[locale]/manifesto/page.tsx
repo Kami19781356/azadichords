@@ -4,14 +4,14 @@ import type { Locale } from "@/lib/content.types";
 
 const meta: Record<Locale, Metadata> = {
   en: {
-    title: "Our Story — Azadichords",
+    title: "Manifesto — Azadichords",
     description:
-      "Azadichords began with an album that needed a home beyond permission. This is why we exist.",
+      "Azadichords is a label and a song festival for voices that cannot, and will not, stay silent.",
   },
   fa: {
-    title: "مانیفست — آزادی‌کورد",
+    title: "مانیفست — آکوردهای آزادی",
     description:
-      "آزادی‌کورد با آلبومی شروع شد که به خانه‌ای فراتر از اجازه نیاز داشت. برای همین وجود داریم.",
+      "آکوردهای آزادی لیبل و جشنواره‌ی ترانه‌ای است برای صداهایی که نمی‌توانند، و نمی‌خواهند، ساکت بمانند.",
   },
 };
 

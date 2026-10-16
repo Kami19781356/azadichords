@@ -9,9 +9,9 @@ const meta: Record<Locale, Metadata> = {
       "Production, distribution, visual identity, live performance, and licensing support for the artists Azadichords works with.",
   },
   fa: {
-    title: "آنچه لیبل ارائه می‌دهد — آزادی‌کورد",
+    title: "آنچه لیبل ارائه می‌دهد — آکوردهای آزادی",
     description:
-      "پشتیبانیِ تولید، توزیع، هویت بصری، اجرای زنده و لایسنس برای هنرمندانی که با آزادی‌کورد کار می‌کنند.",
+      "پشتیبانیِ تولید، توزیع، هویت بصری، اجرای زنده و لایسنس برای هنرمندانی که با آکوردهای آزادی کار می‌کنند.",
   },
 };
 

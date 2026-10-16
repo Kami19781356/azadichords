@@ -28,6 +28,70 @@ function GetReleaseBlock({ release }: { release: Release }) {
   );
 }
 
+function Cover({ release, className }: { release: Release; className?: string }) {
+  if (release.coverImage) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={release.coverImage}
+        alt={release.coverImageCaption || release.title}
+        className={`aspect-square w-full rounded object-cover ${className ?? ""}`}
+      />
+    );
+  }
+  return (
+    <Placeholder
+      caption={release.coverImageCaption}
+      variant="dark45"
+      aspect="1/1"
+      className={`w-full ${className ?? ""}`}
+    />
+  );
+}
+
+// Free download — Persian site only (the audience inside Iran, where
+// streaming platforms are blocked). Goes through /fa/download/<slug>,
+// which starts the file and shows the ways to support.
+export function DownloadButton({ release }: { release: Release }) {
+  const content = useContent();
+  const locale = useLocale();
+  if (locale !== "fa" || !release.downloadUrl) return null;
+  return (
+    <div className="flex flex-col items-start gap-2">
+      <Link
+        href={`/fa/download/${release.slug}`}
+        className="inline-flex items-center gap-2.5 rounded-full bg-garnet px-8 py-4 text-sm tracking-[0.06em] text-paper transition-all duration-200 hover:-translate-y-0.5 hover:bg-garnet-hover"
+      >
+        <span aria-hidden>↓</span>
+        {content.music.downloadLabel}
+      </Link>
+      {content.music.downloadNote && (
+        <span className="text-sm text-paper/50">{content.music.downloadNote}</span>
+      )}
+    </div>
+  );
+}
+
+function Credits({ release }: { release: Release }) {
+  const content = useContent();
+  if (release.credits.length === 0) return null;
+  return (
+    <div>
+      <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
+        {content.music.creditsLabel}
+      </div>
+      <dl className="m-0 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[15px]">
+        {release.credits.map((c) => (
+          <div key={c.role + c.name} className="contents">
+            <dt className="text-paper/45">{c.role}</dt>
+            <dd className="m-0 text-paper/80">{c.name}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
 function TrackList({ tracks }: { tracks: Release["tracks"] }) {
   const content = useContent();
   if (tracks.length === 0) {
@@ -69,19 +133,14 @@ function Spotlight({ release }: { release: Release }) {
       {...reveal}
       className="grid grid-cols-1 gap-12 md:grid-cols-[1.1fr_1fr] md:gap-16"
     >
-      <Placeholder
-        caption={release.coverImageCaption}
-        variant="dark45"
-        aspect="1/1"
-        className="w-full"
-      />
+      <Cover release={release} />
       <div className="flex flex-col gap-7">
         <div>
           <div className="mb-2 flex flex-wrap items-center gap-3">
             <span className="rounded-full border border-gold px-3 py-1 text-[11px] tracking-[0.08em] text-gold uppercase">
               {release.status === "upcoming"
                 ? content.music.comingSoonLabel
-                : content.music.typeLabels[release.type]}
+                : `${content.music.typeLabels[release.type]} · ${content.music.outNowLabel}`}
             </span>
             {release.catalogNumber && (
               <span dir="ltr" className="text-[11px] tracking-[0.12em] text-paper/40 uppercase">
@@ -99,6 +158,8 @@ function Spotlight({ release }: { release: Release }) {
           />
         </div>
 
+        <DownloadButton release={release} />
+
         <div>
           <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
             {content.music.listenLabel}
@@ -112,28 +173,28 @@ function Spotlight({ release }: { release: Release }) {
           )}
         </div>
 
-        <div>
-          <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
-            {content.music.tracksLabel}
+        {(release.tracks.length > 0 || release.type !== "single") && (
+          <div>
+            <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
+              {content.music.tracksLabel}
+            </div>
+            <TrackList tracks={release.tracks} />
           </div>
-          <TrackList tracks={release.tracks} />
-        </div>
+        )}
 
-        <div>
-          <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
-            {content.music.videoLabel}
-          </div>
-          {release.videoUrl ? (
+        {release.videoUrl && (
+          <div>
+            <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
+              {content.music.videoLabel}
+            </div>
             <VideoPlayer
               src={release.videoUrl}
               caption={release.videoCaption || release.title}
             />
-          ) : (
-            <p className="m-0 text-sm text-paper/40">
-              {content.music.videoComingSoonLabel}
-            </p>
-          )}
-        </div>
+          </div>
+        )}
+
+        <Credits release={release} />
 
         {release.streamingLinks.length > 0 && (
           <div className="flex flex-wrap gap-4">
@@ -141,6 +202,8 @@ function Spotlight({ release }: { release: Release }) {
               <a
                 key={link.platform}
                 href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm tracking-[0.05em] text-paper/70 uppercase transition-colors duration-200 hover:text-gold"
               >
                 {link.platform.replace("_", " ")}
@@ -163,12 +226,7 @@ function CatalogItem({ release }: { release: Release }) {
       {...reveal}
       className="grid grid-cols-1 gap-8 border-t border-paper/12 py-12 md:grid-cols-[220px_1fr] md:gap-12"
     >
-      <Placeholder
-        caption={release.coverImageCaption}
-        variant="dark45"
-        aspect="1/1"
-        className="w-full"
-      />
+      <Cover release={release} />
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-3">
           <h4 className="m-0 font-serif text-xl font-semibold">
@@ -182,13 +240,19 @@ function CatalogItem({ release }: { release: Release }) {
           className="m-0 text-base leading-[1.7] text-paper/60"
           dangerouslySetInnerHTML={{ __html: release.description }}
         />
-        <TrackList tracks={release.tracks} />
+        {release.demoAudioUrl && (
+          <AudioPlayer src={release.demoAudioUrl} title={release.title} />
+        )}
+        <DownloadButton release={release} />
+        {release.tracks.length > 0 && <TrackList tracks={release.tracks} />}
         {release.streamingLinks.length > 0 && (
           <div className="flex flex-wrap gap-4">
             {release.streamingLinks.map((link) => (
               <a
                 key={link.platform}
                 href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs tracking-[0.05em] text-paper/60 uppercase transition-colors duration-200 hover:text-gold"
               >
                 {link.platform.replace("_", " ")}

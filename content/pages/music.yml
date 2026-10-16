@@ -2,33 +2,41 @@ eyebrow_en: Music
 eyebrow_fa: موسیقی
 title_en: Music
 title_fa: موسیقی
-intro_en: "The Azadichords catalog begins with a requiem — and continues with the voices our festival brings to light."
-intro_fa: "کاتالوگِ آزادی‌کورد با یک سوگنامه آغاز می‌شود — و با صداهایی که جشنواره‌مان به روشنایی می‌آورد ادامه پیدا می‌کند."
-closing_en: "Next on the label: a compilation of the selected artists from Azadichords Festival 2027."
-closing_fa: "انتشارِ بعدیِ لیبل: مجموعه‌ای از آثارِ هنرمندانِ برگزیده‌ی جشنواره‌ی آزادی‌کورد ۲۰۲۷."
+intro_en: "Songs released by Azadichords — streaming everywhere, and free to download for listeners inside Iran."
+intro_fa: "ترانه‌هایی که آکوردهای آزادی منتشر می‌کند. برای مخاطبانِ داخلِ ایران، دانلودشان از همین سایت رایگان است."
+closing_en: "Coming next on the label: the album «Azadichords» — nine Persian songs selected in the festival's special section, produced by Kamran Rasoolzadeh."
+closing_fa: "انتشارِ بعدیِ لیبل آلبومِ «آکوردهای آزادی» است: نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه‌ی جشنواره، با تهیه و تولیدِ کامران رسول‌زاده."
 comingSoonLabel_en: Coming Soon
 comingSoonLabel_fa: به‌زودی
+outNowLabel_en: Out Now
+outNowLabel_fa: منتشر شد
 tracksComingSoonLabel_en: Tracks arriving soon.
-tracksComingSoonLabel_fa: ترک‌ها به‌زودی.
-videoComingSoonLabel_en: The first music video arrives before the album.
-videoComingSoonLabel_fa: نخستین موزیک‌ویدیو پیش از آلبوم منتشر می‌شود.
-demoComingSoonLabel_en: First listen arriving soon.
-demoComingSoonLabel_fa: نخستین شنیدن، به‌زودی.
+tracksComingSoonLabel_fa: قطعه‌ها به‌زودی.
+videoComingSoonLabel_en: Video arriving soon.
+videoComingSoonLabel_fa: ویدیو به‌زودی.
+demoComingSoonLabel_en: Listening arrives here shortly.
+demoComingSoonLabel_fa: به‌زودی همین‌جا قابلِ شنیدن است.
 listenLabel_en: Listen
 listenLabel_fa: بشنوید
 tracksLabel_en: Tracks
 tracksLabel_fa: قطعه‌ها
 videoLabel_en: Video
 videoLabel_fa: ویدیو
+creditsLabel_en: Credits
+creditsLabel_fa: عوامل
 albumLabel_en: Album
 albumLabel_fa: آلبوم
 singleLabel_en: Single
 singleLabel_fa: تک‌آهنگ
 epLabel_en: EP
 epLabel_fa: ای‌پی
-getReleaseLabel_en: Get This Release
-getReleaseLabel_fa: تهیه‌ی این اثر
-getReleaseNote_en: "Stream it everywhere once released — or own it directly from the artist."
-getReleaseNote_fa: "پس از انتشار همه‌جا بشنوید — یا مستقیم از هنرمند تهیه‌اش کنید."
-getReleaseCtaLabel_en: See how →
-getReleaseCtaLabel_fa: ببینید چطور ←
+downloadLabel_en: Free download
+downloadLabel_fa: دانلودِ رایگان
+downloadNote_en: ""
+downloadNote_fa: "برای مخاطبانِ داخلِ ایران، با کیفیتِ کامل."
+getReleaseLabel_en: Support This Release
+getReleaseLabel_fa: حمایت از این اثر
+getReleaseNote_en: "Stream it everywhere — and stand behind the work."
+getReleaseNote_fa: "در همه‌ی پلتفرم‌ها بشنوید و از این کار حمایت کنید."
+getReleaseCtaLabel_en: Ways to support →
+getReleaseCtaLabel_fa: راه‌های حمایت ←

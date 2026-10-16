@@ -9,12 +9,8 @@ export const content: Record<Locale, Content> = {
   "en": {
     "nav": {
       "brand": "AZADICHORDS",
-      "tagline": "Home for Free Voices",
+      "tagline": "Label & Song Festival",
       "links": [
-        {
-          "href": "/manifesto",
-          "label": "Manifesto"
-        },
         {
           "href": "/music",
           "label": "Music"
@@ -24,12 +20,16 @@ export const content: Record<Locale, Content> = {
           "label": "Festival"
         },
         {
-          "href": "/artists",
-          "label": "Artists"
+          "href": "/submissions",
+          "label": "Submit a Song"
         },
         {
-          "href": "/submissions",
-          "label": "Submissions"
+          "href": "/manifesto",
+          "label": "Manifesto"
+        },
+        {
+          "href": "/artists",
+          "label": "Artist"
         },
         {
           "href": "/support",
@@ -42,37 +42,36 @@ export const content: Record<Locale, Content> = {
       ]
     },
     "hero": {
-      "eyebrow": "Independent Label & Festival — Paris",
+      "eyebrow": "Independent Label & Song Festival — Paris",
       "title": "AZADICHORDS",
-      "subhead": "A home for free voices — a label that releases them, a festival that finds them.",
+      "subhead": "A home for free voices — a label that releases them, a song festival that finds them.",
       "ctaPrimary": {
         "label": "Listen",
         "href": "/music"
       },
       "ctaSecondary": {
-        "label": "The Festival",
+        "label": "The Song Festival",
         "href": "/festival"
       },
       "scrollHint": "(Scroll for more)",
       "promoBar": {
-        "label": "Azadichords Festival · January 8–9, 2027 · Free entry for artists",
-        "href": "/festival"
+        "label": "New single «Golouleh» — out now",
+        "href": "/music"
       }
     },
     "manifesto": {
       "eyebrow": "Manifesto",
       "title": "A Label Built in Exile",
-      "imageCaption": "Azadichords — Requiem for the Eternal Names, album art",
+      "imageCaption": "Azadichords — label artwork",
       "paragraphs": [
-        "Azadichords is built from two words: Azadi — freedom — and chords. Here, the two become one.",
-        "We are an independent label for voices that cannot, and will not, stay silent. For poetry and music that breaks through censorship, not with its permission.",
+        "Azadichords — the chords of freedom — is the name of a label and a song festival: a home for voices that cannot, and will not, stay silent.",
+        "We work for poetry and music that breaks through censorship, not with its permission.",
         "We don't release artists; we release a belief — that every voice, even in exile, even forced into silence, has the right to be heard.",
-        "This label began with one voice. It was never meant to end with it.",
-        "Azadichords began with a decision: that committed music and poetry deserve a label that stands fully behind it — not just behind a single song.",
-        "Every album, every track, every poem is a step toward the day this label is home to many voices, not one.",
-        "That is why the label has a second door: a festival. Each year it gathers voices that have not yet been heard, and the label carries the chosen ones further."
+        "That is why our songs are free to download for listeners inside Iran. Where the platforms are closed, this site is open.",
+        "And that is why there is a festival: each year it gathers voices that have not yet been heard, and carries the chosen songs to an album and to a stage.",
+        "This label began with one voice. It was never meant to end with it."
       ],
-      "closing": "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded this label as its first artist. Not to remain the only one, but to be the first of many voices still to come.",
+      "closing": "Kamran Rasoolzadeh — poet, composer, and singer-songwriter — founded Azadichords as its first artist. Not to remain the only one, but to be the first of many voices still to come.",
       "cta": {
         "label": "Meet the Artist →",
         "href": "/artists"
@@ -81,12 +80,12 @@ export const content: Record<Locale, Content> = {
     "music": {
       "eyebrow": "Music",
       "title": "Music",
-      "intro": "The Azadichords catalog begins with a requiem — and continues with the voices our festival brings to light.",
-      "closing": "Next on the label: a compilation of the selected artists from Azadichords Festival 2027.",
+      "intro": "Songs released by Azadichords — streaming everywhere, and free to download for listeners inside Iran.",
+      "closing": "Coming next on the label: the album «Azadichords» — nine Persian songs selected in the festival's special section, produced by Kamran Rasoolzadeh.",
       "comingSoonLabel": "Coming Soon",
       "tracksComingSoonLabel": "Tracks arriving soon.",
-      "videoComingSoonLabel": "The first music video arrives before the album.",
-      "demoComingSoonLabel": "First listen arriving soon.",
+      "videoComingSoonLabel": "Video arriving soon.",
+      "demoComingSoonLabel": "Listening arrives here shortly.",
       "listenLabel": "Listen",
       "tracksLabel": "Tracks",
       "videoLabel": "Video",
@@ -95,9 +94,40 @@ export const content: Record<Locale, Content> = {
         "single": "Single",
         "ep": "EP"
       },
-      "getReleaseLabel": "Get This Release",
-      "getReleaseNote": "Stream it everywhere once released — or own it directly from the artist.",
-      "getReleaseCtaLabel": "See how →"
+      "getReleaseLabel": "Support This Release",
+      "getReleaseNote": "Stream it everywhere — and stand behind the work.",
+      "getReleaseCtaLabel": "Ways to support →",
+      "downloadLabel": "Free download",
+      "downloadNote": "",
+      "outNowLabel": "Out Now",
+      "creditsLabel": "Credits"
+    },
+    "download": {
+      "eyebrow": "Download",
+      "title": "Your download is starting",
+      "body": "If it doesn't start in a few seconds, use the button below.",
+      "buttonLabel": "Download the file",
+      "unavailable": "The file will be available here shortly.",
+      "supportTitle": "This music is free. Making it was not.",
+      "supportIntro": "Azadichords is independent — no sponsor, no institution. If this song reached you, here is how to carry it further.",
+      "paths": [
+        {
+          "title": "If you are inside Iran",
+          "description": "Listen, and send it to others — every share keeps it alive. If you have written a song in memory of the Javidnaman, send it to the festival's special section.",
+          "cta": {
+            "label": "Send your song →",
+            "href": "/submissions"
+          }
+        },
+        {
+          "title": "If you are outside Iran",
+          "description": "Stream it on Spotify, Apple Music and YouTube — and support the work directly through the artist's studio. Each purchase funds the next song and the festival.",
+          "cta": {
+            "label": "Ways to support →",
+            "href": "/support"
+          }
+        }
+      ]
     },
     "artistsPage": {
       "eyebrow": "Artists",
@@ -153,72 +183,26 @@ export const content: Record<Locale, Content> = {
     ],
     "releases": [
       {
-        "slug": "requiem-for-the-eternal-names",
-        "title": "Requiem for the Eternal Names",
-        "catalogNumber": "AZC-001",
-        "type": "album",
+        "slug": "golouleh",
+        "title": "Golouleh (Bullet)",
+        "catalogNumber": "",
+        "type": "single",
         "artist": "kamran-rasoolzadeh",
-        "status": "upcoming",
-        "releaseDate": "2027-01-08",
-        "coverImageCaption": "Requiem for the Eternal Names — album art",
-        "tagline": "The first release from Azadichords — out January 8, 2027.",
-        "description": "Eight songs by Kamran Rasoolzadeh, written for those whose names are now spoken in their place. A requiem held between grief and the stubborn hope of the living — mourning without surrender, memory without silence. The album arrives on January 8, 2027, the opening day of the first Azadichords Festival.",
+        "status": "out_now",
+        "releaseDate": "2026-10-16",
+        "coverImageCaption": "Golouleh — single cover",
+        "tagline": "The new single by Kamran Rasoolzadeh",
+        "description": "Golouleh, the new song by Kamran Rasoolzadeh. Streaming on all platforms — and free to download on the Persian site for listeners inside Iran.",
         "demoAudioUrl": "",
+        "downloadUrl": "",
+        "coverImage": "",
+        "credits": [],
         "videoUrl": "",
         "videoCaption": "",
-        "tracks": [
-          {
-            "trackNumber": 1,
-            "title": "Darkness (1819)",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 2,
-            "title": "Iran-e Jan",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 3,
-            "title": "Still Alive",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 4,
-            "title": "Javidnam — The Eternal Name",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 5,
-            "title": "Khodash",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 6,
-            "title": "A Trail of Blood",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 7,
-            "title": "If I Die",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 8,
-            "title": "The Tree",
-            "duration": "",
-            "previewUrl": ""
-          }
-        ],
+        "tracks": [],
         "streamingLinks": [],
         "supportTierLink": true,
-        "purchaseNote": "Streaming everywhere from January 8 — and available as a digital bundle with the poetry collection Sans Toi."
+        "purchaseNote": "Free to download for listeners in Iran. Outside Iran, stream it everywhere — and stand behind the work."
       }
     ],
     "activityPage": {
@@ -268,41 +252,60 @@ export const content: Record<Locale, Content> = {
       }
     },
     "submissions": {
-      "eyebrow": "Submissions",
-      "title": "For the Next Voice",
-      "intro": "If your voice is something that can't stay silent, we want to hear it. Azadichords looks for artists whose music and poetry come from a belief, not just a genre. The main door is our festival: every entry is heard by the jury, and selected artists are invited to the label's annual compilation.",
+      "eyebrow": "Submit · Special Section",
+      "title": "Send Us Your Song",
+      "intro": "The special section of the Azadichords Song Festival is for Persian songs written in memory of Iran's Javidnaman. Send the lyrics alone, or with a melody or demo. Nine selected songs will be produced by Kamran Rasoolzadeh and released on the album «Azadichords».",
       "guidelines": [
-        "Festival entries — songs, music videos, compositions, vocal performances and poetry set to music — go through the festival page. Entry is free for the first edition.",
-        "Outside the festival, you can still send 2–3 tracks in their current form, polished or not, with a few sentences about the story behind them.",
-        "No press kit, no pitch deck. Just the music."
+        "The song must be in Persian and your own work (or sent with its author's permission).",
+        "A stage name is enough. Your real name is not required.",
+        "For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.",
+        "Deadline — December 6, 2026. Submitting is free."
       ],
-      "note": "Artists keep full ownership of their work. Every submission is listened to — even when we can't reply to each one.",
-      "cta": {
-        "label": "Submit to the Festival →",
-        "href": "/festival"
+      "safetyNote": "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics.",
+      "fields": {
+        "artistName": "Stage name *",
+        "email": "Email (for our reply) *",
+        "songTitle": "Song title *",
+        "lyricist": "Lyricist (if different)",
+        "composer": "Melody / composer (if any)",
+        "dedication": "In memory of… (optional)",
+        "lyrics": "Lyrics *",
+        "demoUrl": "Demo link (optional)",
+        "note": "Anything else you want us to know (optional)"
+      },
+      "consentRights": "This song is my own work, or I have its author's permission to submit it.",
+      "consentAlbum": "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on the album «Azadichords». I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist.",
+      "submit": "Send my song",
+      "sending": "Sending…",
+      "successMessage": "Received. Thank you — every song is read and listened to. Selections are announced on December 20, 2026.",
+      "errorMessage": "Something went wrong. Please try again in a few minutes, or email the song to contact@azadichords.com.",
+      "generalNote": "Making a music video instead? The general section — love, social and spiritual music videos from anywhere — takes submissions through FilmFreeway.",
+      "generalCta": {
+        "label": "Submit on FilmFreeway →",
+        "href": "https://filmfreeway.com/youality"
       }
     },
     "support": {
       "eyebrow": "Support",
       "title": "Stand Behind the Voice",
       "intro": [
-        "Azadichords is fully independent — no committee, no gatekeeper, no institutional funding. It exists because people choose to listen, share, and show up.",
+        "Azadichords is fully independent — no sponsor, no institution, no gatekeeper. Our songs are free for listeners inside Iran. Everyone else can help keep it that way.",
         "There is no payment on this site. Each way to support below leads to the place where it actually happens."
       ],
       "ways": [
         {
           "name": "01",
-          "title": "Own the Album",
-          "description": "The memorial album together with the poetry collection Sans Toi — a digital bundle, sold directly by the artist's studio.",
+          "title": "Own the Work",
+          "description": "Kamran Rasoolzadeh's music and the poetry collection Sans Toi, sold directly by the artist's studio. Every purchase funds the next song and the festival.",
           "cta": {
-            "label": "Get the bundle →",
+            "label": "Go to the studio →",
             "href": "https://www.youality.fr"
           }
         },
         {
           "name": "02",
           "title": "Listen and Share",
-          "description": "From January 8, 2027, every release streams on all major platforms. A save, a share, a playlist add — each one carries the music further than any budget could.",
+          "description": "Stream on Spotify, Apple Music and YouTube. A save, a share, a playlist add — each one carries the music further than any budget could.",
           "cta": {
             "label": "Go to the music →",
             "href": "/music"
@@ -311,7 +314,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "Be in the Room",
-          "description": "Join us on January 8–9, 2027 for the first Azadichords Festival — a live concert, the competition, and the awards night.",
+          "description": "January 8–9, 2027 in Paris — screenings, the awards, and a live performance by Kamran Rasoolzadeh on closing night.",
           "cta": {
             "label": "The festival →",
             "href": "/festival"
@@ -327,33 +330,69 @@ export const content: Record<Locale, Content> = {
           }
         }
       ],
-      "transparency": "Azadichords never asks for payment on this site. Direct sales of the album are handled by the artist's studio."
+      "transparency": "Azadichords never asks for payment on this site. Direct sales are handled by the artist's studio."
     },
     "festival": {
-      "eyebrow": "Festival · First Edition",
-      "title": "Azadichords Festival 2027",
+      "eyebrow": "Song Festival · First Edition",
+      "title": "Azadichords Song Festival 2027",
       "intro": [
-        "Two days for music that carries memory and freedom. Open to artists from anywhere, in any language — a competition, a live concert, and an awards night.",
-        "The festival is where the label listens. Selected artists are invited to the Azadichords annual compilation, released on every major platform."
+        "A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.",
+        "Hosted by the YOUALITY International Short Film Festival in Paris. On closing night, Kamran Rasoolzadeh performs live."
+      ],
+      "sectionsTitle": "Two Sections",
+      "sections": [
+        {
+          "label": "General Section",
+          "title": "International Music Videos",
+          "description": "Music videos from anywhere in the world, in any language.",
+          "tags": [
+            "Love",
+            "Social",
+            "Spiritual"
+          ],
+          "points": [
+            "Host: YOUALITY International Short Film Festival, Paris",
+            "Awards: the festival statuette and honorary diplomas",
+            "Submit through the festival's FilmFreeway page"
+          ],
+          "cta": {
+            "label": "Submit a music video →",
+            "href": "https://filmfreeway.com/youality"
+          },
+          "highlight": false
+        },
+        {
+          "label": "Special Section",
+          "title": "Persian Songs in Memory of Iran's Javidnaman",
+          "description": "Persian songs — lyrics, or lyrics with a melody or demo — written in memory of those whose names now live on.",
+          "tags": [
+            "Persian lyrics",
+            "Demo welcome"
+          ],
+          "points": [
+            "Submit through this site — a stage name is enough",
+            "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label",
+            "Production of the album by Kamran Rasoolzadeh"
+          ],
+          "cta": {
+            "label": "Submit a Persian song →",
+            "href": "/submissions"
+          },
+          "highlight": true
+        }
       ],
       "datesTitle": "Key Dates",
       "dates": [
         {
-          "date": "2026-10-19",
+          "date": "2026-10-17",
           "endDate": "",
           "label": "Submissions open",
           "highlight": false
         },
         {
-          "date": "2026-11-02",
-          "endDate": "",
-          "label": "Jury announced",
-          "highlight": false
-        },
-        {
           "date": "2026-12-06",
           "endDate": "",
-          "label": "Submission deadline",
+          "label": "Special-section deadline",
           "highlight": false
         },
         {
@@ -365,62 +404,34 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-01-08",
           "endDate": "2027-01-09",
-          "label": "The festival",
+          "label": "The festival, Paris",
           "highlight": true
         }
       ],
-      "categoriesTitle": "Competition Categories",
-      "categories": [
-        {
-          "title": "Best Original Song",
-          "description": "An original song, words and music, in any language."
-        },
-        {
-          "title": "Best Music Video",
-          "description": "The visual life of a song — live action, animation or archive."
-        },
-        {
-          "title": "Best Instrumental or Composition",
-          "description": "Music without words that still speaks."
-        },
-        {
-          "title": "Best Vocal Performance",
-          "description": "A voice heard on its own terms."
-        },
-        {
-          "title": "Best Poetry Set to Music",
-          "description": "Where a poem becomes a song — the root of Azadichords."
-        }
-      ],
-      "entryTitle": "How to Enter",
-      "entrySteps": [
-        "Choose a category and prepare your work — a finished piece or a strong draft.",
-        "Submit through the festival's FilmFreeway listing before December 6, 2026.",
-        "Tick the compilation consent — a non-exclusive permission to include your work on the Azadichords compilation if it is selected. Ownership stays with you."
-      ],
-      "entryFee": "Entry is free for the first edition.",
+      "datesNote": "General-section deadlines follow the host festival's FilmFreeway page.",
+      "entryFee": "Submitting to the special section is free.",
       "programmeTitle": "Programme",
       "programme": [
         {
           "date": "2027-01-08",
-          "title": "Opening Night — Live Concert",
-          "description": "A curated concert of invited artists, and the release of the label's first album, Requiem for the Eternal Names."
+          "title": "Screenings & Listening",
+          "description": "The selected music videos of the general section, and the selected songs of the special section."
         },
         {
           "date": "2027-01-09",
-          "title": "Selections & Awards",
-          "description": "Screenings and listening of the selected works, followed by the awards."
+          "title": "Closing Night — Awards & Live Performance",
+          "description": "The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live performance by Kamran Rasoolzadeh."
         }
       ],
       "juryTitle": "Jury",
-      "juryText": "Musicians, poets and critics from the diaspora and beyond. The jury is announced on November 2, 2026.",
+      "juryText": "Musicians, poets and filmmakers. Members will be announced here.",
       "venueTitle": "Venue",
-      "venueText": "Chantilly, near Paris, France — held alongside the YOUALITY International Film Festival. Exact venue to be announced.",
+      "venueText": "Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
       "cta": {
-        "label": "Get notified when submissions open →",
-        "href": "/contact"
+        "label": "Submit a Persian song →",
+        "href": "/submissions"
       },
-      "ctaNote": "Submissions open on October 19, 2026.",
+      "ctaNote": "Music videos are submitted through FilmFreeway — see the general section below.",
       "detailsLabel": "Full festival details →"
     },
     "contact": {
@@ -449,7 +460,7 @@ export const content: Record<Locale, Content> = {
       "errorMessage": "Something went wrong. Please try again, or email us directly at contact@azadichords.com."
     },
     "footer": {
-      "copyright": "AZADICHORDS © 2026 — Paris · Label & Festival",
+      "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",
       "social": [
         {
           "label": "Instagram",
@@ -474,12 +485,8 @@ export const content: Record<Locale, Content> = {
   "fa": {
     "nav": {
       "brand": "AZADICHORDS",
-      "tagline": "خانه‌ی صداهای آزاد",
+      "tagline": "لیبل و جشنواره‌ی ترانه",
       "links": [
-        {
-          "href": "/manifesto",
-          "label": "مانیفست"
-        },
         {
           "href": "/music",
           "label": "موسیقی"
@@ -489,12 +496,16 @@ export const content: Record<Locale, Content> = {
           "label": "جشنواره"
         },
         {
-          "href": "/artists",
-          "label": "هنرمندان"
+          "href": "/submissions",
+          "label": "ارسالِ ترانه"
         },
         {
-          "href": "/submissions",
-          "label": "ارسال اثر"
+          "href": "/manifesto",
+          "label": "مانیفست"
+        },
+        {
+          "href": "/artists",
+          "label": "هنرمند"
         },
         {
           "href": "/support",
@@ -507,37 +518,36 @@ export const content: Record<Locale, Content> = {
       ]
     },
     "hero": {
-      "eyebrow": "لیبل و جشنواره‌ی مستقل موسیقی — پاریس",
+      "eyebrow": "لیبل و جشنواره‌ی ترانه — پاریس",
       "title": "AZADICHORDS",
-      "subhead": "خانه‌ای برای صداهای آزاد — لیبلی که منتشرشان می‌کند، جشنواره‌ای که پیدایشان می‌کند.",
+      "subhead": "خانه‌ای برای صداهای آزاد؛ لیبلی که منتشرشان می‌کند و جشنواره‌ای که پیدایشان می‌کند.",
       "ctaPrimary": {
         "label": "بشنوید",
         "href": "/music"
       },
       "ctaSecondary": {
-        "label": "جشنواره",
+        "label": "جشنواره‌ی ترانه",
         "href": "/festival"
       },
       "scrollHint": "(برای ادامه اسکرول کنید)",
       "promoBar": {
-        "label": "جشنواره‌ی آزادی‌کورد · ۸ و ۹ ژانویه ۲۰۲۷ · ارسالِ اثر رایگان",
-        "href": "/festival"
+        "label": "«گلوله» منتشر شد · دانلودِ رایگان",
+        "href": "/music"
       }
     },
     "manifesto": {
       "eyebrow": "مانیفست",
       "title": "لیبلی ساخته‌شده در تبعید",
-      "imageCaption": "Azadichords — Requiem for the Eternal Names, album art",
+      "imageCaption": "Azadichords — label artwork",
       "paragraphs": [
-        "آزادی‌کورد از دو کلمه ساخته شده: آزادی، و آکورد. اینجا این دو یکی می‌شن.",
-        "ما یک لیبلِ مستقلیم برای صداهایی که نمی‌تونن، و نمی‌خوان، ساکت بمونن. برای شعر و موسیقی‌ای که از دلِ سانسور بیرون می‌زنه، نه با اجازه‌ی سانسور.",
-        "ما هنرمند منتشر نمی‌کنیم؛ یک باور منتشر می‌کنیم: که صدای هر آدمی، حتی در تبعید، حتی در سکوتِ اجباری، حق داره شنیده بشه.",
-        "این لیبل با یک صدا شروع شد. قرار نیست با همون یکی تموم بشه.",
-        "آزادی‌کورد از یک تصمیم شروع شد: که موسیقی و شعرِ متعهد، لایقِ لیبلی‌ست که پشتش وایسه — نه فقط پشتِ یک آهنگ.",
-        "هر آلبوم، هر ترک، هر شعر، قدمیه به‌سمتِ روزی که این لیبل خونه‌ی چند صدا باشه، نه یکی.",
-        "برای همین این لیبل یک درِ دوم هم داره: یک جشنواره. هر سال صداهایی رو که هنوز شنیده نشدن کنارِ هم جمع می‌کنه، و لیبل صداهای برگزیده رو دورتر می‌بره."
+        "«آکوردهای آزادی» نامِ یک لیبل و یک جشنواره‌ی ترانه است؛ خانه‌ای برای صداهایی که نمی‌توانند، و نمی‌خواهند، ساکت بمانند.",
+        "ما برای شعر و موسیقی‌ای کار می‌کنیم که از دلِ سانسور بیرون می‌زند، نه با اجازه‌ی آن.",
+        "ما هنرمند منتشر نمی‌کنیم؛ یک باور را منتشر می‌کنیم: صدای هر آدمی، حتی در تبعید و حتی در سکوتِ اجباری، حق دارد شنیده شود.",
+        "برای همین، دانلودِ ترانه‌هایمان برای مخاطبانِ داخلِ ایران رایگان است. جایی که پلتفرم‌ها بسته‌اند، این سایت باز است.",
+        "و برای همین جشنواره داریم. هر سال صداهایی را که هنوز شنیده نشده‌اند کنارِ هم می‌آوریم و ترانه‌های برگزیده را به آلبوم و به صحنه می‌رسانیم.",
+        "این لیبل با یک صدا شروع شد، ولی قرار نیست با همان یک صدا تمام شود."
       ],
-      "closing": "کامران رسول‌زاده — شاعر، آهنگ‌ساز، و خواننده-ترانه‌سرا — این لیبل رو به‌عنوانِ اولین هنرمندش بنیان گذاشت؛ نه به این نیت که تنها بمونه، بلکه به این نیت که اولین صدا باشه از صداهای بیشتری که قراره بیان.",
+      "closing": "کامران رسول‌زاده (شاعر، آهنگساز و خواننده) آکوردهای آزادی را به‌عنوانِ نخستین هنرمندش بنیان گذاشت؛ نه برای این‌که تنها بماند، بلکه تا نخستین صدا از صداهای بسیاری باشد که در راه‌اند.",
       "cta": {
         "label": "هنرمند را بشناسید ←",
         "href": "/artists"
@@ -546,12 +556,12 @@ export const content: Record<Locale, Content> = {
     "music": {
       "eyebrow": "موسیقی",
       "title": "موسیقی",
-      "intro": "کاتالوگِ آزادی‌کورد با یک سوگنامه آغاز می‌شود — و با صداهایی که جشنواره‌مان به روشنایی می‌آورد ادامه پیدا می‌کند.",
-      "closing": "انتشارِ بعدیِ لیبل: مجموعه‌ای از آثارِ هنرمندانِ برگزیده‌ی جشنواره‌ی آزادی‌کورد ۲۰۲۷.",
+      "intro": "ترانه‌هایی که آکوردهای آزادی منتشر می‌کند. برای مخاطبانِ داخلِ ایران، دانلودشان از همین سایت رایگان است.",
+      "closing": "انتشارِ بعدیِ لیبل آلبومِ «آکوردهای آزادی» است: نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه‌ی جشنواره، با تهیه و تولیدِ کامران رسول‌زاده.",
       "comingSoonLabel": "به‌زودی",
-      "tracksComingSoonLabel": "ترک‌ها به‌زودی.",
-      "videoComingSoonLabel": "نخستین موزیک‌ویدیو پیش از آلبوم منتشر می‌شود.",
-      "demoComingSoonLabel": "نخستین شنیدن، به‌زودی.",
+      "tracksComingSoonLabel": "قطعه‌ها به‌زودی.",
+      "videoComingSoonLabel": "ویدیو به‌زودی.",
+      "demoComingSoonLabel": "به‌زودی همین‌جا قابلِ شنیدن است.",
       "listenLabel": "بشنوید",
       "tracksLabel": "قطعه‌ها",
       "videoLabel": "ویدیو",
@@ -560,14 +570,45 @@ export const content: Record<Locale, Content> = {
         "single": "تک‌آهنگ",
         "ep": "ای‌پی"
       },
-      "getReleaseLabel": "تهیه‌ی این اثر",
-      "getReleaseNote": "پس از انتشار همه‌جا بشنوید — یا مستقیم از هنرمند تهیه‌اش کنید.",
-      "getReleaseCtaLabel": "ببینید چطور ←"
+      "getReleaseLabel": "حمایت از این اثر",
+      "getReleaseNote": "در همه‌ی پلتفرم‌ها بشنوید و از این کار حمایت کنید.",
+      "getReleaseCtaLabel": "راه‌های حمایت ←",
+      "downloadLabel": "دانلودِ رایگان",
+      "downloadNote": "برای مخاطبانِ داخلِ ایران، با کیفیتِ کامل.",
+      "outNowLabel": "منتشر شد",
+      "creditsLabel": "عوامل"
+    },
+    "download": {
+      "eyebrow": "دانلود",
+      "title": "دانلود شروع شد",
+      "body": "اگر تا چند ثانیه‌ی دیگر شروع نشد، دکمه‌ی زیر را بزن.",
+      "buttonLabel": "دانلودِ فایل",
+      "unavailable": "فایل به‌زودی همین‌جا قرار می‌گیرد.",
+      "supportTitle": "این موسیقی رایگان است، ولی ساختنش رایگان نبوده.",
+      "supportIntro": "آکوردهای آزادی مستقل است و هیچ اسپانسر یا نهادی پشتش نیست. اگر این ترانه به دستت رسید، این‌طوری می‌توانی آن را دورتر ببری.",
+      "paths": [
+        {
+          "title": "اگر داخلِ ایران هستی",
+          "description": "گوش بده و برای دیگران بفرست؛ هر بار که دست‌به‌دست می‌شود، زنده می‌ماند. اگر ترانه‌ای به یادِ جاویدنامان نوشته‌ای، آن را به بخشِ ویژه‌ی جشنواره بفرست.",
+          "cta": {
+            "label": "ارسالِ ترانه ←",
+            "href": "/submissions"
+          }
+        },
+        {
+          "title": "اگر بیرونِ ایران هستی",
+          "description": "آن را در اسپاتیفای، اپل‌موزیک و یوتیوب گوش بده و مستقیم از استودیوی هنرمند حمایت کن. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.",
+          "cta": {
+            "label": "راه‌های حمایت ←",
+            "href": "/support"
+          }
+        }
+      ]
     },
     "artistsPage": {
       "eyebrow": "هنرمندان",
       "title": "هنرمندان",
-      "intro": "هر هنرمندِ آزادی‌کورد، صداییه که تصمیم گرفته ساکت نمونه."
+      "intro": "هر هنرمندِ آکوردهای آزادی، صدایی است که تصمیم گرفته ساکت نماند."
     },
     "artists": [
       {
@@ -577,7 +618,7 @@ export const content: Record<Locale, Content> = {
         "badge": "هنرمند بنیان‌گذار",
         "imageCaption": "portrait — Kamran, close crop",
         "intro": "کامران رسول‌زاده می‌نویسد، می‌سازد و می‌خواند؛ ترانه‌هایی شکل‌گرفته از تبعید و بازگشت. آثارش ممنوع و جایزه‌گرفته‌اند و او پس از سال‌ها سکوت، دوباره آغاز می‌کند.",
-        "bio": "کامران رسول‌زاده شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی است. اشعارش برای بیش از یک دهه در صدر پرفروش‌ترین‌های ایران بوده‌اند. در سال ۲۰۱۴، او آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — آلبومی که با وجودِ محدودیت‌هایی که بر آن اعمال شد، و تا حدی به‌خاطرِ همان محدودیت‌ها، یکی از آثار ماندگارِ نسل خود شد. پس از سال‌ها سانسور و فشار مکرر از سوی مقامات، ایران را ترک کرد و در فرانسه ساکن شد، جایی که اکنون زندگی و کار می‌کند. او آزادی‌کورد را به‌عنوان هنرمند بنیان‌گذار پایه‌گذاری کرد.",
+        "bio": "کامران رسول‌زاده شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی است. اشعارش برای بیش از یک دهه در صدر پرفروش‌ترین‌های ایران بوده‌اند. در سال ۲۰۱۴، او آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — آلبومی که با وجودِ محدودیت‌هایی که بر آن اعمال شد، و تا حدی به‌خاطرِ همان محدودیت‌ها، یکی از آثار ماندگارِ نسل خود شد. پس از سال‌ها سانسور و فشار مکرر از سوی مقامات، ایران را ترک کرد و در فرانسه ساکن شد، جایی که اکنون زندگی و کار می‌کند. او آکوردهای آزادی را به‌عنوان هنرمند بنیان‌گذار پایه‌گذاری کرد.",
         "cta": {
           "label": "موسیقی را کاوش کنید ←",
           "href": "/music"
@@ -611,86 +652,40 @@ export const content: Record<Locale, Content> = {
         ],
         "priorWork": {
           "title": "چشمت (۲۰۱۴)",
-          "description": "پیش از آزادی‌کورد، کامران آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — اثری که نسلی را شکل داد و توجهی جلب کرد که سرانجام به سکوتش انجامید. ویدیوی رسمی آن، منتشرشده در کانال یوتیوب Avang Music، حدود ۲۰ میلیون بار دیده شده است.",
+          "description": "پیش از آکوردهای آزادی، کامران آلبوم «چشمت» را برای خواننده مهرنوش ساخت و تهیه کرد — اثری که نسلی را شکل داد و توجهی جلب کرد که سرانجام به سکوتش انجامید. ویدیوی رسمی آن، منتشرشده در کانال یوتیوب Avang Music، حدود ۲۰ میلیون بار دیده شده است.",
           "videoUrl": ""
         }
       }
     ],
     "releases": [
       {
-        "slug": "requiem-for-the-eternal-names",
-        "title": "سوگنامه‌ی جاویدنام‌ها",
-        "catalogNumber": "AZC-001",
-        "type": "album",
+        "slug": "golouleh",
+        "title": "گلوله",
+        "catalogNumber": "",
+        "type": "single",
         "artist": "kamran-rasoolzadeh",
-        "status": "upcoming",
-        "releaseDate": "2027-01-08",
-        "coverImageCaption": "Requiem for the Eternal Names — album art",
-        "tagline": "نخستین انتشارِ آزادی‌کورد — ۸ ژانویه ۲۰۲۷.",
-        "description": "هشت ترانه از کامران رسول‌زاده، برای کسانی که حالا نامشان به‌جای خودشان شنیده می‌شود. سوگنامه‌ای میانِ اندوه و امیدِ سرسختِ زندگان — سوگی بی‌تسلیم، یادی بی‌سکوت. آلبوم ۸ ژانویه ۲۰۲۷، روزِ گشایشِ نخستین جشنواره‌ی آزادی‌کورد، منتشر می‌شود.",
+        "status": "out_now",
+        "releaseDate": "2026-10-16",
+        "coverImageCaption": "Golouleh — single cover",
+        "tagline": "تک‌آهنگِ تازه‌ی کامران رسول‌زاده",
+        "description": "«گلوله»، تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
         "demoAudioUrl": "",
+        "downloadUrl": "",
+        "coverImage": "",
+        "credits": [],
         "videoUrl": "",
         "videoCaption": "",
-        "tracks": [
-          {
-            "trackNumber": 1,
-            "title": "Darkness (۱۸۱۹)",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 2,
-            "title": "ایرانِ جان",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 3,
-            "title": "هنوز زنده‌ایم",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 4,
-            "title": "جاویدنام",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 5,
-            "title": "خودش",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 6,
-            "title": "ردِ خون",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 7,
-            "title": "اگه مردم",
-            "duration": "",
-            "previewUrl": ""
-          },
-          {
-            "trackNumber": 8,
-            "title": "درخت",
-            "duration": "",
-            "previewUrl": ""
-          }
-        ],
+        "tracks": [],
         "streamingLinks": [],
         "supportTierLink": true,
-        "purchaseNote": "از ۸ ژانویه روی همه‌ی پلتفرم‌ها — و همچنین به‌صورتِ بسته‌ی دیجیتال همراه با مجموعه‌شعرِ «بی‌تو»."
+        "purchaseNote": "اگر بیرونِ ایران هستی، با شنیدن در پلتفرم‌ها و حمایت از هنرمند کنارِ این کار باش."
       }
     ],
     "activityPage": {
       "eyebrow": "فعالیت‌ها",
       "title": "فعالیت‌ها",
-      "intro": "روایتی از مسیرِ آزادی‌کورد — اجراها، ریلیزها، و نقاطِ عطفِ این راه.",
-      "emptyStateNote": "آزادی‌کورد هنوز در ابتداست. این روایت با اولین ریلیز و اولین اجرا شروع می‌شه — که هر دو هنوز پیشِ رو هستن."
+      "intro": "روایتی از مسیرِ آکوردهای آزادی — اجراها، ریلیزها، و نقاطِ عطفِ این راه.",
+      "emptyStateNote": "آکوردهای آزادی هنوز در ابتداست. این روایت با اولین ریلیز و اولین اجرا شروع می‌شود — که هر دو هنوز پیشِ رو هستند."
     },
     "activity": [],
     "press": {
@@ -704,7 +699,7 @@ export const content: Record<Locale, Content> = {
     "services": {
       "eyebrow": "خدمات",
       "title": "آنچه لیبل ارائه می‌دهد",
-      "intro": "فراتر از انتشار، آزادی‌کورد در تمامِ مراحلی که یک اثر پیش از رسیدن به مخاطب طی می‌کنه، کنارِ هنرمندانش می‌ایسته.",
+      "intro": "فراتر از انتشار، آکوردهای آزادی در تمامِ مراحلی که یک اثر پیش از رسیدن به مخاطب طی می‌کند، کنارِ هنرمندانش می‌ایستد.",
       "items": [
         {
           "title": "تولید و میکس",
@@ -720,54 +715,73 @@ export const content: Record<Locale, Content> = {
         },
         {
           "title": "اجرای زنده",
-          "description": "از اولین اجرا تا برنامه‌ی یک تور — تمامِ لجستیکِ رسوندنِ یک اثر به روی صحنه."
+          "description": "از اولین اجرا تا برنامه‌ی یک تور — تمامِ لجستیکِ رساندنِ یک اثر به روی صحنه."
         },
         {
           "title": "لایسنس و نشر",
-          "description": "محافظت از اثر و قرار دادنِ آن در بازار، با شرایطی که هنرمند می‌فهمد و باهاش موافقه."
+          "description": "محافظت از اثر و قرار دادنِ آن در بازار، با شرایطی که هنرمند می‌فهمد و با آن موافق است."
         }
       ],
       "cta": {
-        "label": "کاری داری که اینجا جاش هست؟ تماس بگیر ←",
+        "label": "برای همکاری تماس بگیرید ←",
         "href": "/contact"
       }
     },
     "submissions": {
-      "eyebrow": "ارسال اثر",
-      "title": "برای صدای بعدی",
-      "intro": "اگر صدایتان چیزی است که نمی‌تواند ساکت بماند، می‌خواهیم آن را بشنویم. آزادی‌کورد به‌دنبالِ هنرمندانی است که موسیقی و شعرشان از یک باور می‌آید، نه فقط از یک ژانر. درِ اصلی، جشنواره‌ی ماست: همه‌ی آثار را هیئت داوران می‌شنود و هنرمندانِ برگزیده به آلبومِ مجموعه‌ی سالانه‌ی لیبل دعوت می‌شوند.",
+      "eyebrow": "ارسالِ اثر · بخشِ ویژه",
+      "title": "ترانه‌ات را بفرست",
+      "intro": "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران است. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. نُه ترانه‌ی برگزیده را کامران رسول‌زاده تولید می‌کند و در آلبومِ «آکوردهای آزادی» منتشر می‌شوند.",
       "guidelines": [
-        "آثارِ جشنواره — ترانه، موزیک‌ویدیو، آهنگسازی، اجرای آوازی و شعرِ همراه با موسیقی — از طریقِ صفحه‌ی جشنواره ارسال می‌شوند. ارسال در دوره‌ی نخست رایگان است.",
-        "خارج از جشنواره هم می‌توانید ۲ تا ۳ قطعه را، به همان شکلی که هست، همراه با چند جمله درباره‌ی داستانِ پشتِ آن‌ها بفرستید.",
-        "نه پرس‌کیت، نه پیچ‌دک. فقط موسیقی."
+        "ترانه باید فارسی و اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
+        "نامِ هنری کافی است و نامِ واقعی لازم نیست.",
+        "اگر دمو داری، لینکش را بگذار (گوگل‌درایو، WeTransfer، ساوندکلاود یا هر سرویسِ مشابه). فایلی روی این سایت آپلود نمی‌شود.",
+        "مهلتِ ارسال ۶ دسامبر ۲۰۲۶ (۱۵ آذر ۱۴۰۵) است و ارسال رایگان است."
       ],
-      "note": "مالکیتِ اثر به‌طورِ کامل نزدِ هنرمند می‌ماند. به همه‌ی آثار گوش داده می‌شود — حتی وقتی نتوانیم به تک‌تکشان پاسخ دهیم.",
-      "cta": {
-        "label": "ارسال اثر به جشنواره ←",
-        "href": "/festival"
+      "safetyNote": "اگر داخلِ ایران هستی، از ایمیلی استفاده کن که به نامِ واقعی‌ات نیست. ما هیچ اطلاعاتی از تو را بدون رضایتِ صریحِ خودت منتشر نمی‌کنیم، و این سایت هیچ ابزارِ ردیابی یا آنالیتیکسی ندارد.",
+      "fields": {
+        "artistName": "نامِ هنری *",
+        "email": "ایمیل (برای پاسخِ ما) *",
+        "songTitle": "نامِ ترانه *",
+        "lyricist": "ترانه‌سرا (اگر کسِ دیگری است)",
+        "composer": "ملودی یا آهنگساز (اگر هست)",
+        "dedication": "به یادِ… (اختیاری)",
+        "lyrics": "متنِ ترانه *",
+        "demoUrl": "لینکِ دمو (اختیاری)",
+        "note": "اگر نکته‌ای هست که باید بدانیم (اختیاری)"
+      },
+      "consentRights": "این ترانه اثرِ خودِ من است، یا اجازه‌ی صاحبِ اثر را برای ارسالش دارم.",
+      "consentAlbum": "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در آلبومِ «آکوردهای آزادی» منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود.",
+      "submit": "ارسالِ ترانه",
+      "sending": "در حالِ ارسال…",
+      "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۲۰ دسامبر ۲۰۲۶ (۲۹ آذر ۱۴۰۵) اعلام می‌شوند.",
+      "errorMessage": "مشکلی پیش آمد. چند دقیقه‌ی دیگر دوباره امتحان کن، یا ترانه را به contact@azadichords.com ایمیل کن.",
+      "generalNote": "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ FilmFreeway می‌پذیرد.",
+      "generalCta": {
+        "label": "ارسال در FilmFreeway ←",
+        "href": "https://filmfreeway.com/youality"
       }
     },
     "support": {
       "eyebrow": "حمایت",
       "title": "پشتِ این صدا بایستید",
       "intro": [
-        "آزادی‌کورد کاملاً مستقل است — بی‌کمیته، بی‌دروازه‌بان، بی‌بودجه‌ی نهادی. این لیبل زنده است چون آدم‌ها تصمیم می‌گیرند گوش بدهند، به اشتراک بگذارند، و حاضر باشند.",
+        "آکوردهای آزادی کاملاً مستقل است و هیچ اسپانسر، نهاد یا دروازه‌بانی ندارد. ترانه‌هایمان برای مخاطبانِ داخلِ ایران رایگان است، و بقیه می‌توانند کمک کنند که همین‌طور بماند.",
         "روی این سایت هیچ پرداختی انجام نمی‌شود. هر راهِ حمایتی که در ادامه می‌بینید، شما را به جایی می‌برد که آن حمایت واقعاً اتفاق می‌افتد."
       ],
       "ways": [
         {
           "name": "01",
-          "title": "آلبوم را داشته باشید",
-          "description": "آلبومِ سوگنامه همراه با مجموعه‌شعرِ «بی‌تو» — یک بسته‌ی دیجیتال، مستقیم از استودیوی هنرمند.",
+          "title": "آثار را تهیه کنید",
+          "description": "موسیقیِ کامران رسول‌زاده و مجموعه‌شعرِ «بی‌تو»، مستقیم از استودیوی هنرمند. هر خرید، هزینه‌ی ترانه‌ی بعدی و جشنواره را تأمین می‌کند.",
           "cta": {
-            "label": "تهیه‌ی بسته ←",
+            "label": "رفتن به استودیو ←",
             "href": "https://www.youality.fr"
           }
         },
         {
           "name": "02",
           "title": "بشنوید و به اشتراک بگذارید",
-          "description": "از ۸ ژانویه ۲۰۲۷، همه‌ی انتشارها روی تمامِ پلتفرم‌های اصلی در دسترس است. هر ذخیره، هر اشتراک‌گذاری، هر افزودن به پلی‌لیست — این موسیقی را دورتر از هر بودجه‌ای می‌برد.",
+          "description": "در اسپاتیفای، اپل‌موزیک و یوتیوب بشنوید. اگر داخلِ ایران هستید، از همین سایت دانلود کنید و برای دیگران بفرستید. هر اشتراک‌گذاری این موسیقی را دورتر از هر بودجه‌ای می‌برد.",
           "cta": {
             "label": "رفتن به موسیقی ←",
             "href": "/music"
@@ -776,7 +790,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "در سالن باشید",
-          "description": "۸ و ۹ ژانویه ۲۰۲۷ در نخستین جشنواره‌ی آزادی‌کورد کنارِ ما باشید — کنسرتِ زنده، بخشِ رقابتی و شبِ اهدای جوایز.",
+          "description": "۸ و ۹ ژانویه ۲۰۲۷ (۱۸ و ۱۹ دی ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی کامران رسول‌زاده در شبِ اختتامیه.",
           "cta": {
             "label": "جشنواره ←",
             "href": "/festival"
@@ -785,40 +799,76 @@ export const content: Record<Locale, Content> = {
         {
           "name": "04",
           "title": "همراهِ ما شوید",
-          "description": "سالن‌ها، رسانه‌ها، نهادهای فرهنگی و حامیانی که می‌خواهند صداهای آزاد را به صحنه برسانند — مشتاقیم از شما بشنویم.",
+          "description": "سالن‌ها، رسانه‌ها، نهادهای فرهنگی و حامیانی که می‌خواهند صداهای آزاد را به صحنه برسانند، مشتاقیم از شما بشنویم.",
           "cta": {
             "label": "تماس بگیرید ←",
             "href": "/contact"
           }
         }
       ],
-      "transparency": "آزادی‌کورد روی این سایت هرگز درخواستِ پرداخت نمی‌کند. فروشِ مستقیمِ آلبوم از طریقِ استودیوی هنرمند انجام می‌شود."
+      "transparency": "آکوردهای آزادی روی این سایت هرگز درخواستِ پرداخت نمی‌کند. فروشِ مستقیم از طریقِ استودیوی هنرمند انجام می‌شود."
     },
     "festival": {
-      "eyebrow": "جشنواره · دوره‌ی نخست",
-      "title": "جشنواره‌ی آزادی‌کورد ۲۰۲۷",
+      "eyebrow": "جشنواره‌ی ترانه · دوره‌ی نخست",
+      "title": "جشنواره‌ی ترانه‌ی آکوردهای آزادی",
       "intro": [
-        "دو روز برای موسیقی‌ای که یاد و آزادی را با خود دارد. باز برای هنرمندانی از هر جای جهان و به هر زبانی — بخشِ رقابتی، کنسرتِ زنده، و شبِ اهدای جوایز.",
-        "جشنواره جایی است که لیبل گوش می‌دهد. هنرمندانِ برگزیده به آلبومِ مجموعه‌ی سالانه‌ی آزادی‌کورد دعوت می‌شوند که روی همه‌ی پلتفرم‌های اصلی منتشر می‌شود."
+        "جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.",
+        "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، کامران رسول‌زاده اجرای زنده دارد."
+      ],
+      "sectionsTitle": "دو بخش",
+      "sections": [
+        {
+          "label": "بخش عمومی",
+          "title": "موزیک‌ویدیوهای بین‌المللی",
+          "description": "موزیک‌ویدیو از هر جای جهان و به هر زبانی.",
+          "tags": [
+            "عاشقانه",
+            "اجتماعی",
+            "معنوی"
+          ],
+          "points": [
+            "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، پاریس",
+            "جوایز: تندیسِ جشنواره و دیپلمِ افتخار",
+            "ارسالِ اثر از طریقِ صفحه‌ی جشنواره در FilmFreeway"
+          ],
+          "cta": {
+            "label": "ارسالِ موزیک‌ویدیو ←",
+            "href": "https://filmfreeway.com/youality"
+          },
+          "highlight": false
+        },
+        {
+          "label": "بخش ویژه",
+          "title": "ترانه‌های فارسی به یادِ جاویدنامانِ ایران",
+          "description": "ترانه‌ی فارسی، چه فقط متن و چه همراه با ملودی یا دمو، به یادِ کسانی که نامشان ماندگار شده است.",
+          "tags": [
+            "ترانه‌ی فارسی",
+            "دمو اختیاری"
+          ],
+          "points": [
+            "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است",
+            "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند",
+            "تهیه و تولیدِ آلبوم با کامران رسول‌زاده"
+          ],
+          "cta": {
+            "label": "ارسالِ ترانه ←",
+            "href": "/submissions"
+          },
+          "highlight": true
+        }
       ],
       "datesTitle": "تاریخ‌های کلیدی",
       "dates": [
         {
-          "date": "2026-10-19",
+          "date": "2026-10-17",
           "endDate": "",
           "label": "آغازِ ارسالِ اثر",
           "highlight": false
         },
         {
-          "date": "2026-11-02",
-          "endDate": "",
-          "label": "معرفیِ هیئت داوران",
-          "highlight": false
-        },
-        {
           "date": "2026-12-06",
           "endDate": "",
-          "label": "پایانِ مهلتِ ارسال",
+          "label": "پایانِ مهلتِ بخشِ ویژه",
           "highlight": false
         },
         {
@@ -830,62 +880,34 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-01-08",
           "endDate": "2027-01-09",
-          "label": "برگزاریِ جشنواره",
+          "label": "برگزاریِ جشنواره، پاریس",
           "highlight": true
         }
       ],
-      "categoriesTitle": "بخش‌های رقابتی",
-      "categories": [
-        {
-          "title": "بهترین ترانه‌ی اورجینال",
-          "description": "ترانه‌ای اورجینال، کلام و موسیقی، به هر زبانی."
-        },
-        {
-          "title": "بهترین موزیک‌ویدیو",
-          "description": "زندگیِ تصویریِ یک ترانه — فیلم، انیمیشن یا آرشیو."
-        },
-        {
-          "title": "بهترین قطعه‌ی بی‌کلام یا آهنگسازی",
-          "description": "موسیقیِ بی‌کلامی که همچنان حرف می‌زند."
-        },
-        {
-          "title": "بهترین اجرای آوازی",
-          "description": "صدایی که به شیوه‌ی خودش شنیده می‌شود."
-        },
-        {
-          "title": "بهترین شعر همراه با موسیقی",
-          "description": "جایی که شعر ترانه می‌شود — ریشه‌ی آزادی‌کورد."
-        }
-      ],
-      "entryTitle": "شیوه‌ی شرکت",
-      "entrySteps": [
-        "یک بخش را انتخاب کنید و اثرتان را آماده کنید — اثرِ نهایی یا پیش‌نویسی قوی.",
-        "اثر را تا ۶ دسامبر ۲۰۲۶ از طریقِ صفحه‌ی جشنواره در FilmFreeway ارسال کنید.",
-        "رضایتِ حضور در آلبومِ مجموعه را تأیید کنید — اجازه‌ای غیرانحصاری برای قرار گرفتنِ اثرتان در آلبومِ آزادی‌کورد در صورتِ برگزیده شدن. مالکیتِ اثر نزدِ شما می‌ماند."
-      ],
-      "entryFee": "ارسالِ اثر در دوره‌ی نخست رایگان است.",
+      "datesNote": "مهلت‌های بخشِ عمومی طبقِ صفحه‌ی جشنواره‌ی میزبان در FilmFreeway است.",
+      "entryFee": "ارسالِ اثر به بخشِ ویژه رایگان است.",
       "programmeTitle": "برنامه",
       "programme": [
         {
           "date": "2027-01-08",
-          "title": "شبِ افتتاح — کنسرتِ زنده",
-          "description": "کنسرتی کیوریت‌شده با هنرمندانِ دعوت‌شده، و انتشارِ نخستین آلبومِ لیبل، «سوگنامه‌ی جاویدنام‌ها»."
+          "title": "نمایش و شنیدن",
+          "description": "نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی بخشِ ویژه."
         },
         {
           "date": "2027-01-09",
-          "title": "آثارِ برگزیده و اهدای جوایز",
-          "description": "نمایش و شنیدنِ آثارِ برگزیده، و سپس اهدای جوایز."
+          "title": "شبِ اختتامیه — جوایز و اجرای زنده",
+          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی کامران رسول‌زاده."
         }
       ],
       "juryTitle": "هیئت داوران",
-      "juryText": "موسیقی‌دانان، شاعران و منتقدانی از دیاسپورا و فراتر از آن. اعضای هیئت داوران ۲ نوامبر ۲۰۲۶ معرفی می‌شوند.",
+      "juryText": "موسیقی‌دانان، شاعران و فیلم‌سازان. اعضا به‌زودی همین‌جا معرفی می‌شوند.",
       "venueTitle": "محل برگزاری",
-      "venueText": "شانتیی، نزدیکِ پاریس، فرانسه — هم‌زمان با جشنواره‌ی بین‌المللی فیلم YOUALITY. محلِ دقیق به‌زودی اعلام می‌شود.",
+      "venueText": "پاریس، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.",
       "cta": {
-        "label": "خبرم کنید وقتی ارسال آغاز شد ←",
-        "href": "/contact"
+        "label": "ارسالِ ترانه به بخشِ ویژه ←",
+        "href": "/submissions"
       },
-      "ctaNote": "ارسالِ اثر از ۱۹ اکتبر ۲۰۲۶ آغاز می‌شود.",
+      "ctaNote": "موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).",
       "detailsLabel": "جزئیاتِ کاملِ جشنواره ←"
     },
     "contact": {
@@ -914,7 +936,7 @@ export const content: Record<Locale, Content> = {
       "errorMessage": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."
     },
     "footer": {
-      "copyright": "AZADICHORDS © 2026 — Paris · Label & Festival",
+      "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",
       "social": [
         {
           "label": "Instagram",
@@ -933,7 +955,7 @@ export const content: Record<Locale, Content> = {
           "href": ""
         }
       ],
-      "disclaimer": "آزادی‌کورد لیبل و جشنواره‌ای مستقل است و به هیچ حزب، جنبش یا دولتی وابسته نیست."
+      "disclaimer": "آکوردهای آزادی لیبل و جشنواره‌ای مستقل است و به هیچ حزب، جنبش یا دولتی وابسته نیست."
     }
   }
 };

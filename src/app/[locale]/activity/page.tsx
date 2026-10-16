@@ -9,8 +9,8 @@ const meta: Record<Locale, Metadata> = {
       "A running record of Azadichords' releases, performances, and milestones.",
   },
   fa: {
-    title: "فعالیت‌ها — آزادی‌کورد",
-    description: "روایتی از ریلیزها، اجراها و نقاط عطفِ آزادی‌کورد.",
+    title: "فعالیت‌ها — آکوردهای آزادی",
+    description: "روایتی از ریلیزها، اجراها و نقاط عطفِ آکوردهای آزادی.",
   },
 };
 
