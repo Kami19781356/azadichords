@@ -36,5 +36,5 @@ sendingLabel_en: Sending…
 sendingLabel_fa: در حال ارسال…
 successMessage_en: "Thanks — your message has been sent. We'll get back to you soon."
 successMessage_fa: "سپاس — پیامتان ارسال شد. به‌زودی با شما تماس می‌گیریم."
-errorMessage_en: "Something went wrong. Please try again, or email us directly at contact@azadichords.com."
-errorMessage_fa: "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به contact@azadichords.com ایمیل بزنید."
+errorMessage_en: "Something went wrong. Please try again, or email us directly at info@azadichords.com."
+errorMessage_fa: "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به info@azadichords.com ایمیل بزنید."
