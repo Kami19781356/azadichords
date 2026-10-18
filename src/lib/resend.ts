@@ -16,6 +16,14 @@ function getClient() {
   return client;
 }
 
+// RESEND_TO_EMAIL may hold one address or several, separated by commas.
+function recipients(raw: string | undefined): string[] {
+  return (raw ?? "")
+    .split(",")
+    .map((a) => a.trim())
+    .filter(Boolean);
+}
+
 export async function sendContactNotification(params: {
   name: string;
   email: string;
@@ -24,8 +32,8 @@ export async function sendContactNotification(params: {
   message: string;
 }) {
   const from = process.env.RESEND_FROM_EMAIL;
-  const to = process.env.RESEND_TO_EMAIL;
-  if (!from || !to) {
+  const to = recipients(process.env.RESEND_TO_EMAIL);
+  if (!from || to.length === 0) {
     throw new Error(
       "RESEND_FROM_EMAIL / RESEND_TO_EMAIL are not set. See docs/SALES_SETUP.md.",
     );
@@ -52,8 +60,8 @@ export async function sendSongSubmissionNotification(params: {
   text: string;
 }) {
   const from = process.env.RESEND_FROM_EMAIL;
-  const to = process.env.RESEND_TO_EMAIL;
-  if (!from || !to) {
+  const to = recipients(process.env.RESEND_TO_EMAIL);
+  if (!from || to.length === 0) {
     throw new Error("RESEND_FROM_EMAIL / RESEND_TO_EMAIL are not set.");
   }
   const { error } = await getClient().emails.send({
