@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Festival from "@/components/sections/Festival";
 import type { Locale } from "@/lib/content.types";
+import { pageMeta, ORG_ID } from "@/lib/seo";
+import { content } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
 
 const meta: Record<Locale, Metadata> = {
   en: {
@@ -21,16 +25,49 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const m = meta[locale as Locale] ?? meta.en;
-  return {
-    ...m,
-    alternates: {
-      canonical: `/${locale}/festival`,
-      languages: { en: "/en/festival", fa: "/fa/festival" },
-    },
-  };
+  return pageMeta(meta[locale as Locale] ?? meta.en, locale, "/festival");
 }
 
-export default function FestivalPage() {
-  return <Festival />;
+export default async function FestivalPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const loc: Locale = locale === "fa" ? "fa" : "en";
+  const c = content[loc].festival;
+  // The festival itself is the dated entry that has an end date.
+  const fest = content.en.festival.dates.find((d) => d.endDate);
+  const m = meta[loc];
+  return (
+    <>
+      {fest && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: c.title,
+            description: typeof m.description === "string" ? m.description : undefined,
+            startDate: fest.date,
+            endDate: fest.endDate,
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "Paris, France",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Paris",
+                addressCountry: "FR",
+              },
+            },
+            organizer: { "@id": ORG_ID },
+            image: [`${SITE_URL}/og-image.jpg`],
+            url: `${SITE_URL}/${loc}/festival`,
+          }}
+        />
+      )}
+      <Festival />
+    </>
+  );
 }

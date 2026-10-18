@@ -9,6 +9,8 @@ import { ContentProvider } from "@/lib/ContentProvider";
 import type { Locale } from "@/lib/content.types";
 import { SITE_URL, SITE_INDEXABLE } from "@/lib/site";
 import "../globals.css";
+import JsonLd from "@/components/JsonLd";
+import { ORG_ID } from "@/lib/seo";
 
 const LOCALES: Locale[] = ["en", "fa"];
 
@@ -97,6 +99,31 @@ export default async function RootLayout({
       <body
         className={`min-h-full flex flex-col bg-ink text-paper ${locale === "fa" ? "font-farsi" : ""}`}
       >
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": ORG_ID,
+                name: "Azadichords",
+                alternateName: "آکوردهای آزادی",
+                url: SITE_URL,
+                logo: `${SITE_URL}/images/logo.png`,
+                email: "info@azadichords.com",
+                description:
+                  "Independent music label and song festival, Paris — a home for free voices.",
+              },
+              {
+                "@type": "WebSite",
+                url: SITE_URL,
+                name: "Azadichords",
+                inLanguage: ["en", "fa"],
+                publisher: { "@id": ORG_ID },
+              },
+            ],
+          }}
+        />
         <ContentProvider locale={locale as Locale}>
           <Preloader />
           <SmoothScroll>

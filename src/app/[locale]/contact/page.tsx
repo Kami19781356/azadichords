@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Contact from "@/components/sections/Contact";
 import type { Locale } from "@/lib/content.types";
+import { pageMeta } from "@/lib/seo";
 
 const meta: Record<Locale, Metadata> = {
   en: {
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return meta[locale as Locale] ?? meta.en;
+  return pageMeta(meta[locale as Locale] ?? meta.en, locale, "/contact");
 }
 
 export default function ContactPage() {
