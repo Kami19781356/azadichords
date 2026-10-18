@@ -82,7 +82,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Music",
       "title": "Music",
       "intro": "Songs released by Azadichords — streaming everywhere, and free to download for listeners inside Iran.",
-      "closing": "Coming next on the label: the album «Azadichords» — nine Persian songs selected in the festival's special section, produced by the Azadichords team.",
+      "closing": "Coming next on the label: two albums from the festival — «Azadichords», nine Persian songs selected in the special section, and a second album of nine songs from the international section — both produced by the Azadichords team.",
       "comingSoonLabel": "Coming Soon",
       "tracksComingSoonLabel": "Tracks arriving soon.",
       "videoComingSoonLabel": "Video arriving soon.",
@@ -271,17 +271,24 @@ export const content: Record<Locale, Content> = {
       }
     },
     "submissions": {
-      "eyebrow": "Submit · Special Section",
+      "eyebrow": "Submit · Songs",
       "title": "Send Us Your Song",
-      "intro": "The special section of the Azadichords Song Festival is for Persian songs written in memory of Iran's Javidnaman. Send the lyrics alone, or with a melody or demo. Nine selected songs will be produced by the Azadichords team and released on the album «Azadichords».",
+      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine songs selected in each section will be produced by the Azadichords team and released on an Azadichords album.",
       "guidelines": [
-        "The song must be in Persian and your own work (or sent with its author's permission).",
+        "Special section — songs in Persian, written in memory of Iran's Javidnaman. International section — songs in any language, on any theme.",
+        "The song must be your own work (or sent with its author's permission).",
         "A stage name is enough. Your real name is not required.",
         "For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.",
         "Deadline — December 6, 2026. Submitting is free."
       ],
       "safetyNote": "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics.",
+      "sectionOptions": {
+        "special": "Special section — Persian song, in memory of Iran's Javidnaman",
+        "international": "International section — any language, any theme"
+      },
       "fields": {
+        "section": "Section *",
+        "songLanguage": "Language of the song *",
         "artistName": "Stage name *",
         "email": "Email (for our reply) *",
         "songTitle": "Song title *",
@@ -293,7 +300,7 @@ export const content: Record<Locale, Content> = {
         "note": "Anything else you want us to know (optional)"
       },
       "consentRights": "This song is my own work, or I have its author's permission to submit it.",
-      "consentAlbum": "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on the album «Azadichords». I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist.",
+      "consentAlbum": "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on an Azadichords album. I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist.",
       "submit": "Send my song",
       "sending": "Sending…",
       "successMessage": "Received. Thank you — every song is read and listened to. Selections are announced on December 20, 2026.",
@@ -357,7 +364,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Song Festival · First Edition",
       "title": "Azadichords Song Festival 2027",
       "intro": [
-        "A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.",
+        "A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names; and an international section for songs in any language, on any theme.",
         "Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night."
       ],
       "sectionsTitle": "Festival Sections",
@@ -397,9 +404,29 @@ export const content: Record<Locale, Content> = {
           ],
           "cta": {
             "label": "Submit a Persian song →",
-            "href": "/submissions"
+            "href": "/submissions?section=special"
           },
           "highlight": true
+        },
+        {
+          "label": "International Songs Section",
+          "title": "Songs in Any Language",
+          "description": "Songs in any language and on any theme — lyrics alone, or with a melody or demo.",
+          "tags": [
+            "Any language",
+            "Any theme",
+            "Demo welcome"
+          ],
+          "points": [
+            "Submit through this site — a stage name is enough",
+            "Nine selected songs will appear on a second Azadichords album, released by the label",
+            "The album will be produced by the Azadichords team"
+          ],
+          "cta": {
+            "label": "Submit a song →",
+            "href": "/submissions?section=international"
+          },
+          "highlight": false
         }
       ],
       "datesTitle": "Key Dates",
@@ -413,7 +440,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2026-12-06",
           "endDate": "",
-          "label": "Special-section deadline",
+          "label": "Song-sections deadline",
           "highlight": false
         },
         {
@@ -430,18 +457,18 @@ export const content: Record<Locale, Content> = {
         }
       ],
       "datesNote": "General-section deadlines follow the host festival's FilmFreeway page.",
-      "entryFee": "Submitting to the special section is free.",
+      "entryFee": "Submitting a song is free.",
       "programmeTitle": "Programme",
       "programme": [
         {
           "date": "2027-01-08",
           "title": "Screenings & Listening",
-          "description": "The selected music videos of the general section, and the selected songs of the special section."
+          "description": "The selected music videos of the general section, and the selected songs of the two song sections."
         },
         {
           "date": "2027-01-09",
           "title": "Closing Night — Awards & Live Performance",
-          "description": "The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live music performance."
+          "description": "The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance."
         }
       ],
       "juryTitle": "Jury",
@@ -449,7 +476,7 @@ export const content: Record<Locale, Content> = {
       "venueTitle": "Venue",
       "venueText": "Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
       "cta": {
-        "label": "Submit a Persian song →",
+        "label": "Submit a song →",
         "href": "/submissions"
       },
       "ctaNote": "Music videos are submitted through FilmFreeway — see the general section below.",
@@ -579,7 +606,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "موسیقی",
       "title": "موسیقی",
       "intro": "ترانه‌هایی که آکوردهای آزادی منتشر می‌کند. برای مخاطبانِ داخلِ ایران، دانلودشان از همین سایت رایگان است.",
-      "closing": "انتشارِ بعدیِ لیبل آلبومِ «آکوردهای آزادی» است: نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه‌ی جشنواره، با تهیه و تولیدِ تیمِ آکوردهای آزادی.",
+      "closing": "انتشارهای بعدیِ لیبل دو آلبومِ جشنواره است: آلبومِ «آکوردهای آزادی» با نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه، و آلبومِ دوم با نُه ترانه‌ی برگزیده‌ی بخشِ بین‌المللی؛ هر دو با تهیه و تولیدِ تیمِ آکوردهای آزادی.",
       "comingSoonLabel": "به‌زودی",
       "tracksComingSoonLabel": "قطعه‌ها به‌زودی.",
       "videoComingSoonLabel": "ویدیو به‌زودی.",
@@ -768,17 +795,24 @@ export const content: Record<Locale, Content> = {
       }
     },
     "submissions": {
-      "eyebrow": "ارسالِ اثر · بخشِ ویژه",
+      "eyebrow": "ارسالِ اثر · ترانه",
       "title": "ترانه‌ات را بفرست",
-      "intro": "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران است. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در آلبومِ «آکوردهای آزادی» منتشر می‌شوند.",
+      "intro": "جشنواره‌ی ترانه‌ی آکوردهای آزادی دو بخشِ ترانه دارد: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه‌هایی به هر زبان و با هر موضوع. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. از هر بخش نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در یک آلبومِ آکوردهای آزادی منتشر می‌شوند.",
       "guidelines": [
-        "ترانه باید فارسی و اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
+        "بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران. بخشِ بین‌المللی — ترانه به هر زبان و با هر موضوع.",
+        "ترانه باید اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
         "نامِ هنری کافی است و نامِ واقعی لازم نیست.",
         "اگر دمو داری، لینکش را بگذار (گوگل‌درایو، WeTransfer، ساوندکلاود یا هر سرویسِ مشابه). فایلی روی این سایت آپلود نمی‌شود.",
         "مهلتِ ارسال ۶ دسامبر ۲۰۲۶ (۱۵ آذر ۱۴۰۵) است و ارسال رایگان است."
       ],
       "safetyNote": "اگر داخلِ ایران هستی، از ایمیلی استفاده کن که به نامِ واقعی‌ات نیست. ما هیچ اطلاعاتی از تو را بدون رضایتِ صریحِ خودت منتشر نمی‌کنیم، و این سایت هیچ ابزارِ ردیابی یا آنالیتیکسی ندارد.",
+      "sectionOptions": {
+        "special": "بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران",
+        "international": "بخشِ بین‌المللی — هر زبان، هر موضوع"
+      },
       "fields": {
+        "section": "بخش *",
+        "songLanguage": "زبانِ ترانه *",
         "artistName": "نامِ هنری *",
         "email": "ایمیل (برای پاسخِ ما) *",
         "songTitle": "نامِ ترانه *",
@@ -790,7 +824,7 @@ export const content: Record<Locale, Content> = {
         "note": "اگر نکته‌ای هست که باید بدانیم (اختیاری)"
       },
       "consentRights": "این ترانه اثرِ خودِ من است، یا اجازه‌ی صاحبِ اثر را برای ارسالش دارم.",
-      "consentAlbum": "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در آلبومِ «آکوردهای آزادی» منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود.",
+      "consentAlbum": "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در یک آلبومِ آکوردهای آزادی منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود.",
       "submit": "ارسالِ ترانه",
       "sending": "در حالِ ارسال…",
       "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۲۰ دسامبر ۲۰۲۶ (۲۹ آذر ۱۴۰۵) اعلام می‌شوند.",
@@ -854,7 +888,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "جشنواره‌ی ترانه · دوره‌ی نخست",
       "title": "جشنواره‌ی ترانه‌ی آکوردهای آزادی",
       "intro": [
-        "جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.",
+        "جشنواره‌ی ترانه در سه بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست؛ بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد؛ و بخشِ ترانه‌ی بین‌المللی ترانه‌هایی را می‌پذیرد که به هر زبان و با هر موضوعی نوشته شده باشند.",
         "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد."
       ],
       "sectionsTitle": "بخش‌های جشنواره",
@@ -893,10 +927,30 @@ export const content: Record<Locale, Content> = {
             "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
           ],
           "cta": {
-            "label": "ارسالِ ترانه ←",
-            "href": "/submissions"
+            "label": "ارسالِ ترانه‌ی فارسی ←",
+            "href": "/submissions?section=special"
           },
           "highlight": true
+        },
+        {
+          "label": "بخشِ ترانه‌ی بین‌المللی",
+          "title": "ترانه به هر زبان",
+          "description": "ترانه به هر زبان و با هر موضوع؛ فقط متن، یا همراه با ملودی و دمو.",
+          "tags": [
+            "هر زبان",
+            "هر موضوع",
+            "دمو اختیاری"
+          ],
+          "points": [
+            "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است",
+            "نُه ترانه‌ی برگزیده در آلبومِ دومِ آکوردهای آزادی با لیبلِ آکوردهای آزادی منتشر می‌شوند",
+            "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
+          ],
+          "cta": {
+            "label": "ارسالِ ترانه ←",
+            "href": "/submissions?section=international"
+          },
+          "highlight": false
         }
       ],
       "datesTitle": "تاریخ‌های کلیدی",
@@ -910,7 +964,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2026-12-06",
           "endDate": "",
-          "label": "پایانِ مهلتِ بخشِ ویژه",
+          "label": "پایانِ مهلتِ ارسالِ ترانه‌ها",
           "highlight": false
         },
         {
@@ -927,18 +981,18 @@ export const content: Record<Locale, Content> = {
         }
       ],
       "datesNote": "مهلت‌های بخشِ عمومی طبقِ صفحه‌ی جشنواره‌ی میزبان در FilmFreeway است.",
-      "entryFee": "ارسالِ اثر به بخشِ ویژه رایگان است.",
+      "entryFee": "ارسالِ ترانه رایگان است.",
       "programmeTitle": "برنامه",
       "programme": [
         {
           "date": "2027-01-08",
           "title": "نمایش و شنیدن",
-          "description": "نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی بخشِ ویژه."
+          "description": "نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی دو بخشِ ترانه."
         },
         {
           "date": "2027-01-09",
           "title": "شبِ اختتامیه — جوایز و اجرای زنده",
-          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی موسیقی."
+          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ ترانه‌های برگزیده‌ی دو آلبوم، و اجرای زنده‌ی موسیقی."
         }
       ],
       "juryTitle": "هیئت داوران",
@@ -946,7 +1000,7 @@ export const content: Record<Locale, Content> = {
       "venueTitle": "محل برگزاری",
       "venueText": "پاریس، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.",
       "cta": {
-        "label": "ارسالِ ترانه به بخشِ ویژه ←",
+        "label": "ارسالِ ترانه ←",
         "href": "/submissions"
       },
       "ctaNote": "موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).",

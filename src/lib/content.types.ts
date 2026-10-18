@@ -193,7 +193,10 @@ export type Content = {
     intro: string;
     guidelines: string[];
     safetyNote: string;
+    sectionOptions: { special: string; international: string };
     fields: Record<
+      | "section"
+      | "songLanguage"
       | "artistName"
       | "email"
       | "songTitle"

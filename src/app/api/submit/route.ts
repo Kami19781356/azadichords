@@ -12,6 +12,7 @@ import { submissionsAreOpen } from "@/lib/submissionsWindow";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const LIMITS: Record<string, number> = {
+  songLanguage: 80,
   artistName: 120,
   email: 200,
   songTitle: 200,
@@ -53,6 +54,16 @@ export async function POST(request: NextRequest) {
     }
     fields[key] = value;
   }
+  const section = str(body.section);
+  if (section !== "special" && section !== "international") {
+    return NextResponse.json({ error: "Choose a section" }, { status: 400 });
+  }
+  // The special section is Persian by definition; the international
+  // section needs the song's language.
+  if (section === "special") fields.songLanguage = "Persian";
+  if (section === "international" && !fields.songLanguage) {
+    return NextResponse.json({ error: "Missing song language" }, { status: 400 });
+  }
   if (REQUIRED.some((k) => !fields[k])) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
@@ -68,7 +79,7 @@ export async function POST(request: NextRequest) {
 
   const record = {
     receivedAt: new Date().toISOString(),
-    section: "special",
+    section,
     ...fields,
     consentRights: true,
     consentAlbum: true,
@@ -87,6 +98,8 @@ export async function POST(request: NextRequest) {
   let mailed = false;
   try {
     const text = [
+      `Section: ${section === "special" ? "Special (Persian, in memory of the Javidnaman)" : "International (any language)"}`,
+      `Song language: ${fields.songLanguage}`,
       `Stage name: ${fields.artistName}`,
       `Email: ${fields.email}`,
       `Song: ${fields.songTitle}`,
@@ -104,6 +117,7 @@ export async function POST(request: NextRequest) {
       .filter((line): line is string => typeof line === "string")
       .join("\n");
     await sendSongSubmissionNotification({
+      section,
       artistName: fields.artistName,
       email: fields.email,
       songTitle: fields.songTitle,

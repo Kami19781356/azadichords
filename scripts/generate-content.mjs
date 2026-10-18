@@ -242,7 +242,13 @@ function buildContent(lang) {
       intro: t(submissions, "intro", lang),
       guidelines: t(submissions, "guidelines", lang),
       safetyNote: t(submissions, "safetyNote", lang),
+      sectionOptions: {
+        special: t(submissions, "sectionSpecial", lang),
+        international: t(submissions, "sectionInternational", lang),
+      },
       fields: {
+        section: t(submissions, "fieldSection", lang),
+        songLanguage: t(submissions, "fieldSongLanguage", lang),
         artistName: t(submissions, "fieldArtistName", lang),
         email: t(submissions, "fieldEmail", lang),
         songTitle: t(submissions, "fieldSongTitle", lang),

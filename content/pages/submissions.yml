@@ -1,24 +1,35 @@
-# Submission form for the festival's special section (Persian songs in
-# memory of Iran's Javidnaman). Music videos for the general section go
-# through FilmFreeway instead (generalCtaHref).
-eyebrow_en: Submit · Special Section
-eyebrow_fa: ارسالِ اثر · بخشِ ویژه
+# Submission form for the festival's two song sections — special (Persian
+# songs in memory of Iran's Javidnaman) and international (any language,
+# any theme). Music videos for the general section go through FilmFreeway
+# instead (generalCtaHref).
+eyebrow_en: Submit · Songs
+eyebrow_fa: ارسالِ اثر · ترانه
 title_en: Send Us Your Song
 title_fa: ترانه‌ات را بفرست
-intro_en: "The special section of the Azadichords Song Festival is for Persian songs written in memory of Iran's Javidnaman. Send the lyrics alone, or with a melody or demo. Nine selected songs will be produced by the Azadichords team and released on the album «Azadichords»."
-intro_fa: "بخشِ ویژه‌ی جشنواره‌ی ترانه‌ی آکوردهای آزادی برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران است. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در آلبومِ «آکوردهای آزادی» منتشر می‌شوند."
+intro_en: "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine songs selected in each section will be produced by the Azadichords team and released on an Azadichords album."
+intro_fa: "جشنواره‌ی ترانه‌ی آکوردهای آزادی دو بخشِ ترانه دارد: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه‌هایی به هر زبان و با هر موضوع. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. از هر بخش نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در یک آلبومِ آکوردهای آزادی منتشر می‌شوند."
 guidelines_en:
-  - The song must be in Persian and your own work (or sent with its author's permission).
+  - Special section — songs in Persian, written in memory of Iran's Javidnaman. International section — songs in any language, on any theme.
+  - The song must be your own work (or sent with its author's permission).
   - A stage name is enough. Your real name is not required.
   - For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.
   - Deadline — December 6, 2026. Submitting is free.
 guidelines_fa:
-  - ترانه باید فارسی و اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.
+  - "بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران. بخشِ بین‌المللی — ترانه به هر زبان و با هر موضوع."
+  - ترانه باید اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.
   - نامِ هنری کافی است و نامِ واقعی لازم نیست.
   - اگر دمو داری، لینکش را بگذار (گوگل‌درایو، WeTransfer، ساوندکلاود یا هر سرویسِ مشابه). فایلی روی این سایت آپلود نمی‌شود.
   - مهلتِ ارسال ۶ دسامبر ۲۰۲۶ (۱۵ آذر ۱۴۰۵) است و ارسال رایگان است.
 safetyNote_en: "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics."
 safetyNote_fa: "اگر داخلِ ایران هستی، از ایمیلی استفاده کن که به نامِ واقعی‌ات نیست. ما هیچ اطلاعاتی از تو را بدون رضایتِ صریحِ خودت منتشر نمی‌کنیم، و این سایت هیچ ابزارِ ردیابی یا آنالیتیکسی ندارد."
+fieldSection_en: Section *
+fieldSection_fa: بخش *
+sectionSpecial_en: Special section — Persian song, in memory of Iran's Javidnaman
+sectionSpecial_fa: بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران
+sectionInternational_en: International section — any language, any theme
+sectionInternational_fa: بخشِ بین‌المللی — هر زبان، هر موضوع
+fieldSongLanguage_en: Language of the song *
+fieldSongLanguage_fa: زبانِ ترانه *
 fieldArtistName_en: Stage name *
 fieldArtistName_fa: نامِ هنری *
 fieldEmail_en: Email (for our reply) *
@@ -39,8 +50,8 @@ fieldNote_en: Anything else you want us to know (optional)
 fieldNote_fa: اگر نکته‌ای هست که باید بدانیم (اختیاری)
 consentRights_en: This song is my own work, or I have its author's permission to submit it.
 consentRights_fa: این ترانه اثرِ خودِ من است، یا اجازه‌ی صاحبِ اثر را برای ارسالش دارم.
-consentAlbum_en: "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on the album «Azadichords». I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist."
-consentAlbum_fa: "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در آلبومِ «آکوردهای آزادی» منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود."
+consentAlbum_en: "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on an Azadichords album. I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist."
+consentAlbum_fa: "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در یک آلبومِ آکوردهای آزادی منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود."
 submitLabel_en: Send my song
 submitLabel_fa: ارسالِ ترانه
 sendingLabel_en: Sending…

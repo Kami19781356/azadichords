@@ -54,6 +54,7 @@ export async function sendContactNotification(params: {
 }
 
 export async function sendSongSubmissionNotification(params: {
+  section: "special" | "international";
   artistName: string;
   email: string;
   songTitle: string;
@@ -68,7 +69,7 @@ export async function sendSongSubmissionNotification(params: {
     from,
     to,
     replyTo: params.email,
-    subject: `[Festival · Special section] ${params.songTitle} — ${params.artistName}`,
+    subject: `[Festival · ${params.section === "special" ? "Special" : "International"} section] ${params.songTitle} — ${params.artistName}`,
     text: params.text,
   });
   if (error) throw new Error(`Resend send failed: ${error.message}`);

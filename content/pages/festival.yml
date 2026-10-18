@@ -10,10 +10,10 @@ eyebrow_fa: جشنواره‌ی ترانه · دوره‌ی نخست
 title_en: Azadichords Song Festival 2027
 title_fa: جشنواره‌ی ترانه‌ی آکوردهای آزادی
 intro_en:
-  - A song festival in two sections — an international competition for music videos, and a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names.
+  - A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names; and an international section for songs in any language, on any theme.
   - Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night.
 intro_fa:
-  - جشنواره‌ی ترانه در دو بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست، و بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد.
+  - جشنواره‌ی ترانه در سه بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست؛ بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد؛ و بخشِ ترانه‌ی بین‌المللی ترانه‌هایی را می‌پذیرد که به هر زبان و با هر موضوعی نوشته شده باشند.
   - میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد.
 sectionsTitle_en: Festival Sections
 sectionsTitle_fa: بخش‌های جشنواره
@@ -54,9 +54,28 @@ sections:
       - "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند"
       - "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
     ctaLabel_en: Submit a Persian song →
-    ctaLabel_fa: ارسالِ ترانه ←
-    ctaHref: /submissions
+    ctaLabel_fa: ارسالِ ترانه‌ی فارسی ←
+    ctaHref: /submissions?section=special
     highlight: true
+  - label_en: International Songs Section
+    label_fa: بخشِ ترانه‌ی بین‌المللی
+    title_en: Songs in Any Language
+    title_fa: ترانه به هر زبان
+    description_en: Songs in any language and on any theme — lyrics alone, or with a melody or demo.
+    description_fa: ترانه به هر زبان و با هر موضوع؛ فقط متن، یا همراه با ملودی و دمو.
+    tags_en: [Any language, Any theme, Demo welcome]
+    tags_fa: [هر زبان, هر موضوع, دمو اختیاری]
+    points_en:
+      - "Submit through this site — a stage name is enough"
+      - "Nine selected songs will appear on a second Azadichords album, released by the label"
+      - "The album will be produced by the Azadichords team"
+    points_fa:
+      - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
+      - "نُه ترانه‌ی برگزیده در آلبومِ دومِ آکوردهای آزادی با لیبلِ آکوردهای آزادی منتشر می‌شوند"
+      - "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
+    ctaLabel_en: Submit a song →
+    ctaLabel_fa: ارسالِ ترانه ←
+    ctaHref: /submissions?section=international
 datesTitle_en: Key Dates
 datesTitle_fa: تاریخ‌های کلیدی
 dates:
@@ -64,8 +83,8 @@ dates:
     label_en: Submissions open
     label_fa: آغازِ ارسالِ اثر
   - date: "2026-12-06"
-    label_en: Special-section deadline
-    label_fa: پایانِ مهلتِ بخشِ ویژه
+    label_en: Song-sections deadline
+    label_fa: پایانِ مهلتِ ارسالِ ترانه‌ها
   - date: "2026-12-20"
     label_en: Selections announced
     label_fa: اعلامِ آثارِ برگزیده
@@ -82,13 +101,13 @@ programme:
   - date: "2027-01-08"
     title_en: Screenings & Listening
     title_fa: نمایش و شنیدن
-    description_en: The selected music videos of the general section, and the selected songs of the special section.
-    description_fa: نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی بخشِ ویژه.
+    description_en: The selected music videos of the general section, and the selected songs of the two song sections.
+    description_fa: نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی دو بخشِ ترانه.
   - date: "2027-01-09"
     title_en: Closing Night — Awards & Live Performance
     title_fa: شبِ اختتامیه — جوایز و اجرای زنده
-    description_en: The festival statuettes and honorary diplomas, the nine songs chosen for the album — and a live music performance.
-    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی آلبوم، و اجرای زنده‌ی موسیقی.
+    description_en: The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance.
+    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ ترانه‌های برگزیده‌ی دو آلبوم، و اجرای زنده‌ی موسیقی.
 juryTitle_en: Jury
 juryTitle_fa: هیئت داوران
 juryText_en: Musicians, poets and filmmakers. Members will be announced here.
@@ -97,10 +116,10 @@ venueTitle_en: Venue
 venueTitle_fa: محل برگزاری
 venueText_en: Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.
 venueText_fa: پاریس، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.
-entryFee_en: Submitting to the special section is free.
-entryFee_fa: ارسالِ اثر به بخشِ ویژه رایگان است.
-ctaLabel_en: Submit a Persian song →
-ctaLabel_fa: ارسالِ ترانه به بخشِ ویژه ←
+entryFee_en: Submitting a song is free.
+entryFee_fa: ارسالِ ترانه رایگان است.
+ctaLabel_en: Submit a song →
+ctaLabel_fa: ارسالِ ترانه ←
 ctaHref: "/submissions"
 ctaNote_en: Music videos are submitted through FilmFreeway — see the general section below.
 ctaNote_fa: موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).

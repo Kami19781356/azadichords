@@ -13,6 +13,7 @@ const inputClass =
 type Status = "idle" | "sending" | "success" | "error";
 
 const TEXT_FIELDS = [
+  "songLanguage",
   "artistName",
   "email",
   "songTitle",
@@ -29,6 +30,15 @@ export default function Submissions() {
   const content = useContent();
   const s = content.submissions;
   const [status, setStatus] = useState<Status>("idle");
+  // Which song section the entry is for; the festival page's buttons
+  // link here with ?section=special or ?section=international.
+  const [section, setSection] = useState<"" | "special" | "international">("");
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("section");
+      if (q === "special" || q === "international") setSection(q);
+    } catch {}
+  }, []);
   // Closed until the opening day; the server enforces this too.
   const [open, setOpen] = useState(true);
   useEffect(() => {
@@ -44,6 +54,7 @@ export default function Submissions() {
     const data = new FormData(form);
     const payload: Record<string, unknown> = {};
     for (const key of TEXT_FIELDS) payload[key] = String(data.get(key) ?? "");
+    payload.section = section;
     payload.consentRights = data.get("consentRights") === "on";
     payload.consentAlbum = data.get("consentAlbum") === "on";
 
@@ -57,6 +68,7 @@ export default function Submissions() {
       if (!res.ok) throw new Error("send failed");
       setStatus("success");
       form.reset();
+      setSection("");
     } catch {
       setStatus("error");
     }
@@ -114,6 +126,22 @@ export default function Submissions() {
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 rounded border border-ink/12 bg-white/40 p-6 md:p-10"
         >
+          <select
+            name="section"
+            required
+            value={section}
+            onChange={(e) => setSection(e.target.value as typeof section)}
+            className={`${inputClass} ${section ? "" : "text-ink/45"}`}
+          >
+            <option value="" disabled>
+              {s.fields.section}
+            </option>
+            <option value="special">{s.sectionOptions.special}</option>
+            <option value="international">{s.sectionOptions.international}</option>
+          </select>
+          {section === "international" && (
+            <input type="text" name="songLanguage" required maxLength={80} placeholder={s.fields.songLanguage} className={inputClass} />
+          )}
           <input type="text" name="artistName" required maxLength={120} placeholder={s.fields.artistName} className={inputClass} />
           <input type="email" name="email" required maxLength={200} dir="ltr" placeholder={s.fields.email} className={`${inputClass} text-start`} />
           <input type="text" name="songTitle" required maxLength={200} placeholder={s.fields.songTitle} className={inputClass} />
