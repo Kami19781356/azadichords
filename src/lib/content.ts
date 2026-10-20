@@ -279,7 +279,7 @@ export const content: Record<Locale, Content> = {
         "The song must be your own work (or sent with its author's permission).",
         "A stage name is enough. Your real name is not required.",
         "For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.",
-        "Deadline — December 6, 2026. Submitting is free."
+        "Deadline — December 27, 2026. Submitting is free."
       ],
       "safetyNote": "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics.",
       "sectionOptions": {
@@ -303,7 +303,7 @@ export const content: Record<Locale, Content> = {
       "consentAlbum": "If selected, I give Azadichords a non-exclusive permission to produce this song and release it on an Azadichords album. I am credited as its author and keep ownership of my work; final terms are agreed in writing with each selected artist.",
       "submit": "Send my song",
       "sending": "Sending…",
-      "successMessage": "Received. Thank you — every song is read and listened to. Selections are announced on December 20, 2026.",
+      "successMessage": "Received. Thank you — every song is read and listened to. Selections are announced on January 15, 2027.",
       "errorMessage": "Something went wrong. Please try again in a few minutes, or email the song to info@azadichords.com.",
       "closedMessage": "Submissions open on October 19, 2026. Come back then — the form will be ready for your song.",
       "generalNote": "Making a music video instead? The general section — love, social and spiritual music videos from anywhere — takes submissions through FilmFreeway.",
@@ -438,13 +438,13 @@ export const content: Record<Locale, Content> = {
           "highlight": false
         },
         {
-          "date": "2026-12-06",
+          "date": "2026-12-27",
           "endDate": "",
           "label": "Song-sections deadline",
           "highlight": false
         },
         {
-          "date": "2026-12-20",
+          "date": "2027-01-15",
           "endDate": "",
           "label": "Selections announced",
           "highlight": false
@@ -803,7 +803,7 @@ export const content: Record<Locale, Content> = {
         "ترانه باید اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
         "نامِ هنری کافی است و نامِ واقعی لازم نیست.",
         "اگر دمو داری، لینکش را بگذار (گوگل‌درایو، WeTransfer، ساوندکلاود یا هر سرویسِ مشابه). فایلی روی این سایت آپلود نمی‌شود.",
-        "مهلتِ ارسال ۶ دسامبر ۲۰۲۶ (۱۵ آذر ۱۴۰۵) است و ارسال رایگان است."
+        "مهلتِ ارسال ۲۷ دسامبر ۲۰۲۶ (۶ دی ۱۴۰۵) است و ارسال رایگان است."
       ],
       "safetyNote": "اگر داخلِ ایران هستی، از ایمیلی استفاده کن که به نامِ واقعی‌ات نیست. ما هیچ اطلاعاتی از تو را بدون رضایتِ صریحِ خودت منتشر نمی‌کنیم، و این سایت هیچ ابزارِ ردیابی یا آنالیتیکسی ندارد.",
       "sectionOptions": {
@@ -827,7 +827,7 @@ export const content: Record<Locale, Content> = {
       "consentAlbum": "اگر ترانه‌ام برگزیده شود، به آکوردهای آزادی اجازه‌ی غیرانحصاری می‌دهم که آن را تولید کند و در یک آلبومِ آکوردهای آزادی منتشر کند. نامم به‌عنوانِ صاحبِ اثر درج می‌شود و مالکیتِ اثر نزدِ خودم می‌ماند. شرایطِ نهایی با هر برگزیده به‌صورتِ کتبی توافق می‌شود.",
       "submit": "ارسالِ ترانه",
       "sending": "در حالِ ارسال…",
-      "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۲۰ دسامبر ۲۰۲۶ (۲۹ آذر ۱۴۰۵) اعلام می‌شوند.",
+      "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۱۵ ژانویه ۲۰۲۷ (۲۵ دی ۱۴۰۵) اعلام می‌شوند.",
       "errorMessage": "مشکلی پیش آمد. چند دقیقه‌ی دیگر دوباره امتحان کن، یا ترانه را به info@azadichords.com ایمیل کن.",
       "closedMessage": "ارسالِ ترانه از ۱۹ اکتبر ۲۰۲۶ (۲۷ مهر ۱۴۰۵) آغاز می‌شود. همان روز برگرد؛ فرم برای ترانه‌ی تو آماده است.",
       "generalNote": "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ FilmFreeway می‌پذیرد.",
@@ -962,13 +962,13 @@ export const content: Record<Locale, Content> = {
           "highlight": false
         },
         {
-          "date": "2026-12-06",
+          "date": "2026-12-27",
           "endDate": "",
           "label": "پایانِ مهلتِ ارسالِ ترانه‌ها",
           "highlight": false
         },
         {
-          "date": "2026-12-20",
+          "date": "2027-01-15",
           "endDate": "",
           "label": "اعلامِ آثارِ برگزیده",
           "highlight": false

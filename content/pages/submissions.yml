@@ -13,13 +13,13 @@ guidelines_en:
   - The song must be your own work (or sent with its author's permission).
   - A stage name is enough. Your real name is not required.
   - For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.
-  - Deadline — December 6, 2026. Submitting is free.
+  - Deadline — December 27, 2026. Submitting is free.
 guidelines_fa:
   - "بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران. بخشِ بین‌المللی — ترانه به هر زبان و با هر موضوع."
   - ترانه باید اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.
   - نامِ هنری کافی است و نامِ واقعی لازم نیست.
   - اگر دمو داری، لینکش را بگذار (گوگل‌درایو، WeTransfer، ساوندکلاود یا هر سرویسِ مشابه). فایلی روی این سایت آپلود نمی‌شود.
-  - مهلتِ ارسال ۶ دسامبر ۲۰۲۶ (۱۵ آذر ۱۴۰۵) است و ارسال رایگان است.
+  - مهلتِ ارسال ۲۷ دسامبر ۲۰۲۶ (۶ دی ۱۴۰۵) است و ارسال رایگان است.
 safetyNote_en: "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics."
 safetyNote_fa: "اگر داخلِ ایران هستی، از ایمیلی استفاده کن که به نامِ واقعی‌ات نیست. ما هیچ اطلاعاتی از تو را بدون رضایتِ صریحِ خودت منتشر نمی‌کنیم، و این سایت هیچ ابزارِ ردیابی یا آنالیتیکسی ندارد."
 fieldSection_en: Section *
@@ -56,8 +56,8 @@ submitLabel_en: Send my song
 submitLabel_fa: ارسالِ ترانه
 sendingLabel_en: Sending…
 sendingLabel_fa: در حالِ ارسال…
-successMessage_en: "Received. Thank you — every song is read and listened to. Selections are announced on December 20, 2026."
-successMessage_fa: "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۲۰ دسامبر ۲۰۲۶ (۲۹ آذر ۱۴۰۵) اعلام می‌شوند."
+successMessage_en: "Received. Thank you — every song is read and listened to. Selections are announced on January 15, 2027."
+successMessage_fa: "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۱۵ ژانویه ۲۰۲۷ (۲۵ دی ۱۴۰۵) اعلام می‌شوند."
 closedMessage_en: "Submissions open on October 19, 2026. Come back then — the form will be ready for your song."
 closedMessage_fa: "ارسالِ ترانه از ۱۹ اکتبر ۲۰۲۶ (۲۷ مهر ۱۴۰۵) آغاز می‌شود. همان روز برگرد؛ فرم برای ترانه‌ی تو آماده است."
 errorMessage_en: "Something went wrong. Please try again in a few minutes, or email the song to info@azadichords.com."
