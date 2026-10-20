@@ -36,12 +36,27 @@ export default function Artists() {
           <div key={artist.slug} id={artist.slug}>
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
               <motion.div {...reveal}>
-                <Placeholder
-                  caption={artist.imageCaption}
-                  variant="dark90"
-                  aspect="4/5"
-                  className="w-full"
-                />
+                {artist.image ? (
+                  <div
+                    className="w-full overflow-hidden rounded"
+                    style={{ aspectRatio: "4/5" }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={artist.image}
+                      alt={artist.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <Placeholder
+                    caption={artist.imageCaption}
+                    variant="dark90"
+                    aspect="4/5"
+                    className="w-full"
+                  />
+                )}
               </motion.div>
               <motion.div
                 {...reveal}

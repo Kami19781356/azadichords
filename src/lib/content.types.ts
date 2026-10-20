@@ -63,6 +63,7 @@ export type Artist = {
   role: string;
   badge: string;
   imageCaption: string;
+  image: string;
   intro: string;
   bio: string;
   cta: Cta;

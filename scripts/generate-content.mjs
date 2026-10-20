@@ -78,6 +78,7 @@ function buildContent(lang) {
     role: t(a, "role", lang),
     badge: t(a, "badge", lang) || "",
     imageCaption: a.imageCaption,
+    image: a.image || "",
     intro: t(a, "intro", lang),
     bio: t(a, "bio", lang) || a.body, // fall back to markdown body for older entries
     cta: { label: t(a, "ctaLabel", lang), href: a.ctaHref },
