@@ -144,7 +144,7 @@ export const content: Record<Locale, Content> = {
         "imageCaption": "portrait — Kamran, close crop",
         "image": "/images/artists/kamran-rasoolzadeh.jpg",
         "intro": "Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.",
-        "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works. He founded Azadichords as its Founding Artist.",
+        "bio": "Kamran Rasoolzadeh is an Iranian poet, composer, and singer-songwriter. His poetry has topped bestseller lists in Iran for over a decade. In 2014, he composed and produced <em>CHESHMAT</em> — an album that became one of the defining records of its generation, despite, and in part because of, the restrictions placed on the work. After years of censorship and repeated pressure from state authorities, he left Iran and settled in France, where he now lives and works. He founded Azadichords as its Founding Artist.",
         "cta": {
           "label": "Explore the Music →",
           "href": "/music"
@@ -178,7 +178,7 @@ export const content: Record<Locale, Content> = {
         ],
         "priorWork": {
           "title": "CHESHMAT (2014)",
-          "description": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> for vocalist Mehrnoosh — a record that shaped a generation, and drew the attention that would eventually silence him. Its official video, published on the Avang Music YouTube channel, has been viewed roughly 20 million times.",
+          "description": "Before Azadichords, Kamran composed and produced <em>CHESHMAT</em> — a record that shaped a generation, and drew the attention that would eventually silence him. Its official video, published on the Avang Music YouTube channel, has been viewed roughly 20 million times.",
           "videoUrl": ""
         }
       }
@@ -669,7 +669,7 @@ export const content: Record<Locale, Content> = {
         "imageCaption": "portrait — Kamran, close crop",
         "image": "/images/artists/kamran-rasoolzadeh.jpg",
         "intro": "کامران رسول‌زاده می‌نویسد، می‌سازد و می‌خواند؛ ترانه‌هایی شکل‌گرفته از تبعید و بازگشت. آثارش ممنوع و جایزه‌گرفته‌اند و او پس از سال‌ها سکوت، دوباره آغاز می‌کند.",
-        "bio": "کامران رسول‌زاده شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی است. اشعارش برای بیش از یک دهه در صدر پرفروش‌ترین‌های ایران بوده‌اند. در سال ۲۰۱۴، او ترانه و آهنگ معروف «چشمات» (تو که چشمات خیلی قشنگه) را برای خواننده مهرنوش ساخت و تهیه کرد — اثری که با وجودِ محدودیت‌هایی که بر آن اعمال شد، و تا حدی به‌خاطرِ همان محدودیت‌ها، یکی از آثار ماندگارِ نسل خود شد. پس از سال‌ها سانسور و فشار مکرر از سوی مقامات، ایران را ترک کرد و در فرانسه ساکن شد، جایی که اکنون زندگی و کار می‌کند. او آکوردهای آزادی را به‌عنوان هنرمند بنیان‌گذار پایه‌گذاری کرد.",
+        "bio": "کامران رسول‌زاده شاعر، آهنگساز و خواننده-ترانه‌سرای ایرانی است. اشعارش برای بیش از یک دهه در صدر پرفروش‌ترین‌های ایران بوده‌اند. در سال ۲۰۱۴، او ترانه و آهنگ معروف «چشمات» (تو که چشمات خیلی قشنگه) را ساخت و تهیه کرد — اثری که با وجودِ محدودیت‌هایی که بر آن اعمال شد، و تا حدی به‌خاطرِ همان محدودیت‌ها، یکی از آثار ماندگارِ نسل خود شد. پس از سال‌ها سانسور و فشار مکرر از سوی مقامات، ایران را ترک کرد و در فرانسه ساکن شد، جایی که اکنون زندگی و کار می‌کند. او آکوردهای آزادی را به‌عنوان هنرمند بنیان‌گذار پایه‌گذاری کرد.",
         "cta": {
           "label": "موسیقی را کاوش کنید ←",
           "href": "/music"
@@ -703,7 +703,7 @@ export const content: Record<Locale, Content> = {
         ],
         "priorWork": {
           "title": "چشمات (۲۰۱۴)",
-          "description": "پیش از آکوردهای آزادی، کامران ترانه و آهنگ معروف «چشمات» (تو که چشمات خیلی قشنگه) را برای خواننده مهرنوش ساخت و تهیه کرد — اثری که نسلی را شکل داد و توجهی جلب کرد که سرانجام به سکوتش انجامید. ویدیوی رسمی آن، منتشرشده در کانال یوتیوب Avang Music، حدود ۲۰ میلیون بار دیده شده است.",
+          "description": "پیش از آکوردهای آزادی، کامران ترانه و آهنگ معروف «چشمات» (تو که چشمات خیلی قشنگه) را ساخت و تهیه کرد — اثری که نسلی را شکل داد و توجهی جلب کرد که سرانجام به سکوتش انجامید. ویدیوی رسمی آن، منتشرشده در کانال یوتیوب Avang Music، حدود ۲۰ میلیون بار دیده شده است.",
           "videoUrl": ""
         }
       }
