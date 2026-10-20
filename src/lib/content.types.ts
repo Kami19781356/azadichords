@@ -262,6 +262,8 @@ export type Content = {
     sending: string;
     successMessage: string;
     errorMessage: string;
+    musicVideoSubject: string;
+    musicVideoNote: string;
   };
   footer: { copyright: string; social: NavLink[]; disclaimer: string };
 };

@@ -506,7 +506,9 @@ export const content: Record<Locale, Content> = {
       "submit": "Send",
       "sending": "Sending…",
       "successMessage": "Thanks — your message has been sent. We'll get back to you soon.",
-      "errorMessage": "Something went wrong. Please try again, or email us directly at info@azadichords.com."
+      "errorMessage": "Something went wrong. Please try again, or email us directly at info@azadichords.com.",
+      "musicVideoSubject": "Music video submission",
+      "musicVideoNote": "Music video submission: write your name, email and the video's details (title, director, length, language, and a link to watch it). We'll reply with a FilmFreeway waiver code, or you can send us the link directly."
     },
     "footer": {
       "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",
@@ -832,10 +834,10 @@ export const content: Record<Locale, Content> = {
       "successMessage": "دریافت شد، ممنون. همه‌ی ترانه‌ها خوانده و شنیده می‌شوند. آثارِ برگزیده ۱۵ ژانویه ۲۰۲۷ (۲۵ دی ۱۴۰۵) اعلام می‌شوند.",
       "errorMessage": "مشکلی پیش آمد. چند دقیقه‌ی دیگر دوباره امتحان کن، یا ترانه را به info@azadichords.com ایمیل کن.",
       "closedMessage": "ارسالِ ترانه از ۱۹ اکتبر ۲۰۲۶ (۲۷ مهر ۱۴۰۵) آغاز می‌شود. همان روز برگرد؛ فرم برای ترانه‌ی تو آماده است.",
-      "generalNote": "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ FilmFreeway می‌پذیرد.",
+      "generalNote": "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ صفحه‌ی تماس می‌پذیرد؛ نیازی به پرداختِ هزینه نیست.",
       "generalCta": {
-        "label": "ارسال در FilmFreeway ←",
-        "href": "https://filmfreeway.com/youality"
+        "label": "ارسالِ موزیک‌ویدیو ←",
+        "href": "/contact?topic=musicvideo"
       }
     },
     "support": {
@@ -907,11 +909,11 @@ export const content: Record<Locale, Content> = {
           "points": [
             "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، پاریس",
             "جوایز: تندیسِ جشنواره و دیپلمِ افتخار",
-            "ارسالِ اثر از طریقِ صفحه‌ی جشنواره در FilmFreeway"
+            "ارسالِ اثر از ایران: از طریقِ صفحه‌ی تماس، بدونِ پرداختِ هزینه"
           ],
           "cta": {
             "label": "ارسالِ موزیک‌ویدیو ←",
-            "href": "https://filmfreeway.com/youality"
+            "href": "/contact?topic=musicvideo"
           },
           "highlight": false
         },
@@ -1005,7 +1007,7 @@ export const content: Record<Locale, Content> = {
         "label": "ارسالِ ترانه ←",
         "href": "/submissions"
       },
-      "ctaNote": "موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).",
+      "ctaNote": "موزیک‌ویدیوها از طریقِ صفحه‌ی تماس ارسال می‌شوند (بخشِ عمومی را ببینید).",
       "detailsLabel": "جزئیاتِ کاملِ جشنواره ←"
     },
     "contact": {
@@ -1031,7 +1033,9 @@ export const content: Record<Locale, Content> = {
       "submit": "ارسال",
       "sending": "در حال ارسال…",
       "successMessage": "سپاس — پیامتان ارسال شد. به‌زودی با شما تماس می‌گیریم.",
-      "errorMessage": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به info@azadichords.com ایمیل بزنید."
+      "errorMessage": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید، یا مستقیم به info@azadichords.com ایمیل بزنید.",
+      "musicVideoSubject": "ارسالِ موزیک‌ویدیو",
+      "musicVideoNote": "ارسالِ موزیک‌ویدیو از ایران: نام، ایمیل و مشخصاتِ اثر (عنوان، کارگردان، مدت، زبان و لینکِ تماشای ویدیو) را بنویس. کدِ معافیتِ FilmFreeway (waiver code) را برایت ایمیل می‌کنیم تا اثر را بدونِ پرداختِ هزینه ثبت کنی؛ یا لینکِ ویدیو را مستقیم برایمان بفرست."
     },
     "footer": {
       "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",

@@ -268,7 +268,7 @@ function buildContent(lang) {
       errorMessage: t(submissions, "errorMessage", lang),
       closedMessage: t(submissions, "closedMessage", lang),
       generalNote: t(submissions, "generalNote", lang),
-      generalCta: { label: t(submissions, "generalCtaLabel", lang), href: submissions.generalCtaHref },
+      generalCta: { label: t(submissions, "generalCtaLabel", lang), href: (lang === "fa" && submissions.generalCtaHref_fa) || submissions.generalCtaHref },
     },
     support: {
       eyebrow: t(support, "eyebrow", lang),
@@ -294,7 +294,7 @@ function buildContent(lang) {
         description: t(s, "description", lang),
         tags: t(s, "tags", lang) ?? [],
         points: t(s, "points", lang) ?? [],
-        cta: { label: t(s, "ctaLabel", lang), href: s.ctaHref },
+        cta: { label: t(s, "ctaLabel", lang), href: (lang === "fa" && s.ctaHref_fa) || s.ctaHref },
         highlight: !!s.highlight,
       })),
       datesTitle: t(festival, "datesTitle", lang),
@@ -336,6 +336,8 @@ function buildContent(lang) {
       sending: t(contact, "sendingLabel", lang),
       successMessage: t(contact, "successMessage", lang),
       errorMessage: t(contact, "errorMessage", lang),
+      musicVideoSubject: t(contact, "musicVideoSubject", lang),
+      musicVideoNote: t(contact, "musicVideoNote", lang),
     },
     footer: {
       copyright: footer.copyright,

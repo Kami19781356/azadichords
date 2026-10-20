@@ -33,10 +33,13 @@ sections:
     points_fa:
       - "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، پاریس"
       - "جوایز: تندیسِ جشنواره و دیپلمِ افتخار"
-      - "ارسالِ اثر از طریقِ صفحه‌ی جشنواره در FilmFreeway"
+      - "ارسالِ اثر از ایران: از طریقِ صفحه‌ی تماس، بدونِ پرداختِ هزینه"
     ctaLabel_en: Submit a music video →
     ctaLabel_fa: ارسالِ موزیک‌ویدیو ←
     ctaHref: https://filmfreeway.com/youality
+    # Iran can't pay FilmFreeway fees: the Persian site routes to the contact
+    # form instead (we reply with a FilmFreeway waiver code or a direct link).
+    ctaHref_fa: "/contact?topic=musicvideo"
   - label_en: Special Section
     label_fa: بخش ویژه
     title_en: Persian Songs in Memory of Iran's Javidnaman
@@ -122,6 +125,6 @@ ctaLabel_en: Submit a song →
 ctaLabel_fa: ارسالِ ترانه ←
 ctaHref: "/submissions"
 ctaNote_en: Music videos are submitted through FilmFreeway — see the general section below.
-ctaNote_fa: موزیک‌ویدیوها از طریقِ FilmFreeway ارسال می‌شوند (بخشِ عمومی را ببینید).
+ctaNote_fa: موزیک‌ویدیوها از طریقِ صفحه‌ی تماس ارسال می‌شوند (بخشِ عمومی را ببینید).
 detailsLabel_en: Full festival details →
 detailsLabel_fa: جزئیاتِ کاملِ جشنواره ←

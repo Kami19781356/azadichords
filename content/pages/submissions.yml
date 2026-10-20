@@ -63,7 +63,8 @@ closedMessage_fa: "ارسالِ ترانه از ۱۹ اکتبر ۲۰۲۶ (۲۷ �
 errorMessage_en: "Something went wrong. Please try again in a few minutes, or email the song to info@azadichords.com."
 errorMessage_fa: "مشکلی پیش آمد. چند دقیقه‌ی دیگر دوباره امتحان کن، یا ترانه را به info@azadichords.com ایمیل کن."
 generalNote_en: "Making a music video instead? The general section — love, social and spiritual music videos from anywhere — takes submissions through FilmFreeway."
-generalNote_fa: "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ FilmFreeway می‌پذیرد."
+generalNote_fa: "موزیک‌ویدیو ساخته‌ای؟ بخشِ عمومی (موزیک‌ویدیوهای عاشقانه، اجتماعی و معنوی از هر جای جهان) آثار را از طریقِ صفحه‌ی تماس می‌پذیرد؛ نیازی به پرداختِ هزینه نیست."
 generalCtaLabel_en: Submit on FilmFreeway →
-generalCtaLabel_fa: ارسال در FilmFreeway ←
+generalCtaLabel_fa: ارسالِ موزیک‌ویدیو ←
 generalCtaHref: https://filmfreeway.com/youality
+generalCtaHref_fa: "/contact?topic=musicvideo"

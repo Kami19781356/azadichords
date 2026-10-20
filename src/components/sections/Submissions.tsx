@@ -2,7 +2,9 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useContent } from "@/lib/ContentProvider";
+import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal } from "@/lib/motionVariants";
 import SplitReveal from "@/components/SplitReveal";
 import WaveDivider from "@/components/WaveDivider";
@@ -28,6 +30,7 @@ const TEXT_FIELDS = [
 
 export default function Submissions() {
   const content = useContent();
+  const locale = useLocale();
   const s = content.submissions;
   const [status, setStatus] = useState<Status>("idle");
   // Which song section the entry is for; the festival page's buttons
@@ -109,14 +112,23 @@ export default function Submissions() {
             <p className="m-0 mb-4 text-[15px] leading-[1.7] text-ink/60">
               {s.generalNote}
             </p>
-            <a
-              href={s.generalCta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm tracking-[0.06em] text-garnet uppercase transition-colors duration-200 hover:text-ink"
-            >
-              {s.generalCta.label}
-            </a>
+            {/^https?:\/\//.test(s.generalCta.href) ? (
+              <a
+                href={s.generalCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm tracking-[0.06em] text-garnet uppercase transition-colors duration-200 hover:text-ink"
+              >
+                {s.generalCta.label}
+              </a>
+            ) : (
+              <Link
+                href={localizeHref(s.generalCta.href, locale)}
+                className="text-sm tracking-[0.06em] text-garnet uppercase transition-colors duration-200 hover:text-ink"
+              >
+                {s.generalCta.label}
+              </Link>
+            )}
           </div>
         </motion.div>
 

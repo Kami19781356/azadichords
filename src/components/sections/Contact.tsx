@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useContent } from "@/lib/ContentProvider";
 import { reveal } from "@/lib/motionVariants";
@@ -14,6 +14,16 @@ type Status = "idle" | "sending" | "success" | "error";
 export default function Contact() {
   const content = useContent();
   const [status, setStatus] = useState<Status>("idle");
+  // /contact?topic=musicvideo: the Persian site sends music-video entries
+  // here (Iran can't pay FilmFreeway fees). Preselects "Submission",
+  // fills the subject and shows what to write.
+  const [musicVideo, setMusicVideo] = useState(false);
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("topic");
+      if (q === "musicvideo") setMusicVideo(true);
+    } catch {}
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -81,15 +91,24 @@ export default function Contact() {
             placeholder={content.contact.fields.email}
             className={inputClass}
           />
+          {musicVideo && (
+            <p className="m-0 rounded border border-gold/40 bg-gold/5 p-4 text-[15px] leading-[1.8] text-paper/80">
+              {content.contact.musicVideoNote}
+            </p>
+          )}
           <input
+            key={musicVideo ? "mv" : "std"}
             type="text"
             name="subject"
             required
+            defaultValue={musicVideo ? content.contact.musicVideoSubject : ""}
             placeholder={content.contact.fields.subject}
             className={inputClass}
           />
           <select
+            key={musicVideo ? "mv-cat" : "cat"}
             name="category"
+            defaultValue={musicVideo ? content.contact.categories[2] : undefined}
             aria-label={content.contact.fields.category}
             className="border-0 border-b border-paper/25 bg-ink px-1 py-3.5 font-sans text-base text-paper/70 outline-none"
           >
