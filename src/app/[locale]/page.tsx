@@ -12,7 +12,7 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Azadichords — Independent Label & Song Festival, Paris",
     description:
-      "A home for free voices: an independent label and a song festival. New single «Golouleh» out now. Festival January 8–9, 2027 in Paris.",
+      "A home for free voices: an independent label and a song festival. New single «Golouleh» out now. Festival February 26–27, 2027 in Paris.",
   },
   fa: {
     title: "آکوردهای آزادی — لیبل و جشنواره‌ی ترانه، پاریس",

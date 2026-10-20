@@ -342,7 +342,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "Be in the Room",
-          "description": "January 8–9, 2027 in Paris — screenings, the awards, and a live music performance on closing night.",
+          "description": "February 26–27, 2027 in Paris — screenings, the awards, and a live music performance on closing night.",
           "cta": {
             "label": "The festival →",
             "href": "/festival"
@@ -450,8 +450,8 @@ export const content: Record<Locale, Content> = {
           "highlight": false
         },
         {
-          "date": "2027-01-08",
-          "endDate": "2027-01-09",
+          "date": "2027-02-26",
+          "endDate": "2027-02-27",
           "label": "The festival, Paris",
           "highlight": true
         }
@@ -461,12 +461,12 @@ export const content: Record<Locale, Content> = {
       "programmeTitle": "Programme",
       "programme": [
         {
-          "date": "2027-01-08",
+          "date": "2027-02-26",
           "title": "Screenings & Listening",
           "description": "The selected music videos of the general section, and the selected songs of the two song sections."
         },
         {
-          "date": "2027-01-09",
+          "date": "2027-02-27",
           "title": "Closing Night — Awards & Live Performance",
           "description": "The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance."
         }
@@ -866,7 +866,7 @@ export const content: Record<Locale, Content> = {
         {
           "name": "03",
           "title": "در سالن باشید",
-          "description": "۸ و ۹ ژانویه ۲۰۲۷ (۱۸ و ۱۹ دی ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی موسیقی در شبِ اختتامیه.",
+          "description": "۲۶ و ۲۷ فوریه ۲۰۲۷ (۷ و ۸ اسفند ۱۴۰۵) در پاریس، با نمایش و شنیدنِ آثار، اهدای جوایز و اجرای زنده‌ی موسیقی در شبِ اختتامیه.",
           "cta": {
             "label": "جشنواره ←",
             "href": "/festival"
@@ -974,8 +974,8 @@ export const content: Record<Locale, Content> = {
           "highlight": false
         },
         {
-          "date": "2027-01-08",
-          "endDate": "2027-01-09",
+          "date": "2027-02-26",
+          "endDate": "2027-02-27",
           "label": "برگزاریِ جشنواره، پاریس",
           "highlight": true
         }
@@ -985,12 +985,12 @@ export const content: Record<Locale, Content> = {
       "programmeTitle": "برنامه",
       "programme": [
         {
-          "date": "2027-01-08",
+          "date": "2027-02-26",
           "title": "نمایش و شنیدن",
           "description": "نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی دو بخشِ ترانه."
         },
         {
-          "date": "2027-01-09",
+          "date": "2027-02-27",
           "title": "شبِ اختتامیه — جوایز و اجرای زنده",
           "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ ترانه‌های برگزیده‌ی دو آلبوم، و اجرای زنده‌ی موسیقی."
         }

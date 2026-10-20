@@ -88,8 +88,8 @@ dates:
   - date: "2026-12-20"
     label_en: Selections announced
     label_fa: اعلامِ آثارِ برگزیده
-  - date: "2027-01-08"
-    endDate: "2027-01-09"
+  - date: "2027-02-26"
+    endDate: "2027-02-27"
     label_en: The festival, Paris
     label_fa: برگزاریِ جشنواره، پاریس
     highlight: true
@@ -98,12 +98,12 @@ datesNote_fa: مهلت‌های بخشِ عمومی طبقِ صفحه‌ی جش�
 programmeTitle_en: Programme
 programmeTitle_fa: برنامه
 programme:
-  - date: "2027-01-08"
+  - date: "2027-02-26"
     title_en: Screenings & Listening
     title_fa: نمایش و شنیدن
     description_en: The selected music videos of the general section, and the selected songs of the two song sections.
     description_fa: نمایشِ موزیک‌ویدیوهای برگزیده‌ی بخشِ عمومی و شنیدنِ ترانه‌های برگزیده‌ی دو بخشِ ترانه.
-  - date: "2027-01-09"
+  - date: "2027-02-27"
     title_en: Closing Night — Awards & Live Performance
     title_fa: شبِ اختتامیه — جوایز و اجرای زنده
     description_en: The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance.
