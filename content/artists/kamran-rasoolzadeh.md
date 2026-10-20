@@ -9,8 +9,8 @@ imageCaption: portrait — Kamran, close crop
 image: /images/artists/kamran-rasoolzadeh.jpg
 intro_en: Kamran Rasoolzadeh writes, composes, and performs songs shaped by exile and return. His work has been banned, awarded, and — after years of silence — is beginning again.
 intro_fa: کامران رسول‌زاده می‌نویسد، می‌سازد و می‌خواند؛ ترانه‌هایی شکل‌گرفته از تبعید و بازگشت. آثارش ممنوع و جایزه‌گرفته‌اند و او پس از سال‌ها سکوت، دوباره آغاز می‌کند.
-ctaLabel_en: Explore the Music →
-ctaLabel_fa: موسیقی را کاوش کنید ←
+ctaLabel_en: Works released with Azadichords →
+ctaLabel_fa: آثار منتشرشده با Azadichords ←
 ctaHref: "/music"
 recognition:
   - award: Iranian Film Festival San Francisco
