@@ -126,8 +126,18 @@ function TrackList({ tracks }: { tracks: Release["tracks"] }) {
   );
 }
 
-function Spotlight({ release }: { release: Release }) {
+export function Spotlight({
+  release,
+  asPage = false,
+}: {
+  release: Release;
+  // On the release's own page the title is the page's <h1>; elsewhere
+  // it is an <h3> that links through to that page.
+  asPage?: boolean;
+}) {
   const content = useContent();
+  const locale = useLocale();
+  const Heading = asPage ? "h1" : "h3";
   return (
     <motion.div
       {...reveal}
@@ -147,9 +157,18 @@ function Spotlight({ release }: { release: Release }) {
                 {release.catalogNumber}
               </span>
             )}
-            <h3 className="m-0 font-serif text-3xl font-semibold">
-              {release.title}
-            </h3>
+            <Heading className="m-0 font-serif text-3xl font-semibold">
+              {asPage ? (
+                release.title
+              ) : (
+                <Link
+                  href={localizeHref(`/music/${release.slug}`, locale)}
+                  className="transition-colors duration-200 hover:text-gold"
+                >
+                  {release.title}
+                </Link>
+              )}
+            </Heading>
           </div>
           <p className="m-0 mb-3 text-lg text-gold/90">{release.tagline}</p>
           <p
