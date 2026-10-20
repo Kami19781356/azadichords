@@ -18,18 +18,20 @@ export default function DownloadStart({ slug }: { slug: string }) {
   const d = content.download;
   const started = useRef(false);
   const url = release?.downloadUrl ?? "";
+  // Goes through the counter, which redirects to the file.
+  const href = url ? `/api/dl/${slug}` : "";
 
   // Start the download once, as soon as the page opens.
   useEffect(() => {
     if (!url || started.current) return;
     started.current = true;
     const a = document.createElement("a");
-    a.href = url;
+    a.href = href;
     a.download = fileName(url);
     document.body.appendChild(a);
     a.click();
     a.remove();
-  }, [url]);
+  }, [url, href]);
 
   if (!release) return null;
 
@@ -47,7 +49,7 @@ export default function DownloadStart({ slug }: { slug: string }) {
         </p>
         {url && (
           <a
-            href={url}
+            href={href}
             download={fileName(url)}
             className="inline-flex items-center gap-2.5 rounded-full border border-paper px-8 py-4 text-sm tracking-[0.06em] text-paper transition-colors duration-200 hover:bg-paper hover:text-ink"
           >
