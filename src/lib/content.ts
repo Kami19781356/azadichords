@@ -274,7 +274,7 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "Submit · Songs",
       "title": "Send Us Your Song",
-      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine winning songs, chosen from both sections, will be produced by the Azadichords team and released on one international album, «Freedom Chords».",
+      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of all those who have fallen on the road to freedom, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine winning songs, chosen from both sections, will be produced by the Azadichords team and released on one international album, «Freedom Chords».",
       "guidelines": [
         "Special section — songs in Persian, written in memory of Iran's Javidnaman. International section — songs in any language, on any theme.",
         "The song must be your own work (or sent with its author's permission).",
@@ -365,7 +365,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Song Festival · First Edition",
       "title": "Azadichords Song Festival 2027",
       "intro": [
-        "A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of Iran's Javidnaman, the eternal names; and an international section for songs in any language, on any theme.",
+        "A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of all those who have fallen on the road to freedom; and an international section for songs in any language, on any theme.",
         "Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night."
       ],
       "sectionsTitle": "Festival Sections",

@@ -7,7 +7,7 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Submit a Song — Azadichords Song Festival",
     description:
-      "Submit a song to the Azadichords Song Festival: a special section for Persian songs in memory of Iran’s Javidnaman, and an international section for songs in any language. Nine winning songs from both sections are produced for one international album, Freedom Chords.",
+      "Submit a song to the Azadichords Song Festival: a special section for Persian songs in memory of all those who have fallen on the road to freedom, and an international section for songs in any language. Nine winning songs from both sections are produced for one international album, Freedom Chords.",
   },
   fa: {
     title: "ارسالِ ترانه — جشنواره‌ی ترانه‌ی آکوردهای آزادی",

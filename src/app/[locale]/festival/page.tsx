@@ -10,7 +10,7 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Song Festival 2027 — Azadichords",
     description:
-      "Azadichords Song Festival, February 26–27, 2027 in Paris: international music videos, a special section for Persian songs in memory of Iran’s Javidnaman, and an international section for songs in any language.",
+      "Azadichords Song Festival, February 26–27, 2027 in Paris: international music videos, a special section for Persian songs in memory of all those who have fallen on the road to freedom, and an international section for songs in any language.",
   },
   fa: {
     title: "جشنواره‌ی ترانه — آکوردهای آزادی",
