@@ -72,11 +72,23 @@ export default function Artists() {
                     </span>
                   )}
                 </div>
-                <SplitReveal
-                  as="h3"
-                  text={artist.name}
-                  className="m-0 mb-7 font-serif text-[clamp(28px,4vw,44px)] font-semibold"
-                />
+                {/* A Latin name inside the RTL page would have its words
+                    reversed ("Rasoolzadeh Kamran"); keep it left-to-right
+                    but aligned to the page's start edge. */}
+                <div
+                  dir={/^[\x00-\x7F\s]+$/.test(artist.name) ? "ltr" : undefined}
+                  className={
+                    locale === "fa" && /^[\x00-\x7F\s]+$/.test(artist.name)
+                      ? "text-right"
+                      : undefined
+                  }
+                >
+                  <SplitReveal
+                    as="h3"
+                    text={artist.name}
+                    className="m-0 mb-7 font-serif text-[clamp(28px,4vw,44px)] font-semibold"
+                  />
+                </div>
                 <p className="m-0 text-[19px] leading-[1.7] text-paper/75">
                   {artist.intro}
                 </p>

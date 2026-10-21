@@ -133,7 +133,7 @@ export const content: Record<Locale, Content> = {
     "artistsPage": {
       "eyebrow": "Artists",
       "title": "Artists",
-      "intro": "Every Azadichords artist is a voice that chose not to stay silent."
+      "intro": "Every Azadichords artist is a voice for free melodies — a voice that has risen from the heart of the people's suffering."
     },
     "artists": [
       {
@@ -660,7 +660,7 @@ export const content: Record<Locale, Content> = {
     "artistsPage": {
       "eyebrow": "هنرمندان",
       "title": "هنرمندان",
-      "intro": "هر هنرمندِ آکوردهای آزادی، صدایی است که تصمیم گرفته ساکت نماند."
+      "intro": "هر هنرمندِ آکوردهای آزادی، صدایی است برای نغمه‌های آزاد، صدایی که از دل رنج‌های مردم بیرون زده است."
     },
     "artists": [
       {
