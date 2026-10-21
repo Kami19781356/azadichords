@@ -133,7 +133,7 @@ export const content: Record<Locale, Content> = {
     "artistsPage": {
       "eyebrow": "Artists",
       "title": "Artists",
-      "intro": "Every Azadichords artist is a voice for free melodies — a voice that has risen from the heart of the people's suffering."
+      "intro": "Every Azadichords artist is a voice for free melodies — a voice that has risen from the heart of people's suffering around the world."
     },
     "artists": [
       {
@@ -660,7 +660,7 @@ export const content: Record<Locale, Content> = {
     "artistsPage": {
       "eyebrow": "هنرمندان",
       "title": "هنرمندان",
-      "intro": "هر هنرمندِ آکوردهای آزادی، صدایی است برای نغمه‌های آزاد، صدایی که از دل رنج‌های مردم بیرون زده است."
+      "intro": "هر هنرمندِ آکوردهای آزادی، صدایی است برای نغمه‌های آزاد، صدایی که از دل رنج‌های مردم سراسر دنیا بیرون زده است."
     },
     "artists": [
       {
@@ -721,7 +721,7 @@ export const content: Record<Locale, Content> = {
         "releaseDate": "2026-10-16",
         "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "تک‌آهنگِ تازه‌ی کامران رسول‌زاده",
-        "description": "گلوله، ترانه‌ای که به تازگی «گل» کرده... تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
+        "description": "گلوله، ترانه‌ای که از دلِ زخم‌های تازه، «گل» کرده... تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "coverImage": "/images/releases/golouleh.jpg",
