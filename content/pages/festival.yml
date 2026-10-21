@@ -50,12 +50,12 @@ sections:
     tags_fa: [ترانه‌ی فارسی, دمو اختیاری]
     points_en:
       - "Submit through this site — a stage name is enough"
-      - "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label"
-      - "The album will be produced by the Azadichords team"
+      - "Songs selected in this section receive an honorary diploma"
+      - "The nine winners of the festival's two song sections appear on one international album, «Freedom Chords», produced by the Azadichords team"
     points_fa:
       - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
-      - "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند"
-      - "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
+      - "ترانه‌های برگزیده‌ی این بخش دیپلمِ افتخار می‌گیرند"
+      - "نُه برنده‌ی دو بخشِ ترانه‌ی جشنواره در یک آلبومِ بین‌المللی به نامِ «آکوردهای آزادی» (Freedom Chords) منتشر می‌شوند؛ تهیه و تولید با تیمِ آکوردهای آزادی"
     ctaLabel_en: Submit a Persian song →
     ctaLabel_fa: ارسالِ ترانه‌ی فارسی ←
     ctaHref: /submissions?section=special
@@ -70,11 +70,11 @@ sections:
     tags_fa: [هر زبان, هر موضوع, دمو اختیاری]
     points_en:
       - "Submit through this site — a stage name is enough"
-      - "Nine selected songs will appear on a second Azadichords album, released by the label"
-      - "The album will be produced by the Azadichords team"
+      - "Winning songs join the nine-song international album «Freedom Chords», released by the Azadichords label"
+      - "The album is produced by the Azadichords team"
     points_fa:
       - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
-      - "نُه ترانه‌ی برگزیده در آلبومِ دومِ آکوردهای آزادی با لیبلِ آکوردهای آزادی منتشر می‌شوند"
+      - "ترانه‌های برنده در آلبومِ بین‌المللیِ نُه‌ترانه‌ایِ «آکوردهای آزادی» (Freedom Chords) با لیبلِ آکوردهای آزادی منتشر می‌شوند"
       - "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
     ctaLabel_en: Submit a song →
     ctaLabel_fa: ارسالِ ترانه ←
@@ -109,8 +109,8 @@ programme:
   - date: "2027-02-27"
     title_en: Closing Night — Awards & Live Performance
     title_fa: شبِ اختتامیه — جوایز و اجرای زنده
-    description_en: The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance.
-    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ ترانه‌های برگزیده‌ی دو آلبوم، و اجرای زنده‌ی موسیقی.
+    description_en: The festival statuettes and honorary diplomas, the nine winning songs of the «Freedom Chords» album — and a live music performance.
+    description_fa: اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی برنده‌ی آلبومِ «آکوردهای آزادی»، و اجرای زنده‌ی موسیقی.
 juryTitle_en: Jury
 juryTitle_fa: هیئت داوران
 juryText_en: Musicians, poets and filmmakers. Members will be announced here.

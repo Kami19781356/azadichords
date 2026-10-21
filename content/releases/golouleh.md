@@ -15,7 +15,7 @@ demo_audio_url: "/downloads/golouleh-kamran-rasoolzadeh.mp3"
 download_url: "/downloads/golouleh-kamran-rasoolzadeh.mp3"
 tagline_en: "The new single by Kamran Rasoolzadeh"
 tagline_fa: "تک‌آهنگِ تازه‌ی کامران رسول‌زاده"
-description_en: "Golouleh — a song that has just come into bloom, a “gol” (flower) in the heart of the bullet... The newest song by Kamran Rasoolzadeh. Free to download on the Persian site for listeners inside Iran."
+description_en: "Golouleh — a song that has just come into bloom, a “gol” (flower) in the heart of the bullet... The newest song by Kamran Rasoolzadeh."
 description_fa: "گلوله، ترانه‌ای که از دلِ زخم‌های تازه، «گل» کرده... تازه‌ترین ترانه‌ی کامران رسول‌زاده. دانلودش برای مخاطبانِ داخلِ ایران از همین صفحه رایگان است."
 credits:
   - role_en: Words & Music
@@ -38,6 +38,6 @@ streaming_links:
   - platform: Spotify
     url: https://open.spotify.com/track/3O0Sbp5EduC5TpJtpbGdHG
 support_tier_link: true
-purchaseNote_en: "Free to download for listeners in Iran. Outside Iran, stream it everywhere — and stand behind the work."
+purchaseNote_en: "Stream it everywhere — and stand behind the work."
 purchaseNote_fa: "اگر بیرونِ ایران هستی، با شنیدن در پلتفرم‌ها و حمایت از هنرمند کنارِ این کار باش."
 ---

@@ -81,8 +81,8 @@ export const content: Record<Locale, Content> = {
     "music": {
       "eyebrow": "Music",
       "title": "Music",
-      "intro": "Songs released by Azadichords — streaming everywhere, and free to download for listeners inside Iran.",
-      "closing": "Coming next on the label: two albums from the festival — «Azadichords», nine Persian songs selected in the special section, and a second album of nine songs from the international section — both produced by the Azadichords team.",
+      "intro": "Songs released by Azadichords — streaming everywhere.",
+      "closing": "Coming next on the label: «Freedom Chords», an international album of the nine winning songs of the festival — chosen from both song sections, in several languages — produced by the Azadichords team.",
       "comingSoonLabel": "Coming Soon",
       "tracksComingSoonLabel": "Tracks arriving soon.",
       "videoComingSoonLabel": "Video arriving soon.",
@@ -194,7 +194,7 @@ export const content: Record<Locale, Content> = {
         "releaseDate": "2026-10-16",
         "coverImageCaption": "Golouleh — gol·ou·leh (n.) a bullet · gol (n.) a flower",
         "tagline": "The new single by Kamran Rasoolzadeh",
-        "description": "Golouleh — a song that has just come into bloom, a “gol” (flower) in the heart of the bullet... The newest song by Kamran Rasoolzadeh. Free to download on the Persian site for listeners inside Iran.",
+        "description": "Golouleh — a song that has just come into bloom, a “gol” (flower) in the heart of the bullet... The newest song by Kamran Rasoolzadeh.",
         "demoAudioUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "downloadUrl": "/downloads/golouleh-kamran-rasoolzadeh.mp3",
         "coverImage": "/images/releases/golouleh.jpg",
@@ -222,7 +222,7 @@ export const content: Record<Locale, Content> = {
           }
         ],
         "supportTierLink": true,
-        "purchaseNote": "Free to download for listeners in Iran. Outside Iran, stream it everywhere — and stand behind the work."
+        "purchaseNote": "Stream it everywhere — and stand behind the work."
       }
     ],
     "activityPage": {
@@ -274,7 +274,7 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "Submit · Songs",
       "title": "Send Us Your Song",
-      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine songs selected in each section will be produced by the Azadichords team and released on an Azadichords album.",
+      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine winning songs, chosen from both sections, will be produced by the Azadichords team and released on one international album, «Freedom Chords».",
       "guidelines": [
         "Special section — songs in Persian, written in memory of Iran's Javidnaman. International section — songs in any language, on any theme.",
         "The song must be your own work (or sent with its author's permission).",
@@ -400,8 +400,8 @@ export const content: Record<Locale, Content> = {
           ],
           "points": [
             "Submit through this site — a stage name is enough",
-            "Nine selected songs will appear on the album «Azadichords», released by the Azadichords label",
-            "The album will be produced by the Azadichords team"
+            "Songs selected in this section receive an honorary diploma",
+            "The nine winners of the festival's two song sections appear on one international album, «Freedom Chords», produced by the Azadichords team"
           ],
           "cta": {
             "label": "Submit a Persian song →",
@@ -420,8 +420,8 @@ export const content: Record<Locale, Content> = {
           ],
           "points": [
             "Submit through this site — a stage name is enough",
-            "Nine selected songs will appear on a second Azadichords album, released by the label",
-            "The album will be produced by the Azadichords team"
+            "Winning songs join the nine-song international album «Freedom Chords», released by the Azadichords label",
+            "The album is produced by the Azadichords team"
           ],
           "cta": {
             "label": "Submit a song →",
@@ -469,7 +469,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-02-27",
           "title": "Closing Night — Awards & Live Performance",
-          "description": "The festival statuettes and honorary diplomas, the songs chosen for the two albums — and a live music performance."
+          "description": "The festival statuettes and honorary diplomas, the nine winning songs of the «Freedom Chords» album — and a live music performance."
         }
       ],
       "juryTitle": "Jury",
@@ -609,7 +609,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "موسیقی",
       "title": "موسیقی",
       "intro": "ترانه‌هایی که آکوردهای آزادی منتشر می‌کند. برای مخاطبانِ داخلِ ایران، دانلودشان از همین سایت رایگان است.",
-      "closing": "انتشارهای بعدیِ لیبل دو آلبومِ جشنواره است: آلبومِ «آکوردهای آزادی» با نُه ترانه‌ی فارسیِ برگزیده‌ی بخشِ ویژه، و آلبومِ دوم با نُه ترانه‌ی برگزیده‌ی بخشِ بین‌المللی؛ هر دو با تهیه و تولیدِ تیمِ آکوردهای آزادی.",
+      "closing": "انتشارِ بعدیِ لیبل آلبومِ بین‌المللیِ «آکوردهای آزادی» (Freedom Chords) است، با نُه ترانه‌ی برنده‌ی جشنواره که از میانِ آثارِ هر دو بخش و به زبان‌های گوناگون برگزیده می‌شوند؛ با تهیه و تولیدِ تیمِ آکوردهای آزادی.",
       "comingSoonLabel": "به‌زودی",
       "tracksComingSoonLabel": "قطعه‌ها به‌زودی.",
       "videoComingSoonLabel": "ویدیو به‌زودی.",
@@ -801,7 +801,7 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "ارسالِ اثر · ترانه",
       "title": "ترانه‌ات را بفرست",
-      "intro": "جشنواره‌ی ترانه‌ی آکوردهای آزادی دو بخشِ ترانه دارد: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه‌هایی به هر زبان و با هر موضوع. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. از هر بخش نُه ترانه‌ی برگزیده را تیمِ آکوردهای آزادی تولید می‌کند و در یک آلبومِ آکوردهای آزادی منتشر می‌شوند.",
+      "intro": "جشنواره‌ی ترانه‌ی آکوردهای آزادی دو بخشِ ترانه دارد: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه‌هایی به هر زبان و با هر موضوع. می‌توانی فقط متنِ ترانه را بفرستی یا آن را همراه با ملودی یا دمو ارسال کنی. از میانِ ترانه‌های هر دو بخش، نُه ترانه‌ی برنده را تیمِ آکوردهای آزادی تولید می‌کند و در یک آلبومِ بین‌المللی به نامِ «آکوردهای آزادی» (Freedom Chords) منتشر می‌شوند.",
       "guidelines": [
         "بخشِ ویژه — ترانه‌ی فارسی به یادِ جاویدنامانِ ایران. بخشِ بین‌المللی — ترانه به هر زبان و با هر موضوع.",
         "ترانه باید اثرِ خودت باشد، یا با اجازه‌ی صاحبِ اثر فرستاده شود.",
@@ -927,8 +927,8 @@ export const content: Record<Locale, Content> = {
           ],
           "points": [
             "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است",
-            "نُه ترانه‌ی برگزیده در آلبومِ «آکوردهای آزادی» با لیبلِ آکوردهای آزادی منتشر می‌شوند",
-            "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
+            "ترانه‌های برگزیده‌ی این بخش دیپلمِ افتخار می‌گیرند",
+            "نُه برنده‌ی دو بخشِ ترانه‌ی جشنواره در یک آلبومِ بین‌المللی به نامِ «آکوردهای آزادی» (Freedom Chords) منتشر می‌شوند؛ تهیه و تولید با تیمِ آکوردهای آزادی"
           ],
           "cta": {
             "label": "ارسالِ ترانه‌ی فارسی ←",
@@ -947,7 +947,7 @@ export const content: Record<Locale, Content> = {
           ],
           "points": [
             "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است",
-            "نُه ترانه‌ی برگزیده در آلبومِ دومِ آکوردهای آزادی با لیبلِ آکوردهای آزادی منتشر می‌شوند",
+            "ترانه‌های برنده در آلبومِ بین‌المللیِ نُه‌ترانه‌ایِ «آکوردهای آزادی» (Freedom Chords) با لیبلِ آکوردهای آزادی منتشر می‌شوند",
             "تهیه و تولیدِ آلبوم با تیمِ آکوردهای آزادی خواهد بود"
           ],
           "cta": {
@@ -996,7 +996,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-02-27",
           "title": "شبِ اختتامیه — جوایز و اجرای زنده",
-          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ ترانه‌های برگزیده‌ی دو آلبوم، و اجرای زنده‌ی موسیقی."
+          "description": "اهدای تندیس و دیپلمِ افتخار، اعلامِ نُه ترانه‌ی برنده‌ی آلبومِ «آکوردهای آزادی»، و اجرای زنده‌ی موسیقی."
         }
       ],
       "juryTitle": "هیئت داوران",

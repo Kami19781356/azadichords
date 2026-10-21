@@ -7,12 +7,12 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Submit a Song — Azadichords Song Festival",
     description:
-      "Submit a song to the Azadichords Song Festival: a special section for Persian songs in memory of Iran’s Javidnaman, and an international section for songs in any language. Nine songs from each section are produced for an Azadichords album.",
+      "Submit a song to the Azadichords Song Festival: a special section for Persian songs in memory of Iran’s Javidnaman, and an international section for songs in any language. Nine winning songs from both sections are produced for one international album, Freedom Chords.",
   },
   fa: {
     title: "ارسالِ ترانه — جشنواره‌ی ترانه‌ی آکوردهای آزادی",
     description:
-      "ارسالِ ترانه به جشنواره‌ی ترانه‌ی آکوردهای آزادی: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه به هر زبان. از هر بخش نُه ترانه‌ی برگزیده در یک آلبومِ آکوردهای آزادی منتشر می‌شوند.",
+      "ارسالِ ترانه به جشنواره‌ی ترانه‌ی آکوردهای آزادی: بخشِ ویژه برای ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ بین‌المللی برای ترانه به هر زبان. نُه ترانه‌ی برنده از میانِ هر دو بخش در یک آلبومِ بین‌المللی به نامِ «آکوردهای آزادی» (Freedom Chords) منتشر می‌شوند.",
   },
 };
 
