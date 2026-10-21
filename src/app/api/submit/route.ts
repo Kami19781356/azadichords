@@ -58,10 +58,12 @@ export async function POST(request: NextRequest) {
   if (section !== "special" && section !== "international") {
     return NextResponse.json({ error: "Choose a section" }, { status: 400 });
   }
-  // The special section is Persian by definition; the international
-  // section needs the song's language.
-  if (section === "special") fields.songLanguage = "Persian";
-  if (section === "international" && !fields.songLanguage) {
+  // On the Persian site the special section is Persian by definition.
+  // Everywhere else (English site, and the international section) the
+  // song's language is asked.
+  const fromFa = str(body.lang) === "fa";
+  if (section === "special" && fromFa) fields.songLanguage = "Persian";
+  if (!fields.songLanguage) {
     return NextResponse.json({ error: "Missing song language" }, { status: 400 });
   }
   if (REQUIRED.some((k) => !fields[k])) {
@@ -98,7 +100,7 @@ export async function POST(request: NextRequest) {
   let mailed = false;
   try {
     const text = [
-      `Section: ${section === "special" ? "Special (Persian, in memory of the Javidnaman)" : "International (any language)"}`,
+      `Section: ${section === "special" ? "Special (for the road to freedom — Persian site: Persian songs in memory of the Javidnaman)" : "International (any language, any theme)"}`,
       `Song language: ${fields.songLanguage}`,
       `Stage name: ${fields.artistName}`,
       `Email: ${fields.email}`,

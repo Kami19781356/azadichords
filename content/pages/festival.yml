@@ -10,7 +10,7 @@ eyebrow_fa: جشنواره‌ی ترانه · دوره‌ی نخست
 title_en: Azadichords Song Festival 2027
 title_fa: جشنواره‌ی ترانه‌ی آکوردهای آزادی
 intro_en:
-  - A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of all those who have fallen on the road to freedom; and an international section for songs in any language, on any theme.
+  - A song festival in three sections — an international competition for music videos; a special section for songs written for the road to freedom, in memory of those who have fallen on it; and an international section for songs in any language, on any theme.
   - Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night.
 intro_fa:
   - جشنواره‌ی ترانه در سه بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست؛ بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد؛ و بخشِ ترانه‌ی بین‌المللی ترانه‌هایی را می‌پذیرد که به هر زبان و با هر موضوعی نوشته شده باشند.
@@ -42,11 +42,11 @@ sections:
     ctaHref_fa: "/contact?topic=musicvideo"
   - label_en: Special Section
     label_fa: بخش ویژه
-    title_en: Persian Songs in Memory of Iran's Javidnaman
+    title_en: Songs for the Road to Freedom
     title_fa: ترانه‌های فارسی به یادِ جاویدنامانِ ایران
-    description_en: Persian songs — lyrics, or lyrics with a melody or demo — written in memory of those whose names now live on.
+    description_en: Songs in any language — lyrics, or lyrics with a melody or demo — written for the road to freedom, or in memory of those who have fallen on it, anywhere in the world.
     description_fa: ترانه‌ی فارسی، چه فقط متن و چه همراه با ملودی یا دمو، به یادِ کسانی که نامشان ماندگار شده است.
-    tags_en: [Persian lyrics, Demo welcome]
+    tags_en: [Any language, Road to freedom, Demo welcome]
     tags_fa: [ترانه‌ی فارسی, دمو اختیاری]
     points_en:
       - "Submit through this site — a stage name is enough"
@@ -56,7 +56,7 @@ sections:
       - "ارسالِ اثر از همین سایت؛ نامِ هنری کافی است"
       - "ترانه‌های برگزیده‌ی این بخش دیپلمِ افتخار می‌گیرند"
       - "نُه برنده‌ی دو بخشِ ترانه‌ی جشنواره در یک آلبومِ بین‌المللی به نامِ «آکوردهای آزادی» (Freedom Chords) منتشر می‌شوند؛ تهیه و تولید با تیمِ آکوردهای آزادی"
-    ctaLabel_en: Submit a Persian song →
+    ctaLabel_en: Submit a freedom song →
     ctaLabel_fa: ارسالِ ترانه‌ی فارسی ←
     ctaHref: /submissions?section=special
     highlight: true

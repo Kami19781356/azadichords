@@ -274,9 +274,9 @@ export const content: Record<Locale, Content> = {
     "submissions": {
       "eyebrow": "Submit · Songs",
       "title": "Send Us Your Song",
-      "intro": "The Azadichords Song Festival has two song sections: a special section for Persian songs written in memory of Iran's Javidnaman, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine winning songs, chosen from both sections, will be produced by the Azadichords team and released on one international album, «Freedom Chords».",
+      "intro": "The Azadichords Song Festival has two song sections: a special section for songs written for the road to freedom, in memory of those who have fallen on it, and an international section for songs in any language on any theme. Send the lyrics alone, or with a melody or demo. Nine winning songs, chosen from both sections, will be produced by the Azadichords team and released on one international album, «Freedom Chords».",
       "guidelines": [
-        "Special section — songs in Persian, written in memory of Iran's Javidnaman. International section — songs in any language, on any theme.",
+        "Special section — songs in any language, written for the road to freedom or in memory of those who have fallen on it. International section — songs in any language, on any theme.",
         "The song must be your own work (or sent with its author's permission).",
         "A stage name is enough. Your real name is not required.",
         "For a demo, share a link — Google Drive, WeTransfer, SoundCloud or similar. Files are not uploaded to this site.",
@@ -284,7 +284,7 @@ export const content: Record<Locale, Content> = {
       ],
       "safetyNote": "If you are writing from inside Iran: use an email address that is not tied to your real name. We never publish anything about you without your explicit consent, and this site uses no tracking or analytics.",
       "sectionOptions": {
-        "special": "Special section — Persian song, in memory of Iran's Javidnaman",
+        "special": "Special section — a song for the road to freedom, any language",
         "international": "International section — any language, any theme"
       },
       "fields": {
@@ -365,7 +365,7 @@ export const content: Record<Locale, Content> = {
       "eyebrow": "Song Festival · First Edition",
       "title": "Azadichords Song Festival 2027",
       "intro": [
-        "A song festival in three sections — an international competition for music videos; a special section for Persian songs written in memory of all those who have fallen on the road to freedom; and an international section for songs in any language, on any theme.",
+        "A song festival in three sections — an international competition for music videos; a special section for songs written for the road to freedom, in memory of those who have fallen on it; and an international section for songs in any language, on any theme.",
         "Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night."
       ],
       "sectionsTitle": "Festival Sections",
@@ -392,10 +392,11 @@ export const content: Record<Locale, Content> = {
         },
         {
           "label": "Special Section",
-          "title": "Persian Songs in Memory of Iran's Javidnaman",
-          "description": "Persian songs — lyrics, or lyrics with a melody or demo — written in memory of those whose names now live on.",
+          "title": "Songs for the Road to Freedom",
+          "description": "Songs in any language — lyrics, or lyrics with a melody or demo — written for the road to freedom, or in memory of those who have fallen on it, anywhere in the world.",
           "tags": [
-            "Persian lyrics",
+            "Any language",
+            "Road to freedom",
             "Demo welcome"
           ],
           "points": [
@@ -404,7 +405,7 @@ export const content: Record<Locale, Content> = {
             "The nine winners of the festival's two song sections appear on one international album, «Freedom Chords», produced by the Azadichords team"
           ],
           "cta": {
-            "label": "Submit a Persian song →",
+            "label": "Submit a freedom song →",
             "href": "/submissions?section=special"
           },
           "highlight": true

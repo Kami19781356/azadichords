@@ -58,6 +58,7 @@ export default function Submissions() {
     const payload: Record<string, unknown> = {};
     for (const key of TEXT_FIELDS) payload[key] = String(data.get(key) ?? "");
     payload.section = section;
+    payload.lang = locale;
     payload.consentRights = data.get("consentRights") === "on";
     payload.consentAlbum = data.get("consentAlbum") === "on";
 
@@ -151,7 +152,7 @@ export default function Submissions() {
             <option value="special">{s.sectionOptions.special}</option>
             <option value="international">{s.sectionOptions.international}</option>
           </select>
-          {section === "international" && (
+          {(section === "international" || (section === "special" && locale !== "fa")) && (
             <input type="text" name="songLanguage" required maxLength={80} placeholder={s.fields.songLanguage} className={inputClass} />
           )}
           <input type="text" name="artistName" required maxLength={120} placeholder={s.fields.artistName} className={inputClass} />
