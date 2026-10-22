@@ -10,7 +10,7 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Music — Azadichords",
     description:
-      "Songs released by Azadichords, an independent label in Paris for free voices.",
+      "Songs released by Azadichords, an independent label in Greater Paris for free voices.",
   },
   fa: {
     title: "موسیقی — آکوردهای آزادی",

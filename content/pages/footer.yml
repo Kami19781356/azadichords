@@ -1,10 +1,10 @@
 # Social hrefs left blank — no real URLs exist yet for any of these.
 # Footer.tsx filters out empty/"#" links, so nothing renders until a
 # real URL is added here.
-copyright: AZADICHORDS © 2026 — Paris · Label & Song Festival
+copyright: AZADICHORDS © 2026 — Greater Paris · Label & Song Festival
 social:
   - label: Instagram
-    href: ""
+    href: https://www.instagram.com/azadichords/
   - label: YouTube
     href: ""
   - label: Spotify

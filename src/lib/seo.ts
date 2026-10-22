@@ -34,6 +34,12 @@ export function pageMeta(base: Metadata, locale: string, path: string): Metadata
       description: base.description ?? undefined,
       images: [OG_IMAGE],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: typeof base.title === "string" ? base.title : undefined,
+      description: base.description ?? undefined,
+      images: [OG_IMAGE.url],
+    },
   };
 }
 

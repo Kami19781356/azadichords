@@ -42,7 +42,7 @@ export const content: Record<Locale, Content> = {
       ]
     },
     "hero": {
-      "eyebrow": "Independent Label & Song Festival — Paris",
+      "eyebrow": "Independent Label & Song Festival — Greater Paris",
       "title": "AZADICHORDS",
       "subhead": "A home for songs and free voices — a label to release the melodies of freedom, a festival to discover the words and voices of freedom.",
       "ctaPrimary": {
@@ -366,7 +366,7 @@ export const content: Record<Locale, Content> = {
       "title": "Azadichords Song Festival 2027",
       "intro": [
         "A song festival in three sections — an international competition for music videos; a special section for songs written for the road to freedom, in memory of those who have fallen on it; and an international section for songs in any language, on any theme.",
-        "Hosted by the YOUALITY International Short Film Festival in Paris. A live music performance will also take place on closing night."
+        "Hosted by the YOUALITY International Short Film Festival, Chantilly · Greater Paris. A live music performance will also take place on closing night."
       ],
       "sectionsTitle": "Festival Sections",
       "sections": [
@@ -380,7 +380,7 @@ export const content: Record<Locale, Content> = {
             "Spiritual"
           ],
           "points": [
-            "Host: YOUALITY International Short Film Festival, Paris",
+            "Host: YOUALITY International Short Film Festival, Chantilly · Greater Paris",
             "Awards: the festival statuette and honorary diplomas",
             "Submit through the festival's FilmFreeway page"
           ],
@@ -454,7 +454,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-02-26",
           "endDate": "2027-02-27",
-          "label": "The festival, Paris",
+          "label": "The festival, Chantilly · Greater Paris",
           "highlight": true
         }
       ],
@@ -476,7 +476,7 @@ export const content: Record<Locale, Content> = {
       "juryTitle": "Jury",
       "juryText": "Musicians, poets and filmmakers. Members will be announced here.",
       "venueTitle": "Venue",
-      "venueText": "Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
+      "venueText": "Chantilly · Greater Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
       "cta": {
         "label": "Submit a song →",
         "href": "/submissions"
@@ -487,7 +487,7 @@ export const content: Record<Locale, Content> = {
     "contact": {
       "eyebrow": "Contact",
       "title": "Get in Touch",
-      "subhead": "For music, festival, press, partnership or performance inquiries.",
+      "subhead": "For music, festival, press, partnership or performance inquiries — or write to us at info@azadichords.com",
       "fields": {
         "name": "Name",
         "email": "Email",
@@ -512,11 +512,11 @@ export const content: Record<Locale, Content> = {
       "musicVideoNote": "Music video submission: write your name, email and the video's details (title, director, length, language, and a link to watch it). We'll reply with a FilmFreeway waiver code, or you can send us the link directly."
     },
     "footer": {
-      "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",
+      "copyright": "AZADICHORDS © 2026 — Greater Paris · Label & Song Festival",
       "social": [
         {
           "label": "Instagram",
-          "href": ""
+          "href": "https://www.instagram.com/azadichords/"
         },
         {
           "label": "YouTube",
@@ -570,7 +570,7 @@ export const content: Record<Locale, Content> = {
       ]
     },
     "hero": {
-      "eyebrow": "لیبل و جشنواره‌ی ترانه — پاریس",
+      "eyebrow": "لیبل و جشنواره‌ی ترانه — پاریس بزرگ",
       "title": "AZADICHORDS",
       "subhead": "خانه‌ای برای ترانه‌ها و صداهای آزاد؛ لیبلی برای انتشار نغمه‌های آزادی؛ جشنواره‌ای برای کشف واژه‌ها و حنجره‌های آزادی",
       "ctaPrimary": {
@@ -894,7 +894,7 @@ export const content: Record<Locale, Content> = {
       "title": "جشنواره‌ی ترانه‌ی آکوردهای آزادی",
       "intro": [
         "جشنواره‌ی ترانه در سه بخش برگزار می‌شود. بخشِ عمومی رقابتی بین‌المللی برای موزیک‌ویدیوهاست؛ بخشِ ویژه به ترانه‌های فارسی به یادِ جاویدنامانِ ایران اختصاص دارد؛ و بخشِ ترانه‌ی بین‌المللی ترانه‌هایی را می‌پذیرد که به هر زبان و با هر موضوعی نوشته شده باشند.",
-        "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در پاریس است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد."
+        "میزبانِ جشنواره، جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی در شهر زیبای شانتیی (در پاریس بزرگ) است. در شبِ اختتامیه، اجرای زنده موسیقی نیز برگزار خواهد شد."
       ],
       "sectionsTitle": "بخش‌های جشنواره",
       "sections": [
@@ -908,7 +908,7 @@ export const content: Record<Locale, Content> = {
             "معنوی"
           ],
           "points": [
-            "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، پاریس",
+            "میزبان: جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی، شانتیی، پاریس بزرگ",
             "جوایز: تندیسِ جشنواره و دیپلمِ افتخار",
             "ارسالِ اثر از ایران: از طریقِ صفحه‌ی تماس، بدونِ پرداختِ هزینه"
           ],
@@ -981,7 +981,7 @@ export const content: Record<Locale, Content> = {
         {
           "date": "2027-02-26",
           "endDate": "2027-02-27",
-          "label": "برگزاریِ جشنواره، پاریس",
+          "label": "برگزاریِ جشنواره، شانتیی، پاریس بزرگ",
           "highlight": true
         }
       ],
@@ -1003,7 +1003,7 @@ export const content: Record<Locale, Content> = {
       "juryTitle": "هیئت داوران",
       "juryText": "موسیقی‌دانان، شاعران و فیلم‌سازان. اعضا به‌زودی همین‌جا معرفی می‌شوند.",
       "venueTitle": "محل برگزاری",
-      "venueText": "پاریس، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.",
+      "venueText": "شانتیی، پاریس بزرگ، فرانسه، هم‌زمان با جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی. محلِ دقیق به‌زودی اعلام می‌شود.",
       "cta": {
         "label": "ارسالِ ترانه ←",
         "href": "/submissions"
@@ -1014,7 +1014,7 @@ export const content: Record<Locale, Content> = {
     "contact": {
       "eyebrow": "تماس",
       "title": "با ما در تماس باشید",
-      "subhead": "برای پرسش‌های مربوط به موسیقی، جشنواره، رسانه، همکاری یا اجرا.",
+      "subhead": "برای پرسش‌های مربوط به موسیقی، جشنواره، رسانه، همکاری یا اجرا — یا مستقیم به info@azadichords.com ایمیل بزنید",
       "fields": {
         "name": "نام",
         "email": "ایمیل",
@@ -1039,11 +1039,11 @@ export const content: Record<Locale, Content> = {
       "musicVideoNote": "ارسالِ موزیک‌ویدیو از ایران: نام، ایمیل و مشخصاتِ اثر (عنوان، کارگردان، مدت، زبان و لینکِ تماشای ویدیو) را بنویس. کدِ معافیتِ FilmFreeway (waiver code) را برایت ایمیل می‌کنیم تا اثر را بدونِ پرداختِ هزینه ثبت کنی؛ یا لینکِ ویدیو را مستقیم برایمان بفرست."
     },
     "footer": {
-      "copyright": "AZADICHORDS © 2026 — Paris · Label & Song Festival",
+      "copyright": "AZADICHORDS © 2026 — Greater Paris · Label & Song Festival",
       "social": [
         {
           "label": "Instagram",
-          "href": ""
+          "href": "https://www.instagram.com/azadichords/"
         },
         {
           "label": "YouTube",

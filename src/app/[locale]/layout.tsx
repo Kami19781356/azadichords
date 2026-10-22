@@ -67,9 +67,9 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Azadichords — Independent Label & Song Festival, Paris",
+  title: "Azadichords — Independent Label & Song Festival, Greater Paris",
   description:
-    "A home for free voices: an independent music label and a song festival, based in Paris.",
+    "A home for free voices: an independent music label and a song festival, based in Greater Paris.",
   applicationName: "Azadichords",
   robots: SITE_INDEXABLE
     ? { index: true, follow: true }
@@ -112,7 +112,7 @@ export default async function RootLayout({
                 logo: `${SITE_URL}/images/logo.png`,
                 email: "info@azadichords.com",
                 description:
-                  "Independent music label and song festival, Paris — a home for free voices.",
+                  "Independent music label and song festival, Greater Paris — a home for free voices.",
               },
               {
                 "@type": "WebSite",

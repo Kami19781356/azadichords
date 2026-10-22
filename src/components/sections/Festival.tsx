@@ -52,6 +52,29 @@ function Cta() {
   );
 }
 
+const HOST_URL = "https://www.youality.fr/en/festival";
+const HOST_RE =
+  /(YOUALITY International Short Film Festival|جشنواره‌ی بین‌المللی فیلم کوتاه یوآلیتی)/;
+
+// Links the host festival's name (EN or FA) to its own page.
+function withHostLink(text: string) {
+  return text.split(HOST_RE).map((part, i) =>
+    i % 2 === 1 ? (
+      <a
+        key={i}
+        href={HOST_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-gold/50 underline-offset-4 transition-colors duration-200 hover:text-gold"
+      >
+        {part}
+      </a>
+    ) : (
+      part
+    ),
+  );
+}
+
 function KeyDates() {
   const content = useContent();
   const locale = useLocale();
@@ -176,7 +199,7 @@ function Sections() {
                   key={point}
                   className="border-s-2 border-gold/40 ps-4 text-[15px] leading-[1.6] text-paper/70"
                 >
-                  {point}
+                  {withHostLink(point)}
                 </li>
               ))}
             </ul>
@@ -233,7 +256,7 @@ function JuryAndVenue() {
       <div>
         <SectionLabel>{f.venueTitle}</SectionLabel>
         <p className="m-0 text-lg leading-[1.7] text-paper/70">
-          {f.venueText}
+          {withHostLink(f.venueText)}
         </p>
       </div>
     </motion.div>
@@ -278,7 +301,7 @@ export default function Festival({ compact = false }: { compact?: boolean }) {
               i < f.intro.length - 1 && "mb-4",
             )}
           >
-            {paragraph}
+            {withHostLink(paragraph)}
           </p>
         ))}
         <div className="mt-10">

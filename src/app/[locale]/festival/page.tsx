@@ -10,12 +10,12 @@ const meta: Record<Locale, Metadata> = {
   en: {
     title: "Song Festival 2027 — Azadichords",
     description:
-      "Azadichords Song Festival, February 26–27, 2027 in Paris: international music videos, a special section for songs for the road to freedom, and an international section for songs in any language.",
+      "Azadichords Song Festival, February 26–27, 2027 in Chantilly · Greater Paris: international music videos, a special section for songs for the road to freedom, and an international section for songs in any language.",
   },
   fa: {
     title: "جشنواره‌ی ترانه — آکوردهای آزادی",
     description:
-      "جشنواره‌ی ترانه‌ی آکوردهای آزادی، ۲۶ و ۲۷ فوریه ۲۰۲۷ در پاریس: موزیک‌ویدیوهای بین‌المللی، بخشِ ویژه‌ی ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ ترانه‌ی بین‌المللی به هر زبان.",
+      "جشنواره‌ی ترانه‌ی آکوردهای آزادی، ۲۶ و ۲۷ فوریه ۲۰۲۷ در شانتیی، پاریس بزرگ: موزیک‌ویدیوهای بین‌المللی، بخشِ ویژه‌ی ترانه‌های فارسی به یادِ جاویدنامانِ ایران، و بخشِ ترانه‌ی بین‌المللی به هر زبان.",
   },
 };
 
@@ -54,14 +54,18 @@ export default async function FestivalPage({
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
             location: {
               "@type": "Place",
-              name: "Paris, France",
+              name: "Chantilly · Greater Paris, France",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Paris",
+                addressLocality: "Chantilly",
                 addressCountry: "FR",
               },
             },
-            organizer: { "@id": ORG_ID },
+            organizer: {
+              "@type": "Organization",
+              name: "YOUALITY International Short Film Festival",
+              url: "https://www.youality.fr/en/festival",
+            },
             image: [`${SITE_URL}/og-image.jpg`],
             url: `${SITE_URL}/${loc}/festival`,
           }}
