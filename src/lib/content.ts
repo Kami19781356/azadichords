@@ -476,7 +476,7 @@ export const content: Record<Locale, Content> = {
       "juryTitle": "Jury",
       "juryText": "Musicians, poets and filmmakers. Members will be announced here.",
       "venueTitle": "Venue",
-      "venueText": "Chantilly · Greater Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
+      "venueText": "Chantilly, Greater Paris, France — together with the YOUALITY International Short Film Festival. Exact venue to be announced.",
       "cta": {
         "label": "Submit a song →",
         "href": "/submissions"
