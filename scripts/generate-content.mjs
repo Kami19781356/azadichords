@@ -200,6 +200,10 @@ function buildContent(lang) {
       body: t(download, "body", lang),
       buttonLabel: t(download, "buttonLabel", lang),
       unavailable: t(download, "unavailable", lang),
+      telegramLabel: t(download, "telegramLabel", lang),
+      telegramHref: download.telegramHref || "",
+      telegramNote: t(download, "telegramNote", lang),
+      videoTitle: t(download, "videoTitle", lang),
       supportTitle: t(download, "supportTitle", lang),
       supportIntro: t(download, "supportIntro", lang),
       paths: download.paths.map((p) => ({

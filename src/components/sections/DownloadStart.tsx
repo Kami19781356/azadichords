@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useContent } from "@/lib/ContentProvider";
+import VideoPlayer from "@/components/VideoPlayer";
 import { useLocale, localizeHref } from "@/lib/locale";
 import { reveal, staggerParent, staggerChild } from "@/lib/motionVariants";
 
@@ -57,7 +58,35 @@ export default function DownloadStart({ slug }: { slug: string }) {
             {d.buttonLabel}
           </a>
         )}
+        {d.telegramHref && (
+          <div className="mt-8 flex flex-col items-start gap-3">
+            <a
+              href={d.telegramHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full border border-gold px-8 py-4 text-sm tracking-[0.06em] text-gold transition-colors duration-200 hover:bg-gold hover:text-ink"
+            >
+              {d.telegramLabel}
+            </a>
+            <p className="m-0 max-w-[520px] text-[15px] leading-[1.8] text-paper/55">
+              {d.telegramNote}
+            </p>
+          </div>
+        )}
       </motion.div>
+
+      {release.videoUrl && (
+        <motion.div {...reveal} className="max-w-[860px]">
+          <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
+            {d.videoTitle}
+          </div>
+          <VideoPlayer
+            src={release.videoUrl}
+            caption={release.videoCaption || release.title}
+            poster={release.coverImage || undefined}
+          />
+        </motion.div>
+      )}
 
       <motion.div {...reveal} className="border-t border-paper/10 pt-14">
         <h2 className="m-0 mb-4 max-w-[720px] font-serif text-[clamp(26px,3.4vw,40px)] leading-[1.3] font-semibold">

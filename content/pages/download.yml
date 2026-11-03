@@ -10,6 +10,13 @@ buttonLabel_en: Download the file
 buttonLabel_fa: دانلودِ فایل
 unavailable_en: The file will be available here shortly.
 unavailable_fa: فایل به‌زودی همین‌جا قرار می‌گیرد.
+telegramLabel_en: The artist's Telegram channel
+telegramLabel_fa: کانال تلگرامِ هنرمند
+telegramHref: https://t.me/kamranpopchannel
+telegramNote_en: Can't open YouTube? Download the song above and follow the channel for new releases.
+telegramNote_fa: یوتیوب باز نمی‌شود؟ ترانه را از دکمه‌ی بالا دانلود کن و برای تازه‌ها به کانال تلگرامِ هنرمند بپیوند.
+videoTitle_en: The official music video
+videoTitle_fa: موزیک‌ویدیوی رسمی
 supportTitle_en: This music is free. Making it was not.
 supportTitle_fa: این موسیقی رایگان است، ولی ساختنش رایگان نبوده.
 supportIntro_en: Azadichords is independent — no sponsor, no institution. If this song reached you, here is how to carry it further.

@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
 
+// YouTube embeds use youtube-nocookie.com (privacy-enhanced mode). A local
+// `poster` image can replace the remote thumbnail, so nothing is requested
+// from the video host before the visitor clicks play.
 // Accepts a raw YouTube (watch/share/youtu.be) or Vimeo URL from the
 // CMS's video_url field — detects the provider, shows a thumbnail
 // facade, and only mounts the real embed <iframe> once clicked (no
@@ -16,17 +19,17 @@ function parseVideo(src: string): { embedUrl: string; thumbnailUrl: string | nul
       const id = url.pathname.slice(1);
       if (!id) return null;
       return {
-        embedUrl: `https://www.youtube.com/embed/${id}?autoplay=1`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`,
         thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
       };
     }
-    if (host === "youtube.com" || host === "m.youtube.com") {
+    if (host === "youtube.com" || host === "m.youtube.com" || host === "youtube-nocookie.com") {
       const id = url.pathname.startsWith("/embed/")
         ? url.pathname.split("/embed/")[1]
         : url.searchParams.get("v");
       if (!id) return null;
       return {
-        embedUrl: `https://www.youtube.com/embed/${id}?autoplay=1`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`,
         thumbnailUrl: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
       };
     }
@@ -50,9 +53,11 @@ function parseVideo(src: string): { embedUrl: string; thumbnailUrl: string | nul
 export default function VideoPlayer({
   src,
   caption,
+  poster,
 }: {
   src: string;
   caption?: string;
+  poster?: string;
 }) {
   const [playing, setPlaying] = useState(false);
   const video = parseVideo(src);
@@ -69,6 +74,7 @@ export default function VideoPlayer({
           src={video.embedUrl}
           title={caption ?? "Video"}
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           className="absolute inset-0 h-full w-full border-0"
         />
@@ -79,8 +85,8 @@ export default function VideoPlayer({
           aria-label={`Play ${caption ?? "video"}`}
           className="group absolute inset-0 flex h-full w-full items-center justify-center border-0 bg-cover bg-center p-0"
           style={
-            video.thumbnailUrl
-              ? { backgroundImage: `url(${video.thumbnailUrl})` }
+            poster || video.thumbnailUrl
+              ? { backgroundImage: `url(${poster || video.thumbnailUrl})` }
               : undefined
           }
         >

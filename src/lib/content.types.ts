@@ -162,6 +162,10 @@ export type Content = {
     body: string;
     buttonLabel: string;
     unavailable: string;
+    telegramLabel: string;
+    telegramHref: string;
+    telegramNote: string;
+    videoTitle: string;
     supportTitle: string;
     supportIntro: string;
     paths: { title: string; description: string; cta: Cta }[];

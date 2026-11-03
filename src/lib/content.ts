@@ -55,8 +55,8 @@ export const content: Record<Locale, Content> = {
       },
       "scrollHint": "(Scroll for more)",
       "promoBar": {
-        "label": "New single «Golouleh» — out now",
-        "href": "/music"
+        "label": "New: the official music video for «Golouleh»",
+        "href": "/music/golouleh"
       }
     },
     "manifesto": {
@@ -109,6 +109,10 @@ export const content: Record<Locale, Content> = {
       "body": "If it doesn't start in a few seconds, use the button below.",
       "buttonLabel": "Download the file",
       "unavailable": "The file will be available here shortly.",
+      "telegramLabel": "The artist's Telegram channel",
+      "telegramHref": "https://t.me/kamranpopchannel",
+      "telegramNote": "Can't open YouTube? Download the song above and follow the channel for new releases.",
+      "videoTitle": "The official music video",
       "supportTitle": "This music is free. Making it was not.",
       "supportIntro": "Azadichords is independent — no sponsor, no institution. If this song reached you, here is how to carry it further.",
       "paths": [
@@ -212,8 +216,8 @@ export const content: Record<Locale, Content> = {
             "name": "Azadichords"
           }
         ],
-        "videoUrl": "",
-        "videoCaption": "",
+        "videoUrl": "https://youtu.be/iIf8UG9Ophk",
+        "videoCaption": "Golouleh — official music video",
         "tracks": [],
         "streamingLinks": [
           {
@@ -583,8 +587,8 @@ export const content: Record<Locale, Content> = {
       },
       "scrollHint": "(برای ادامه اسکرول کنید)",
       "promoBar": {
-        "label": "«گلوله» منتشر شد · دانلودِ رایگان",
-        "href": "/music"
+        "label": "جدید: موزیک‌ویدیوی رسمی «گلوله»",
+        "href": "/music/golouleh"
       }
     },
     "manifesto": {
@@ -637,6 +641,10 @@ export const content: Record<Locale, Content> = {
       "body": "اگر تا چند ثانیه‌ی دیگر شروع نشد، دکمه‌ی زیر را بزن.",
       "buttonLabel": "دانلودِ فایل",
       "unavailable": "فایل به‌زودی همین‌جا قرار می‌گیرد.",
+      "telegramLabel": "کانال تلگرامِ هنرمند",
+      "telegramHref": "https://t.me/kamranpopchannel",
+      "telegramNote": "یوتیوب باز نمی‌شود؟ ترانه را از دکمه‌ی بالا دانلود کن و برای تازه‌ها به کانال تلگرامِ هنرمند بپیوند.",
+      "videoTitle": "موزیک‌ویدیوی رسمی",
       "supportTitle": "این موسیقی رایگان است، ولی ساختنش رایگان نبوده.",
       "supportIntro": "آکوردهای آزادی مستقل است و هیچ اسپانسر یا نهادی پشتش نیست. اگر این ترانه به دستت رسید، این‌طوری می‌توانی آن را دورتر ببری.",
       "paths": [
@@ -740,8 +748,8 @@ export const content: Record<Locale, Content> = {
             "name": "آکوردهای آزادی"
           }
         ],
-        "videoUrl": "",
-        "videoCaption": "",
+        "videoUrl": "https://youtu.be/iIf8UG9Ophk",
+        "videoCaption": "گلوله — موزیک‌ویدیوی رسمی",
         "tracks": [],
         "streamingLinks": [
           {

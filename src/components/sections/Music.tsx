@@ -129,8 +129,12 @@ function TrackList({ tracks }: { tracks: Release["tracks"] }) {
 export function Spotlight({
   release,
   asPage = false,
+  hideVideo = false,
 }: {
   release: Release;
+  // The home page keeps its spotlight light: the video lives on the
+  // release page.
+  hideVideo?: boolean;
   // On the release's own page the title is the page's <h1>; elsewhere
   // it is an <h3> that links through to that page.
   asPage?: boolean;
@@ -201,7 +205,7 @@ export function Spotlight({
           </div>
         )}
 
-        {release.videoUrl && (
+        {release.videoUrl && !hideVideo && (
           <div>
             <div className="mb-3 text-[13px] tracking-[0.15em] text-paper/40 uppercase">
               {content.music.videoLabel}
@@ -209,6 +213,7 @@ export function Spotlight({
             <VideoPlayer
               src={release.videoUrl}
               caption={release.videoCaption || release.title}
+              poster={release.coverImage || undefined}
             />
           </div>
         )}
@@ -308,7 +313,7 @@ export default function Music() {
         </p>
       </motion.div>
 
-      {latest && <Spotlight release={latest} />}
+      {latest && <Spotlight release={latest} hideVideo />}
 
       {rest.length > 0 && (
         <div className="flex flex-col">

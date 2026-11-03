@@ -30,9 +30,9 @@ credits:
     role_fa: لیبل
     name_en: Azadichords
     name_fa: آکوردهای آزادی
-video_url: ""
-musicVideoCaption_en: ""
-musicVideoCaption_fa: ""
+video_url: "https://youtu.be/iIf8UG9Ophk"
+musicVideoCaption_en: "Golouleh — official music video"
+musicVideoCaption_fa: "گلوله — موزیک‌ویدیوی رسمی"
 tracks: []
 streaming_links:
   - platform: Spotify
